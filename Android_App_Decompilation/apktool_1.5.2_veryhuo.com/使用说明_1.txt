@@ -1,0 +1,21 @@
+第一步：使用 apktool 对 apk （安卓应用）进行解压
+
+1、将需要解压的apk复制到 apktool 所在的目录下
+2、ctrl+R 后 输入 cmd 打开DOS
+3、用cd指令 进入 apktool 所在的目录
+4、输入 apktool 的功能指令 ：apktool d *.apk  回车
+5、apktool 所在的目录便会自动生成一个 跟apk相同名称的文件夹 
+6、解压完成
+
+备注：
+1、在对应的apk目录下，res存放着许多布局文件
+
+
+CMD上的输入信息
+Microsoft Windows [版本 6.1.7600]
+版权所有 (c) 2009 Microsoft Corporation。保留所有权利。
+
+C:\Users\Blacknife>cd C:\Android_App_Decompilation\apktool_1.5.2_veryhuo.com
+
+C:\Android_App_Decompilation\apktool_1.5.2_veryhuo.com>apktool *.apk
+

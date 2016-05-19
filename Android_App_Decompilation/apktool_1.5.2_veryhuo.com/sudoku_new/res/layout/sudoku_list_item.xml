@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:padding="4.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.nrsmagic.sudoku.gui.SudokuBoardView android:id="@id/sudoku_board" android:layout_width="100.0sp" android:layout_height="100.0sp" android:layout_marginRight="4.0sp" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="state" android:layout_toRightOf="@id/sudoku_board" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="right" android:id="@id/time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0sp" android:layout_marginRight="8.0sp" android:text="time" android:layout_toRightOf="@id/state" />
+    <TextView android:id="@id/last_played" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:text="last_played" android:layout_toRightOf="@id/sudoku_board" android:layout_below="@id/state" />
+    <TextView android:id="@id/created" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="created" android:layout_toRightOf="@id/sudoku_board" android:layout_below="@id/last_played" />
+    <TextView android:id="@id/note" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="note" android:layout_toRightOf="@id/sudoku_board" android:layout_below="@id/created" />
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="im_button">
+        <item name="android:textColor">@*android:color/black</item>
+        <item name="android:background">@drawable/btn_default_bg</item>
+    </style>
+    <style name="im_popup_number_button" parent="@*android:style/Widget.Button">
+        <item name="android:textColor">@*android:color/black</item>
+        <item name="android:background">@drawable/btn_default_bg</item>
+        <item name="android:layout_width">95.0sp</item>
+        <item name="android:layout_height">70.0sp</item>
+    </style>
+    <style name="im_popup_note_number_button" parent="@*android:style/Widget.Button.Toggle">
+        <item name="android:textColor">@*android:color/black</item>
+        <item name="android:background">@drawable/btn_toggle_bg</item>
+        <item name="android:layout_width">95.0sp</item>
+        <item name="android:layout_height">70.0sp</item>
+    </style>
+    <style name="im_popup_close_button" parent="@*android:style/Widget.Button">
+        <item name="android:textColor">@*android:color/black</item>
+        <item name="android:background">@drawable/btn_default_bg</item>
+        <item name="android:layout_width">140.0sp</item>
+        <item name="android:layout_height">60.0sp</item>
+        <item name="android:layout_marginTop">10.0sp</item>
+    </style>
+    <style name="im_popup_clear_button" parent="@*android:style/Widget.Button">
+        <item name="android:textColor">@*android:color/black</item>
+        <item name="android:background">@drawable/btn_default_bg</item>
+        <item name="android:layout_width">95.0sp</item>
+        <item name="android:layout_height">60.0sp</item>
+        <item name="android:layout_marginLeft">45.0sp</item>
+        <item name="android:layout_marginTop">10.0sp</item>
+    </style>
+    <style name="ThemeDefault">
+        <item name="lineColor">#ff666666</item>
+        <item name="sectorLineColor">@*android:color/black</item>
+        <item name="textColor">@*android:color/black</item>
+        <item name="textColorReadOnly">@*android:color/black</item>
+        <item name="textColorNote">@*android:color/black</item>
+        <item name="backgroundColor">@*android:color/white</item>
+        <item name="backgroundColorReadOnly">#ffcccccc</item>
+        <item name="backgroundColorTouched">#ff3232ff</item>
+        <item name="backgroundColorSelected">#ffffff00</item>
+    </style>
+    <style name="ThemePaperI">
+        <item name="lineColor">#ff666666</item>
+        <item name="sectorLineColor">@*android:color/black</item>
+        <item name="textColor">#ff555555</item>
+        <item name="textColorReadOnly">@*android:color/black</item>
+        <item name="textColorNote">#ff555555</item>
+        <item name="backgroundColor">@*android:color/white</item>
+        <item name="backgroundColorTouched">#ff3232ff</item>
+        <item name="backgroundColorSelected">#ffffff00</item>
+    </style>
+    <style name="ThemePaperII">
+        <item name="lineColor">#ff666666</item>
+        <item name="sectorLineColor">@*android:color/black</item>
+        <item name="textColor">#ff555555</item>
+        <item name="textColorReadOnly">@*android:color/black</item>
+        <item name="textColorNote">#ff555555</item>
+        <item name="backgroundColor">#ffdddddd</item>
+        <item name="backgroundColorSecondary">@*android:color/white</item>
+        <item name="backgroundColorTouched">#ff3232ff</item>
+        <item name="backgroundColorSelected">#ffffff00</item>
+    </style>
+</resources>

@@ -1,0 +1,183 @@
+Manifest-Version: 1.0
+Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+
+Name: res/drawable/pencil_disabled.png
+SHA1-Digest: Q2RbvBfofockmu5ZrZbnLItB10Y=
+
+Name: res/layout/im_numpad.xml
+SHA1-Digest: DNtoLcvS4LJkcodWV9k3UeWVA3s=
+
+Name: res/drawable/btn_toggle_off.9.png
+SHA1-Digest: y9lWdD0v4ZDlb0Zb15X78qWWC4k=
+
+Name: res/layout/folder_list.xml
+SHA1-Digest: 5bRUqhgUT75Crx7izeIXNQ35AJE=
+
+Name: res/layout/file_list.xml
+SHA1-Digest: 5bRUqhgUT75Crx7izeIXNQ35AJE=
+
+Name: res/layout/preference_dialog_seek_bar.xml
+SHA1-Digest: 24yvntTSnVKVooHB3KtRul/RAWw=
+
+Name: res/layout/sudoku_list_item.xml
+SHA1-Digest: JG0iKRNBR7KzVJskS1tmeYjjnn8=
+
+Name: res/layout-land/im_popup_edit_note.xml
+SHA1-Digest: +0ThB6r5ROp+R+HH1LBlcabEsos=
+
+Name: res/drawable/btn_default_bg.xml
+SHA1-Digest: YtKGmiXpI8Q9RXJ2PV6yWlgx0EU=
+
+Name: res/drawable/btn_completed_normal_disable_focused.9.png
+SHA1-Digest: rgC56rxJW7BsOk9669IoNZfY+9k=
+
+Name: res/drawable/btn_completed_bg.xml
+SHA1-Digest: 9JtutLLN0lzWkn26vbHS19+VuPw=
+
+Name: res/layout/sudoku_edit.xml
+SHA1-Digest: o/mn5hXzZat8lmq2KpLJttKtYh4=
+
+Name: res/drawable/btn_toggle_on.9.png
+SHA1-Digest: a5FwWkSZiCSKWJf7bfrRNztJCsI=
+
+Name: res/drawable-mdpi/icon.png
+SHA1-Digest: ZeYQbI7kEe6s55IoxL9sdp28/04=
+
+Name: res/layout-land/im_popup.xml
+SHA1-Digest: 2cqmi434JOgrsXHFUqtZdoBwgtU=
+
+Name: res/drawable/btn_default_pressed.9.png
+SHA1-Digest: CG1r5C+o/Yujlv5Z8BvzDNbd8bA=
+
+Name: res/layout-land/im_single_number.xml
+SHA1-Digest: G7uMpyWfXAmtpuI7NcmqVsjc2KY=
+
+Name: res/drawable/pencil_license.txt
+SHA1-Digest: SUV3DRZUsThyOL1d+d2HiTf/i74=
+
+Name: assets/easy
+SHA1-Digest: 3wKcY17SDTQ9UmK30vHYTJt9qc4=
+
+Name: res/layout-land/im_popup_edit_value.xml
+SHA1-Digest: SX5IdEG0ocgxtSuIWz2OHlcRutc=
+
+Name: res/layout-land/sudoku_edit.xml
+SHA1-Digest: 7EgEFFR2Q0KR7cS71CVtPCO7Erg=
+
+Name: res/layout-land/im_numpad.xml
+SHA1-Digest: G7uMpyWfXAmtpuI7NcmqVsjc2KY=
+
+Name: res/layout/import_sudoku.xml
+SHA1-Digest: NsGMQsauUo4XHHAVneTuWUSOHI8=
+
+Name: res/drawable/btn_default_normal.9.png
+SHA1-Digest: Y/Wsayjt/i20xiGTaZ/9v9J+1Gg=
+
+Name: res/layout/sudoku_list_item_note.xml
+SHA1-Digest: 2xjybsLwQc0zVKqlwD/SOm14aRc=
+
+Name: assets/hard
+SHA1-Digest: xg6DdEoxjY7594V5ry5yE95Xnco=
+
+Name: res/drawable/btn_toggle_completed_bg.xml
+SHA1-Digest: lX4NrAXpZcXLIWcY5obGVbjepDc=
+
+Name: res/layout/about.xml
+SHA1-Digest: UZy2iAc3RcSGmmDLae7hmmYUZeY=
+
+Name: res/drawable/btn_default_normal_disable.9.png
+SHA1-Digest: UEQlYtw0cFpTzIcZ666gaprk2BA=
+
+Name: res/raw/changelog
+SHA1-Digest: T/FgkmC75HO/zy6BvSplae+O5Xc=
+
+Name: res/layout/im_popup_edit_note.xml
+SHA1-Digest: GsynGdOQgx/PKuu2u1wZ3RYtx+4=
+
+Name: assets/versions.txt
+SHA1-Digest: o1U5prl2SRCQNoNGySTr3Cz7lTo=
+
+Name: res/drawable/btn_completed_normal_disable.9.png
+SHA1-Digest: UEQlYtw0cFpTzIcZ666gaprk2BA=
+
+Name: res/layout/folder_name.xml
+SHA1-Digest: 759JXcm4VGpAIRuYzWauRLeds28=
+
+Name: res/layout/sudoku_play.xml
+SHA1-Digest: CkpOmZTl1VYkqxloJ69IZtnnDGY=
+
+Name: res/drawable/btn_toggle_bg.xml
+SHA1-Digest: 3GZ29Qy/QhtcUEgAnTCG2yUoG9w=
+
+Name: res/drawable/btn_default_selected.9.png
+SHA1-Digest: jrrScBRqK6lt1WyqtlwwSnqzF3w=
+
+Name: res/layout/im_single_number.xml
+SHA1-Digest: DNtoLcvS4LJkcodWV9k3UeWVA3s=
+
+Name: resources.arsc
+SHA1-Digest: Sv58arkjo4f+o+F38QTdtyGAeWA=
+
+Name: res/drawable/btn_completed_normal.9.png
+SHA1-Digest: 9Mi1P8FImEEXH7jwRGH7ImbPlik=
+
+Name: AndroidManifest.xml
+SHA1-Digest: 3amJEoi4zKAPIlfPN3j4nicUFVM=
+
+Name: res/drawable-xxhdpi/icon.png
+SHA1-Digest: 73yiZHEpXBtwNyuGAsepWQ3N1Hw=
+
+Name: res/xml/game_settings.xml
+SHA1-Digest: /1EwpbHEQFN5dET0lov0vv6JNYo=
+
+Name: res/layout/im_popup.xml
+SHA1-Digest: UujnNrUGzR0KfkbPnIaRK7CyN5A=
+
+Name: res/drawable-xhdpi/icon.png
+SHA1-Digest: 32ZnfjbEk5hNPSeP9NwK6FFIHAk=
+
+Name: res/layout/sudoku_export.xml
+SHA1-Digest: C+5PEu7dxBLspBnBOIB4O/9ew4M=
+
+Name: res/layout/folder_list_item.xml
+SHA1-Digest: Cwxoq0BEz9iwdP7MBm1KZjtWaVA=
+
+Name: assets/medium
+SHA1-Digest: KOzD7q6KD1GRSlATk0Vi/fAdYjM=
+
+Name: classes.dex
+SHA1-Digest: vonvsxA+6frJbetLeMD9AjUONfs=
+
+Name: res/menu/main.xml
+SHA1-Digest: veNSU4vE/VRBredjR5y028aQEWw=
+
+Name: res/layout/im_popup_edit_value.xml
+SHA1-Digest: TGgzIw/Jr75JvGn8XeWKF5ffZ6w=
+
+Name: res/layout/file_list_item.xml
+SHA1-Digest: Cwxoq0BEz9iwdP7MBm1KZjtWaVA=
+
+Name: res/drawable/pencil.png
+SHA1-Digest: 1h6tBUmmx2n8B1JaU2ER4mUx7Wg=
+
+Name: res/drawable/icon.png
+SHA1-Digest: dGwx0MqAxNMBv3R70tH9BWjPYQY=
+
+Name: res/drawable/btn_toggle.xml
+SHA1-Digest: WVWZfmvVAy+FK8riX7TTeFLW+xs=
+
+Name: assets/very_hard
+SHA1-Digest: JSA7G54lGraTjslvgP1FQBkTfIw=
+
+Name: res/layout/sudoku_list.xml
+SHA1-Digest: ALiYUJrFC3pVUx5/03ClKnhHRRY=
+
+Name: res/layout-land/sudoku_play.xml
+SHA1-Digest: MUmGAhPg3ncGQd6pm+eYqetWe88=
+
+Name: res/drawable/btn_default_normal_disable_focused.9.png
+SHA1-Digest: rgC56rxJW7BsOk9669IoNZfY+9k=
+
+Name: res/drawable-hdpi/icon.png
+SHA1-Digest: dGwx0MqAxNMBv3R70tH9BWjPYQY=
+

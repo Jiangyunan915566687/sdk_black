@@ -1,0 +1,13 @@
+version: 1.5.2
+apkFileName: Sudoku_1.1.8.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: '8'
+  targetSdkVersion: '19'
+packageInfo:
+  cur_package: com.nrsmagic.sudoku
+  orig_package: com.nrsmagic.sudoku
+compressionType: false

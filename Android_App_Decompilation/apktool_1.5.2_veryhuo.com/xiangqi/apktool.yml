@@ -1,0 +1,13 @@
+version: 1.5.2
+apkFileName: xiangqi.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: '4'
+  targetSdkVersion: '19'
+packageInfo:
+  cur_package: com.cnvcs.xiangqi
+  orig_package: com.cnvcs.xiangqi
+compressionType: false

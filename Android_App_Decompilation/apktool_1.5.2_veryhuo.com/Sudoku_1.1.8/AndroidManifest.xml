@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="118" android:versionName="1.1.8" android:installLocation="auto" package="com.nrsmagic.sudoku"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application android:label="@string/app_name" android:icon="@drawable/icon" android:backupAgent="com.nrsmagic.sudoku.utils.SudokuBackup" android:allowBackup="true">
+        <activity android:label="@string/app_name" android:name=".gui.FolderListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name=".gui.SudokuListActivity" android:uiOptions="splitActionBarWhenNarrow" />
+        <activity android:label="@string/edit_sudoku" android:name=".gui.SudokuEditActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT" />
+                <action android:name="android.intent.action.EDIT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.Dialog" android:label="@string/app_name" android:name=".gui.FileImportActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="file" android:host="*" android:pathPattern=".*\\.sdm" />
+                <data android:scheme="http" android:host="*" android:pathPattern=".*\\.sdm" />
+                <data android:scheme="file" android:host="*" android:pathPattern=".*\\.opensudoku" />
+                <data android:scheme="http" android:host="*" android:pathPattern=".*\\.opensudoku" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".gui.ImportSudokuActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.Dialog" android:label="@string/app_name" android:name=".gui.SudokuImportActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:mimeType="application/x-opensudoku" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name=".gui.SudokuExportActivity" />
+        <activity android:label="@string/app_name" android:name=".gui.SudokuPlayActivity" />
+        <activity android:label="@string/game_settings" android:name=".gui.GameSettingsActivity" />
+        <activity android:label="@string/app_name" android:name=".gui.FileListActivity" />
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIt-A5Og94fZ9PlkCemnAU4enLv3WxWmJIYuWIsQ" />
+    </application>
+</manifest>

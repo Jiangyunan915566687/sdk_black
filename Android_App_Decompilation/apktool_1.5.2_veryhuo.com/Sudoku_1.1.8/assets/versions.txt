@@ -1,0 +1,3 @@
+- Allow installation on SD-Card
+- Replaced default 90 puzzles with 4000 puzzles.
+- Changed 'Popup' default setting to false.

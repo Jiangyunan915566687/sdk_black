@@ -1,0 +1,3600 @@
+.class public Lcom/nrsmagic/sudoku/gui/q/c/s;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field static a:Ljava/lang/Object;
+
+.field public static b:[Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+.field private static final c:Ljava/util/regex/Pattern;
+
+.field private static d:Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    const/4 v1, 0x0
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->ai:Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/nrsmagic/sudoku/gui/q/c/s;->c:Ljava/util/regex/Pattern;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/nrsmagic/sudoku/gui/q/c/s;->a:Ljava/lang/Object;
+
+    sput-object v1, Lcom/nrsmagic/sudoku/gui/q/c/s;->d:Ljava/lang/String;
+
+    sput-object v1, Lcom/nrsmagic/sudoku/gui/q/c/s;->b:[Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+    return-void
+.end method
+
+.method private static A(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    .locals 2
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->s:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static a(Landroid/content/Context;[Ljava/lang/String;I)I
+    .locals 6
+
+    const/4 v3, 0x0
+
+    move v4, v3
+
+    move v1, v3
+
+    :goto_0
+    :try_start_0
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v4, v0, :cond_1
+
+    move v2, v3
+
+    :goto_1
+    array-length v0, p1
+
+    if-ge v2, v0, :cond_0
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ResolveInfo;
+
+    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+
+    aget-object v5, p1, v2
+
+    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->a:Ljava/util/List;
+
+    sget-object v5, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v5, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-interface {v0, v5}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ResolveInfo;
+
+    invoke-static {p0, v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Landroid/content/Context;Landroid/content/pm/ResolveInfo;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    if-ge v1, p2, :cond_2
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->a:Ljava/util/List;
+
+    sget-object v5, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v5, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    add-int/lit8 v0, v1, 0x1
+
+    :goto_2
+    add-int/lit8 v1, v2, 0x1
+
+    move v2, v1
+
+    move v1, v0
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v0, v4, 0x1
+
+    move v4, v0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :cond_1
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+
+    :cond_2
+    move v0, v1
+
+    goto :goto_2
+.end method
+
+.method public static a(Landroid/content/Context;Ljava/io/File;Z)Landroid/content/Intent;
+    .locals 3
+
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    const/high16 v1, 0x1000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    const-string v1, "android.intent.action.VIEW"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-static {p1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/nrsmagic/sudoku/gui/q/c/h;->ay:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public static a(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected static a(Ljava/lang/String;I)Ljava/io/File;
+    .locals 4
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "mounted"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->G:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v0, Ljava/io/File;
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
+
+    :cond_1
+    new-instance v0, Ljava/io/File;
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v3, "/"
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    goto :goto_0
+.end method
+
+.method public static a(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Class;
+    .locals 4
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v0
+
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    :try_start_0
+    invoke-static {p0, v0, v1}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
+
+    move-result-object v0
+
+    iget-object v2, v0, Landroid/content/pm/PackageInfo;->activities:[Landroid/content/pm/ActivityInfo;
+
+    if-nez v2, :cond_1
+
+    :cond_0
+    :goto_0
+    return-object p1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    array-length v1, v2
+
+    if-ge v0, v1, :cond_0
+
+    :try_start_1
+    aget-object v1, v2, v0
+
+    iget-object v1, v1, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
+
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    :try_end_1
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    move-object p1, v1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    :cond_2
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
+.end method
+
+.method public static a(DD)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public static a(I)Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/r;->g:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static a(Landroid/content/Context;)Ljava/lang/String;
+    .locals 3
+
+    new-instance v1, Ljava/io/File;
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+
+    move-result-object v0
+
+    sget-object v2, Lcom/nrsmagic/sudoku/gui/q/c/h;->z:Ljava/lang/String;
+
+    invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-static {p0, v1}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Landroid/content/Context;Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const-string v2, ""
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    :cond_0
+    invoke-static {p0, v1}, Lcom/nrsmagic/sudoku/gui/q/c/s;->b(Landroid/content/Context;Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_1
+    if-eqz v0, :cond_2
+
+    const-string v1, ""
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    invoke-static {v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->e(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    :cond_2
+    const-string v0, ""
+
+    :cond_3
+    return-object v0
+.end method
+
+.method public static a(Landroid/content/Context;Landroid/content/pm/PackageManager;)Ljava/lang/String;
+    .locals 2
+
+    invoke-static {p0, p1}, Lcom/nrsmagic/sudoku/gui/q/c/s;->b(Landroid/content/Context;Landroid/content/pm/PackageManager;)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v0
+
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+
+    :try_start_0
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->A:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->bG:Ljava/lang/String;
+
+    :cond_0
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->bG:Ljava/lang/String;
+
+    goto :goto_0
+.end method
+
+.method private static a(Landroid/content/Context;Ljava/io/File;)Ljava/lang/String;
+    .locals 5
+
+    const/4 v2, 0x0
+
+    const-string v0, "mounted"
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {p1}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    :try_start_0
+    new-instance v4, Ljava/io/FileInputStream;
+
+    invoke-direct {v4, p1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_6
+
+    :try_start_1
+    new-instance v1, Ljava/io/InputStreamReader;
+
+    invoke-direct {v1, v4}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_d
+
+    :try_start_2
+    new-instance v3, Ljava/io/BufferedReader;
+
+    invoke-direct {v3, v1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_e
+
+    :try_start_3
+    invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    invoke-static {v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->e(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-static {p0, v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->i(Landroid/content/Context;Ljava/lang/String;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_f
+
+    if-eqz v3, :cond_0
+
+    :try_start_4
+    invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+
+    :cond_0
+    :goto_0
+    if-eqz v1, :cond_1
+
+    :try_start_5
+    invoke-virtual {v1}, Ljava/io/InputStreamReader;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
+
+    :cond_1
+    :goto_1
+    if-eqz v4, :cond_2
+
+    :try_start_6
+    invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
+
+    :cond_2
+    :goto_2
+    return-object v0
+
+    :catch_0
+    move-exception v2
+
+    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_2
+
+    :cond_3
+    if-eqz p1, :cond_4
+
+    :try_start_7
+    invoke-virtual {p1}, Ljava/io/File;->delete()Z
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_f
+
+    :cond_4
+    if-eqz v3, :cond_5
+
+    :try_start_8
+    invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_3
+
+    :cond_5
+    :goto_3
+    if-eqz v1, :cond_6
+
+    :try_start_9
+    invoke-virtual {v1}, Ljava/io/InputStreamReader;->close()V
+    :try_end_9
+    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_4
+
+    :cond_6
+    :goto_4
+    if-eqz v4, :cond_7
+
+    :try_start_a
+    invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
+    :try_end_a
+    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_5
+
+    :cond_7
+    :goto_5
+    const-string v0, ""
+
+    goto :goto_2
+
+    :catch_3
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_3
+
+    :catch_4
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_4
+
+    :catch_5
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_5
+
+    :catch_6
+    move-exception v0
+
+    move-object v1, v2
+
+    move-object v3, v2
+
+    :goto_6
+    :try_start_b
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_4
+
+    if-eqz v2, :cond_8
+
+    :try_start_c
+    invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
+    :try_end_c
+    .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_8
+
+    :cond_8
+    :goto_7
+    if-eqz v1, :cond_9
+
+    :try_start_d
+    invoke-virtual {v1}, Ljava/io/InputStreamReader;->close()V
+    :try_end_d
+    .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_9
+
+    :cond_9
+    :goto_8
+    if-eqz v3, :cond_7
+
+    :try_start_e
+    invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
+    :try_end_e
+    .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_7
+
+    goto :goto_5
+
+    :catch_7
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_5
+
+    :catch_8
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_7
+
+    :catch_9
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_8
+
+    :catchall_0
+    move-exception v0
+
+    move-object v1, v2
+
+    move-object v4, v2
+
+    :goto_9
+    if-eqz v2, :cond_a
+
+    :try_start_f
+    invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
+    :try_end_f
+    .catch Ljava/io/IOException; {:try_start_f .. :try_end_f} :catch_a
+
+    :cond_a
+    :goto_a
+    if-eqz v1, :cond_b
+
+    :try_start_10
+    invoke-virtual {v1}, Ljava/io/InputStreamReader;->close()V
+    :try_end_10
+    .catch Ljava/io/IOException; {:try_start_10 .. :try_end_10} :catch_b
+
+    :cond_b
+    :goto_b
+    if-eqz v4, :cond_c
+
+    :try_start_11
+    invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
+    :try_end_11
+    .catch Ljava/io/IOException; {:try_start_11 .. :try_end_11} :catch_c
+
+    :cond_c
+    :goto_c
+    throw v0
+
+    :catch_a
+    move-exception v2
+
+    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_a
+
+    :catch_b
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_b
+
+    :catch_c
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_c
+
+    :catchall_1
+    move-exception v0
+
+    move-object v1, v2
+
+    goto :goto_9
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_9
+
+    :catchall_3
+    move-exception v0
+
+    move-object v2, v3
+
+    goto :goto_9
+
+    :catchall_4
+    move-exception v0
+
+    move-object v4, v3
+
+    goto :goto_9
+
+    :catch_d
+    move-exception v0
+
+    move-object v1, v2
+
+    move-object v3, v4
+
+    goto :goto_6
+
+    :catch_e
+    move-exception v0
+
+    move-object v3, v4
+
+    goto :goto_6
+
+    :catch_f
+    move-exception v0
+
+    move-object v2, v3
+
+    move-object v3, v4
+
+    goto :goto_6
+.end method
+
+.method protected static a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 7
+
+    :try_start_0
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->ah:Ljava/lang/String;
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->U:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const/4 v0, 0x0
+
+    :goto_0
+    array-length v4, v1
+
+    if-ge v0, v4, :cond_0
+
+    aget-byte v4, v1, v0
+
+    and-int/lit16 v4, v4, 0xff
+
+    array-length v5, v2
+
+    rem-int v5, v0, v5
+
+    aget-byte v5, v2, v5
+
+    and-int/lit16 v5, v5, 0xff
+
+    add-int/2addr v4, v5
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "%"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object p0
+
+    :goto_1
+    return-object p0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
+
+    goto :goto_1
+.end method
+
+.method public static a(ILandroid/graphics/Bitmap;)V
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->Z:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->H:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Ljava/lang/String;I)Ljava/io/File;
+
+    move-result-object v2
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    invoke-direct {v0, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
+
+    const/16 v2, 0x64
+
+    invoke-virtual {p1, v1, v2, v0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+
+    :try_start_1
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->flush()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+
+    :goto_1
+    :try_start_2
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+
+    :goto_2
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_2
+.end method
+
+.method public static a(JLandroid/content/Context;)V
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p0, v0
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->bh:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p2, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->bi:Ljava/lang/String;
+
+    invoke-interface {v0, v1, p0, p1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    goto :goto_0
+.end method
+
+.method public static a(Landroid/content/Context;J)V
+    .locals 2
+
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->z(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "c"
+
+    invoke-interface {v0, v1, p1, p2}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 3
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "f"
+
+    invoke-static {v1, v0, p0}, Lcom/nrsmagic/sudoku/gui/q/a/j;->a(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V
+
+    return-void
+.end method
+
+.method private static a(Landroid/content/Context;Ljava/io/File;Ljava/lang/String;)V
+    .locals 5
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_0
+
+    if-nez p2, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    :try_start_0
+    invoke-virtual {p1}, Ljava/io/File;->getParentFile()Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
+
+    :cond_2
+    invoke-virtual {p1}, Ljava/io/File;->createNewFile()Z
+
+    new-instance v4, Ljava/io/FileOutputStream;
+
+    invoke-direct {v4, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
+
+    :try_start_1
+    new-instance v3, Ljava/io/OutputStreamWriter;
+
+    invoke-direct {v3, v4}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_a
+
+    :try_start_2
+    new-instance v2, Ljava/io/BufferedWriter;
+
+    invoke-direct {v2, v3}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_b
+
+    :try_start_3
+    invoke-static {p2}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Ljava/io/BufferedWriter;->flush()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_c
+
+    if-eqz v2, :cond_3
+
+    :try_start_4
+    invoke-virtual {v2}, Ljava/io/BufferedWriter;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
+
+    :cond_3
+    :goto_1
+    if-eqz v3, :cond_4
+
+    :try_start_5
+    invoke-virtual {v3}, Ljava/io/OutputStreamWriter;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
+
+    :cond_4
+    :goto_2
+    if-eqz v4, :cond_0
+
+    :try_start_6
+    invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_2
+
+    :catch_3
+    move-exception v0
+
+    move-object v2, v1
+
+    move-object v3, v1
+
+    :goto_3
+    :try_start_7
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_4
+
+    if-eqz v1, :cond_5
+
+    :try_start_8
+    invoke-virtual {v1}, Ljava/io/BufferedWriter;->close()V
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_5
+
+    :cond_5
+    :goto_4
+    if-eqz v2, :cond_6
+
+    :try_start_9
+    invoke-virtual {v2}, Ljava/io/OutputStreamWriter;->close()V
+    :try_end_9
+    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_6
+
+    :cond_6
+    :goto_5
+    if-eqz v3, :cond_0
+
+    :try_start_a
+    invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
+    :try_end_a
+    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_4
+
+    goto :goto_0
+
+    :catch_4
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_0
+
+    :catch_5
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_4
+
+    :catch_6
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_5
+
+    :catchall_0
+    move-exception v0
+
+    move-object v3, v1
+
+    move-object v4, v1
+
+    :goto_6
+    if-eqz v1, :cond_7
+
+    :try_start_b
+    invoke-virtual {v1}, Ljava/io/BufferedWriter;->close()V
+    :try_end_b
+    .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_7
+
+    :cond_7
+    :goto_7
+    if-eqz v3, :cond_8
+
+    :try_start_c
+    invoke-virtual {v3}, Ljava/io/OutputStreamWriter;->close()V
+    :try_end_c
+    .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_8
+
+    :cond_8
+    :goto_8
+    if-eqz v4, :cond_9
+
+    :try_start_d
+    invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
+    :try_end_d
+    .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_9
+
+    :cond_9
+    :goto_9
+    throw v0
+
+    :catch_7
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_7
+
+    :catch_8
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_8
+
+    :catch_9
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_9
+
+    :catchall_1
+    move-exception v0
+
+    move-object v3, v1
+
+    goto :goto_6
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_6
+
+    :catchall_3
+    move-exception v0
+
+    move-object v1, v2
+
+    goto :goto_6
+
+    :catchall_4
+    move-exception v0
+
+    move-object v4, v3
+
+    move-object v3, v2
+
+    goto :goto_6
+
+    :catch_a
+    move-exception v0
+
+    move-object v2, v1
+
+    move-object v3, v4
+
+    goto :goto_3
+
+    :catch_b
+    move-exception v0
+
+    move-object v2, v3
+
+    move-object v3, v4
+
+    goto :goto_3
+
+    :catch_c
+    move-exception v0
+
+    move-object v1, v2
+
+    move-object v2, v3
+
+    move-object v3, v4
+
+    goto :goto_3
+.end method
+
+.method public static a(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 4
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/s;->a:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    if-nez p1, :cond_0
+
+    :try_start_0
+    monitor-exit v1
+
+    :goto_0
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->D:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v0, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    sget-object v2, Lcom/nrsmagic/sudoku/gui/q/c/h;->E:Ljava/lang/String;
+
+    const-string v3, ""
+
+    invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ";"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    :cond_1
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    sget-object v2, Lcom/nrsmagic/sudoku/gui/q/c/h;->E:Ljava/lang/String;
+
+    invoke-interface {v0, v2, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    monitor-exit v1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public static a(Ljava/lang/String;Landroid/content/Context;I)V
+    .locals 3
+
+    invoke-static {p2}, Lcom/nrsmagic/sudoku/gui/q/c/s;->b(I)Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/io/File;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {p2}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "/"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public static a([Ljava/lang/String;Landroid/content/Context;II)V
+    .locals 7
+
+    const/4 v6, 0x4
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/s;->d:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    invoke-static {p1}, Lcom/nrsmagic/sudoku/gui/q/c/s;->l(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/nrsmagic/sudoku/gui/q/c/s;->d:Ljava/lang/String;
+
+    :cond_0
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    if-nez v0, :cond_1
+
+    invoke-static {p1}, Lcom/nrsmagic/sudoku/gui/q/c/p;->a(Landroid/content/Context;)Lcom/nrsmagic/sudoku/gui/q/c/p;
+
+    :cond_1
+    if-eqz p0, :cond_4
+
+    move v4, v2
+
+    move v1, v2
+
+    :goto_0
+    array-length v0, p0
+
+    if-ge v4, v0, :cond_5
+
+    move v3, v2
+
+    :goto_1
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v3, v0, :cond_3
+
+    aget-object v5, p0, v4
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ResolveInfo;
+
+    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->a:Ljava/util/List;
+
+    sget-object v5, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-interface {v0, v5}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_9
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ResolveInfo;
+
+    invoke-static {p1, v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Landroid/content/Context;Landroid/content/pm/ResolveInfo;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_9
+
+    if-ge v1, p2, :cond_9
+
+    add-int/lit8 v0, v1, 0x1
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/p;->a:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    sub-int/2addr v1, p3
+
+    if-ge v1, v6, :cond_2
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/p;->a:Ljava/util/List;
+
+    sget-object v5, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    :goto_2
+    add-int/lit8 v1, v3, 0x1
+
+    move v3, v1
+
+    move v1, v0
+
+    goto :goto_1
+
+    :cond_3
+    add-int/lit8 v0, v4, 0x1
+
+    move v4, v0
+
+    goto :goto_0
+
+    :cond_4
+    move v1, v2
+
+    :cond_5
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    move v2, v0
+
+    :goto_3
+    const/4 v0, 0x1
+
+    if-le v2, v0, :cond_7
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->a:Ljava/util/List;
+
+    sget-object v3, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-interface {v0, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ResolveInfo;
+
+    invoke-static {p1, v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Landroid/content/Context;Landroid/content/pm/ResolveInfo;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    if-ge v1, p2, :cond_8
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ResolveInfo;
+
+    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+
+    sget-object v3, Lcom/nrsmagic/sudoku/gui/q/c/s;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    add-int/lit8 v0, v1, 0x1
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/p;->a:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    sub-int/2addr v1, p3
+
+    if-ge v1, v6, :cond_6
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/p;->a:Ljava/util/List;
+
+    sget-object v3, Lcom/nrsmagic/sudoku/gui/q/c/p;->b:Ljava/util/List;
+
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_6
+    :goto_4
+    add-int/lit8 v1, v2, -0x1
+
+    move v2, v1
+
+    move v1, v0
+
+    goto :goto_3
+
+    :catch_0
+    move-exception v0
+
+    :cond_7
+    return-void
+
+    :cond_8
+    move v0, v1
+
+    goto :goto_4
+
+    :cond_9
+    move v0, v1
+
+    goto :goto_2
+.end method
+
+.method private static a(Landroid/content/Context;Landroid/content/pm/ResolveInfo;)Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/s;->b:[Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+    if-nez v1, :cond_0
+
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->s(Landroid/content/Context;)[Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+    move-result-object v1
+
+    sput-object v1, Lcom/nrsmagic/sudoku/gui/q/c/s;->b:[Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+    :cond_0
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/s;->b:[Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+    if-eqz v1, :cond_3
+
+    if-eqz p1, :cond_3
+
+    move v1, v0
+
+    :goto_0
+    sget-object v2, Lcom/nrsmagic/sudoku/gui/q/c/s;->b:[Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+    array-length v2, v2
+
+    if-ge v0, v2, :cond_2
+
+    iget-object v2, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v2, v2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+
+    sget-object v3, Lcom/nrsmagic/sudoku/gui/q/c/s;->b:[Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+    aget-object v3, v3, v0
+
+    iget-object v3, v3, Lcom/nrsmagic/sudoku/gui/q/b/b;->f:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/4 v1, 0x1
+
+    :cond_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    move v0, v1
+
+    :cond_3
+    return v0
+.end method
+
+.method public static a(Landroid/content/SharedPreferences;Landroid/content/Context;)Z
+    .locals 5
+
+    invoke-static {p1}, Lcom/nrsmagic/sudoku/gui/q/c/s;->l(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/io/File;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v4, Lcom/nrsmagic/sudoku/gui/q/c/h;->aP:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget-object v3, Lcom/nrsmagic/sudoku/gui/q/c/h;->aJ:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method private static a(Ljava/io/File;Landroid/content/Context;)[Ljava/lang/String;
+    .locals 5
+
+    const/4 v0, 0x0
+
+    invoke-static {p1}, Lcom/nrsmagic/sudoku/gui/q/c/s;->j(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    :try_start_0
+    invoke-virtual {p0}, Ljava/io/File;->createNewFile()Z
+
+    new-instance v1, Ljava/io/BufferedWriter;
+
+    new-instance v2, Ljava/io/FileWriter;
+
+    invoke-direct {v2, p0}, Ljava/io/FileWriter;-><init>(Ljava/io/File;)V
+
+    invoke-direct {v1, v2}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    invoke-static {p1}, Lcom/nrsmagic/sudoku/gui/q/c/s;->m(Landroid/content/Context;)Lcom/nrsmagic/sudoku/gui/q/b/f;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/nrsmagic/sudoku/gui/q/b/f;->c:Ljava/lang/String;
+
+    const-string v3, ";"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
+
+    move-result-object v0
+
+    :try_start_2
+    invoke-virtual {v1, v2}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/io/BufferedWriter;->newLine()V
+
+    invoke-virtual {v1}, Ljava/io/BufferedWriter;->flush()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_3
+
+    :try_start_3
+    invoke-virtual {v1}, Ljava/io/BufferedWriter;->close()V
+
+    :cond_0
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v1
+
+    move-object v1, v0
+
+    :goto_1
+    invoke-virtual {v1}, Ljava/io/BufferedWriter;->close()V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    move-object v2, v0
+
+    move-object v4, v0
+
+    move-object v0, v1
+
+    move-object v1, v4
+
+    :goto_2
+    :try_start_4
+    invoke-virtual {v2}, Ljava/io/BufferedWriter;->close()V
+
+    throw v0
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
+
+    :catch_2
+    move-exception v0
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v2
+
+    move-object v4, v2
+
+    move-object v2, v1
+
+    move-object v1, v0
+
+    move-object v0, v4
+
+    goto :goto_2
+
+    :catchall_2
+    move-exception v2
+
+    move-object v4, v2
+
+    move-object v2, v1
+
+    move-object v1, v0
+
+    move-object v0, v4
+
+    goto :goto_2
+
+    :catch_3
+    move-exception v2
+
+    goto :goto_1
+.end method
+
+.method public static b(Landroid/content/Context;Landroid/content/pm/PackageManager;)Landroid/content/pm/ApplicationInfo;
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v1, 0x80
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static b(I)Ljava/io/File;
+    .locals 3
+
+    new-instance v0, Ljava/io/File;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v2, Lcom/nrsmagic/sudoku/gui/q/c/r;->g:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method private static b(Landroid/content/Context;Ljava/io/File;)Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "phone"
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/telephony/TelephonyManager;
+
+    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->T:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/nrsmagic/sudoku/gui/q/c/h;->j:Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    const-string v3, ""
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    :cond_0
+    invoke-static {v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->e(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-static {p0, v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->i(Landroid/content/Context;Ljava/lang/String;)V
+
+    invoke-static {p0, p1, v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Landroid/content/Context;Ljava/io/File;Ljava/lang/String;)V
+
+    :cond_1
+    :goto_0
+    return-object v0
+
+    :cond_2
+    const-string v0, ""
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->j:Ljava/lang/String;
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    :cond_3
+    const-string v0, ""
+
+    goto :goto_0
+
+    :cond_4
+    invoke-static {v2}, Lcom/nrsmagic/sudoku/gui/q/c/s;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->e(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v0, ""
+
+    goto :goto_0
+.end method
+
+.method public static b(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/16 v3, 0x80
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    :cond_0
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
+
+    goto :goto_0
+.end method
+
+.method protected static b(Ljava/lang/String;)Ljava/lang/String;
+    .locals 6
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-object p0
+
+    :cond_1
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/s;->c:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    :try_start_1
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    new-array v3, v0, [B
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->U:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v4
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_2
+    array-length v0, v3
+
+    if-ge v1, v0, :cond_3
+
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    array-length v5, v4
+
+    rem-int v5, v1, v5
+
+    aget-byte v5, v4, v5
+
+    and-int/lit16 v5, v5, 0xff
+
+    sub-int/2addr v0, v5
+
+    int-to-byte v0, v0
+
+    aput-byte v0, v3, v1
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_2
+
+    :cond_3
+    new-instance v0, Ljava/lang/String;
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->ah:Ljava/lang/String;
+
+    invoke-direct {v0, v3, v1}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+    :try_end_1
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_1 .. :try_end_1} :catch_1
+
+    move-object p0, v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
+
+    goto :goto_0
+.end method
+
+.method public static b(JLandroid/content/Context;)V
+    .locals 2
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->aE:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p2, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->aF:Ljava/lang/String;
+
+    invoke-interface {v0, v1, p0, p1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    return-void
+.end method
+
+.method public static b(Landroid/content/Context;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    const-string v1, ""
+
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    :cond_0
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->bs:Ljava/lang/String;
+
+    invoke-static {p0, v1}, Lcom/nrsmagic/sudoku/gui/q/c/s;->f(Landroid/content/Context;Ljava/lang/String;)V
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const-string v1, "mounted"
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->br:Ljava/lang/String;
+
+    invoke-static {p0, v1}, Lcom/nrsmagic/sudoku/gui/q/c/s;->f(Landroid/content/Context;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static c(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    .locals 4
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    new-instance v0, Ljava/net/URL;
+
+    invoke-direct {v0, p0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/net/URL;->getContent()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/io/InputStream;
+    :try_end_0
+    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+
+    :goto_0
+    new-instance v2, Landroid/graphics/BitmapFactory$Options;
+
+    invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
+
+    const/4 v3, 0x0
+
+    iput-boolean v3, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    const/4 v3, 0x1
+
+    iput v3, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+
+    invoke-static {v0, v1, v2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/net/MalformedURLException;->printStackTrace()V
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    move-object v0, v1
+
+    goto :goto_0
+.end method
+
+.method public static c(Landroid/content/Context;)Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "0ed4c1ee745747fa85cd38dead4eb606"
+
+    invoke-static {p0, v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->c(Landroid/content/Context;Ljava/lang/String;)Z
+
+    const-string v0, "0ed4c1ee745747fa85cd38dead4eb606"
+
+    return-object v0
+.end method
+
+.method public static c(Landroid/content/Context;Ljava/lang/String;)Z
+    .locals 2
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->B:Ljava/lang/String;
+
+    invoke-virtual {p0, v1, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->B:Ljava/lang/String;
+
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public static d(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->R:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->S:Ljava/lang/String;
+
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    goto :goto_0
+.end method
+
+.method public static d(Ljava/lang/String;)V
+    .locals 2
+
+    :try_start_0
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/a/b;->a:Ljava/util/Map;
+
+    invoke-interface {v0, p0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/r;->a:Ljava/util/Map;
+
+    invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/r;->c:Ljava/util/Map;
+
+    invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/r;->b:Ljava/util/Map;
+
+    invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+.end method
+
+.method public static d(Landroid/content/Context;)Z
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    and-int/lit8 v0, v0, 0x1
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static e(Landroid/content/Context;)I
+    .locals 1
+
+    const v0, 0x186dd
+
+    return v0
+.end method
+
+.method public static e(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+    .locals 2
+
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    const/high16 v1, 0x1000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    return-object v0
+.end method
+
+.method private static e(Ljava/lang/String;)Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x3
+
+    :try_start_0
+    invoke-virtual {p0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
+.end method
+
+.method public static f(Landroid/content/Context;)Landroid/location/Location;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public static f(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-static {p0, p1, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    return-void
+.end method
+
+.method public static g(Landroid/content/Context;)Ljava/lang/String;
+    .locals 4
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/s;->a:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->D:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v0, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    sget-object v2, Lcom/nrsmagic/sudoku/gui/q/c/h;->E:Ljava/lang/String;
+
+    const-string v3, ""
+
+    invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    sget-object v3, Lcom/nrsmagic/sudoku/gui/q/c/h;->E:Ljava/lang/String;
+
+    invoke-interface {v0, v3}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    monitor-exit v1
+
+    return-object v2
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public static g(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 2
+
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->A(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->b:Ljava/lang/String;
+
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    return-void
+.end method
+
+.method public static h(Landroid/content/Context;)Ljava/lang/String;
+    .locals 3
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->B:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->A:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->A:Ljava/lang/String;
+
+    invoke-static {p0, v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->b(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_0
+    if-eqz v0, :cond_1
+
+    :goto_0
+    return-object v0
+
+    :cond_1
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->bG:Ljava/lang/String;
+
+    goto :goto_0
+.end method
+
+.method public static h(Landroid/content/Context;Ljava/lang/String;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, p1, v3}, Landroid/content/pm/PackageManager;->getPackageArchiveInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method public static i(Landroid/content/Context;)Ljava/lang/String;
+    .locals 3
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->R:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->S:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private static i(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 3
+
+    if-nez p1, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->T:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->j:Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    goto :goto_0
+.end method
+
+.method public static j(Landroid/content/Context;)Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "connectivity"
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/ConnectivityManager;
+
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getTypeName()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public static k(Landroid/content/Context;)Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->j(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    sget-object v2, Lcom/nrsmagic/sudoku/gui/q/c/h;->ad:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    sget-object v2, Lcom/nrsmagic/sudoku/gui/q/c/h;->ae:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    sget-object v2, Lcom/nrsmagic/sudoku/gui/q/c/h;->af:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :cond_1
+    return v0
+.end method
+
+.method public static l(Landroid/content/Context;)Ljava/lang/String;
+    .locals 4
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v1
+
+    :goto_0
+    if-eqz v1, :cond_0
+
+    iget-object v0, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    :cond_0
+    return-object v0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
+
+    move-object v1, v0
+
+    goto :goto_0
+.end method
+
+.method public static m(Landroid/content/Context;)Lcom/nrsmagic/sudoku/gui/q/b/f;
+    .locals 2
+
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/c;->a(Landroid/content/Context;)Lcom/nrsmagic/sudoku/gui/q/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/nrsmagic/sudoku/gui/q/c;->a()Lcom/nrsmagic/sudoku/gui/q/b/f;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v1, v0, Lcom/nrsmagic/sudoku/gui/q/b/f;->b:Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lcom/nrsmagic/sudoku/gui/q/b/f;->a:Ljava/lang/String;
+
+    if-nez v1, :cond_1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :cond_1
+    return-object v0
+.end method
+
+.method public static n(Landroid/content/Context;)[Ljava/lang/String;
+    .locals 6
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    new-instance v1, Ljava/io/File;
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+
+    move-result-object v2
+
+    sget-object v3, Lcom/nrsmagic/sudoku/gui/q/c/h;->aP:Ljava/lang/String;
+
+    invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
+
+    :cond_0
+    new-instance v2, Ljava/io/File;
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+
+    move-result-object v1
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v4, Lcom/nrsmagic/sudoku/gui/q/c/h;->aP:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    sget-object v4, Lcom/nrsmagic/sudoku/gui/q/c/h;->aV:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    sget-object v4, Lcom/nrsmagic/sudoku/gui/q/c/h;->bl:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v1, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    invoke-static {v2, p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Ljava/io/File;Landroid/content/Context;)[Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+
+    move-result-object v0
+
+    :cond_1
+    :goto_0
+    return-object v0
+
+    :cond_2
+    if-eqz v2, :cond_1
+
+    :try_start_1
+    new-instance v1, Ljava/io/BufferedReader;
+
+    new-instance v3, Ljava/io/FileReader;
+
+    invoke-direct {v3, v2}, Ljava/io/FileReader;-><init>(Ljava/io/File;)V
+
+    invoke-direct {v1, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
+
+    :try_start_2
+    new-instance v3, Ljava/lang/StringBuffer;
+
+    invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
+
+    :goto_1
+    invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_3
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v2
+
+    :goto_2
+    :try_start_3
+    invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v1
+
+    :goto_3
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_0
+
+    :cond_3
+    :try_start_4
+    invoke-virtual {v3}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, ";"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+
+    move-result-object v0
+
+    if-nez v0, :cond_4
+
+    :try_start_5
+    invoke-static {v2, p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Ljava/io/File;Landroid/content/Context;)[Ljava/lang/String;
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
+
+    move-result-object v0
+
+    :cond_4
+    :try_start_6
+    invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    move-object v2, v0
+
+    move-object v5, v0
+
+    move-object v0, v1
+
+    move-object v1, v5
+
+    :goto_4
+    :try_start_7
+    invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
+
+    throw v0
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_2
+
+    :catch_2
+    move-exception v0
+
+    move-object v1, v0
+
+    move-object v0, v2
+
+    goto :goto_3
+
+    :catchall_1
+    move-exception v2
+
+    move-object v5, v2
+
+    move-object v2, v0
+
+    move-object v0, v5
+
+    goto :goto_4
+
+    :catchall_2
+    move-exception v2
+
+    move-object v5, v2
+
+    move-object v2, v0
+
+    move-object v0, v5
+
+    goto :goto_4
+
+    :catch_3
+    move-exception v1
+
+    move-object v1, v0
+
+    goto :goto_2
+.end method
+
+.method public static o(Landroid/content/Context;)V
+    .locals 3
+
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->j(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/nrsmagic/sudoku/gui/q/Btus;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->bb:Ljava/lang/String;
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    :cond_0
+    return-void
+.end method
+
+.method public static p(Landroid/content/Context;)V
+    .locals 1
+
+    :try_start_0
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/a/j;->b(Landroid/content/Context;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+.end method
+
+.method public static q(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    .locals 2
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->aO:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static r(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    .locals 2
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->aE:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static s(Landroid/content/Context;)[Lcom/nrsmagic/sudoku/gui/q/b/b;
+    .locals 2
+
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/c;->a(Landroid/content/Context;)Lcom/nrsmagic/sudoku/gui/q/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/nrsmagic/sudoku/gui/q/c;->b()Ljava/util/HashMap;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const-class v1, Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+    check-cast v0, [Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+    sput-object v0, Lcom/nrsmagic/sudoku/gui/q/c/s;->b:[Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/s;->b:[Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/s;->b:[Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/s;->b:[Lcom/nrsmagic/sudoku/gui/q/b/b;
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static t(Landroid/content/Context;)V
+    .locals 2
+
+    const/4 v1, 0x0
+
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->j(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/nrsmagic/sudoku/gui/q/g;->a()Lcom/nrsmagic/sudoku/gui/q/g;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0, v1, v1}, Lcom/nrsmagic/sudoku/gui/q/g;->a(Landroid/content/Context;II)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    const-string v0, "-1,0"
+
+    invoke-static {p0, v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    goto :goto_0
+.end method
+
+.method public static u(Landroid/content/Context;)J
+    .locals 4
+
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->z(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "c"
+
+    const-wide/16 v2, 0x0
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public static v(Landroid/content/Context;)Ljava/lang/String;
+    .locals 3
+
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->A(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/nrsmagic/sudoku/gui/q/c/h;->b:Ljava/lang/String;
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static w(Landroid/content/Context;)V
+    .locals 2
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->bf:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    return-void
+.end method
+
+.method public static x(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    .locals 2
+
+    const-string v0, "e"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static y(Landroid/content/Context;)V
+    .locals 3
+
+    const/4 v2, 0x1
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "mounted"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->br:Ljava/lang/String;
+
+    invoke-static {p0, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    const-string v0, ""
+
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-static {p0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    :cond_1
+    sget-object v0, Lcom/nrsmagic/sudoku/gui/q/c/h;->bs:Ljava/lang/String;
+
+    invoke-static {p0, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    goto :goto_0
+
+    :cond_2
+    const-class v0, Lcom/nrsmagic/sudoku/gui/q/Ds;
+
+    invoke-static {p0, v0}, Lcom/nrsmagic/sudoku/gui/q/c/s;->a(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-static {p0, v0}, Lcom/nrsmagic/sudoku/gui/q/c/i;->a(Landroid/content/Context;Ljava/lang/Class;)V
+
+    goto :goto_0
+.end method
+
+.method private static z(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    .locals 2
+
+    const-string v0, "t"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    return-object v0
+.end method

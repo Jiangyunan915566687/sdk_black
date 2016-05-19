@@ -1,0 +1,23 @@
+第二步：使用 dex2jar.bat 获取 apk （安卓应用）的框架代码
+
+1、将需要解压的apk复制到 apktool 所在的目录下
+2、将 *.apk 文件名修改为 *.zip，并对其进行正常解压
+3、获得对应apk文件名的文件夹，打开文件夹，在其中找到classes.dex 文件
+4、将该classes.dex文件复制到dex2jar.bat的目录下，（复制到上一层目录）
+5、ctrl+R 后 输入 cmd 打开DOS
+6、用cd指令 进入 dex2jar.bat 所在的目录
+7、输入 dex2jar 的功能指令 ：dex2jar classes.dex  回车
+8、dex2jar.bat 所在的目录便会自动生成一个 classes_dex2jar.jar 的文件 
+9、该classes_dex2jar.jar 便是该Apk的框架文件
+10、请跳转到第三步
+
+
+CMD上的输入信息
+
+Microsoft Windows [版本 6.1.7600]
+版权所有 (c) 2009 Microsoft Corporation。保留所有权利。
+
+C:\Users\Blacknife>cd C:\Android_App_Decompilation\dex2jar-0.0.9.15
+
+C:\Android_App_Decompilation\dex2jar-0.0.9.15>dex2jar classes.dex
+

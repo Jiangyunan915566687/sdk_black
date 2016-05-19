@@ -1,0 +1,121 @@
+.class public final Lcom/baidu/mobads/WallManager;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field private static a:Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/Class",
+            "<*>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static setAppSid(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/baidu/mobads/AdView;->setAppSid(Landroid/content/Context;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static showWall(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 6
+
+    :try_start_0
+    sget-object v0, Lcom/baidu/mobads/WallManager;->a:Ljava/lang/Class;
+
+    if-nez v0, :cond_0
+
+    const-string v0, "com.baidu.mobads.remote.WallManager"
+
+    invoke-static {p0, v0}, Lcom/baidu/mobads/b/b;->e(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/baidu/mobads/WallManager;->a:Ljava/lang/Class;
+
+    :cond_0
+    sget-object v0, Lcom/baidu/mobads/WallManager;->a:Ljava/lang/Class;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Class;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/baidu/mobads/WallManager;->a:Ljava/lang/Class;
+
+    const-string v2, "showWall"
+
+    const/4 v3, 0x2
+
+    new-array v3, v3, [Ljava/lang/Class;
+
+    const/4 v4, 0x0
+
+    const-class v5, Landroid/content/Context;
+
+    aput-object v5, v3, v4
+
+    const/4 v4, 0x1
+
+    const-class v5, Ljava/lang/String;
+
+    aput-object v5, v3, v4
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p0, v2, v3
+
+    const/4 v3, 0x1
+
+    aput-object p1, v2, v3
+
+    invoke-virtual {v1, v0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/baidu/mobads/b/e;->b(Ljava/lang/Throwable;)I
+
+    goto :goto_0
+.end method

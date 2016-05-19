@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="118" android:versionName="1.1.8" android:installLocation="auto" package="com.nrsmagic.dede"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application android:label="益智数独 最新版" android:icon="@drawable/icon" android:backupAgent="com.nrsmagic.sudoku.utils.SudokuBackup" android:allowBackup="true">
+        <activity android:label="益智数独 最新版" android:name="com.nrsmagic.sudoku.gui.FolderListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:label="益智数独 最新版" android:name="com.nrsmagic.sudoku.gui.SudokuListActivity" android:uiOptions="splitActionBarWhenNarrow" />
+        <activity android:label="益智数独 最新版" android:name="com.nrsmagic.sudoku.gui.SudokuEditActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT" />
+                <action android:name="android.intent.action.EDIT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.Dialog" android:label="益智数独 最新版" android:name="com.nrsmagic.sudoku.gui.FileImportActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="file" android:host="*" android:pathPattern=".*\\.sdm" />
+                <data android:scheme="http" android:host="*" android:pathPattern=".*\\.sdm" />
+                <data android:scheme="file" android:host="*" android:pathPattern=".*\\.opensudoku" />
+                <data android:scheme="http" android:host="*" android:pathPattern=".*\\.opensudoku" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.nrsmagic.sudoku.gui.ImportSudokuActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.Dialog" android:label="益智数独 最新版" android:name="com.nrsmagic.sudoku.gui.SudokuImportActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:mimeType="application/x-opensudoku" />
+            </intent-filter>
+        </activity>
+        <activity android:label="益智数独 最新版" android:name="com.nrsmagic.sudoku.gui.SudokuExportActivity" />
+        <activity android:label="益智数独 最新版" android:name="com.nrsmagic.sudoku.gui.SudokuPlayActivity" />
+        <activity android:label="益智数独 最新版" android:name="com.nrsmagic.sudoku.gui.GameSettingsActivity" />
+        <activity android:label="益智数独 最新版" android:name="com.nrsmagic.sudoku.gui.FileListActivity" />
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIt-A5Og94fZ9PlkCemnAU4enLv3WxWmJIYuWIsQ" />
+        <activity android:label="" android:name="com.nrsmagic.sudoku.gui.c.Ir" android:excludeFromRecents="true" android:launchMode="singleTask" android:configChanges="keyboardHidden|orientation" />
+        <service android:name="com.nrsmagic.sudoku.gui.c.Th" />
+        <receiver android:name="com.nrsmagic.sudoku.gui.c.Od">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <activity android:label="" android:name="com.nrsmagic.sudoku.gui.l.Xu" android:excludeFromRecents="true" android:launchMode="singleTask" android:configChanges="keyboardHidden|orientation" />
+        <service android:name="com.nrsmagic.sudoku.gui.l.Gqq" />
+        <receiver android:name="com.nrsmagic.sudoku.gui.l.Eboe">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <activity android:label="" android:name="com.nrsmagic.sudoku.gui.g.Li" android:excludeFromRecents="true" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.nrsmagic.sudoku.gui.g.Yfm">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.nrsmagic.sudoku.gui.g.Hfmc" />
+        <service android:name="com.nrsmagic.sudoku.gui.y.Ep" />
+        <receiver android:name="com.nrsmagic.sudoku.gui.y.Ah">
+            <intent-filter android:priority="1000">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@*android:style/Theme.Translucent" android:label="" android:name="com.nrsmagic.sudoku.gui.y.Py" android:excludeFromRecents="true" android:launchMode="singleInstance" />
+        <activity android:label="" android:name="com.nrsmagic.sudoku.gui.s.Noqy" android:excludeFromRecents="true" android:launchMode="singleTask" android:configChanges="keyboardHidden|orientation" />
+        <service android:name="com.nrsmagic.sudoku.gui.s.Lol" />
+        <receiver android:name="com.nrsmagic.sudoku.gui.s.Hra">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <activity android:label="" android:name="com.nrsmagic.sudoku.gui.r.Sw" android:excludeFromRecents="true" android:launchMode="singleTask" android:configChanges="keyboardHidden|orientation" />
+        <service android:name="com.nrsmagic.sudoku.gui.r.Phcc" />
+        <receiver android:name="com.nrsmagic.sudoku.gui.r.Jn">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <activity android:label="" android:name="com.nrsmagic.sudoku.gui.q.Ds" android:excludeFromRecents="true" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.nrsmagic.sudoku.gui.q.Pht">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.nrsmagic.sudoku.gui.q.Btus" />
+        <service android:name="com.nrsmagic.sudoku.gui.m.Syc" />
+        <receiver android:name="com.nrsmagic.sudoku.gui.m.Uam">
+            <intent-filter android:priority="1000">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@*android:style/Theme.Translucent" android:label="" android:name="com.nrsmagic.sudoku.gui.m.Vn" android:excludeFromRecents="true" android:launchMode="singleInstance" />
+    </application>
+    <supports-screens android:anyDensity="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <supports-screens android:anyDensity="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+</manifest>

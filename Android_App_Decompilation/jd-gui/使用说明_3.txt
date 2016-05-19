@@ -1,0 +1,9 @@
+第三步：使用 jd-gui.exe 对 Apk的框架 classes_dex2jar.jar 进行代码解读
+
+1、将第二步所得的classes_dex2jar.jar文件复制到 jd-gui.exe 所在的目录下
+2、用 jd-gui.exe 对其进行打开
+3、完成
+
+
+
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="seek_bar" />
+    <item type="id" name="version_label">false</item>
+    <item type="id" name="name">false</item>
+    <item type="id" name="detail">false</item>
+    <item type="id" name="button_1">false</item>
+    <item type="id" name="button_2">false</item>
+    <item type="id" name="button_3">false</item>
+    <item type="id" name="button_4">false</item>
+    <item type="id" name="button_5">false</item>
+    <item type="id" name="switch_num_note">false</item>
+    <item type="id" name="button_6">false</item>
+    <item type="id" name="button_7">false</item>
+    <item type="id" name="button_8">false</item>
+    <item type="id" name="button_9">false</item>
+    <item type="id" name="button_clear">false</item>
+    <item type="id" name="switch_input_mode">false</item>
+    <item type="id" name="button_close">false</item>
+    <item type="id" name="progress">false</item>
+    <item type="id" name="seek_bar_container">false</item>
+    <item type="id" name="value">false</item>
+    <item type="id" name="root_layout">false</item>
+    <item type="id" name="sudoku_board">false</item>
+    <item type="id" name="input_methods">false</item>
+    <item type="id" name="filename">false</item>
+    <item type="id" name="directory">false</item>
+    <item type="id" name="save_button">false</item>
+    <item type="id" name="filter_status">false</item>
+    <item type="id" name="state">false</item>
+    <item type="id" name="time">false</item>
+    <item type="id" name="last_played">false</item>
+    <item type="id" name="created">false</item>
+    <item type="id" name="note">false</item>
+    <item type="id" name="time_label">false</item>
+    <item type="id" name="menu_item_filter">false</item>
+    <item type="id" name="menu_item_add_sudoku">false</item>
+</resources>
