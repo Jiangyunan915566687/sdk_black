@@ -186,7 +186,7 @@ public class YaYawanconstants {
 			String roleCTime, String ext) {
 		Log.d(TAG, "设置角色数据 - setData");
 		if (YYWMain.mRole != null) {
-
+			
 		}
 	}
 
@@ -208,7 +208,7 @@ public class YaYawanconstants {
 	}
 
 	public static void onStop(Activity paramActivity) {
-
+		
 	}
 
 	public static void onDestroy(Activity paramActivity) {
