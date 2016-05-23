@@ -1,0 +1,30 @@
+1、接上SDK，并调测通过
+2、拷贝Eclipse中已完成调测SDK的APK文件，通过APK改之理进行反编译(打开Apk功能)
+3、反编译完成后，打开反编译文件夹
+4、删除反编译文件夹下的 original 文件夹 与 apktool.yml 文件
+5、修改反编译根目录下的AndroidManifest.xml文件，将启动Activity的注册内容去掉
+	如下：
+	<activity android:label="@string/app_name" android:name="com.yayawan.sdktemplate.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+    </activity>
+6、在反编译文件夹下，全选所有剩余的文件以及文件夹，对其进行压缩为.zip格式
+7、对zip压缩文件进行重命名，sdk+平台名称（拼音格式）+ _ceshi 
+
+以上为打包sdk，完成
+
+8、上传打包好的sdk*.zip文件至公司服务器，\\192.168.1.246\packsdk\sdk，复制粘贴
+9、\\192.168.1.246\packsdk\sdk\config 
+	创建一个对应你sdk包名的.html文件，可复制进行修改
+	注意：测试包名随便填写(填上SDK的包名)，上平台就需要按照规定要求
+	appid、gamekey若为全数字值，需在其值前面加上string作为代入(string为全小写字母)
+	而游戏ID（yayawan_game_id）、联合ID（union_id），则需在其值前面加上yaya作为代入
+	横竖屏按所需要求进行选择即可
+10、打开 http://192.168.1.246/   打包地址
+11、选择目标游戏（测试推荐使用：锻冶屋英雄谭.apk）
+12、再选中你上传的sdk
+13、上传icon资源文件（非必须）
+14、开始打包，等待完成即可
+15、下载测试

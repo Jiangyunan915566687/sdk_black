@@ -1,0 +1,1128 @@
+<!DOCTYPE html><html lang="en"><head>
+<title> 丫丫玩sdk对接文档.md---小书匠,在线编辑器,MARKDOWN,Evernote,文件版本</title>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="()">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<style type="text/css">
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
+
+h1.story_title {
+	margin: 1em 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+
+h1 {
+  font-size: 38.5px;
+}
+
+h2 {
+  font-size: 31.5px;
+}
+
+h3 {
+  font-size: 24.5px;
+}
+
+h4 {
+  font-size: 17.5px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 11.9px;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0 0 10px 25px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+
+dl {
+  margin-bottom: 20px;
+}
+
+dt,
+dd {
+  line-height: 20px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 10px;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999;
+}
+
+
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 20px;
+  border-left: 5px solid #dddddd;
+}
+
+blockquote p {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+blockquote small {
+  display: block;
+  line-height: 20px;
+  color: #999999;
+}
+
+blockquote small:before {
+  content: '\2014 \00A0';
+}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+address {
+  display: block;
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 20px;
+}
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+}
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.tag.label{
+display: inline-block;
+vertical-align: baseline;
+line-height: 1;
+margin: 0em 0.125em;
+background-color: #e8e8e8;
+border-color: #e8e8e8;
+background-image: none;
+padding: 0.6em 0.8em;
+color: rgba(0, 0, 0, 0.6);
+text-transform: none;
+font-weight: bold;
+border-radius: 0.2857rem;
+box-sizing: border-box;
+font-size: 0.7428rem;
+}
+.tag.label.blue{
+background-color: #3b83c0 !important;
+border-color: #3b83c0 !important;
+color: #ffffff !important;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table thead th {
+  vertical-align: bottom;
+}
+
+.table caption + thead tr:first-child th,
+.table caption + thead tr:first-child td,
+.table colgroup + thead tr:first-child th,
+.table colgroup + thead tr:first-child td,
+.table thead:first-child tr:first-child th,
+.table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+.table .table {
+  background-color: #ffffff;
+}
+
+
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+.toc li {
+	list-style: none;
+}
+p {
+	line-height: 1.8em;
+}
+body>p {
+  margin-bottom: 1.8em;
+}
+body>p>img.center,
+body>p>a>img.center {
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(128,128,128,0.3);
+}
+body {
+  font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", Heiti, "黑体", SimSun, "宋体", sans-serif;
+  font-size: 1.15em;
+  font-weight: 100;
+//  line-height: 1.8em;
+  color: #2f2f2f;
+}
+em.cjk_emphasis{
+	font-style: normal;
+	font-family: Georgia,"Times New Roman",Times,"楷体","AR PL UKai CN", "NSimSun","Songti SC","SimSun",serif!important;
+}
+body dt,
+body dd {
+  line-height: 1.35em;
+}
+body code {
+	background-color: #D6DBDF;
+	border: 0;
+  border-radius: 4px;
+  color: #2C3E50;
+  font-size: 90%;
+  padding: 2px 4px;
+}
+body h1 {
+  line-height: 1.6;
+}
+body h2 {
+  line-hieght: 1.1;
+}
+body h3 {
+  line-height: 1.1;
+}
+
+/**
+ * Treeview syntax highlighting based on highlight.js
+ * Copyright (c) 2014-2015, Asciidocfx Team, (MIT Licensed)
+ * https://github.com/asciidocfx/highlight-treeview.js
+ */
+.language-treeview.hljs{
+  position: relative;
+}
+.hljs-folder,
+.hljs-hiddenfile,
+.hljs-file {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    height: 16px;
+}
+.hljs-folder:before,
+.hljs-file:before,
+.hljs-hiddenfile:before {
+    top: 0;
+    content: '';
+    width: 14px;
+    height: 12px;
+    margin-top: 0px;
+    margin-right: 3px;
+    position: relative;
+    display: inline-block;
+    background-size: 14px;
+    background-repeat: no-repeat;
+}
+.hljs-file:before,
+.hljs-hiddenfile:before {
+    height: 14px;
+    margin-left: 1px;
+}
+.hljs-hiddenfile {
+    opacity: 0.6;
+}
+.hljs-file.photo:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c5";
+}
+.hljs-file.plain:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f016";
+}
+.hljs-file.source:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c9";
+}
+.hljs-file.archive:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c6";
+}
+.hljs-file.audio:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c7";
+}
+.hljs-file.video:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c8";
+}
+.hljs-file.pdf:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c1";
+}
+.hljs-file.xls:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c3";
+}
+.hljs-file.doc:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c2";
+}
+.hljs-file.ppt:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c4";
+}
+.hljs-folder:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f114";
+}
+.hljs-hiddenfile:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f016";
+}
+.hljs-tvline {
+    margin-left: 6px;
+    position: absolute;
+    text-indent: -99em;
+    padding-bottom: 8px;
+    vertical-align: top;
+    display: inline-block;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(94, 144, 117);
+}
+.hljs-folder-branch {
+    width: 8px;
+    height: 8px;
+    margin-top: -1px;
+    margin-left: 6px;
+    text-indent: -99em;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(94, 144, 117);
+}
+.hljs-folder-branch.win {
+    width: 14px;
+    margin-right: 2px;
+}
+.hljs-folder-last-branch {
+    height: 7px;
+    width: 7px;
+    margin-left: 6px;
+    text-indent: -99em;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(94, 144, 117);
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(94, 144, 117);
+}
+.hljs-folder-last-branch.win {
+    width: 13px;
+    margin-right: 2px;
+}
+
+
+/**
+ * Treeview syntax highlighting based on highlight.js
+ */
+
+
+.mark{
+	border: 0;
+  background-color: #ddf3e7;
+  border-radius: 4px;
+  color: #29754d;
+  font-size: 90%;
+  padding: 2px 4px;
+}
+.line_mark{
+	border: 1px dashed #3A4C42;
+}
+code .mark{
+	border-radius: 0px;
+	font-size: initial;
+	padding: initial;
+}
+a.attachment{
+	background-color: #ecf0f3;
+	border: 1px solid #bec6cb;
+	display: inline-block;
+	padding: 5px;
+	margin: 2px;
+}
+a.attachment i.fa{
+	font-size: 3em;
+  float: left;
+  margin-right: 0.2em;
+}
+a.attachment .filename{
+	vertical-align: top;
+  text-align: left;
+  font-weight: bold;
+}
+a.attachment .filesize{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  opacity: .6;
+  font-size: 80%;
+  white-space: nowrap;
+}
+.checkbox .checked{
+	text-decoration: line-through;
+}
+.flow-chart, .sequence-diagram{
+	text-align: center;
+}
+.plot, .plot-image{
+	text-align: center;
+	min-height: 200px;
+	min-width: 200px;
+}
+
+pre {
+	line-height: initial !important;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
+.story_align_left {
+	text-align: left;
+}
+.story_align_right {
+	text-align: right;
+}
+.story_align_center {
+	text-align: center;
+}
+.story_align_justify {
+	text-align: justify;
+}
+
+
+/** 
+ * code line nums
+ */
+code.hljs.code_linenums{
+	position: relative;
+}
+ol.ol_linenums{
+	padding: 0px;
+	margin-left: 30px;
+	border-left: 1px solid #e0e0e0;
+}
+li.li_linenum{
+	line-height: 20px;
+	margin-left: 10px;
+	list-style: none;
+	counter-increment: lines 1;
+}
+li.li_linenum:before{
+	content: counter(lines, decimal);
+  position: absolute;
+  left: 0px;
+  text-align: center;
+  width: 2.5em;
+	opacity: 0.5;
+  vertical-align: top;
+}
+/** 
+ * code line nums
+ */
+
+/*
+    Paraíso (light)
+    Created by Jan T. Sott (http://github.com/idleberg)
+    Inspired by the art of Rubens LP (http://www.rubenslp.com.br)
+*/
+
+/* Paraíso Comment */
+.hljs-comment,
+.hljs-title {
+  color: #776e71;
+}
+
+/* Paraíso Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.hljs-name,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #ef6155;
+}
+
+/* Paraíso Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #f99b15;
+}
+
+/* Paraíso Yellow */
+.ruby .hljs-class .hljs-title,
+.css .hljs-rule .hljs-attribute {
+  color: #fec418;
+}
+
+/* Paraíso Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #48b685;
+}
+
+/* Paraíso Aqua */
+.css .hljs-hexcolor {
+  color: #5bc4bf;
+}
+
+/* Paraíso Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #06b6ef;
+}
+
+/* Paraíso Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #815ba4;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #e7e9db;
+  color: #4f424c;
+  padding: 0.5em;
+  -webkit-text-size-adjust: none;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+
+
+
+</style>
+</head><body>
+<div><div class="preview" id="wmd-preview">
+
+	<div class="preview"><h2 id="e4b8abe4b8abe78ea9e5afb9e68ea5e69687e6a1a3">丫丫玩对接文档</h2>
+<p><strong>一.资源文件</strong></p>
+<pre><code class="hljs stylus">将 yayawansdk<span class="hljs-class">.jar</span> android-support-v4<span class="hljs-class">.jar</span> alipaySDK-<span class="hljs-number">20151112</span><span class="hljs-class">.jar</span> 拷贝至项目 lib 目录
+</code></pre>
+<hr>
+<p><strong>二.清单文件AndroidManifest.xml 配置说明</strong></p>
+<blockquote>
+<p>1.重点:</p>
+</blockquote>
+<pre><code class="hljs stylus">应用程序入口 name 设置为入下
+    &lt;application
+             android:name=<span class="hljs-string">"com.yayawan.impl.YYApplication"</span>
+    &lt;/application&gt;
+Activity 的 name 统一用全路径名, 如:com<span class="hljs-class">.yayawan</span><span class="hljs-class">.impl</span><span class="hljs-class">.Activity</span>....
+禁止使用相对路径如: <span class="hljs-class">.activity</span>
+</code></pre>
+<blockquote>
+<p>2.android SDK 编译版本版本必须大于 8</p>
+</blockquote>
+<pre><code class="hljs nix">&lt;uses-sdk
+    android:<span class="hljs-variable">minSdkVersion=</span><span class="hljs-string">"8"</span>
+    android:<span class="hljs-variable">targetSdkVersion=</span><span class="hljs-string">"21"</span> /&gt;
+</code></pre>
+<blockquote>
+<p>3.参数配置</p>
+</blockquote>
+<pre><code class="hljs q">其中 game_id game_key game_secret 为平台申请的值
+
+&lt;<span class="hljs-built_in">meta</span>-data
+    android:name=<span class="hljs-string">"yayawan_game_id"</span>
+    android:<span class="hljs-built_in">value</span>=<span class="hljs-string">"yaya1450687397"</span> /&gt;
+&lt;<span class="hljs-built_in">meta</span>-data
+    android:name=<span class="hljs-string">"yayawan_game_key"</span>
+    android:<span class="hljs-built_in">value</span>=<span class="hljs-string">"4c328109f9a7e4dd6c90e98566cccf5d"</span> /&gt;
+&lt;<span class="hljs-built_in">meta</span>-data
+    android:name=<span class="hljs-string">"yayawan_game_secret"</span>
+    android:<span class="hljs-built_in">value</span>=<span class="hljs-string">"849cc51976066b1c8c6a21e687137237"</span> /&gt;
+<span class="hljs-comment">//这是渠道 id 统计用</span>
+&lt;<span class="hljs-built_in">meta</span>-data
+    android:name=<span class="hljs-string">"yayawan_source_id"</span>
+    android:<span class="hljs-built_in">value</span>=<span class="hljs-string">"91"</span> /&gt;
+<span class="hljs-comment">//这是 yyawan 版本号</span>
+&lt;<span class="hljs-built_in">meta</span>-data
+    android:name=<span class="hljs-string">"yayawan_version"</span>
+    android:<span class="hljs-built_in">value</span>=<span class="hljs-string">"3.07"</span> /&gt;
+</code></pre>
+<blockquote>
+<p>4.横竖屏设置（必选）</p>
+</blockquote>
+<pre><code class="hljs vbscript-html"><span class="xml"><span class="hljs-comment">&lt;!-- 横屏设置--&gt;</span>
+<span class="hljs-comment">&lt;!--
+&lt;meta-data
+    android:name="yayawan_orientation"
+    android:value="landscape" /&gt;
+--&gt;</span>
+<span class="hljs-comment">&lt;!-- 竖屏设置--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">meta-data</span>
+    <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"yayawan_orientation"</span>
+    <span class="hljs-attribute">android:value</span>=<span class="hljs-value">"portrait"</span> /&gt;</span>
+横竖屏设置 2 选一,不选或多选会出错
+</span></code></pre>
+<blockquote>
+<p>5.是否支持 sdk 内切换账号(3.08 版本新加入,可选)</p>
+</blockquote>
+<p>注意:必须是游戏无法在游戏中切换账号时..才能设置,一般游戏忽略</p>
+<pre><code class="hljs vbscript-html"><span class="xml"><span class="hljs-comment">&lt;!-- yayawan_nochangecount 设置为 true 这取消切换账号..
+除个别特殊游戏外.都不能取消切换账号这个选项 --&gt;</span>
+<span class="hljs-comment">&lt;!-- &lt;meta-data
+android:name="yayawan_nochangecount"
+android:value="false" /&gt; --&gt;</span>
+</span></code></pre>
+<blockquote>
+<p>6.支付方式选择</p>
+</blockquote>
+<pre><code class="hljs vbscript-html"><span class="xml"><span class="hljs-comment">&lt;!-- 支付方式选择,不设置在支付中心会显示该支付方式,设置为 false 将不出现该支付方式(默认全显示,只需
+配置不
+显示的支付方式即可) --&gt;</span>
+<span class="hljs-comment">&lt;!-- 支付宝--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">meta-data</span>
+<span class="hljs-attribute">android:name</span>=<span class="hljs-value">"yaya_alipay"</span>
+<span class="hljs-attribute">android:value</span>=<span class="hljs-value">"true"</span> /&gt;</span>
+<span class="hljs-comment">&lt;!-- 信用卡--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">meta-data</span>
+<span class="hljs-attribute">android:name</span>=<span class="hljs-value">"yaya_visa"</span>
+<span class="hljs-attribute">android:value</span>=<span class="hljs-value">"true"</span> /&gt;</span>
+<span class="hljs-comment">&lt;!-- 丫丫币--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">meta-data</span>
+<span class="hljs-attribute">android:name</span>=<span class="hljs-value">"yaya_yayabi"</span>
+<span class="hljs-attribute">android:value</span>=<span class="hljs-value">"true"</span> /&gt;</span>
+<span class="hljs-comment">&lt;!-- 储蓄卡--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">meta-data</span>
+<span class="hljs-attribute">android:name</span>=<span class="hljs-value">"yaya_cash"</span>
+<span class="hljs-attribute">android:value</span>=<span class="hljs-value">"true"</span> /&gt;</span>
+<span class="hljs-comment">&lt;!-- 移动充值卡--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">meta-data</span>
+<span class="hljs-attribute">android:name</span>=<span class="hljs-value">"yaya_yidong"</span>
+<span class="hljs-attribute">android:value</span>=<span class="hljs-value">"true"</span> /&gt;</span>
+<span class="hljs-comment">&lt;!-- 联通充值卡--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">meta-data</span>
+<span class="hljs-attribute">android:name</span>=<span class="hljs-value">"yaya_liantong"</span>
+<span class="hljs-attribute">android:value</span>=<span class="hljs-value">"true"</span> /&gt;</span>
+<span class="hljs-comment">&lt;!-- 电信充值卡--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">meta-data</span>
+<span class="hljs-attribute">android:name</span>=<span class="hljs-value">"yaya_dianxin"</span>
+<span class="hljs-attribute">android:value</span>=<span class="hljs-value">"true"</span> /&gt;</span>
+<span class="hljs-comment">&lt;!-- 盛大--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">meta-data</span>
+<span class="hljs-attribute">android:name</span>=<span class="hljs-value">"yaya_shengda"</span>
+<span class="hljs-attribute">android:value</span>=<span class="hljs-value">"true"</span> /&gt;</span>
+<span class="hljs-comment">&lt;!-- 骏网--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">meta-data</span>
+<span class="hljs-attribute">android:name</span>=<span class="hljs-value">"yaya_junwang"</span>
+<span class="hljs-attribute">android:value</span>=<span class="hljs-value">"true"</span> /&gt;</span>
+<span class="hljs-comment">&lt;!-- QQ --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">meta-data</span>
+<span class="hljs-attribute">android:name</span>=<span class="hljs-value">"yaya_qq"</span>
+<span class="hljs-attribute">android:value</span>=<span class="hljs-value">"true"</span> /&gt;</span>
+</span></code></pre>
+<blockquote>
+<p>7.权限设置</p>
+</blockquote>
+<pre><code class="hljs vbscript-html"><span class="xml"><span class="hljs-comment">&lt;!-- 丫丫玩 sdk 必须权限--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.INTERNET"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.READ_PHONE_STATE"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.ACCESS_NETWORK_STATE"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.ACCESS_WIFI_STATE"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.MOUNT_UNMOUNT_FILESYSTEMS"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.WRITE_EXTERNAL_STORAGE"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.RECEIVE_SMS"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.SEND_SMS"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.SYSTEM_ALERT_WINDOW"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.DISABLE_KEYGUARD"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.ACCESS_COARSE_LOCATION"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"</span> /&gt;</span>
+<span class="hljs-comment">&lt;!-- 快捷支付必须的权限--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.READ_SMS"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.WAKE_LOCK"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">uses-permission</span> <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"android.permission.VIBRATE"</span> /&gt;</span>
+</span></code></pre>
+<blockquote>
+<p>8.activity注册</p>
+</blockquote>
+<pre><code class="hljs vbscript-html"><span class="xml"> <span class="hljs-comment">&lt;!-- 丫丫玩sdk 配置开始 --&gt;</span>
+
+
+    <span class="hljs-comment">&lt;!-- BaseLogin_Activity 登录 --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">activity</span>
+        <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"com.yayawan.sdk.jflogin.BaseLogin_Activity"</span>
+        <span class="hljs-attribute">android:configChanges</span>=<span class="hljs-value">"keyboardHidden|navigation|orientation|screenSize"</span>
+        <span class="hljs-attribute">android:theme</span>=<span class="hljs-value">"@android:style/Theme.Translucent"</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- 头像上传 --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">activity</span>
+        <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"com.yayawan.sdk.jfsmallhelp.CropPhoto_Activity"</span>
+        <span class="hljs-attribute">android:configChanges</span>=<span class="hljs-value">"keyboardHidden|navigation|orientation|screenSize"</span>
+        <span class="hljs-attribute">android:theme</span>=<span class="hljs-value">"@android:style/Theme.Translucent"</span> &gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">activity</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- 发帖 --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">activity</span>
+        <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"com.yayawan.sdk.jfsmallhelp.Push_feeling_Activity"</span>
+        <span class="hljs-attribute">android:configChanges</span>=<span class="hljs-value">"keyboardHidden|navigation|orientation|screenSize"</span> &gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">activity</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- alipay sdk begin --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">activity</span>
+        <span class="hljs-attribute">android:name</span>=<span class="hljs-value">"com.alipay.sdk.app.H5PayActivity"</span>
+        <span class="hljs-attribute">android:configChanges</span>=<span class="hljs-value">"keyboardHidden|navigation|orientation|screenSize"</span>
+        <span class="hljs-attribute">android:exported</span>=<span class="hljs-value">"false"</span>
+        <span class="hljs-attribute">android:screenOrientation</span>=<span class="hljs-value">"behind"</span>
+        <span class="hljs-attribute">android:windowSoftInputMode</span>=<span class="hljs-value">"adjustResize|stateHidden"</span> &gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">activity</span>&gt;</span>
+</span></code></pre>
+<hr>
+<p><strong>三.接口说明</strong></p>
+<blockquote>
+<p>1.复写生命周期方法</p>
+</blockquote>
+<pre><code class="hljs java">    <span class="hljs-annotation">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+    <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
+    YaYaWan.getInstance().onCreate(<span class="hljs-keyword">this</span>);
+    }
+    <span class="hljs-annotation">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStop</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">super</span>.onStop();
+    YaYaWan.getInstance().onStop(<span class="hljs-keyword">this</span>);
+    }
+    <span class="hljs-annotation">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onResume</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">super</span>.onResume();
+    YaYaWan.getInstance().onResume(<span class="hljs-keyword">this</span>);
+    }<span class="hljs-annotation">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onPause</span><span class="hljs-params">()</span> </span>{
+    Super.onPause();
+    YaYaWan.getInstance().onPause(<span class="hljs-keyword">this</span>);
+    }@
+    <span class="hljs-function">Override
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onRestart</span><span class="hljs-params">()</span> </span>{
+    Super.onRestart();
+    YaYaWan.getInstance().onRestart(<span class="hljs-keyword">this</span>);
+    }@
+    <span class="hljs-function">Override
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDestroy</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">super</span>.onDestroy();
+    YaYaWan.getInstance().onDestroy(<span class="hljs-keyword">this</span>);
+    }@
+    <span class="hljs-function">Override
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onActivityResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> requestCode, <span class="hljs-keyword">int</span> resultCode, Intent data)</span> </span>{
+    <span class="hljs-keyword">super</span>.onActivityResult(requestCode, resultCode, data);
+    YaYaWan.getInstance().onActivityResult(<span class="hljs-keyword">this</span>, requestCode, resultCode,
+    data);
+    }@
+    <span class="hljs-function">Override
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onNewIntent</span><span class="hljs-params">(Intent intent)</span> </span>{
+    <span class="hljs-keyword">super</span>.onNewIntent(intent);
+    YaYaWan.getInstance().onNewIntent(intent);
+    }
+</code></pre>
+<blockquote>
+<p>2.闪屏接口(必接)</p>
+</blockquote>
+<pre><code class="hljs processing">YaYaWan.getInstance().anim(<span class="hljs-keyword">this</span>, <span class="hljs-keyword">new</span> YYWAnimCallBack() {
+@Override
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> onAnimSuccess(<span class="hljs-keyword">String</span> arg0, <span class="hljs-keyword">Object</span> arg1) {
+    System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">"播放动画成功"</span>);
+}
+@Override
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> onAnimFailed(<span class="hljs-keyword">String</span> arg0, <span class="hljs-keyword">Object</span> arg1) {
+     System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">"播放动画失败"</span>);
+}
+@Override
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> onAnimCancel(<span class="hljs-keyword">String</span> arg0, <span class="hljs-keyword">Object</span> arg1) {
+     System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">"播放动画退出"</span>);
+}
+});
+</code></pre>
+<blockquote>
+<p>3.用户登录接口（必接）</p>
+</blockquote>
+<p>注意:登录有三个回调..第一个成功,第二个取消...注意第三个是登出..登出则是用户点击了sdk中的切换账号按钮,游戏应该注销账户回到游戏的登录页面..<br>
+参数说明：<br>
+User 类说明<br>
+String uid 用户登录成功后 id<br>
+String userName 用户名<br>
+String token 用户登录成功后授权信息</p>
+<pre><code class="hljs processing">    YaYaWan.getInstance().login(<span class="hljs-keyword">this</span>, <span class="hljs-keyword">new</span> YYWUserCallBack() {
+        @Override
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> onLogout(<span class="hljs-keyword">Object</span> arg0) {
+         System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">"登出成功--"</span>);
+         <span class="hljs-comment">//游戏应该注销账户回到游戏的登录页面</span>
+        }
+        @Override
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> onLoginSuccess(YYWUser user, <span class="hljs-keyword">Object</span> arg1) {
+            System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">"登录成功--"</span> + user);
+            user.uid;
+            user.userName;
+            user.token;
+        }
+        @Override
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> onLoginFailed(<span class="hljs-keyword">String</span> arg0, <span class="hljs-keyword">Object</span> arg1) {
+         System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">"登录失败--"</span>);
+        }
+        <span class="hljs-comment">//3.0 新添放法</span>
+        @Override
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> onCancel(<span class="hljs-keyword">String</span> arg0, <span class="hljs-keyword">Object</span> arg1) {
+            System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">"登录取消--"</span>);
+        }
+        });
+</code></pre>
+<hr>
+<blockquote>
+<p>4.用户充值接口(必选接口)</p>
+</blockquote>
+<p>参数说明：<br>
+Order 类说明<br>
+String goods; 商品名称(不可为空)<br>
+Long money; 充值金额单位分<br>
+String orderId; 游戏商提供的订单号,用于异步通知<br>
+String ext; 附加参数，原样返回限制 255 字节</p>
+<pre><code class="hljs processing">    YYWOrder yywOrder = YYWOrder(<span class="hljs-keyword">String</span> orderId, <span class="hljs-keyword">String</span> goods, Long money, <span class="hljs-keyword">String</span> ext);
+    YaYaWan.getInstance().pay(<span class="hljs-keyword">this</span>, yywOrder, <span class="hljs-keyword">new</span> YYWPayCallBack() {
+    @Override
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> onPaySuccess(YYWUser user, YYWOrder order, <span class="hljs-keyword">Object</span> arg2) {
+        System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">"支付成功"</span>);
+    }
+    @Override
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> onPayFailed(<span class="hljs-keyword">String</span> arg0, <span class="hljs-keyword">Object</span> arg1) {
+        System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">"支付失败"</span>);
+    }
+    @Override
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> onPayCancel(<span class="hljs-keyword">String</span> arg0, <span class="hljs-keyword">Object</span> arg1) {
+         System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">"支付退出"</span>);
+    }
+    });
+</code></pre>
+<hr>
+<blockquote>
+<p>5.退出接口(必选接口)</p>
+</blockquote>
+<p>调用时机:比如用户按返回键退出游戏.或者游戏内有退出游戏按钮...</p>
+<pre><code class="hljs d">YaYaWan.getInstance().exit(<span class="hljs-keyword">this</span>, <span class="hljs-keyword">new</span> YYWExitCallback(){
+<span class="hljs-keyword">@Override</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> onExit() {
+     System.<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"退出"</span>);
+     <span class="hljs-comment">//这里执行游戏退出的操作。</span>
+}
+});
+</code></pre>
+<hr>
+
+
+<blockquote>
+<p>6.设置角色基本数据(必选接口)</p>
+</blockquote>
+<p>调用时间,游戏登录验证成功 后...必须接<br>
+参数描述:<br>
+Activity 上下文 activity<br>
+roleId 角色唯一标示(String)<br>
+roleName 角色名(string)<br>
+roleLevel 角色等级(String)<br>
+zoneId 角色所在区域唯一标示(string)<br>
+zoneName 角色所在区域名称(string)</p>
+<pre><code class="hljs javascript">  YaYaWan.getInstance().setRoleData(Activity paramActivity, <span class="hljs-built_in">String</span> roleId,<span class="hljs-built_in">String</span> roleName,<span class="hljs-built_in">String</span> roleLevel, <span class="hljs-built_in">String</span> zoneId, <span class="hljs-built_in">String</span> zoneName);
+</code></pre>
+
+<hr>
+
+<blockquote>
+<p>6.1.创建角色，角色升级调用的方法(3.14.2添加，一定要接入）</p>
+</blockquote>
+<pre><code class="hljs objectivec">    调用时间，在角色登录成功后调用,上传角色信息.在角色升级的时候调用，在角色创建的时候调用
+    
+    YaYaWan<span class="hljs-variable">.getInstance</span>()<span class="hljs-variable">.setData</span>(paramActivity, roleId, roleName, roleLevel, zoneId, zoneName, roleCTime, ext);
+    参数介绍      角色<span class="hljs-keyword">id</span>  角色name  等级    区服<span class="hljs-keyword">id</span>  区服名字   角色创建时间    附加信息
+    角色创建时间为秒   距离<span class="hljs-number">1970</span>年的秒数，其中java可以用这个方法获取 <span class="hljs-keyword">long</span> startPaintLogoTime=System<span class="hljs-variable">.currentTimeMillis</span>()/<span class="hljs-number">1000</span>;
+</code></pre>
+<hr>
+
+
+
+
+<blockquote>
+<p>7.初始化方法(3.14添加）</p>
+</blockquote>
+<pre><code class="hljs sml">    调用时间，闪屏之后登陆之前
+    <span class="hljs-type">YaYaWan</span>.getInstance<span class="hljs-literal">()</span>.initSdk(<span class="hljs-type">Activity</span>);
+</code></pre>
+<hr>
+<p><strong>四.混淆</strong></p>
+<p>如果需要混淆代码,请在混淆配置文件中添加</p>
+<pre><code class="hljs haml">-<span class="ruby">keep public <span class="hljs-class"><span class="hljs-keyword">class</span> * <span class="hljs-title">extends</span> <span class="hljs-title">android</span>.<span class="hljs-title">os</span>.<span class="hljs-title">IInterface</span></span>
+</span>-<span class="ruby">dontwarn com.yayawan.**
+</span>-<span class="ruby">libraryjars libs/yayawansdk.jar
+</span>-<span class="ruby">keep <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">com</span>.<span class="hljs-title">yayawan</span>.** { *;</span> }
+</span>-<span class="ruby">dontwarn com.alipay.**
+</span>-<span class="ruby">libraryjars libs/alipaySDK-<span class="hljs-number">20150602</span>.jar
+</span>-<span class="ruby">keep <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">com</span>.<span class="hljs-title">alipay</span>.** { *;</span> }
+</span></code></pre>
+<hr>
+<p><strong>五.服务端处理</strong></p>
+<blockquote>
+<p>1.用户验证接口</p>
+</blockquote>
+<p>说明：此接口可以验证用户是否还在登录状态。在游戏客户端接收到 SDK 登录回调返回的 uid 和 token 信息后，游戏客户端应该将信息传给游戏服务器，由游戏服务器请求丫丫玩服务器的用户登录验证接口，如果能成功获得返回结果，表明 token 有效。服务器就可以返回登录成功标识，通知客户端此次登录成功。</p>
+<p>请求地址：<a href="http://union.yayawan.com/user_token/" target="_blank">http://union.yayawan.com/user_token/</a></p>
+<p>参数格式：app_id=xxx&amp;uid=xxx&amp;token=xxx&amp;sign=xxx</p>
+<p>请求方式: POST</p>
+<p>请求头：Content-Type: application/x-www-form-urlencoded</p>
+<p>请求参数:</p>
+<table class="table table-striped  ">
+<thead>
+<tr>
+<th>参数</th>
+<th>是否必需</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app_id</td>
+<td>是</td>
+<td>int</td>
+<td>app_id由丫丫玩平台生成。</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>是</td>
+<td>bigint</td>
+<td>用户注册或登录后返回的 uid 参数。注：uid为丫丫玩用户唯一不变标识，强烈建议用于绑定用户游戏角色，以避免当用户其他属性变更时，出现角色不符的情况。</td>
+</tr>
+<tr>
+<td>token</td>
+<td>是</td>
+<td>string</td>
+<td>用户注册或登录后返回的 token 参数。</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>是</td>
+<td>string</td>
+<td>由 token 与 game_key 拼接，再经 MD5 加密后的加密串。用来保证接口访问者的合法性生成。公式：sig=MD5(token|game_key)注意：（中间有“|”）</td>
+</tr>
+</tbody>
+</table>
+<p>成功返回示例：</p>
+<pre><code class="hljs lasso">    {
+    <span class="hljs-string">"id"</span>:<span class="hljs-number">346456457473234534</span>,
+    <span class="hljs-string">"username"</span>:<span class="hljs-string">"yayawan"</span>,
+    <span class="hljs-string">"reg_time"</span>:<span class="hljs-number">2012</span><span class="hljs-subst">-</span><span class="hljs-number">03</span><span class="hljs-subst">-</span><span class="hljs-number">04</span> <span class="hljs-number">11</span>:<span class="hljs-number">11</span>:<span class="hljs-number">11</span>,
+    <span class="hljs-string">"token"</span>:<span class="hljs-string">"F9A0F6A0E0D4564F56C483165A607735FA4F324"</span>,
+    <span class="hljs-string">"error_code"</span>:<span class="hljs-number">0</span>
+    }
+
+    字段说明：
+    
+    字段名      字段类型    字段说明
+    id          bigint      用户编号（UID）
+    username    <span class="hljs-built_in">string</span>      用户名
+    reg_time    <span class="hljs-built_in">string</span>      注册时间 （格式：<span class="hljs-number">1970</span><span class="hljs-subst">-</span><span class="hljs-number">1</span><span class="hljs-subst">-</span><span class="hljs-number">1</span> <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>）
+    token       <span class="hljs-built_in">string</span>      接口访问令牌，原样返回。
+    <span class="hljs-keyword">error_code</span>   int        错误码
+    <span class="hljs-keyword">error_msg</span>   <span class="hljs-built_in">string</span>      错误描述
+</code></pre>
+<p>失败返回：丫丫玩验证失败时，会直接返回 HTTP 状态 401。</p>
+<pre><code class="hljs groovy">    HTTP/<span class="hljs-number">1.1</span> <span class="hljs-number">401</span> Unauthorized
+<span class="hljs-label">    Server:</span> nginx
+<span class="hljs-label">    Date:</span> Mon, <span class="hljs-number">21</span> Apr <span class="hljs-number">2014</span> <span class="hljs-number">09</span>:<span class="hljs-number">42</span>:<span class="hljs-number">08</span> GMT
+    Content-<span class="hljs-string">Type:</span> text/html
+    Transfer-<span class="hljs-string">Encoding:</span> chunked
+<span class="hljs-label">    Connection:</span> keep-alive
+    WWW-<span class="hljs-string">Authenticate:</span> OAuth realm=<span class="hljs-string">'Service'</span>, error=<span class="hljs-string">'invalid_request'</span>
+</code></pre>
+<hr>
+<blockquote>
+<p>2.充值结果通知</p>
+</blockquote>
+<p>说明：在支付订单处理完后,丫丫玩服务器会主动发起请求将支付结果发送到游戏商提供的通知地址。游戏商应验证签名是否相同，如果成功请返回 HTTP 状态码 200，如果失败请返回非 200 状态</p>
+<p>请求方式：POST<br>
+参数格式：名称/值对<br>
+签名格式：strtolower(md5(orderid+transnum+username+money+status+payment_key))</p>
+<pre><code class="hljs fortran">    参数说明：
+    
+    <span class="hljs-keyword">status</span>   状态（succeed 成功，pending 等待）。
+    money    金额（单位：分）
+    uid      充值用户 id
+    username 充值用户
+    transnum 平台流水号
+    orderid  游戏商提供的订单号
+    ext      游戏商提供的附加信息
+    time     时间戳
+    <span class="hljs-built_in">sign</span>     签名
+</code></pre>
+<p>说明：</p>
+<ol>
+<li><p>应该验证签名的合法性</p></li>
+<li><p>在接收到丫丫玩的通知信息后， 如果验证成功， 请返回 200 状态(HTTP 状态码)。如果失败， 请返回非 200 状态(如401，500 等)。</p></li>
+</ol>
+<p>PHP 示例 成功返回</p>
+<pre><code class="hljs delphi">    header(<span class="hljs-string">'HTTP/1.1 200 OK'</span>);
+    <span class="hljs-keyword">exit</span>;
+</code></pre>
+<p>PHP 示例 失败返回</p>
+<pre><code class="hljs delphi">    header(<span class="hljs-string">'HTTP/1.1 402 Payment Required'</span>);
+    <span class="hljs-keyword">exit</span>;
+</code></pre>
+<p>JAVA 示例 成功返回</p>
+<pre><code class="hljs vbscript">    <span class="hljs-built_in">response</span>.setStatus(HttpServletResponse.SC_OK);
+</code></pre>
+<p>JAVA 示例 失败返回</p>
+<pre><code class="hljs vbscript"><span class="hljs-built_in">response</span>.setStatus(HttpServletResponse.SC_PAYMENT_REQUIRED);
+</code></pre>
+<p>注意：丫丫玩只获取 HTTP 状态码 200为通知成功，未通知成功的订单丫丫玩会重复通知 4 次，通知间隔为：600、1800、7200、60000（单位秒）。</p>
+</div>
+
+</div></div>
+</body></html>
+
