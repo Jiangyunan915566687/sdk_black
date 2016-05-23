@@ -1,0 +1,47 @@
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+    
+  	<LinearLayout
+    android:id="@+id/llTitle"
+    android:layout_width="match_parent"
+    android:layout_height="44dip"
+    android:background="@color/title_bg"
+    android:gravity="center"
+    android:orientation="horizontal" >
+	
+	    <TextView
+	        android:id="@+id/title"
+	        style="@style/TitleFontStyle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+
+	</LinearLayout> 
+	 <LinearLayout 
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/black">
+	     <ImageView 
+	            android:src="@drawable/title_back"
+	            android:scaleType="fitXY" 
+	         	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"/>
+	     <TextView 
+	         android:layout_width="wrap_content"
+       		 android:layout_height="wrap_content"
+       		 android:textColor="@color/white"
+       		 android:textSize="@dimen/text_size_16"
+	         android:text="@string/back"/>
+	 </LinearLayout>
+<!--     <Button  -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:id="@+id/black" -->
+<!--         android:layout_gravity="center_vertical" -->
+<!--         android:background="@drawable/title_back"/> -->
+</FrameLayout>
+

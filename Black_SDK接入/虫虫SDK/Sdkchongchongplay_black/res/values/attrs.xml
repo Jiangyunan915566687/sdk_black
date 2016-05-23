@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RatioImageView">
+        <attr name="RatioImageView_X" format="integer" />
+        <attr name="RatioImageView_Y" format="integer" />
+    </declare-styleable>
+	<declare-styleable name="CircleFlowIndicatorStyle">
+		<attr name="CircleFlowIndicatorStyle_Count" 					format="integer" />
+		<attr name="CircleFlowIndicatorStyle_Normal" 					format="reference|color" />
+		<attr name="CircleFlowIndicatorStyle_Selected" 					format="reference|color" />
+		<attr name="CircleFlowIndicatorStyle_Selection" 				format="integer" />
+		<attr name="CircleFlowIndicatorStyle_Radius" 					format="dimension" />
+		<attr name="CircleFlowIndicatorStyle_Gravity">
+    		<flag name="left" value="1" />
+    		<flag name="center" value="0" />
+    		<flag name="right" value="2" />
+		</attr>
+    </declare-styleable>
+    
+    <declare-styleable name="CustomGridLayout">
+       	<attr name="CustomGridLayout_numColumns" 						format="integer|reference" />
+       	<attr name="CustomGridLayout_divider" 							format="reference" />
+       	<attr name="CustomGridLayout_horizontalSpacing" 				format="dimension" />
+       	<attr name="CustomGridLayout_verticalSpacing"	 				format="dimension" />
+    </declare-styleable>
+    
+    <declare-styleable name="ShaderImageView">
+    	<attr name="ShaderImageView_BgColor" 							format="reference|color" />
+    	<attr name="ShaderImageView_BgWidth" 							format="dimension" />
+    	<attr name="ShaderImageView_BorderColor" 						format="reference|color" />
+    	<attr name="ShaderImageView_BorderWidth" 						format="dimension" />
+    </declare-styleable>
+    
+        <declare-styleable name="CustomTagsGridView">
+        <attr name="CustomTagsGridView_horizontalSpacing" 				format="dimension" />
+        <attr name="CustomTagsGridView_verticalSpacing" 				format="dimension" />
+    </declare-styleable>
+</resources>

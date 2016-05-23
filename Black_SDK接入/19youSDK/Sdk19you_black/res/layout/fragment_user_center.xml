@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/account_bg_color"
+    android:fillViewport="true" >
+
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+	<TextView 
+         android:textColor="#000000"
+         android:textSize="16sp"
+         android:layout_width="fill_parent"
+         android:layout_marginTop="10dip"
+         android:text="账号信息"
+          android:background="#f3f3f3"
+         android:gravity="center_vertical"
+         android:paddingLeft="20dip"
+         android:layout_height="40dip"/>
+    <RelativeLayout 
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_width="match_parent">
+        <TextView 
+		  	android:id="@+id/tv_name"
+	        style="@style/text_change_pwd_left"
+	        android:layout_marginTop="20dip"
+	        android:layout_centerVertical="true"
+	        android:text="登录账号   :"/>
+        <TextView 
+	        android:layout_centerVertical="true"
+		  	android:layout_width="wrap_content"
+		  	android:layout_height="wrap_content"
+		  	android:layout_toRightOf="@id/tv_name"
+		  	android:textColor="@color/black"
+		  	android:id="@+id/loginname"
+	        />  
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_width="match_parent">
+        <TextView 
+		  	android:id="@+id/tv_name"
+	        style="@style/text_change_pwd_left"
+	        android:layout_marginTop="20dip"
+	        android:layout_centerVertical="true"
+	        android:text="系统账号   :"/>
+        <TextView 
+	        android:layout_centerVertical="true"
+		  	android:layout_width="wrap_content"
+		  	android:layout_height="wrap_content"
+		  	android:textColor="@color/black"
+		  	android:layout_toRightOf="@id/tv_name"
+		  	android:id="@+id/systemname"
+	        />  
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_width="match_parent">
+        <TextView 
+		  	android:id="@+id/tv_name"
+	        style="@style/text_change_pwd_left"
+	        android:layout_marginTop="20dip"
+	        android:layout_centerVertical="true"
+	        android:text="绑定手机   :"/>
+        <TextView 
+	        android:layout_centerVertical="true"
+		  	android:layout_width="wrap_content"
+		  	android:layout_height="wrap_content"
+		  	android:layout_toRightOf="@id/tv_name"
+		  	android:textColor="@color/black"
+	       	android:id="@+id/phone"
+	       	android:text="还没有绑定手机号"
+	        />  
+        <Button 
+	    android:id="@+id/btn_bind"
+	    android:layout_centerVertical="true"
+	    android:layout_toRightOf="@id/phone"
+	    android:layout_width="wrap_content"
+	    android:layout_height="30dip"
+	    android:layout_marginLeft="20dip"
+	    android:paddingRight="10dip"
+	    android:paddingLeft="10dip"
+	    android:visibility="gone"
+	    android:text="绑定"
+	    android:layout_marginTop="20dip"
+	    android:layout_marginBottom="20dip"
+	    android:textColor="@color/white"
+	    android:background="@drawable/btn_submit_selector"/>
+    </RelativeLayout>
+    
+	<RelativeLayout 
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_width="match_parent">
+        <TextView 
+		  	android:id="@+id/tv_name"
+	        style="@style/text_change_pwd_left"
+	        android:layout_marginTop="20dip"
+	        android:layout_centerVertical="true"
+	        android:text="平台币   :"/>
+        <TextView 
+            android:id="@+id/platcoin"
+	        android:layout_centerVertical="true"
+		  	android:layout_width="wrap_content"
+		  	android:textColor="#ff862e2c"
+		  	android:layout_height="wrap_content"
+		  	android:layout_toRightOf="@id/tv_name"
+		  	android:text="0"
+	        />  
+	        
+        <Button 
+		    android:id="@+id/btn_recharge"
+		    android:layout_centerVertical="true"
+		    android:layout_toRightOf="@id/platcoin"
+		    android:layout_width="wrap_content"
+		    android:layout_height="30dip"
+		    android:layout_marginLeft="20dip"
+		    android:paddingRight="10dip"
+		    android:paddingLeft="10dip"
+		    android:text="充值"
+		    android:layout_marginTop="20dip"
+		    android:layout_marginBottom="20dip"
+		    android:textColor="@color/white"
+		    android:background="@drawable/btn_submit_selector"/>
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_width="match_parent">
+        <TextView 
+		  	android:id="@+id/tv_name"
+	        style="@style/text_change_pwd_left"
+	        android:layout_marginTop="20dip"
+	        android:layout_centerVertical="true"
+	        android:text="绑银余额  :"/>
+        <TextView 
+	        android:layout_centerVertical="true"
+		  	android:layout_width="wrap_content"
+		  	android:layout_height="wrap_content"
+		  	android:layout_toRightOf="@id/tv_name"
+		  	android:textColor="#ff862e2c"
+	        android:text="0"
+	        android:id="@+id/bindcoin"
+	        />  
+    </RelativeLayout>
+	
+	
+</LinearLayout>
+</ScrollView>

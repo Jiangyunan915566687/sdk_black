@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+    	android:layout_height="wrap_content">
+	    <LinearLayout 
+	        android:layout_width="100dip"
+	        android:layout_height="100dip"
+	        android:gravity="center"
+	        android:layout_marginLeft="@dimen/float_spac_width"
+	        android:id="@+id/ll_zfb"
+	        android:background="@drawable/pay_selector"
+	        android:orientation="vertical">
+	        <ImageView 
+	            android:src="@drawable/zfb"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:scaleType="fitXY"/>
+	        <TextView style="@style/text_paytype"
+	            android:text="支付宝"/>
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:layout_width="100dip"
+	        android:layout_height="100dip"
+	        android:gravity="center"
+	        android:layout_marginLeft="@dimen/float_spac_width"
+	        android:id="@+id/ll_yl"
+	        android:background="@drawable/pay_selector"
+	        android:orientation="vertical">
+	        <ImageView 
+	            android:src="@drawable/yl"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:scaleType="fitXY"/>
+	        <TextView style="@style/text_paytype"
+	            android:text="银行卡支付"/>
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:layout_width="100dip"
+	        android:layout_height="100dip"
+	        android:gravity="center"
+	        android:layout_marginLeft="@dimen/float_spac_width"
+	        android:id="@+id/ll_kq"
+	        android:background="@drawable/pay_selector"
+	        android:orientation="vertical">
+	        <ImageView 
+	            android:src="@drawable/kq"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:scaleType="fitXY"/>
+	        <TextView style="@style/text_paytype"
+	            android:text="快钱支付"/>
+	    </LinearLayout>
+	    
+	    
+	    
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+    	android:layout_height="wrap_content">
+	    
+        <LinearLayout 
+	        android:layout_width="100dip"
+	        android:layout_height="100dip"
+	        android:gravity="center"
+	        android:layout_marginLeft="@dimen/float_spac_width"
+	        android:id="@+id/ll_yb"
+	        android:background="@drawable/pay_selector"
+	        android:orientation="vertical">
+	        <ImageView 
+	            android:src="@drawable/yb"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:scaleType="fitXY"/>
+	        <TextView style="@style/text_paytype"
+	            android:text="充值卡"/>
+	    </LinearLayout>
+        
+	    <LinearLayout 
+	        android:layout_width="100dip"
+	        android:layout_height="100dip"
+	        android:gravity="center"
+	        android:layout_marginLeft="@dimen/float_spac_width"
+	        android:id="@+id/ll_pt"
+	        android:background="@drawable/pay_selector"
+	        android:orientation="vertical">
+	        <ImageView 
+	            android:src="@drawable/pt"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:scaleType="fitXY"/>
+	        <TextView style="@style/text_paytype"
+	            android:text="平台币支付"/>
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:layout_width="100dip"
+	        android:layout_height="100dip"
+	        android:gravity="center"
+	        android:layout_marginLeft="@dimen/float_spac_width"
+	        android:id="@+id/ll_cft"
+	        android:background="@drawable/pay_selector"
+	        android:orientation="vertical">
+	        <ImageView 
+	            android:src="@drawable/cft"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:scaleType="fitXY"/>
+	        <TextView style="@style/text_paytype"
+	            android:text="财付通支付"/>
+	    </LinearLayout>
+     </LinearLayout>
+</LinearLayout>

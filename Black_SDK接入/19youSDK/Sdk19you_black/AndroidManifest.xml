@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ghyed.zhzh.bdycx"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 19youSDK permission start -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <!-- 19youSDK permission end -->
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="19you_SDK"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 19youSDK activity start -->
+        <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.app.yjy.game.SplashActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+		<activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.SplashActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity 
+	       android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+	       android:name="com.yuecheng.sdk.view.GiftActivity"
+	       android:screenOrientation="landscape"
+	       android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity 
+	       android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+	       android:name="com.yuecheng.sdk.view.BoutiqueActivity"
+	       android:screenOrientation="landscape"
+	       android:launchMode="singleTask"
+	       android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity 
+	       android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+	       android:name="com.yuecheng.sdk.view.AccountActivity"
+	       android:screenOrientation="landscape"
+	       android:windowSoftInputMode="stateHidden"
+	       android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.DialogActivity"
+            android:theme="@style/Theme.Transparent"
+            android:screenOrientation="landscape"
+            />
+        <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.PayActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape"
+	       	android:windowSoftInputMode="stateHidden"
+            />
+        <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.NoticeActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape"
+            />
+        <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.WebViewActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape"
+            />
+		<activity 
+			android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+			android:name="com.yuecheng.sdk.view.YBPayActivity"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:screenOrientation="landscape"
+		/>
+		<activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.PlatformsActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape"
+            />
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+		<activity android:name="com.unionpay.uppay.PayActivity"/>
+		<service android:name="com.yuecheng.sdk.service.FxService"/>
+        <service android:name="com.yuecheng.sdk.down.DownloadFileService"/>
+        <!-- 19youSDK activity end -->
+        <!-- 19sdk 是  固定值 -->
+        <meta-data 
+            android:name="ONENINEGAMECHANNEL" 
+            android:value="19sdk" />
+     	<meta-data 
+     	    android:name="channelId" 
+     	    android:value="1900" />
+     	<meta-data 
+     	    android:name="gameId" 
+     	    android:value="55" />
+     	<meta-data 
+     	    android:name="yuanbao" 
+     	    android:value="元宝" />
+        <meta-data 
+     	    android:name="gamename" 
+     	    android:value="全民攻城" />
+        
+        
+        <!-- 丫丫玩 非必要  Start -->
+        <meta-data
+            android:name="need_yayaexit"
+            android:value="on" />
+        <meta-data
+            android:name="need_yayaanim"
+            android:value="no" />
+        <!-- 
+        <meta-data
+            android:name="appid"
+            android:value="string" />
+        <meta-data
+            android:name="APPKEY"
+            android:value="" />
+        <meta-data
+            android:name="APPSECRET"
+            android:value="" />
+        <meta-data
+            android:name="CallbackUrl"
+            android:value="http://union.yayawan.com/pay/notify/" />
+        -->
+        <!-- 丫丫玩 非必要   End -->
+
+        <meta-data
+            android:name="yayawan_game_id"
+            android:value="yaya2230511226" />
+        <meta-data
+            android:name="union_id"
+            android:value="yaya1911011756" />
+        <!-- yaya1911011756 696089580-->
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+    </application>
+
+</manifest>

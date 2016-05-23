@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.delzsp.lsz.ccplay"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" >
+    </uses-permission>
+
+    <uses-feature android:name="android.hardware.nfc.hce" />
+    <!-- 查看当前运行的进程的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lion.ccpay.pay.app.PayOrderActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.lion.ccpay.pay.app.CBPayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.lion.ccpay.pay.app.CouponSelectDialog"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.lion.ccpay.app.BrowserActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.lion.ccpay.user.app.UserTopUpActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.lion.ccpay.user.app.UserInfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <receiver android:name="com.yayawan.impl.LoginOutBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="CCPAY_LOGINOUT_ACTION" />
+
+                <data android:scheme="string-appid" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.lion.ccpay.pay.app.TransfersActivtiy"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <meta-data
+            android:name="developer_key"
+            android:value="e36691e25516412d9374229b25c1c867" />
+        <meta-data
+            android:name="app_id"
+            android:value="103833" />
+        <meta-data
+            android:name="appid"
+            android:value="103833" />
+
+        <!-- 添加DataEye需要配置的Meta start -->
+        <!-- DC_APPID 是一组32位的代码，可以在g.dataeye.com创建游戏后获得. -->
+        <!-- “937042C1192B1833CD8DF4895B281674”的部分要按照实际情况设置，一定要记得替换哦 -->
+        <meta-data
+            android:name="DC_APPID"
+            android:value="D5398FA1B07FC62C8B6781BAE02B99C1" >
+        </meta-data>
+
+        <!-- DC_CHANNEL对应于您的发布渠道，不同渠道需要做相应的修改 --> 
+        <!-- “DataEye”的部分要按照实际情况设置，一定要记得替换哦 -->
+        <meta-data
+            android:name="DC_CHANNEL"
+            android:value="DataEye" />
+        <!-- 添加DataEye需要配置的Meta end -->
+
+        <meta-data
+            android:name="yayawan_game_id"
+            android:value="yaya4098818794" />
+        <meta-data
+            android:name="union_id"
+            android:value="yaya696089580" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        <meta-data
+            android:name="goodid"
+            android:value="string103833" />
+    </application>
+    <!-- 10.16更新 1.2 -->
+
+</manifest>

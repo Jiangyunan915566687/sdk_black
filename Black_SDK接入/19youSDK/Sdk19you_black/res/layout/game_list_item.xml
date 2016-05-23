@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="4.5dip"
+    android:paddingRight="4.5dip" >
+
+    <RelativeLayout
+        style="@style/GameItemStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5.0dip" >
+
+        <ImageView
+            android:id="@+id/imv_icon"
+            android:layout_width="@dimen/list_icon_height"
+            android:layout_height="@dimen/list_icon_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_no" />
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:layout_toRightOf="@id/imv_icon"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="10dip" >
+
+           <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/hall_list_item_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="剑心传奇"
+                    android:singleLine="true" />
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="卡牌 |95M"
+                android:singleLine="true"
+                android:textColor="#ffb37542"
+                android:textSize="12.0sp" />
+			<RatingBar
+                    android:id="@+id/ratingbar"
+                    style="@style/GameRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dip"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:stepSize="0.5" 
+                   />
+			</LinearLayout>
+			<Button
+                  android:id="@+id/down"
+                  android:layout_width="60dip"
+                  android:layout_height="30dip"
+                  android:background="@drawable/btn_ok_selector"
+                  android:textColor="@color/white"
+                  android:text="下载" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:fillViewport="true"
+    android:background="@color/account_bg_color"
+    android:layout_height="fill_parent">
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:gravity="center"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+	<RelativeLayout 
+	    android:id="@+id/llInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         >
+        <FrameLayout 
+ 		    android:id="@+id/fl_account"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true" 
+	         android:layout_marginTop="20dip"
+	        android:gravity="center_vertical"> 
+	        <EditText  
+		        android:id="@+id/et_account" 
+		        style="@style/text_change_pwd_right"
+		        android:background="@drawable/bk"
+		        android:hint="@string/change_account_hint"/>
+	        <ImageView 
+	            android:id="@+id/iv_del"
+	            android:src="@drawable/del"
+	            android:visibility="gone"
+	            android:layout_width="wrap_content"
+	            android:layout_gravity="center_vertical|right"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="10dip"
+	            android:scaleType="fitXY"/>
+	        </FrameLayout>
+	 	<TextView 
+		  	android:layout_toLeftOf="@id/fl_account"
+	        style="@style/text_change_pwd_left"
+	         android:layout_marginTop="20dip"
+	        android:text="账号   :"
+	        android:hint="@string/change_account_hint"/> 
+	         <EditText 
+            android:id="@+id/et_pwd" 
+             android:layout_marginTop="10dip"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/fl_account"
+            android:inputType="textPassword"
+            style="@style/text_change_pwd_right"
+            android:background="@drawable/bk"
+            android:hint="请输入密码"/>
+		 
+ 	    <TextView 
+ 	        android:layout_toLeftOf="@id/et_pwd"
+           	style="@style/text_change_pwd_left"
+           	android:layout_alignTop="@id/et_pwd"
+            android:text="密码   :"/>
+ 	    
+ 	     <FrameLayout 
+ 		    android:id="@+id/fl_code"
+ 		    android:layout_below="@id/et_pwd"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true" 
+	         android:layout_marginTop="10dip"
+	        android:gravity="center_vertical"> 
+	        <EditText  
+		        android:id="@+id/et_phone" 
+		        android:inputType="number"
+		        style="@style/text_change_pwd_right"
+		        android:background="@drawable/bk"
+		        android:hint="请输入手机号码"/>
+	        <Button 
+		            android:layout_width="wrap_content"
+		            android:minWidth="50dip"
+	                android:layout_height="20dip"
+	                android:layout_gravity="right|center_vertical"
+	                android:background="@drawable/bk"
+	                android:textColor="@color/sendSms_n"
+	                android:layout_marginRight="6dip"
+	                android:paddingLeft="5dip"
+	                android:paddingRight="5dip"
+	                android:textSize="10dip"
+	                android:text="发送验证码"
+		            android:id="@+id/btn_sendSms"/>
+	        </FrameLayout>
+ 	   	 <TextView 
+	             android:layout_toLeftOf="@id/fl_code"
+           	style="@style/text_change_pwd_left"
+           	android:layout_alignTop="@id/fl_code"
+                android:text="手机号   :"/>
+ 	   	  <EditText 
+            android:id="@+id/et_smsCode" 
+            android:inputType="number"
+             android:layout_marginTop="10dip"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/fl_code"
+            style="@style/text_change_pwd_right"
+            android:background="@drawable/bk"
+            android:hint="请输入验证码"/>
+		 
+ 	    <TextView 
+ 	        android:layout_toLeftOf="@id/et_smsCode"
+           	style="@style/text_change_pwd_left"
+           	android:layout_alignTop="@id/et_smsCode"
+            android:text="验证码   :"/>
+<!-- 	    <LinearLayout  -->
+<!-- 	        android:layout_width="wrap_content" -->
+<!-- 	        android:gravity="center_vertical" -->
+<!-- 	        android:layout_height="wrap_content"  -->
+<!-- 	        android:layout_marginTop="20dip" -->
+<!-- 	        android:orientation="horizontal"> -->
+<!-- 		    <TextView  -->
+<!-- 	            style="@style/text_change_pwd_left" -->
+<!--                 android:text="账号   :"/> -->
+<!-- 		    <FrameLayout  -->
+<!-- 		        android:layout_width="wrap_content" -->
+<!-- 		        android:layout_height="wrap_content"  -->
+<!-- 		        android:gravity="center_vertical" -->
+<!-- 		        > -->
+<!-- 		        <EditText  -->
+<!-- 	                android:id="@+id/et_account"  -->
+<!-- 	                style="@style/text_change_pwd_right" -->
+<!-- 	                android:background="@drawable/bk" -->
+<!-- 	                android:hint="@string/change_account_hint"/> -->
+<!-- 		        <ImageView  -->
+<!-- 		            android:id="@+id/iv_del" -->
+<!-- 		            android:src="@drawable/del" -->
+<!-- 		            android:visibility="gone" -->
+<!-- 		            android:layout_width="wrap_content" -->
+<!-- 		            android:layout_gravity="center_vertical|right" -->
+<!-- 		            android:layout_height="wrap_content" -->
+<!-- 		            android:layout_marginRight="10dip" -->
+<!-- 		            android:scaleType="fitXY"/> -->
+<!-- 		    </FrameLayout> -->
+<!-- 		</LinearLayout> -->
+<!-- 	    <LinearLayout  -->
+<!-- 	        android:layout_width="wrap_content" -->
+<!-- 	        android:gravity="center_vertical" -->
+<!-- 	        android:layout_height="wrap_content" -->
+<!-- 	        android:layout_marginTop="@dimen/text_size_10" -->
+<!-- 	        android:orientation="horizontal"> -->
+<!-- 	       <TextView  -->
+<!-- 	            style="@style/text_change_pwd_left" -->
+<!--                 android:text="密码   :"/> -->
+<!-- 	        <EditText  -->
+<!-- 	            android:inputType="textPassword" -->
+<!--                 android:id="@+id/et_pwd"  -->
+<!--                 style="@style/text_change_pwd_right" -->
+<!--                 android:background="@drawable/bk" -->
+<!--                 android:hint="请输入密码"/> -->
+<!-- 	    </LinearLayout> -->
+	    
+<!-- 	    <LinearLayout  -->
+<!-- 	        android:layout_width="wrap_content" -->
+<!-- 	        android:gravity="center_vertical" -->
+<!-- 	        android:layout_height="wrap_content"  -->
+<!-- 	         android:layout_marginTop="@dimen/text_size_10" -->
+<!-- 	        android:orientation="horizontal"> -->
+<!-- 		     <TextView  -->
+<!-- 	            style="@style/text_change_pwd_left" -->
+<!--                 android:text="手机号   :"/> -->
+<!-- 		     <FrameLayout  -->
+<!-- 		        android:layout_width="wrap_content" -->
+<!-- 		        android:layout_height="wrap_content"  -->
+<!-- 	            android:gravity="center_vertical"> -->
+		        
+<!-- 	          	<TextView  -->
+<!-- 		            style="@style/text_change_pwd_left" -->
+<!-- 	                android:text="@string/infm_id"/> -->
+<!-- 		        <EditText  -->
+<!-- 	                android:id="@+id/et_phone"  -->
+<!-- 	               	android:inputType="number" -->
+<!-- 	                style="@style/text_change_pwd_right" -->
+<!-- 	                android:background="@drawable/bk" -->
+<!-- 	                android:hint="请输入手机号码"/> -->
+		        
+<!-- 		        <Button  -->
+<!-- 		            android:layout_width="wrap_content" -->
+<!-- 		            android:minWidth="50dip" -->
+<!-- 	                android:layout_height="20dip" -->
+<!-- 	                android:layout_gravity="right|center_vertical" -->
+<!-- 	                android:background="@drawable/bk" -->
+<!-- 	                android:textColor="@color/sendSms_n" -->
+<!-- 	                android:layout_marginRight="6dip" -->
+<!-- 	                android:paddingLeft="5dip" -->
+<!-- 	                android:paddingRight="5dip" -->
+<!-- 	                android:textSize="10dip" -->
+<!-- 	                android:text="发送验证码" -->
+<!-- 		            android:id="@+id/btn_sendSms"/> -->
+<!-- 		    </FrameLayout> -->
+<!-- 		</LinearLayout> -->
+<!-- 	    <LinearLayout  -->
+<!-- 	        android:layout_width="wrap_content" -->
+<!-- 	        android:gravity="center_vertical" -->
+<!-- 	        android:layout_height="wrap_content"  -->
+<!-- 	        android:layout_marginTop="@dimen/text_size_10" -->
+<!-- 	        android:orientation="horizontal"> -->
+<!-- 	        <TextView  -->
+<!-- 	            style="@style/text_change_pwd_left" -->
+<!--                 android:text="验证码   :"/> -->
+<!-- 	       	<EditText  -->
+<!--                 android:id="@+id/et_smsCode" -->
+<!--                 android:background="@drawable/bk" -->
+<!--                 android:inputType="textEmailSubject"  -->
+<!--                 style="@style/text_change_pwd_right" -->
+<!--                 android:hint="请输入验证码"/> -->
+<!-- 	    </LinearLayout> -->
+	</RelativeLayout>
+	<Button 
+	    android:id="@+id/btn_submit"
+	    android:layout_gravity="center_horizontal"
+	    android:layout_width="192dip"
+	    android:layout_height="35dip"
+	    android:text="@string/confirm_submit"
+	    android:layout_marginTop="20dip"
+	    android:textColor="@color/white"
+	    android:background="@drawable/btn_submit_selector"/>
+	
+</LinearLayout>
+</ScrollView>

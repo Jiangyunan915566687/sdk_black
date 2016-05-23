@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="label_color">#2F79A2</color>
+    
+	<color name="white">#FFFFFF</color>
+	<color name="black">#000000</color>
+	<color name="gray">#808080</color>
+	<color name="red">#FF0000</color>
+	<color name="gold">#FFD700</color>
+	<color name="yellow">#FFFF00</color>
+	<color name="green">#008000</color>
+	<color name="blue">#0000FF</color>
+	<color name="purple">#800080</color>
+	<color name="pink">#FFC0CB</color>
+	<color name="orange">#FFA500</color>
+	<color name="lightgrey">#ff888888</color>
+	<color name="lightblack">#ff202020</color>
+	<color name="lemonyellow">#FFFACD</color>
+	<color name="graywhite">#F5F5F5</color>
+	<color name="grayslate">#708090</color>
+	<color name="lightblue">#0083FF</color>
+	<color name="light_green">#ff599543</color>
+    <color name="half_transparent">#aa000000</color>
+    
+	<color name="green_deep">#39734a</color>
+	<color name="green_midden">#60946e</color>
+	<color name="green_gray">#a8c3b0</color>
+	<color name="green_white">#d3eada</color>
+	<color name="yellow_gold">#fe940c</color>
+	<color name="frame_bg">#d6dff1</color>
+	<color name="tab_text">#f8dea5</color>
+	<color name="tab_text_select">#f69a23</color>
+
+	<drawable name="white">#FFFFFFFF</drawable>
+	<drawable name="NULL">#00ffffff</drawable>
+	<drawable name="black">#000000</drawable>
+	<drawable name="alpha_black">#55000000</drawable>
+	<drawable name="yellow">#FEF693</drawable>
+	<drawable name="blue">#FF0000FF</drawable>
+	<drawable name="red">#FF0000</drawable>
+	<drawable name="weak_yellow">#FFFE9B21</drawable>
+	<drawable name="blue_label">#FF415991</drawable>
+	<drawable name="divide_line">#FFDFDFDF</drawable>
+	<drawable name="yellow_lebel">#FFFFA200</drawable>
+	<drawable name="gray_lebel">#FF6D6D6D</drawable>
+	<drawable name="gray_white">#EEEEEE</drawable>
+
+    <color name="hall_list_item_title">#ff220803</color>
+    <color name="hall_list_item_content">#ff76141c</color>
+    <color name="hall_list_item_desc">#ff472b16</color>
+    <color name="hall_list_item_button">#ffffffff</color>
+    
+    <color name="full_transparent">#00000000</color>
+    
+    <color name="listitem_black">#ff000000</color>
+    <color name="listitem_white">#ffffffff</color>
+    <color name="listitem_blue">#0e5986</color>
+    <color name="listitem_gray">#ff9da19e</color>
+    <color name="listitem_green">#ffe3ffc6</color>
+    <color name="listitem_greenyellow">#ff87b869</color>
+    <color name="listitem_yellow">#fffaffbf</color> 
+    
+    <color name="tab_button_text">#fff69a23</color>
+    <color name="tab_button_text_h">#ffffe29a</color>
+    
+    <color name="apk_list_bg">#ffeaeaea</color>
+    <color name="apk_size">#ff666666</color>
+    <color name="apk_truesize">#ff5ac45c</color>
+    <color name="apk_name">#ff333333</color>
+    <color name="apk_desc">#ff888888</color>
+    <color name="comment_pop_more_color">#ffafafaf</color>
+    <color name="comment_pop_choice_word_color">#ff496395</color>
+    
+    <color name="report_reason">#ff4b5159</color>
+    <color name="report_reason_disabled">#ffbbbbbb</color>
+    
+    <color name="text_cannot_selected">#ff6d6d6d</color>
+    <color name="tab_cannot_selected">#ffe4e4e4</color>
+    <color name="over_word_tips_text">#fff57a7a</color>
+    <color name="comment_detail_5_color">#fff57a7a</color>
+    <color name="dialogTiltleOrange">#FFA500</color>
+    
+    <color name="comment_detail_write_commen_color">#cc4b5159</color>
+    <color name="comment_detail_text_color_dark">#ff4b5159</color>
+    <color name="normal_color_download_num">#ff666666</color>
+    <color name="content_none">#ffae621c</color>
+    
+    <color name="game_detail_info1">#ff7e3f14</color>
+    <color name="game_detail_info2">#ff76141c</color>
+    
+    <color name="game_item_label_color">#ff862e2c</color>
+    
+    <color name="micro_detail_head_title">#ff560607</color>
+    <color name="micro_gift_item_bg1">#fffee9c3</color>
+    <color name="micro_gift_item_bg2">#ffe5b04b</color>
+    
+    <drawable name="recommend_game_list_item_normal">#F9E6C8</drawable> 
+    <drawable name="recommend_game_list_item_pressed">#E5B04B</drawable>
+    
+    <color name="tab_indicator_text_unselected">#aac5d7</color>
+    
+    <color name="title_bg">#313944</color>
+    <color name="login_btn_n">#ffc600</color>
+    <color name="login_btn_p">#ffb400</color>
+    
+<!--     账号页面，页面之间的颜色间隔，登录按钮， -->
+    <color name="bg_color">#cf1132</color>
+    <color name="account_bg_color">#EEEEEE</color>
+    
+<!--     登录框的字体颜色，与背景色相反 -->
+    <color name="login_text">#ff666666</color>
+    
+<!--     new  -->
+    <color name="sendSms_n">#aa0000</color>
+    <color name="sendSms_p">#9b9b9b</color>
+	
+    
+</resources>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:fillViewport="true"
+    android:layout_height="fill_parent">
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:background="#ffffff"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+	    <include layout="@layout/title"/>
+		<TextView 
+	            android:textColor="#000000"
+	            android:textSize="16sp"
+	            android:layout_width="fill_parent"
+	            android:text="支付信息"
+	             android:background="#f3f3f3"
+	            android:gravity="center_vertical"
+	            android:paddingLeft="20dip"
+	            android:layout_height="40dip"
+	            />
+	<!--     支付信息 -->
+		<LinearLayout 
+		    android:id="@+id/llInformation"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="10dip"
+	        android:orientation="vertical" >
+		    
+		    <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:gravity="center_vertical"
+		        android:layout_height="30dip" 
+		        android:orientation="horizontal">
+		        <LinearLayout 
+			        android:layout_width="0dip"
+			        android:layout_weight="1"
+			        android:gravity="center_vertical"
+			        android:layout_height="30dip" 
+			        android:orientation="horizontal">
+			        <TextView 
+			            android:layout_width="wrap_content"
+			            style="@style/text_pay_information"
+		                android:text="充值账号 ："
+		                />
+			        <TextView 
+			            android:id="@+id/tv_account"
+			            style="@style/text_pay_information"
+			            android:layout_width="0dip"
+		                android:layout_weight="1.0"
+		                android:ellipsize="end"
+		                android:singleLine="true"
+		                />
+			    </LinearLayout>
+			    
+		        <LinearLayout 
+			        android:layout_width="0dip"
+			        android:layout_weight="1"
+			        android:gravity="center_vertical"
+			        android:layout_height="30dip" 
+			        android:orientation="horizontal">
+			        <TextView 
+			            android:layout_width="wrap_content"
+			            style="@style/text_pay_information"
+		                android:text="游戏名称 ："
+		                />
+			        <TextView 
+			            style="@style/text_pay_information"
+			            android:id="@+id/tv_gameName"
+			            android:layout_width="0dip"
+		                android:layout_weight="1.0"
+		                android:ellipsize="end"
+		                android:singleLine="true"/>
+		    	</LinearLayout>
+		    </LinearLayout>
+		    
+		    
+		    
+		    <LinearLayout 
+		        android:layout_width="wrap_content"
+		        android:gravity="center_vertical"
+		        android:layout_height="30dip" 
+		        android:orientation="horizontal">
+		        <TextView 
+		            android:layout_width="wrap_content"
+		            style="@style/text_pay_information"
+	                android:text="充值金额 ："
+	                />
+		        <TextView 
+		            android:id="@+id/tv_money"
+		            style="@style/text_pay_information"
+		            android:layout_width="60dip"
+	                android:ellipsize="end"
+	                android:visibility="gone"
+	                android:gravity="center"
+	                android:textColor="#ff862e2c"
+	                android:singleLine="true"
+	                />
+		        <LinearLayout 
+			        android:layout_width="wrap_content"
+			        android:gravity="center_vertical"
+			        android:id="@+id/ll_choice"
+			        android:visibility="gone"
+			        android:layout_height="wrap_content" 
+			        android:background="@drawable/et_choice"
+			        android:orientation="horizontal">
+			        <TextView 
+		                android:id="@+id/tv_choice" 
+		               	android:textColor="#ff862e2c"
+		                android:gravity="left|center_vertical"
+		                android:layout_width="80dip"
+		                android:layout_height="30dip"
+		                android:paddingLeft="10dip"
+		                android:paddingRight="10dip"/>
+			        <LinearLayout 
+			            android:layout_width="match_parent"
+			            android:id="@+id/iv_choice"
+			            android:gravity="center"
+			            android:paddingLeft="10dip"
+		                android:paddingRight="10dip"
+			            android:layout_height="match_parent">
+			            <ImageView 
+			            android:src="@drawable/choice_money"
+			            android:layout_width="wrap_content"
+			            android:layout_gravity="center_vertical|right"
+			            android:layout_height="wrap_content"
+			            android:scaleType="fitXY"/>
+			        </LinearLayout>
+			    	
+		    	</LinearLayout>
+	<!-- 	        <TextView  -->
+	<!-- 	            style="@style/text_pay_information" -->
+	<!-- 	            android:layout_width="0dip" -->
+	<!--                 android:layout_weight="1.0" -->
+	<!--                 android:ellipsize="end" -->
+	<!--                 android:text="元" -->
+	<!--                 android:textColor="#ff862e2c"  -->
+	<!--                 android:singleLine="true" -->
+	<!--                 /> -->
+		    </LinearLayout>
+		</LinearLayout>
+		
+		<RelativeLayout 
+		    android:layout_height="wrap_content"
+		    android:background="#f3f3f3"
+		    android:layout_width="fill_parent">
+		<TextView 
+	            android:textColor="#000000"
+	            android:textSize="16sp"
+	            android:layout_width="wrap_content"
+	            android:text="选择支付方式"
+	           	android:gravity="center_vertical"
+	           	android:layout_centerVertical="true"
+	            android:paddingLeft="20dip"
+	            android:layout_height="40dip"
+	            android:ellipsize="end"
+	            android:singleLine="true"/>
+		<TextView 
+	            android:textColor="#007fff"
+	            android:textSize="16sp"
+	            android:layout_width="wrap_content"
+	            android:text="客服QQ:2310455774"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="10dip"
+	            android:paddingLeft="20dip"
+	            android:layout_height="40dip"
+	            android:gravity="center_vertical"
+	            android:ellipsize="end"
+	            android:singleLine="true"/>
+		</RelativeLayout>
+		<LinearLayout
+	            android:id="@+id/llRecommend"
+	            android:layout_width="fill_parent"
+	            android:gravity="center_horizontal"
+	            android:layout_height="wrap_content"
+	            android:paddingTop="5dip"
+	            android:orientation="horizontal" >
+	
+	    <include layout="@layout/pay_layout"/>  
+	
+	    </LinearLayout>
+	
+	</LinearLayout>
+</ScrollView>

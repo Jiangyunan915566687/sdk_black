@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lion.ccpay.widget.CustomGridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_community_plate_detail_notice"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_frame_two_nor"
+    app:CustomGridLayout_divider="@color/common_line"
+    app:CustomGridLayout_horizontalSpacing="0.5dip"
+    app:CustomGridLayout_numColumns="1"
+    app:CustomGridLayout_verticalSpacing="0.5dip" />
