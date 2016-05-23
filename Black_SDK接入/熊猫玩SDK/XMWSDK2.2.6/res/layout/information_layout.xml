@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/luc_back"
+    android:orientation="vertical" >
+
+    <include layout="@layout/information_main" />
+
+    <include layout="@layout/xmw_benomallayout" />
+
+    <include layout="@layout/information_paylist" />
+
+    <include layout="@layout/xmw_bindemail" />
+
+    <include layout="@layout/xmw_bindphone" />
+
+    <include layout="@layout/xmw_findtypelayout" />
+
+    <include layout="@layout/xmw_changepass" />
+
+    <include layout="@layout/xmw_explayout" />
+
+    <include layout="@layout/information_commonproblems" />
+
+    <include layout="@layout/information_contact" />
+
+    <include layout="@layout/information_giftbag" />
+
+</RelativeLayout>

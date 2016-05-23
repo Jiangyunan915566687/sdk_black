@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/user_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00ffffff"
+    android:gravity="center" >
+
+    <!-- 登录框弹出框布局 -->
+
+    <include layout="@layout/autologin_view" />
+
+    <!-- 用户登录布局 -->
+
+    <include layout="@layout/login_layout" />
+
+    <!-- 用户注册布局 -->
+
+    <include layout="@layout/register_layout" />
+
+    <include layout="@layout/register_phone" />
+
+    <!-- 账号找回1布局 -->
+
+    <include layout="@layout/xmw_findlayout1" />
+
+    <!-- 账号找回2布局 -->
+
+    <include layout="@layout/xmw_findlayout2" />
+
+    <!-- 账号找回方式布局 -->
+
+    <include layout="@layout/xmw_findtypelayout" />
+
+    <!-- 帮助布局 -->
+
+    <include layout="@layout/xmw_help" />
+
+    <!-- 绑定 邮箱布局 -->
+
+    <include layout="@layout/xmw_bindemail" />
+
+</RelativeLayout>

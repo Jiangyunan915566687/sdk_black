@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 5qwanSDK peimission -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 新的权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+
+    <!-- 5qwanSDK peimission -->
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="5qwan_SDK"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 5qwanSDK actitvty start -->
+        <!-- 以下内容只在支持计费的SDK中使用，如若无需SDK计费支持，可省略 ! -->
+        <service
+            android:name="com.net1798.sdk.core.service"
+            android:label="net1798_pay"
+            android:persistent="true" />
+		<activity android:name="com.yayawan.impl.UserActivity" 
+		    android:label="net1798_user"
+	    	android:screenOrientation="landscape" 
+	    	android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name="com.net1798.sdk.pay.Pay"
+            android:label="net1798_pay"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.net1798.sdk.pay.Notify_Activity"
+            android:label="net1798_pay"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mokredit.payment.MktPayment"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="net1798_payeco"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.payeco.android.plugin.PayecoPluginLoadingActivity"
+            android:label="net1798_payeco"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.payeco.android.plugin.PayecoCameraActivity"
+            android:label="net1798_payeco"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.payeco.android.plugin.PayecoVedioActivity"
+            android:label="net1798_payeco"
+            android:process="com.payeco.android.plugin.vedio"
+            android:screenOrientation="landscape" />
+
+        <!-- 易联支付依赖项，百度定位 ! -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="DhNxS47YIr3CNdocGoAcy1ts" />
+        <!-- 以上内容只在支持计费的SDK中使用 ! -->
+        <!-- 5qwanSDK actitvty start -->
+        <meta-data
+            android:name="CID"
+            android:value="5qwan" >
+        </meta-data>
+        <meta-data
+            android:name="PID"
+            android:value="5qwan" >
+        </meta-data>
+        <meta-data
+            android:name="APPID"
+            android:value="qmgc" >
+        </meta-data>
+	<!-- dff_131390 -->
+        <!-- 丫丫玩 非必要  Start -->
+        <meta-data
+            android:name="need_yayaexit"
+            android:value="yes" />
+        <meta-data
+            android:name="need_yayaanim"
+            android:value="no" />
+        <!--
+		<meta-data 
+            android:name="appid" 
+            android:value="string" />
+        <meta-data 
+            android:name="APPKEY" 
+            android:value="" />
+        <meta-data 
+            android:name="APPSECRET" 
+            android:value="" />
+        <meta-data 
+            android:name="CallbackUrl" 
+            android:value="http://union.yayawan.com/pay/notify/" />
+        -->
+        <!-- 丫丫玩 非必要   End -->
+
+        <meta-data
+            android:name="yayawan_game_id"
+            android:value="yaya3382224689" />
+        <meta-data
+            android:name="union_id"
+            android:value="yaya4286886187" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+    </application>
+
+</manifest>

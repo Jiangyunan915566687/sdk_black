@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.frztz.gzyy.huawei"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- HWGameSDK permission start -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="com.huawei.hwid.permission.ACCESS" />
+    <uses-permission android:name="com.huawei.appmarket.provider.readPermission" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- HWGameSDK permission end -->
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="HWGame_SDK"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- HWGameSDK activity and receiver start -->
+        <!-- 账号依赖的Activity声明 -->
+        <activity
+            android:name="com.huawei.hwid.openapi.auth.dump.OpenDumpActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.huawei.hwid.openapi.quicklogin.ui.QuickLoginActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme.quicklogin" >
+            <intent-filter>
+                <action android:name="com.huawei.hwid.opensdk.ACTION_QUICKLOGIN_SMS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 浮标依赖的Activity声明,建议根据游戏的屏幕方向将Activity设置为相同的方向 -->
+        <activity
+            android:name="com.huawei.gamebox.buoy.sdk.activity.WebPageActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.huawei.gamebox.buoy.sdk.activity.NoticeActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.huawei.gamebox.buoy.sdk.activity.BaseDialogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:theme="@style/buoy_baseDialog" />
+ 		<!-- 浮标中下载依赖的广播 -->
+ 		
+        <receiver 
+            android:name="com.huawei.gamebox.buoy.sdk.service.download.DownloadBroadcastReceiver" >
+        	<intent-filter>
+          		<action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+          		<action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
+    		</intent-filter>
+         </receiver>
+            <!-- HWGameSDK activity and receiver end -->
+
+
+            <!-- 丫丫玩 非必要  Start -->
+            <meta-data
+                android:name="need_yayaexit"
+                android:value="yes" />
+            <meta-data
+                android:name="need_yayaanim"
+                android:value="no" />
+            <meta-data
+                android:name="APP_ID"
+                android:value="string10511599" />
+            <meta-data
+                android:name="PAY_ID"
+                android:value="string890086000001008408" />
+            <meta-data
+                android:name="privateKey"
+                android:value="MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAJe68BIIYYLBeKHDSu4jQvplbVte5DoZfkfdadHOzSZ4JqHyifEmYrF5NfysHPh49GG7kWEL432Pxuy9CYN46iR6ZegxX/IL3wSrhURX2Q7ingpUs8K71tv2qAaHi0kj39JWy7VBG+3gN/+LQ8H6YTkVRGZ6AuUSEE3S9Tv/NGBrAgMBAAECgYAC2jDJJf8vRhPOdq1h7KfFrUJxBUelD/WfxDnJB+ozXu7a/IQ7VE1mqLCrH1EsGpn9fFkvSdns8lb6/FLBdfRw07M2ee2QY4h8Zsv/7mZh7CmUfWOMAdkyU+8sh5KO9ZHHrUttMXcQHkMfqXK94urYi2ZsnuesW1qAZioyPvYeAQJBAMZ61sR0LRUdIF5WCdDJ88JsfcvSlJ5CxeKiuetsQd3H7C8N4jgplg0bGhb9EqD7oFmVlwO0u9ko+0eePkIs35sCQQDDs8I6NhfaUN3NGeHsz97AtmaD4o1o9vVteZEGs0gUEdJmQ/TtdwBGzYkTXG8BJAvMhT9kyiiX5OFd6tqWuFdxAkEAoW0K++DZQdDcoJ0tgoieHsUKUxnEEiuQslFTESyNLYoKiAKsuKzqA2LFh2jxG8lLk1Dc8ACwv2BbbtY/IKdKfQJAFrKVl0zIzXBNmUkkM+QUEMPW9frjrcXexzivQliuxm0euu+sy5HevVd/S3iQA1Db8XeO17C+rodEQDFJ8uskcQJABKraS1tehimTCqDwGWoXQWCgu36D1dsXwi+Bo8bnq0HkpYS0iTXy8sz2TXDLr1e7rEwex10H2JjTuR2LxN7+1A==" />
+            <meta-data
+	            android:name="companyname"
+	            android:value="广州千骐动漫科技有限公司" />
+            <!-- 
+            <meta-data
+                android:name="CallbackUrl"
+                android:value="http://union.yayawan.com/pay/notify/" />
+            -->
+            <!-- 丫丫玩 非必要   End -->
+
+            <meta-data
+                android:name="yayawan_game_id"
+                android:value="yaya2121556624" />
+            <meta-data
+                android:name="union_id"
+                android:value="yaya452499687" />
+            <meta-data
+                android:name="isLandscape"
+                android:value="true" />
+    </application>
+
+</manifest>

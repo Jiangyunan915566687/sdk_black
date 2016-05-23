@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate.xmw"
+    android:versionCode="226"
+    android:versionName="2.2.6" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <!-- XMW 权限 Start -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- XMW 权限 end -->
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="Black_SDKname"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- XMW activity start -->
+        <activity
+            android:name="com.xmwsdk.xmwsdk.XmwLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.xmwsdk.xmwsdk.InfomationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.xmwsdk.xmwsdk.PayActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.xmwsdk.xmwsdk.InfomationNewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <service android:name="com.xmwsdk.xmwsdk.FloatingWindowService" />
+
+        <activity
+            android:name="com.alipay.android.app.sdk.WapPayActivity"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name="com.mokredit.payment.MktPayment"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="sensor"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.unionpay.uppay.PayActivity" />
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="sensor" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="sensor" >
+        </activity>
+        <!-- alipay sdk end -->
+        <activity
+            android:name="com.xmwsdk.webview.AccountActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.xmwsdk.webview.HotNewsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.xmwsdk.xmwsdk.paytendWXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <receiver android:name="com.example.sdk.AppReciver" >
+            <intent-filter>
+                <action android:name="com.paytend.wxpay.plugin.recive" />
+            </intent-filter>
+        </receiver>
+        
+        <!-- XMW activity end -->
+        <!-- XMW meta-data start -->
+        <meta-data
+            android:name="notifyAddress"
+            android:value="http://union.yayawan.com/pay/notify/1246603097/4098818794/" />
+        <meta-data
+            android:name="CLIENTID"
+            android:value="d085abb9020e73db2dc59e31be446da9" />
+        <meta-data
+            android:name="CLIENTSECRET"
+            android:value="dc5a5bb3b4977e0823e8c5214dc010ed" />
+        
+        <!-- 版本信息， 渠道升级判断 -->
+        <meta-data
+            android:name="XMWAPPID"
+            android:value="d085abb9020e73db2dc59e31be446da9" />
+		<meta-data 
+		    android:name="XMWVERSION" 
+		    android:value="v226" />
+        
+        <!-- XMW meta-data end -->
+        <meta-data
+            android:name="need_yayaexit"
+            android:value="no" />
+        <meta-data
+            android:name="yayawan_game_id"
+            android:value="yaya740115402-union" />
+        <meta-data
+            android:name="union_id"
+            android:value="yaya1246603097" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+    </application>
+
+</manifest>

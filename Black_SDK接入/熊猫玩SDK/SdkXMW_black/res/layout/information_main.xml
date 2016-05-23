@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/information_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/con_backd"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/information_main1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/con_back"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/xmw_accountinfo"
+                        android:textColor="@color/appBlack"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/info_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:src="@drawable/xmw_close" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/con_rudeback" >
+                </View>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/information_main2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/information_main1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/xmw_roundbg"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/dl_dl_text1"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/xmw_accountpng" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="7dp"
+                        android:lines="1"
+                        android:text="@string/xmw_name"
+                        android:textColor="@color/con_blackt"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/xmw_infoname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:lines="1"
+                        android:textColor="@color/con_blackt"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/con_line" >
+                </View>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/xmw_phone" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1"
+                        android:lines="1"
+                        android:text="@string/xmw_phonenum"
+                        android:textColor="@color/con_blackt"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/xmw_bindphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginTop="1dp"
+                            android:background="@drawable/info_4" />
+
+                        <TextView
+                            android:id="@+id/xmw_infophone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:lines="1"
+                            android:text="@string/xmw_nobind"
+                            android:textColor="@color/appBlack"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/xmw_phonego"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/group_arrow_right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/con_line" >
+                </View>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1"
+                        android:lines="1"
+                        android:text="@string/xmw_email"
+                        android:textColor="@color/con_blackt"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/xmw_bindemail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/info_4" />
+
+                        <TextView
+                            android:id="@+id/xmw_infoemail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:lines="1"
+                            android:text="@string/xmw_nobind"
+                            android:textColor="@color/appBlack"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/xmw_emailgo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="7dp"
+                            android:background="@drawable/group_arrow_right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/xmw_xing" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="7dp"
+                            android:lines="1"
+                            android:text="@string/xmw_expst"
+                            android:textColor="@color/con_blackt"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/xmw_exphelp"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/xmw_exphelp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/progressyellow"
+                        android:padding="1px" >
+
+                        <ProgressBar
+                            android:id="@+id/xmw_inpro"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="145dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:progressDrawable="@drawable/xmw_expprogressbar" />
+
+                        <TextView
+                            android:id="@+id/xmw_inprotext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:textColor="@color/con_black"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/xmw_level"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="11dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/con_line" >
+                </View>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/xmw_xmtou" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="7dp"
+                        android:lines="1"
+                        android:text="@string/xmw_pandaless"
+                        android:textColor="@color/con_blackt"
+                        android:textSize="15sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="7dp" >
+
+                        <TextView
+                            android:id="@+id/xmw_infopanda"
+                            android:layout_width="90dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/xmw_coinroundbg"
+                            android:gravity="center"
+                            android:text="11"
+                            android:textColor="#ffffff"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/xmw_coinpaybt"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="18dp"
+                            android:src="@drawable/xmw_coinplus" />
+
+                        <ImageView
+                            android:id="@+id/xmw_cointb"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignLeft="@id/xmw_infopanda"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/pandapayicon" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/information_main2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/xmw_roundbg"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:id="@+id/gouppaylist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/info_1" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="7dp"
+                        android:drawableEnd="@drawable/group_arrow_right"
+                        android:text="@string/xmw_ordernotes"
+                        android:textColor="@color/appBlack"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/con_line" >
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/godownpaylist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/info_2" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="7dp"
+                        android:drawableEnd="@drawable/group_arrow_right"
+                        android:text="@string/xmw_purchasenotes"
+                        android:textColor="@color/appBlack"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/con_line" >
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/xmw_infochangepass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/info_3" />
+
+                    <TextView
+                        android:id="@+id/xmw_infochangemsg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="7dp"
+                        android:drawableEnd="@drawable/group_arrow_right"
+                        android:text="@string/xmw_resetpasss"
+                        android:textColor="@color/appBlack"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- 礼包领取 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/con_line" >
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/giftbag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/info_7" />
+
+                    <TextView
+                        android:id="@+id/giftbagmsg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="7dp"
+                        android:drawableEnd="@drawable/group_arrow_right"
+                        android:text="@string/xmw_giftbagmsg"
+                        android:textColor="@color/appBlack"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- 礼包领取 -->
+
+
+                <!-- 常见问题 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/con_line" >
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/comproblems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/info_6" />
+
+                    <TextView
+                        android:id="@+id/comproblemsmsg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="7dp"
+                        android:drawableEnd="@drawable/group_arrow_right"
+                        android:text="@string/xmw_comproblemsmsg"
+                        android:textColor="@color/appBlack"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- 常见问题 -->
+
+
+                <!-- 联系我们 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/con_line" >
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/info_5" />
+
+                    <TextView
+                        android:id="@+id/contactmsg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="7dp"
+                        android:drawableEnd="@drawable/group_arrow_right"
+                        android:text="@string/xmw_contactmsg"
+                        android:textColor="@color/appBlack"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- 联系我们 -->
+
+                <LinearLayout
+                    android:id="@+id/xmw_infobbs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:background="@color/con_line" >
+                    </View>
+
+                    <TextView
+                        android:id="@+id/xmw_infobbsmsg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="7dp"
+                        android:drawableEnd="@drawable/group_arrow_right"
+                        android:text="@string/xmw_bbsst"
+                        android:textColor="@color/appBlack"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/xmw_infonew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/information_main1"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/xmw_newmsgbg1"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/xmw_infonewmsg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1"
+                    android:text="@string/xmw_msgnotes"
+                    android:textColor="@color/appWhite"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/information_main2"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/xmw_counttip"
+                android:textColor="@color/con_blackt"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

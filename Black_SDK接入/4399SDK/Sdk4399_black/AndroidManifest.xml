@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.makebestgame.blacksmithstory.m4399"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 4399 SDK permission start -->
+    <!-- Common permission -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!-- For Dial custom service hotline -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- SMS pay permission -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Alipay permission -->
+    <!-- YouYiFu permission -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <!-- 4399 SDK permission end -->
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="Black_SDKname"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 4399SDK activity start -->
+        <!--
+             	For 4399 recharging SDK. 请不要在此处修改RechargeActivity的方向设置，
+             	因为某些2。3的机型启动Activity总是先启动
+            	竖屏，然后强制转换成横屏，这会导致潜在问题.
+        -->
+        <!--
+				activity的配置不能少于orientation|screenSize|keyboardHidden，
+				这些配置是为了防止Activity被系统或第三方界面强拉成竖屏时，发生重建而加入的。
+				SDK的Activity支持横屏或竖屏，但不支持横竖屏切换，否则会包初始化问题
+        -->
+        <activity
+            android:name="cn.m4399.recharge.ui.activity.RechargeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/m4399ActivityTheme" />
+        <!-- For 4399 Operation SDK -->
+        <activity
+            android:name="cn.m4399.operate.ui.activity.LoginActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:theme="@style/m4399TransparentStyle" />
+        <activity
+            android:name="cn.m4399.operate.ui.activity.UserCenterActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="cn.m4399.operate.ui.activity.CustomWebActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <service
+            android:name="cn.m4399.recharge.service.smsm.SmsmService"
+            android:enabled="true"
+            android:exported="false"
+            android:process="system" >
+        </service>
+
+        <receiver android:name="cn.m4399.recharge.service.smsm.SmsmStartReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!--	 以下为第三方支付SDK Activity&Service配置  
+        		须按游戏需求 设置成固定的横竖屏
+        -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- For YouYiFu -->
+        <activity
+            android:name="com.arcsoft.hpay100.HPaySdkActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:screenOrientation="behind"
+            android:theme="@style/hpay_dialog_style" >
+        </activity>
+        <activity
+            android:name="com.arcsoft.hpay100.web.HPayWebActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:screenOrientation="behind"
+            android:theme="@style/hpay_custom_confim_dialog" >
+        </activity>
+        <activity
+            android:name="com.arcsoft.hpay100.web.HPayWebFullActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:screenOrientation="behind" >
+        </activity>
+        <!-- 4399SDK activity end -->
+
+
+        <!-- 丫丫玩 非必要  Start -->
+        <meta-data
+            android:name="need_yayaexit"
+            android:value="no" />
+        <meta-data
+            android:name="need_yayaanim"
+            android:value="yes" />
+        
+        <meta-data
+            android:name="appkey"
+            android:value="string106409" />
+        <!-- 
+        <meta-data
+            android:name="appid"
+            android:value="string" />
+        <meta-data
+            android:name="APPSECRET"
+            android:value="" />
+        <meta-data
+            android:name="CallbackUrl"
+            android:value="http://union.yayawan.com/pay/notify/" />
+         -->
+        <!-- 丫丫玩 非必要   End -->
+
+        <meta-data
+            android:name="yayawan_game_id"
+            android:value="yaya1039899331" />
+        <meta-data
+            android:name="union_id"
+            android:value="yaya2423573686" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+    </application>
+
+</manifest>

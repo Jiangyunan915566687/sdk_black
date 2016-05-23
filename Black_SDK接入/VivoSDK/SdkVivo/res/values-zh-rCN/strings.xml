@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="login_account">LoginAccount</string>
+    <string name="switch_account">SwitchAccount</string>
+    <string name="name_label">name:</string>
+    <string name="openid_label">openid:</string>
+    <string name="authtoken_label">authtoken:</string>
+    <string name="remove_account">RemoveAccount</string>
+</resources>

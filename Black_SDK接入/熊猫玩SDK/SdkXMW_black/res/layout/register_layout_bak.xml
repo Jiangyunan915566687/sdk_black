@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/register_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/con_backd"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:background="@color/con_back"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/xmw_title2"
+            android:text="@string/xmw_regisitytip" />
+
+        <LinearLayout
+            android:id="@+id/re_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:src="@drawable/xmw_back" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/con_rudeback" >
+    </View>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"
+        android:background="@color/con_line" >
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 用户名 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="0dp"
+            android:background="@color/appWhite"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp" >
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/xmw_accountpng"
+                android:gravity="center" />
+
+            <com.xmwsdk.view.XmwEditText
+                android:id="@+id/re_name"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/luc_back"
+                android:hint="@string/xmw_nametip"
+                android:inputType="text"
+                android:maxLength="18"
+                android:paddingLeft="3dp"
+                android:textColorHint="@color/con_black"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <!-- 用户名 -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/con_line" >
+        </View>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:background="@color/appWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp" >
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/xmw_accountpass"
+                android:gravity="center" />
+
+            <com.xmwsdk.view.XmwEditText
+                android:id="@+id/re_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/luc_back"
+                android:hint="@string/xmw_passtip"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:paddingLeft="3dp"
+                android:textColorHint="@color/con_black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/con_line" >
+        </View>
+        <!-- 手机号 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="0dp"
+            android:background="@color/appWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/xmw_phone"
+                android:gravity="center" />
+
+            <com.xmwsdk.view.XmwEditText
+                android:id="@+id/re_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/luc_back"
+                android:hint="@string/xmw_phonetip"
+                android:inputType="phone"
+                android:maxLength="18"
+                android:paddingLeft="3dp"
+                android:textColorHint="@color/con_black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/con_line" >
+        </View>
+
+        <Button
+            android:id="@+id/register_btn"
+            style="@style/but_noamol"
+            android:text="@string/xmw_regisit" />
+
+        <TextView
+            android:id="@+id/register_jump"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/appBlack"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="8dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/xiongmaowan" />
+    </LinearLayout>
+
+</LinearLayout>

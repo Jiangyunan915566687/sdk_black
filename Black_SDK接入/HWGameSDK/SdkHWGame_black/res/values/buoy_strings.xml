@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="buoy_validParamFail">应用ID和浮标ID校验失败</string>
+    <string name="buoy_noInit">尚未初始化</string>
+    <string name="buoy_close">关闭</string>
+    <string name="buoy_cancel">取消</string>
+    <string name="buoy_update">更新</string>
+    <string name="buoy_confirm">确定</string>
+    <string name="buoy_app_update">应用更新</string>
+    <string name="buoy_initProgress">正在初始化SDK...</string>
+    <string name="buoy_noNetwork">没有网络连接</string>
+    <string name="buoy_login_fail">登录失败，请重试！</string>
+    <string name="buoy_async_login_notice">欢迎 %1$s</string>
+    <string name="buoy_notification_title_game_coupon">华为游戏券到账，点击查看</string>
+    <string name="buoy_dialog_download_gamebox_content">需要下载最新版本游戏中心才能使用，确认下载？</string>
+    <string name="buoy_dialog_download_gamebox_title">华为游戏中心</string>
+    <string name="buoy_download_gamebox_tips">正在下载华为游戏中心</string>
+    <string name="buoy_dialog_download_wallet_content">需要下载最新版本快捷支付才能使用，确认是否下载？</string>
+    <string name="buoy_dialog_download_wallet_title">提示</string>
+    <string name="buoy_dialog_download_gamebox_tips">需要下载最新版本的游戏中心应用才能使用此功能，请确认是否下载？</string>
+    <string name="buoy_dialog_download_title">提示</string>
+    <string name="buoy_download_notification_tips">正在下载...</string>
+    <string name="buoy_gamebox_appname">华为游戏中心</string>
+    <string name="buoy_download_wallet_tips">正在下载...</string>
+    <string name="buoy_window_title">华为游戏中心</string>
+	<string name="buoy_window_record">录制</string>
+	<string name="screen_record">游戏录屏</string>
+	<string name="screen_record_description">您可以记录游戏的精彩过程并分享；录屏过程将使用麦克风，您可以进行游戏过程讲解。是否继续？</string>
+	<string name="standard_definition">流畅</string>
+	<string name="high_definition">高清</string>
+	<string name="cancel">取消</string>
+	<string name="continues">继续</string>
+	<string name="buoy_svid_amount_max_length">已达到最大时长，录屏文件已保存</string>
+	<string name="buoy_gamebox_sign_invalid_msg">华为游戏中心客户端的签名校验不合法，禁止使用此服务</string>
+	<string name="buoy_init_record_service">正在初始化录屏服务...</string>
+</resources>

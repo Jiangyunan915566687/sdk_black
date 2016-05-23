@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.delzsp.lsz"
+    android:versionCode="2"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- ali -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- nfc -->
+    <!-- 打电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- nfc权限 -->
+    <uses-permission android:name="android.permission.NFC" />
+    <!-- 手机震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="sdkdangle"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdkdangle.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="sdkdangle"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         <!-- SdkActivity 和 PayActivity 横竖屏设置与游戏保持一致 -->
+        <activity
+            android:name="com.downjoy.activity.SdkActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="behind"
+            android:theme="@style/dcn_dialog_activity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- UPPay sdk begin -->
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:label="pay"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- UPPay sdk end -->
+
+
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <!-- alipay sdk end -->
+        <!-- QQ sdk end -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100772260" />
+            </intent-filter>
+        </activity>
+        <!-- nfc -->
+        <activity
+            android:name="com.wepayplugin.nfc.ui.PayStartActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="behind" >
+        </activity>
+        <activity
+            android:name="com.wepayplugin.nfc.ui.SwiperCardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="behind" >
+        </activity>
+        <activity
+            android:name="com.wepayplugin.nfc.ui.PayResultActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="behind" >
+        </activity>
+        <!-- Polling Service -->
+        <service android:name="com.downjoy.service.PollingService" >
+            <intent-filter>
+                <action android:name="action.downjoy.polling.service" />
+            </intent-filter>
+        </service>
+        
+
+        <meta-data
+            android:name="yayawan_game_id"
+            android:value="yaya2618989494" />
+        <meta-data
+            android:name="union_id"
+            android:value="yaya4180306041" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="false" />
+       <!--  是否强制退出 -->
+         <meta-data
+            android:name="isfinish"
+            android:value="no" />
+        
+        <meta-data
+            android:name="MERCHANT_ID"
+            android:value="string1072" />
+        <meta-data
+            android:name="APP_ID"
+            android:value="string4868" />
+        <meta-data
+            android:name="APP_KEY"
+            android:value="DYtFpM5m" />
+        <meta-data
+            android:name="SERVER_SEQ_NUM"
+            android:value="string1" />
+    </application>
+
+</manifest>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <color name="appBlack">#ff000000</color>
+    <color name="appWhite">#ffffffff</color>
+    <color name="name_black">#ff222222</color>
+    <color name="con_black">#ff999999</color>
+    <color name="con_blackt">#ff808080</color>
+    <color name="luc_back">#00000000</color>
+    <color name="con_textblack">#ff555555</color>
+    <color name="con_line">#FFcdcdcd</color>
+    <color name="con_back">#FFf8f8f8</color>
+    <color name="con_rudeback">#bb808080</color>
+    <color name="red_text">#ffff5555</color>
+    <color name="progressyellow">#fffa9135</color>
+    <color name="con_backd">#ffe9eaea</color>
+    <color name="con_blue">#ff0062a7</color>
+    <color name="con_green">#ff358e00</color>
+    <color name="con_red">#ffdf3939</color>
+    <color name="con_cheng">#fffc8901</color>
+    <color name="con_chenghong">#fe6826</color>
+    <color name="appDarkGrey">#949393</color>
+    <color name="xmw_yellow">#fa730c</color>
+
+</resources>

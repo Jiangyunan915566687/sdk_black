@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tencent.tmgp.xjxzzgzlc"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+     <!-- TODO SDK接入 接入支付需要设置屏幕兼容声明 START -->
+	<supports-screens
+	    android:anyDensity="true"
+	    android:largeScreens="true"
+	    android:normalScreens="true" />
+
+<!-- TODO SDK接入 接入支付需要设置屏幕兼容声明 END -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- QQYSDK permission start -->
+    <!-- TODO SDK接入必须权限模块 START -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- QQYSDK permission end -->
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="QQY_SDK"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- QQYSDK接入 QQ接入配置 START -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                
+                <data android:scheme="tencent1105258885" />
+            </intent-filter>
+        </activity>
+        <!-- black  android:scheme="tencent1105258885"  tencent+qqappid -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- TODO SDK接入 QQ接入配置 END -->
+        
+        
+        <!-- TODO SDK接入 微信接入配置 START -->
+        <!-- black 注意：此处应改为 游戏包名.wxapi.WXEntryActivity -->
+        <!-- black 注意：此处应改为 游戏包名.diff -->
+        <activity
+            android:name="com.tencent.tmgp.xjxzzgzlc.wxapi.WXEntryActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:label="WXEntryActivity"
+            android:launchMode="singleTop"
+            android:taskAffinity="com.tencent.tmgp.xjxzzgzlc.diff" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- black 注意：此处应改为 游戏的微信appid -->
+                <data android:scheme="wxf1bc308ce4dad1c8" />
+            </intent-filter>
+        </activity>
+        <!-- TODO SDK接入 微信接入配置 END -->
+
+        
+        <!-- 丫丫玩 非必要  Start -->
+        <meta-data
+            android:name="need_yayaexit"
+            android:value="on" />
+        <meta-data
+            android:name="need_yayaanim"
+            android:value="no" />
+        <meta-data
+            android:name="appid"
+            android:value="string" />
+        <meta-data
+            android:name="APPKEY"
+            android:value="" />
+        <meta-data
+            android:name="APPSECRET"
+            android:value="" />
+        <meta-data
+            android:name="CallbackUrl"
+            android:value="http://union.yayawan.com/pay/notify/" />
+        <!-- 丫丫玩 非必要   End -->
+
+        <meta-data
+            android:name="yayawan_game_id"
+            android:value="yaya4098818794" />
+        <meta-data
+            android:name="union_id"
+            android:value="yaya696089580" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+    </application>
+
+</manifest>

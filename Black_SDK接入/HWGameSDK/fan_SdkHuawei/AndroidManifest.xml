@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lj.mlys.huawei"
+    android:versionCode="11"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+  	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="com.huawei.hwid.permission.ACCESS" />
+    <uses-permission android:name="com.huawei.appmarket.provider.readPermission" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+   
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+
+        
+    <!-- 账号依赖的Activity声明 -->
+        <activity
+            android:name="com.huawei.hwid.openapi.auth.dump.OpenDumpActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.huawei.hwid.openapi.quicklogin.ui.QuickLoginActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme.quicklogin" >
+            <intent-filter>
+                <action android:name="com.huawei.hwid.opensdk.ACTION_QUICKLOGIN_SMS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 浮标依赖的Activity声明，建议将此Activity的屏幕方向与应用的屏幕方向设置为一样的 -->
+        <activity
+            android:name="com.huawei.gamebox.buoy.sdk.activity.WebPageActivity"
+            android:configChanges="orientation|screenSize" 
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.huawei.gamebox.buoy.sdk.activity.NoticeActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.huawei.gamebox.buoy.sdk.activity.BaseDialogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:theme="@style/buoy_baseDialog" >
+        </activity>
+
+        <!-- 切换帐号的广播，由开发者自行实现逻辑，并修改package路径；其中的exported参数必须添加，防止其他应用的广播干扰 -->
+        <receiver
+            android:name="com.yayawan.impl.ChangeUserReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.huawei.gamebox.changeUserLogin" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 浮标中下载依赖的广播 -->
+        <receiver android:name="com.huawei.gamebox.buoy.sdk.service.download.DownloadBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
+            </intent-filter>
+        </receiver>
+         
+      <meta-data android:name="APP_ID" 
+          android:value="string10319604" />
+        <meta-data 
+            android:name="PAY_ID" 
+            android:value="string900086000032540158" />
+        <meta-data 
+            android:name="privateKey" 
+            android:value="MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAIWNLmV5KozrTQ1CLEPw+ULi/1Fa0hJxb7/OWZiS4PDyRz6ZjsbX/+w/L0aURE04IkG1k44tbcMU58lI4enuAHipdsxpjzRhGswKLXcIXa85aktVn9+W6FtrIYJGVwYkyWBHSYs2VrdG52GvUNbTXl8uYCy8gZWJAfSDQSt6xz9BAgMBAAECgYAw5SGJcTUM5tEM+58tOLpprKYBaRjkO7fIJ4pR++RzEqDW4G2Pi2FdYzyxwHLJOrYADLR7J1K6S5sY7KAZf1OYUVpLeuA/NJWbf6poEmi70rAWhe3NcKH2RgxCbeVpEGia3hza9Eus5ZEIZUvbk7yZYREC768MOvTHBN7V4Uum4QJBAM9cyRGN8L+v2iTErLvGxBQuPtzlLHYEgtkvLVVOLZs4AEOjS/ybpIxM85Lbpy9G/ajra/fwq+v3sGLPVt3vt00CQQCk4F5RwXB5vZE9XkteOl7JLjVVwHJRfAuG2EWux5pxm6sDE4LK9HuYYHQPpt/hoVLSkeFYNV7ej3ZcmZOSLXXFAkBklc960m1LrlOUrkpTs7D9UQlxQUF15e5Kx5Wn4YpB1sJaDOYZHK6O1+z2+dF5H2h//eKbnIToq3dGFuk+Mr+pAkBxzHMNVsh9HnyKsPSwOvWFQiGJ6GR/HXEPR2MBOb+9vkYQv3y8/HX6PEifLPzFzQVPVWUF7wBl+Psm+tFCSaJJAkEAw41d/tzsJq5bMDkjOj24lxwb1foCPEzZTQInjvFOsnSOHCGv9+Pyh8dGE0Nz4V1OAMXLESGoLgwsaq2pYlYvEQ==" />
+ 
+        
+        
+      <meta-data android:name="yayawan_game_id" android:value="yaya3981646739" />
+        <meta-data android:name="union_id" android:value="yaya452499687" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="false" />
+    
+    </application>
+
+</manifest>

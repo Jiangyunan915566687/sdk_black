@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/xmw_new_bjk1" 
+    android:padding="1dp"
+    >
+
+    <ImageView
+        android:id="@+id/xmwpayt_img"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="2dp"
+        android:scaleType="centerInside" 
+        
+        />
+
+    <CheckBox
+        android:id="@+id/xmwpayt_check"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/xmw_checkbox"
+        android:button="@null"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/xmwpayt_check1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/xmwbox_cant"
+        android:button="@null"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/xmw_scyx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/scyx"
+        android:visibility="gone" />
+
+</LinearLayout>

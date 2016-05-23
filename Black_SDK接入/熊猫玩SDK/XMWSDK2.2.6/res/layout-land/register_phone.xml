@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/register_phone"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/xmw_new_bjk"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <!-- 标题 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/xmw_new_title1" />
+
+        <TextView
+            style="@style/xmw_title2"
+            android:text="@string/xmw_regisitytip"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <!-- 标题 -->
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5px"
+        android:background="@drawable/xmw_new_divider1" >
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 手机号码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/xmw_new_inputbox"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/xmw_new_iphone"
+                android:gravity="center" />
+
+            <com.xmwsdk.view.XmwEditText
+                android:id="@+id/rephone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@color/luc_back"
+                android:hint="@string/xmw_phonenumber"
+                android:inputType="number"
+                android:maxLength="11"
+                android:paddingLeft="3dp"
+                android:textColor="@color/appWhite"
+                android:textColorHint="@color/con_black"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/rephone_send"
+                android:layout_width="75dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:background="@drawable/xmw_new_code" />
+        </LinearLayout>
+        <!-- 手机号码 -->
+
+
+        <!-- 短信验证码 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/xmw_new_inputbox"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/xmw_new_email"
+                android:gravity="center" />
+
+            <com.xmwsdk.view.XmwEditText
+                android:id="@+id/rephone_code"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/luc_back"
+                android:hint="@string/xmw_phonecode"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingLeft="3dp"
+                android:textColor="@color/appWhite"
+                android:textColorHint="@color/con_black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- 短信验证码 -->
+
+        <Button
+            android:id="@+id/rephone_btn"
+            style="@style/but_noamol"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/xmw_new_register" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="5px"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/xmw_new_divider1" >
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/rephone_jump"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/xmw_new_green"
+                android:text="返回登录返回"
+                android:textColor="@color/appWhite"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/rephone_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/xmw_new_returnlogin"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="返回登录"
+                    android:textColor="@color/appWhite"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

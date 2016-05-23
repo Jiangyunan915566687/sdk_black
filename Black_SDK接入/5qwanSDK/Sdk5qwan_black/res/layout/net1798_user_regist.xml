@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/net1798_user_bg" >
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="280dp"
+            android:layout_gravity="center"
+            android:background="@drawable/net1798_user_center"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:contentDescription="LOGO"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/net1798_logo_big" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="用户注册"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </LinearLayout>
+			
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" 
+            	android:layout_gravity="center" >
+	            
+	            <TextView
+	                android:id="@+id/textView1"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="用户名称：" />
+	
+	            <EditText
+	                android:id="@+id/username"
+	                android:layout_width="200dp"
+	                android:layout_height="wrap_content"
+	                android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" 
+            	android:layout_gravity="center" >
+	            
+	            <TextView
+	                android:id="@+id/textView2"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="用户密码：" />
+	
+	            <EditText
+	                android:id="@+id/userpass"
+	                android:layout_width="200dp"
+	                android:layout_height="wrap_content"
+	                android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" 
+            	android:layout_gravity="center" >
+
+                <Button
+                    android:id="@+id/button_regist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="注       册" />
+
+                <Button
+                    android:id="@+id/button_gologin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="前往登录" />
+
+                <Button
+                    android:id="@+id/button_visitor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="游客模式" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pay_view2"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#a0000000"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/xmw_new_bjk"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/xmw_paymaintitle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="@string/xmw_payorder"
+                            android:textColor="@color/appBlack"
+                            android:textSize="18sp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/new_xiongmao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:src="@drawable/xmw_new_xiongmao"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/xmw_new_title6" />
+
+                        <LinearLayout
+                            android:id="@+id/pay_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:src="@drawable/xmw_close" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/payorderinfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/xmw_new_inputbox"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/payorderinfomsg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp" 
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="10dp"
+                           
+                            android:text="@string/xmw_payorderinfo"
+                            android:textColor="@color/appWhite"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/xmw_orderdesall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/xmw_new_bjk1"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <LinearLayout
+                            android:id="@+id/xmw_orderdes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/xmw_new_pay_1" />
+
+                                <TextView
+                                    style="@style/noamol_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="0dp"
+                                    android:text="@string/xmw_payordernum"
+                                    android:textColor="@color/appWhite" />
+
+                                <TextView
+                                    android:id="@+id/xmw_ordernum"
+                                    style="@style/noamol_text"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginRight="6dp"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:gravity="right"
+                                    android:textColor="@color/appWhite" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="5px"
+                                android:background="@drawable/xmw_new_divider1" >
+                            </View>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/xmw_new_pay_2" />
+
+                                <TextView
+                                    style="@style/noamol_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="0dp"
+                                    android:text="@string/xmw_payorderaccount"
+                                    android:textColor="@color/appWhite" />
+
+                                <TextView
+                                    android:id="@+id/xmw_orderaccount"
+                                    style="@style/noamol_text"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:gravity="right"
+                                    android:textColor="@color/appWhite" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="5px"
+                                android:background="@drawable/xmw_new_divider1" >
+                            </View>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/xmw_ordernameview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/xmw_new_pay_3" />
+
+                                <TextView
+                                    style="@style/noamol_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="0dp"
+                                    android:text="@string/xmw_payordername"
+                                    android:textColor="@color/appWhite" />
+
+                                <TextView
+                                    android:id="@+id/xmw_ordername"
+                                    style="@style/noamol_text"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:lines="1"
+                                    android:textColor="@color/appWhite" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="5px"
+                                android:background="@drawable/xmw_new_divider1" >
+                            </View>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/xmw_new_pay_4" />
+
+                                <TextView
+                                    style="@style/noamol_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="0dp"
+                                    android:text="@string/xmw_payorderamount"
+                                    android:textColor="@color/appWhite" />
+
+                                <TextView
+                                    android:id="@+id/xmw_payamount"
+                                    style="@style/noamol_text"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:textColor="@color/appWhite" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="5px"
+                                android:background="@drawable/xmw_new_divider1" >
+                            </View>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    style="@style/noamol_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="12dp"
+                                    android:text="@string/xmw_pandaneed"
+                                    android:textColor="@color/con_rudeback" />
+
+                                <TextView
+                                    android:id="@+id/xmw_orderpanda"
+                                    style="@style/noamol_text"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="14dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:textColor="@color/appBlack" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1px"
+                                android:background="@color/con_line" >
+                            </View>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/xmw_new_xmtou" />
+
+                                <TextView
+                                    style="@style/noamol_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="0dp"
+                                    android:text="@string/xmw_pandaless"
+                                    android:textColor="@color/appWhite" />
+
+                                <ImageView
+                                    android:id="@+id/xmw_coinhelp"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="4dp"
+                                    android:padding="2dp"
+                                    android:src="@drawable/xmw_new_exphelp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="7dp" >
+
+                                    <TextView
+                                        android:id="@+id/xmw_pandaless"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="35dp"
+                                        android:layout_toLeftOf="@+id/xmw_coinpaybtpay"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textColor="@color/appWhite"
+                                        android:textSize="18sp" />
+
+                                    <ImageView
+                                        android:id="@+id/xmw_coinpaybtpay"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="35dp"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_marginLeft="18dp"
+                                        android:src="@drawable/xmw_new_coinplus" />
+
+                                    <ImageView
+                                        android:id="@+id/xmw_paycointb"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_alignLeft="@id/xmw_pandaless"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/pandapayicon"
+                                        android:visibility="gone" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/xmw_payordertype"
+                        android:textColor="@color/con_textblack"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp" >
+
+                        <com.xmwsdk.view.MyGridView
+                            android:id="@+id/xmwgridview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/xmw_new_bjk1"
+                            android:columnWidth="80dp"
+                            android:gravity="center"
+                            android:horizontalSpacing="20dp"
+                            android:listSelector="@android:color/transparent"
+                            android:numColumns="3"
+                            android:paddingBottom="6dp"
+                            android:paddingTop="6dp"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true" >
+
+                            <ImageView
+                                android:id="@+id/xmw_scyx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="55dp"
+                                android:background="@drawable/scyx"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="@string/xmw_problem"
+                        android:textColor="@color/appWhite"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/payhelpabout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/appWhite"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/paybypersion"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/appWhite"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/xmw_paygo"
+                        style="@style/but_noamol"
+                        android:text="@string/xmw_paygo"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- android:listSelector="@drawable/xmw_gridselector" -->
+
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

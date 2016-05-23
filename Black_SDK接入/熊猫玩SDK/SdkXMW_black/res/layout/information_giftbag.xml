@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/xmw_giftbag"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/con_backd"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/con_back"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@color/con_back"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/giftbag_title"
+                style="@style/xmw_title2"
+                android:text="@string/xmw_giftbagmsg" />
+
+            <LinearLayout
+                android:id="@+id/giftbag_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:src="@drawable/xmw_back" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/con_rudeback" >
+        </View>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/xmw_roundbg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/gbagintromsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:text="填写您的QQ号码，如果有礼包入库，客服会在QQ上通知和发布"
+            android:textColor="@color/appBlack"
+            android:textSize="18sp" />
+
+        <com.xmwsdk.view.XmwEditText
+            android:id="@+id/giftbag_qq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/xmw_roundbg"
+            android:hint="请输入QQ号"
+            android:maxLength="16"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/appBlack"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/giftbag_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="38dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/xmw_butbg"
+            android:text="提交"
+            android:textColor="@color/appBlack"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="8dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/xiongmaowan" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.makebestgame.blacksmithstory.wdj"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+ <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.GET_TOP_ACTIVITY_INFO"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.webkit.permission.PLUGIN"/>
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:label="豌豆荚" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+     
+        
+        
+        
+        
+              <!--   丫丫玩sdk配置开始 -->
+        <!-- 支付相关 -->
+        <activity
+            android:name="com.alipay.android.app.sdk.WapPayActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- BaseLogin_Activity 登录 -->
+        <activity
+            android:name="com.yayawan.sdk.jflogin.BaseLogin_Activity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <!-- 头像上传 -->
+        <activity
+            android:name="com.yayawan.sdk.jfsmallhelp.CropPhoto_Activity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <!-- 发帖 -->
+        <activity
+            android:name="com.yayawan.sdk.jfsmallhelp.Push_feeling_Activity"
+            android:configChanges="keyboardHidden|navigation|screenSize|orientation" >
+        </activity>
+        
+          <!-- 竖屏设置 -->
+
+         <meta-data
+            android:name="yayawan_orientation"
+            android:value="portrait" />
+
+          <meta-data android:name="yayawan_game_key" android:value="2739ae4cb1db672afaf6f93c04031ad5"/>
+        <meta-data android:name="yayawan_game_secret" android:value="e918cb5d97d0a4acee54c1def8c3a78c"/>
+         
+        <!-- 支付方式选择,不设置在支付中心会显示该支付方式,设置为false将不出现该支付方式(默认全显示,只需配置不显示的支付方式即可) -->
+        <!-- 支付宝 -->
+        <meta-data
+            android:name="yaya_alipay"
+            android:value="true" />
+        <!-- 信用卡 -->
+        <meta-data
+            android:name="yaya_visa"
+            android:value="true" />
+        <!-- 丫丫币 -->
+        <meta-data
+            android:name="yaya_yayabi"
+            android:value="true" />
+        <!-- 储蓄卡 -->
+        <meta-data
+            android:name="yaya_cash"
+            android:value="true" />
+        <!-- 移动充值卡 -->
+        <meta-data
+            android:name="yaya_yidong"
+            android:value="true" />
+        <!-- 联通充值卡 -->
+        <meta-data
+            android:name="yaya_liantong"
+            android:value="true" />
+        <!-- 电信充值卡 -->
+        <meta-data
+            android:name="yaya_dianxin"
+            android:value="true" />
+        <!-- 盛大 -->
+        <meta-data
+            android:name="yaya_shengda"
+            android:value="true" />
+        <!-- 骏网 -->
+        <meta-data
+            android:name="yaya_junwang"
+            android:value="true" />
+        <!-- QQ -->
+        <meta-data
+            android:name="yaya_qq"
+            android:value="true" />
+          <!--   丫丫玩sdk配置结束 -->
+        
+    
+         <activity
+            android:name="com.wandoujia.mariosdk.plugin.apk.activity.MarioAccountActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            />
+
+        <activity
+                android:name="com.wandoujia.mariosdk.plugin.apk.activity.MarioAccountChangeActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:launchMode="singleTop"
+                android:screenOrientation="sensor"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <activity
+            android:name="com.wandoujia.mariosdk.plugin.apk.activity.UserInfoSettingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            />
+
+        <activity
+            android:name="com.wandoujia.mariosdk.plugin.apk.activity.LeaderboardActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            />
+
+        <activity
+            android:name="com.wandoujia.mariosdk.plugin.apk.activity.AchievementActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            />
+
+        <activity
+            android:name="com.wandoujia.mariosdk.plugin.apk.activity.InviteActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            />
+
+        <activity
+            android:name="com.wandoujia.mariosdk.plugin.apk.activity.MiniProfileActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            />
+
+        <activity
+            android:name="com.wandoujia.mariosdk.plugin.apk.activity.MarioActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            />
+
+        <activity
+            android:name="com.wandoujia.mariosdk.plugin.apk.fantasy.activity.FFActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            />
+
+        <receiver android:name="com.wandoujia.mariosdk.plugin.api.WandouPluginReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="pheonix.intent.action.LOGIN_SUCCESS"/>
+                <action android:name="pheonix.intent.action.REGISTER_SUCCESS"/>
+                <action android:name="pheonix.intent.action.LOGOUT_SUCCESS"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.wandoujia.mariosdk.plugin.apk.message_push.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.wandoujia.mariosdk.plugin.api.WandouPluginService"
+            android:exported="false"/>
+
+        <!-- message push -->
+        <service
+            android:name="com.wandoujia.mariosdk.plugin.apk.message_push.MessagePushService"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <!--  pay sdk plugin -->
+        <activity
+            android:name="com.wandoujia.oakenshield.activity.OakenshieldActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize">
+
+            <intent-filter>
+                <action android:name="com.wandoujia.oakenshield"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <!-- Make sure to replace XXX by your AppKeyid -->
+                <data android:scheme="Wandoujia-PaySdk-100008237"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Alipay SDK begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <!-- Alipay SDK end -->
+
+        <!-- UnionPay start -->
+        <service android:name="com.UCMobile.PayPlugin.PayPluginService">
+            <intent-filter>
+                <action android:name="android.webkit.PLUGIN"/>
+            </intent-filter>
+            <meta-data
+                android:name="type"
+                android:value="native"/>
+        </service>
+        <activity android:name="com.unionpay.uppay.PayActivity">
+        </activity>
+        <!-- UnionPay end -->
+
+        <activity
+            android:name="com.shandianshua.nen.activity.PayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- 微信支付 -->
+        <activity
+            android:name="com.ipaynow.plugin.inner_plugin.wechat_plugin.activity.WeChatNotifyActivity"
+            android:theme="@android:style/Theme.NoDisplay"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <meta-data
+            android:name="APP_KEY"
+            android:value="string100036470" />
+       
+        <meta-data
+            android:name="SECURITY_KEY"
+            android:value="a9dc414edcf7dc6854de72b8f1313cfa" />
+        <meta-data
+            android:name="yayawan_game_id"
+            android:value="yaya1403551085" />
+        <meta-data
+            android:name="union_id"
+            android:value="yaya344534282" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="false" />
+    </application>
+
+</manifest>

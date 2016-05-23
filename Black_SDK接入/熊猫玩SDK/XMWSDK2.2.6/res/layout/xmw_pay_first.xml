@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/xmw_pay_first"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="260dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/xmw_new_bjk"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/xmw_title2"
+                    android:text="@string/xmw_coinhelptext"
+                    android:textColor="@color/appBlack"
+                    android:visibility="gone" />
+
+                
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                  android:layout_centerInParent="true"
+                    android:text="确认付款"
+                    android:textSize="18sp"
+                    android:textColor="@color/appWhite"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/xmw_coinhelpback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:src="@drawable/xmw_new_close1"
+                        android:visibility="gone"
+                         />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+          <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/con_line"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+             >
+         </View>
+        
+          <TextView  android:id="@+id/xmw_pay_first_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     android:text="10元"
+                    android:textSize="30sp"
+                    android:textColor="@color/appWhite"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
+                    android:textStyle="bold"
+                    />
+          
+         <LinearLayout    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="6dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    >
+             
+             <TextView  
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:text="使用 "
+                    android:textSize="16sp"
+                    android:textColor="@color/appWhite"
+                    android:gravity="center_horizontal"
+             
+                    android:textStyle="normal"
+                    /> 
+             <TextView  
+                 
+                   android:id="@+id/xmw_pay_xmcoin_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100熊猫币  "
+                    android:textSize="16sp"
+                    android:textColor="@color/con_red"
+                    /> 
+                     <TextView  
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:text="支付"
+                    android:textSize="16sp"
+                    android:textColor="@color/appWhite"
+                    android:gravity="center_horizontal"
+                    
+                    android:textStyle="normal"
+                    /> 
+                    
+                        <TextView  
+                             android:id="@+id/change_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:text="    更换>"
+                     
+                    android:textSize="17sp"
+                    android:textColor="@color/xmw_yellow"
+                    android:gravity="center_horizontal"
+          
+                    android:textStyle="bold"
+                    /> 
+         </LinearLayout> 
+           <TextView  
+                    android:id="@+id/xmw_coin_yue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="（当前熊猫币：100 ）"
+                    android:textSize="15sp"
+                    android:textColor="@color/appWhite"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="3dp"
+                    android:paddingRight="20dp"
+                    android:textStyle="normal"
+                    /> 
+          
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" 
+            android:layout_marginTop="5dp"
+            >
+
+            <Button
+                android:id="@+id/xmw_coinhelppay"
+                style="@style/but_noamol"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/xmw_ljzf" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

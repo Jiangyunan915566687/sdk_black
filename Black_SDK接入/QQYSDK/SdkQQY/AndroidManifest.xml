@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tencent.tmgp.xjxzzgzlc"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- SDK -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- SDK -->
+
+
+    <!-- TODO SDK接入必须权限模块 START -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- TODO SDK接入必须权限模块 START -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 登录上报时需要带设备名称, 通过蓝牙模块来获取设备名称 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- 可选的权限：异常上报系统log,XG也需要 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- TODO SDK接入 接入支付需要设置屏幕兼容声明 START -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true" />
+    <!-- TODO SDK接入 接入支付需要设置屏幕兼容声明 END -->
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity1"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="MYq3q"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- TODO SDK接入 QQ接入配置 START -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105258885" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- TODO SDK接入 QQ接入配置 END -->
+
+
+        <!-- TODO SDK接入 微信接入配置 START -->
+        <!-- 注意：此处应改为 游戏包名.wxapi.WXEntryActivity -->
+        <!-- 注意：此处应改为 游戏包名.diff -->
+        <!-- TODO SDK接入 微信接入配置 START -->
+        <!-- 注意：此处应改为 游戏的微信appid -->
+        <activity
+            android:name="com.tencent.tmgp.xjxzzgzlc.wxapi.WXEntryActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:label="WXEntryActivity"
+            android:launchMode="singleTop"
+            android:taskAffinity="com.tencent.tmgp.xjxzzgzlc.diff" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wxf1bc308ce4dad1c8" />
+            </intent-filter>
+        </activity>
+        <!-- TODO SDK接入 微信接入配置 END -->
+
+
+        <!-- BaseLogin_Activity 登录 -->
+        <activity
+            android:name="com.yayawan.sdk.jflogin.BaseLogin_Activity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <!-- 头像上传 -->
+        <activity
+            android:name="com.yayawan.sdk.jfsmallhelp.CropPhoto_Activity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <!-- 发帖 -->
+        <activity
+            android:name="com.yayawan.sdk.jfsmallhelp.Push_feeling_Activity"
+            android:configChanges="keyboardHidden|navigation|screenSize|orientation" >
+        </activity>
+        <activity
+            android:name="com.yayawan.sdk.Yinlian_Activity"
+            android:configChanges="keyboardHidden|navigation|screenSize|orientation" >
+        </activity>
+
+         <meta-data
+            android:name="com.tencent.rdm.uuid"
+            android:value="55f4d74e-ce87-4cab-afc7-407814265410" />
+        
+        
+        <meta-data
+            android:name="appid"
+            android:value="string1105086100" />
+       
+        <meta-data
+            android:name="qqAppId"
+            android:value="string1105086100" />
+        <meta-data
+            android:name="wxAppId"
+            android:value="wxf9b0eff5ff57d374" />
+        <meta-data
+            android:name="wxAppKey"
+            android:value="5276544ffd2b597cf97b52bef36fbc10" />
+        <meta-data
+            android:name="addexit"
+            android:value="yes" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="56a1938067e58ec57f0029a5" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="jiafan1" />
+
+        <!-- 请将value改为MTA分配的appkey -->
+        <meta-data
+            android:name="TA_APPKEY"
+            android:value="AY68YTM5I9AP" />
+        <!-- 请将value改为app发布对应的渠道，不同的发布渠道使用不同的名字 -->
+        <meta-data
+            android:name="InstallChannel"
+            android:value="string3" />
+        <!-- 注意：若填写的渠道为纯数字字符串类型，请不要超过int表示的范围！ -->
+
+        <meta-data
+            android:name="yayawan_orientation"
+            android:value="landscape" />
+        <meta-data
+            android:name="yayawan_game_key"
+            android:value="2739ae4cb1db672afaf6f93c04031ad5" />
+        <meta-data
+            android:name="yayawan_game_secret"
+            android:value="e918cb5d97d0a4acee54c1def8c3a78c" />
+        <meta-data
+            android:name="yayawan_game_id"
+            android:value="yaya2079036627" />
+        <meta-data
+            android:name="union_id"
+            android:value="yaya2958292331" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="false" />
+    </application>
+
+</manifest>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/page_coinhelp"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#a0000000"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/xmw_new_bjk"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/xmw_title2"
+                    android:text="@string/xmw_coinhelptext"
+                    android:textColor="@color/appBlack"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/new_xiongmao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/xmw_new_xiongmao"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@+id/new_xiongmao"
+                    android:src="@drawable/xmw_new_title8" />
+
+                <LinearLayout
+                    android:id="@+id/xmw_coinhelpback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:src="@drawable/xmw_new_close1" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" >
+
+            <TextView
+                android:id="@+id/xmw_coinhelpinfo"
+                style="@style/xmw_textcon"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/xmw_new_bjk1"
+                android:lineSpacingExtra="3dp"
+                android:padding="15dp"
+                android:textColor="@color/appWhite" />
+
+            <Button
+                android:id="@+id/xmw_coinhelppay"
+                style="@style/but_noamol"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/xmw_coinhelpinfo"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/xmw_new_recharge" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
