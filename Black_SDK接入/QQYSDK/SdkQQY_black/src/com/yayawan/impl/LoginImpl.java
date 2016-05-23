@@ -48,7 +48,7 @@ public class LoginImpl implements YYWLoginer {
 
 		System.err.println("relogin");
 	}
-
+/*
 	public void getAccessToken(final Activity paramActivity, String code) {
 		progress(paramActivity);
 		AsyncHttpConnection http = AsyncHttpConnection.getInstance();
@@ -77,7 +77,8 @@ public class LoginImpl implements YYWLoginer {
 
 		});
 	}
-
+	*/
+/*
 	public void getAccessUserInfo(final Activity paramActivity, String code) {
 		progress(paramActivity);
 		AsyncHttpConnection http = AsyncHttpConnection.getInstance();
@@ -131,7 +132,7 @@ public class LoginImpl implements YYWLoginer {
 
 		});
 	}
-
+*/
 	ProgressDialog progressDialog = null;
 
 	private void progress(Activity paramActivity) {

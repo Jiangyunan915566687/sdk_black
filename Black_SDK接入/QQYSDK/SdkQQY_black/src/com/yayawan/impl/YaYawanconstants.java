@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
@@ -40,8 +41,9 @@ public class YaYawanconstants {
 		Yayalog.loger("sdk初始化");
 		Log.d(TAG, "sdk初始化 - inintsdk");
 		YSDKApi.onCreate(mactivity);
-		// YSDKApi.setUserListener(arg0);
-		// YSDKApi.setBuglyListener(arg0);
+		YSDKApi.handleIntent(mactivity.getIntent());
+		YSDKApi.setUserListener(new YSDKCallback(mactivity));
+		YSDKApi.setBuglyListener(new YSDKCallback(mactivity));
 	}
 
 	/**
@@ -58,7 +60,11 @@ public class YaYawanconstants {
 	public static void login(final Activity mactivity) {
 		Yayalog.loger("sdk登录");
 		Log.d(TAG, "sdk登录 - login");
-		YSDKApi.login(ePlatform.QQ);
+		if("1".equals("1")){
+			YSDKApi.login(ePlatform.QQ);
+		}else{
+			YSDKApi.login(ePlatform.WX);
+		}
 
 	}
 
@@ -196,24 +202,35 @@ public class YaYawanconstants {
 	 * @param paramActivity
 	 */
 	public static void onPause(Activity paramActivity) {
-		
+		YSDKApi.onPause(paramActivity);
 	}
 
 	public static void onResume(Activity paramActivity) {
-		
+		YSDKApi.onResume(paramActivity);
 	}
 
 	public static void onRestart(Activity paramActivity) {
-		
+		YSDKApi.onRestart(paramActivity);
 	}
 
 	public static void onStop(Activity paramActivity) {
-		
+		YSDKApi.onStop(paramActivity);
 	}
 
 	public static void onDestroy(Activity paramActivity) {
-
+		YSDKApi.logout();
+		YSDKApi.onDestroy(paramActivity);
 	}
+
+	public static void onNewIntent(Intent paramIntent) {
+		YSDKApi.handleIntent(paramIntent);
+	}
+
+	public static void onActivityResult(Activity paramActivity, int paramInt1,
+			int paramInt2, Intent paramIntent) {
+		YSDKApi.onActivityResult(paramInt1, paramInt2, paramIntent);
+	}
+
 
 	/**
 	 * 登录成功调用
@@ -360,5 +377,6 @@ public class YaYawanconstants {
 		 * callback.onExit(); } }); } });
 		 */
 	}
+
 
 }

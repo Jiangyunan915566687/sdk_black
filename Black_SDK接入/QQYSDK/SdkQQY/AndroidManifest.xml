@@ -133,16 +133,12 @@
             android:name="com.yayawan.sdk.Yinlian_Activity"
             android:configChanges="keyboardHidden|navigation|screenSize|orientation" >
         </activity>
-
-         <meta-data
+        <meta-data
             android:name="com.tencent.rdm.uuid"
             android:value="55f4d74e-ce87-4cab-afc7-407814265410" />
-        
-        
         <meta-data
             android:name="appid"
             android:value="string1105086100" />
-       
         <meta-data
             android:name="qqAppId"
             android:value="string1105086100" />

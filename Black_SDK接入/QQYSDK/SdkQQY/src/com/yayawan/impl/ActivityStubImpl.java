@@ -72,14 +72,12 @@ public class ActivityStubImpl implements YYWActivityStub {
 
 	@Override
 	public void applicationDestroy(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void onActivityResult(Activity paramActivity, int paramInt1,
 			int paramInt2, Intent paramIntent) {
-		// TODO Auto-generated method stub
 		YSDKApi.onActivityResult(paramInt1, paramInt2, paramIntent);
 	}
 

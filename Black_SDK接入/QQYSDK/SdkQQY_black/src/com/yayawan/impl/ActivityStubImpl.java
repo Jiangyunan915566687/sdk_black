@@ -53,12 +53,12 @@ public class ActivityStubImpl implements YYWActivityStub {
 	@Override
 	public void onActivityResult(Activity paramActivity, int paramInt1,
 			int paramInt2, Intent paramIntent) {
-
+		YaYawanconstants.onActivityResult(paramActivity,paramInt1,paramInt2,paramIntent);
 	}
 
 	@Override
 	public void onNewIntent(Intent paramIntent) {
-
+		YaYawanconstants.onNewIntent(paramIntent);
 	}
 
 	@Override

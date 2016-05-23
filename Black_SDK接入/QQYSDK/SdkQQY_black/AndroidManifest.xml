@@ -41,7 +41,7 @@
         <activity
             android:name="com.yayawan.sdktemplate.MainActivity"
             android:label="QQY_SDK"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -63,7 +63,7 @@
                 <data android:scheme="tencent1105258885" />
             </intent-filter>
         </activity>
-        <!-- black  android:scheme="tencent1105258885"  tencent+qqappid -->
+        <!-- black1 android:scheme="tencent1105258885"  tencent+qqappid -->
         <activity
             android:name="com.tencent.connect.common.AssistActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
@@ -73,8 +73,8 @@
         
         
         <!-- TODO SDK接入 微信接入配置 START -->
-        <!-- black 注意：此处应改为 游戏包名.wxapi.WXEntryActivity -->
-        <!-- black 注意：此处应改为 游戏包名.diff -->
+        <!-- black2 注意：此处应改为 游戏包名.wxapi.WXEntryActivity -->
+        <!-- black3 注意：此处应改为 游戏包名.diff -->
         <activity
             android:name="com.tencent.tmgp.xjxzzgzlc.wxapi.WXEntryActivity"
             android:excludeFromRecents="true"
@@ -86,12 +86,32 @@
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-                <!-- black 注意：此处应改为 游戏的微信appid -->
+                <!-- black4 注意：此处应改为 游戏的微信appid -->
                 <data android:scheme="wxf1bc308ce4dad1c8" />
             </intent-filter>
         </activity>
         <!-- TODO SDK接入 微信接入配置 END -->
-
+		<!-- BaseLogin_Activity 登录 -->
+        <activity
+            android:name="com.yayawan.sdk.jflogin.BaseLogin_Activity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <!-- 头像上传 -->
+        <activity
+            android:name="com.yayawan.sdk.jfsmallhelp.CropPhoto_Activity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <!-- 发帖 -->
+        <activity
+            android:name="com.yayawan.sdk.jfsmallhelp.Push_feeling_Activity"
+            android:configChanges="keyboardHidden|navigation|screenSize|orientation" >
+        </activity>
+        <activity
+            android:name="com.yayawan.sdk.Yinlian_Activity"
+            android:configChanges="keyboardHidden|navigation|screenSize|orientation" >
+        </activity>
+        
         
         <!-- 丫丫玩 非必要  Start -->
         <meta-data
@@ -102,27 +122,57 @@
             android:value="no" />
         <meta-data
             android:name="appid"
-            android:value="string" />
+            android:value="string1105086100" />
         <meta-data
-            android:name="APPKEY"
-            android:value="" />
+            android:name="qqAppId"
+            android:value="string1105086100" />
         <meta-data
-            android:name="APPSECRET"
-            android:value="" />
+            android:name="wxAppId"
+            android:value="wxf9b0eff5ff57d374" />
         <meta-data
-            android:name="CallbackUrl"
-            android:value="http://union.yayawan.com/pay/notify/" />
+            android:name="wxAppKey"
+            android:value="5276544ffd2b597cf97b52bef36fbc10" />
+        
+        <meta-data
+            android:name="com.tencent.rdm.uuid"
+            android:value="55f4d74e-ce87-4cab-afc7-407814265410" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="56a1938067e58ec57f0029a5" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="jiafan1" />
+
+                <!-- 请将value改为MTA分配的appkey -->
+        <meta-data
+            android:name="TA_APPKEY"
+            android:value="AY68YTM5I9AP" />
+        <!-- 请将value改为app发布对应的渠道，不同的发布渠道使用不同的名字 -->
+        <meta-data
+            android:name="InstallChannel"
+            android:value="string3" />
+        <!-- 注意：若填写的渠道为纯数字字符串类型，请不要超过int表示的范围！ -->
+
+        <meta-data
+            android:name="yayawan_orientation"
+            android:value="landscape" />
+        <meta-data
+            android:name="yayawan_game_key"
+            android:value="2739ae4cb1db672afaf6f93c04031ad5" />
+        <meta-data
+            android:name="yayawan_game_secret"
+            android:value="e918cb5d97d0a4acee54c1def8c3a78c" />
         <!-- 丫丫玩 非必要   End -->
 
         <meta-data
             android:name="yayawan_game_id"
-            android:value="yaya4098818794" />
+            android:value="yaya2079036627" />
         <meta-data
             android:name="union_id"
-            android:value="yaya696089580" />
+            android:value="yaya2958292331" />
         <meta-data
             android:name="isLandscape"
-            android:value="true" />
+            android:value="false" />
     </application>
 
 </manifest>
