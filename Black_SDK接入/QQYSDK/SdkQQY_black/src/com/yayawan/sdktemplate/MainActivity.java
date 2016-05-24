@@ -239,6 +239,15 @@ public class MainActivity extends Activity {
 	    	super.onActivityResult(requestCode, resultCode, data);
 	    	GameProxy.getInstent().onActivityResult(this, requestCode, resultCode, data);
 	    }
+		@Override
+		protected void onNewIntent(Intent intent) {
+			// TODO Auto-generated method stub
+			GameProxy.getInstent().onNewIntent(intent);
+			super.onNewIntent(intent);
+			// System.out.println("onNewIntent");
+			// WGPlatform.handleCallback(intent);
+		
+		}
 
 	    public boolean onKeyDown(int keyCode, KeyEvent event) {
 	    	// 如果是返回键,直接返回到桌面

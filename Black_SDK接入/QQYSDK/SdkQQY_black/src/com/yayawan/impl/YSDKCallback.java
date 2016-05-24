@@ -5,6 +5,7 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.text.LoginFilter;
+import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -89,10 +90,12 @@ public class YSDKCallback implements UserListener, BuglyListener {
 			// 登录获取的pfkey值
 			Myconstants.mpayinfo.pfKey = pf_key;
 			Myconstants.mpayinfo.sessionId = openId;
-			if (Myconstants.platform.equals("qq")) {
-				YSDKApi.queryUserInfo(ePlatform.QQ);
-			} else {
-				YSDKApi.queryUserInfo(ePlatform.WX);
+			if(!TextUtils.isEmpty(Myconstants.platform)){
+				if (Myconstants.platform.equals("qq")) {
+					YSDKApi.queryUserInfo(ePlatform.QQ);
+				} else {
+					YSDKApi.queryUserInfo(ePlatform.WX);
+				}
 			}
 			break;
 		// 游戏逻辑，对登陆失败情况分别进行处理
