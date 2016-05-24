@@ -21,7 +21,11 @@ import com.yayawan.sdk.main.YayaWan;
 import com.yayawan.utils.DeviceUtil;
 import com.yayawan.utils.Handle;
 import com.yayawan.utils.JSONUtil;
-
+/**
+ * 版本号 ： 5.5
+ * @author black
+ *
+ */
 public class YaYawanconstants {
 
 	private static HashMap<String, String> mGoodsid;

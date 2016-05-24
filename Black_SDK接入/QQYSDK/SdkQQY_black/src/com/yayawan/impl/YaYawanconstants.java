@@ -1,16 +1,23 @@
 package com.yayawan.impl;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.tencent.tmgp.xjxzzgzlc.R;
 import com.tencent.ysdk.api.YSDKApi;
@@ -21,8 +28,6 @@ import com.tencent.ysdk.module.pay.PayRet;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
-import com.yayawan.sdk.callback.YayaWanCallback;
-import com.yayawan.sdk.main.YayaWan;
 import com.yayawan.utils.DeviceUtil;
 import com.yayawan.utils.Handle;
 import com.yayawan.utils.JSONUtil;
@@ -41,6 +46,7 @@ public class YaYawanconstants {
 		Yayalog.loger("sdk初始化");
 		Log.d(TAG, "sdk初始化 - inintsdk");
 		YSDKApi.onCreate(mactivity);
+		//Myconstants.mpayinfo=new Payinfo();
 		YSDKApi.handleIntent(mactivity.getIntent());
 		YSDKApi.setUserListener(new YSDKCallback(mactivity));
 		YSDKApi.setBuglyListener(new YSDKCallback(mactivity));
@@ -60,12 +66,51 @@ public class YaYawanconstants {
 	public static void login(final Activity mactivity) {
 		Yayalog.loger("sdk登录");
 		Log.d(TAG, "sdk登录 - login");
-		if("1".equals("1")){
-			YSDKApi.login(ePlatform.QQ);
-		}else{
-			YSDKApi.login(ePlatform.WX);
-		}
+		showQQAndWeiXinDialog(mactivity);
+	}
+	public static void showQQAndWeiXinDialog(Activity mactivity){
+		AlertDialog.Builder builder = new AlertDialog.Builder(mactivity,R.style.dialog);
+		final AlertDialog dialog = builder.create();
+		// 将自定义的布局文件设置给dialog
+		View view = View.inflate(mactivity, R.layout.login_qqweixin_dailog, null);
+		dialog.setView(view, 0, 0, 0, 0);// 设置弹窗边距为0
+		ImageView iv_loginQQ = (ImageView) view.findViewById(R.id.iv_loginQQ);
+		ImageView iv_loginWX = (ImageView) view.findViewById(R.id.iv_loginWX);
+		iv_loginQQ.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Log.d(TAG, "iv_loginQQ");
+				Myconstants.mpayinfo=null;
+				Myconstants.mpayinfo=new Payinfo();
+				YSDKApi.login(ePlatform.QQ);
+				Myconstants.platform="qq";
+				Myconstants.mpayinfo.opentype = "qq";
+				dialog.dismiss();
+			}
+		});
+		iv_loginWX.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Log.d(TAG, "iv_loginWX");
+				Myconstants.mpayinfo=null;
+				Myconstants.mpayinfo=new Payinfo();
+				YSDKApi.login(ePlatform.WX);
+				Myconstants.platform="wx";
+				Myconstants.mpayinfo.opentype = "wx";
+				dialog.dismiss();
+			}
+		});
+		dialog.setCanceledOnTouchOutside(true);
+		dialog.setOnCancelListener(new OnCancelListener() {
 
+			public void onCancel(DialogInterface dialog) {
+				loginFail();
+				Log.d(TAG, "Dialog onCancel");
+			}
+		});
+		dialog.show();
 	}
 
 	/**
@@ -86,68 +131,81 @@ public class YaYawanconstants {
 		Yayalog.loger("sdk支付");
 		Log.d(TAG, "sdk支付 - pay");
 		String zoneId = "1";
-		String saveValue = "1";
+		String saveValue = "" + YYWMain.mOrder.money / 10;;
 		boolean isCanChange = false;
-		Bitmap bmp = BitmapFactory.decodeResource(mactivity.getResources(),
-				R.drawable.sample_yuanbao);
+		/*AssetManager assetManager = mactivity.getAssets();
+		InputStream istr = null;
+		try {
+			istr = assetManager.open("sample_yuanbao.png");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}*/
+		
+		Bitmap bmp = BitmapFactory.decodeResource(mactivity.getResources(), R.drawable.sample_yuanbao);
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		bmp.compress(Bitmap.CompressFormat.PNG, 100, baos);
 		byte[] appResData = baos.toByteArray();
 		String ysdkExt = "ysdkExt";
 		YSDKApi.recharge(zoneId, saveValue, isCanChange, appResData, ysdkExt,
 				new PayListener() {
-					@Override
-					public void OnPayNotify(PayRet ret) {
-						if (PayRet.RET_SUCC == ret.ret) {
-							// 支付流程成功
-							switch (ret.payState) {
-							// 支付成功
-							case PayRet.PAYSTATE_PAYSUCC:
-								Log.d(TAG, "用户支付成功，支付金额"
-										+ ret.realSaveNum + ";" + "使用渠道："
-										+ ret.payChannel + ";" + "发货状态："
-										+ ret.provideState + ";" + "业务类型："
-										+ ret.extendInfo + ";建议查询余额："
-										+ ret.toString());
-								break;
-							// 取消支付
-							case PayRet.PAYSTATE_PAYCANCEL:
-								Log.d(TAG, "用户取消支付：" + ret.toString());
-								break;
-							// 支付结果未知
-							case PayRet.PAYSTATE_PAYUNKOWN:
-								Log.d(TAG, "用户支付结果未知，建议查询余额："
-										+ ret.toString());
-								break;
-							// 支付失败
-							case PayRet.PAYSTATE_PAYERROR:
-								Log.d(TAG, "支付异常" + ret.toString());
-								break;
-							}
-						} else {
-							switch (ret.flag) {
-							case eFlag.User_LocalTokenInvalid:
-								// 用户取消支付
-								Log.d(TAG, "登陆态过期，请重新登陆："
-										+ ret.toString());
-								//mactivity.letUserLogout();
-								break;
-							case eFlag.Pay_User_Cancle:
-								// 用户取消支付
-								Log.d(TAG, "用户取消支付：" + ret.toString());
-								break;
-							case eFlag.Pay_Param_Error:
-								Log.d(TAG, "支付失败，参数错误"
-										+ ret.toString());
-								break;
-							case eFlag.Error:
-							default:
-								Log.d(TAG, "支付异常" + ret.toString());
-								break;
-							}
+				@Override
+				public void OnPayNotify(PayRet ret) {
+					if (PayRet.RET_SUCC == ret.ret) {
+						// 支付流程成功
+						switch (ret.payState) {
+						// 支付成功
+						case PayRet.PAYSTATE_PAYSUCC:
+							Log.d(TAG, "用户支付成功，支付金额"
+								+ ret.realSaveNum + ";" + "使用渠道："
+								+ ret.payChannel + ";" + "发货状态："
+								+ ret.provideState + ";" + "业务类型："
+								+ ret.extendInfo + ";建议查询余额："
+								+ ret.toString());
+							break;
+						// 取消支付
+						case PayRet.PAYSTATE_PAYCANCEL:
+							Log.d(TAG, "用户取消支付：" + ret.toString());
+							payCancel();
+							break;
+						// 支付结果未知
+						case PayRet.PAYSTATE_PAYUNKOWN:
+							Log.d(TAG, "用户支付结果未知，建议查询余额："
+								+ ret.toString());
+							payFail();
+							break;
+						// 支付失败
+						case PayRet.PAYSTATE_PAYERROR:
+							Log.d(TAG, "支付异常" + ret.toString());
+							payFail();
+							break;
+						}
+					} else {
+						switch (ret.flag) {
+						case eFlag.User_LocalTokenInvalid:
+							// 用户取消支付
+							Log.d(TAG, "登陆态过期，请重新登陆："+ ret.toString());
+							Toast.makeText(mactivity, "登陆时间过长，请新登陆游戏进行支付",
+									0).show();
+							//login(mactivity);
+							break;
+						case eFlag.Pay_User_Cancle:
+							// 用户取消支付
+							Log.d(TAG, "用户取消支付：" + ret.toString());
+							payCancel();
+							break;
+						case eFlag.Pay_Param_Error:
+							Log.d(TAG, "支付失败，参数错误"+ ret.toString());
+							payFail();
+							break;
+						case eFlag.Error:
+						default:
+							Log.d(TAG, "支付异常" + ret.toString());
+							payFail();
+							break;
 						}
 					}
-				});
+				}
+			});
 	}
 
 	/**
@@ -352,30 +410,23 @@ public class YaYawanconstants {
 	public static void exitgameFromYyw(final Activity paramActivity,
 			final YYWExitCallback callback) {
 		Log.d(TAG, "退出弹窗");
-		new AlertDialog.Builder(paramActivity).setTitle("退出游戏提示")
-				.setMessage("是否退出游戏？")// paramYayaWanCallback
-				.setPositiveButton("确定", new OnClickListener() {
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						paramActivity.finish(); // 关闭游戏
-						Log.d(TAG, "callback");
-						callback.onExit(); // 游戏退出回调
-						Log.d(TAG, "System.exit(0)");
-						System.exit(0); // 适配单机游戏
-						// 部分游戏的退出回调处理得不好，推荐直接关闭 System.exit(0);
-						// 若是单机游戏，则需要添加上退出回调，以免退出操作没有对游戏进行本地保存
-
-					}
-				}).setNeutralButton("取消", null).create().show();
-		/*
-		 * paramActivity.runOnUiThread(new Runnable() {
-		 * 
-		 * @Override public void run() { YayaWan.Exitgame(paramActivity, new
-		 * YayaWanCallback() {
-		 * 
-		 * @Override public void onSuccess() { paramActivity.finish();
-		 * callback.onExit(); } }); } });
-		 */
+		new AlertDialog.Builder(paramActivity)
+		.setTitle("退出游戏提示")
+		.setMessage("是否退出游戏？")// paramYayaWanCallback
+		.setPositiveButton("确定", new OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				paramActivity.finish(); // 关闭游戏
+				Log.d(TAG, "callback");
+				callback.onExit(); // 游戏退出回调
+				Log.d(TAG, "System.exit(0)");
+				System.exit(0); // 适配单机游戏
+				// 部分游戏的退出回调处理得不好，推荐直接关闭 System.exit(0);
+				// 若是单机游戏，则需要添加上退出回调，以免退出操作没有对游戏进行本地保存
+			}
+		}).setNeutralButton("取消", null)
+		.create()
+		.show();
 	}
 
 

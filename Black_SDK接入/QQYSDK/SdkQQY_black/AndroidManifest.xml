@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.tencent.tmgp.xjxzzgzlc"
     android:versionCode="1"
     android:versionName="1.0" >
@@ -8,13 +7,14 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="19" />
-     <!-- TODO SDK接入 接入支付需要设置屏幕兼容声明 START -->
+    
+	<!-- TODO SDK接入 接入支付需要设置屏幕兼容声明 START -->
 	<supports-screens
 	    android:anyDensity="true"
 	    android:largeScreens="true"
 	    android:normalScreens="true" />
 
-<!-- TODO SDK接入 接入支付需要设置屏幕兼容声明 END -->
+	<!-- TODO SDK接入 接入支付需要设置屏幕兼容声明 END -->
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -40,6 +40,7 @@
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
             android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="QQY_SDK"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -67,7 +68,7 @@
         <activity
             android:name="com.tencent.connect.common.AssistActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:screenOrientation="behind"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <!-- TODO SDK接入 QQ接入配置 END -->
         
@@ -116,16 +117,20 @@
         <!-- 丫丫玩 非必要  Start -->
         <meta-data
             android:name="need_yayaexit"
-            android:value="on" />
+            android:value="yes" />
         <meta-data
             android:name="need_yayaanim"
             android:value="no" />
         <meta-data
             android:name="appid"
-            android:value="string1105086100" />
+            android:value="1105258885" />
         <meta-data
             android:name="qqAppId"
-            android:value="string1105086100" />
+            android:value="string1105258885" />
+        <meta-data
+            android:name="qqAppKey"
+            android:value="0JAPgMs2gq4Ct4jT" />
+        
         <meta-data
             android:name="wxAppId"
             android:value="wxf9b0eff5ff57d374" />
@@ -156,6 +161,7 @@
         <meta-data
             android:name="yayawan_orientation"
             android:value="landscape" />
+        <!-- black6 -->
         <meta-data
             android:name="yayawan_game_key"
             android:value="2739ae4cb1db672afaf6f93c04031ad5" />

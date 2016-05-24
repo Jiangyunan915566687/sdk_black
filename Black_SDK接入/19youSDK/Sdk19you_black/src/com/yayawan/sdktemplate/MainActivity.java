@@ -181,7 +181,7 @@ public class MainActivity extends Activity {
 		YYWMain.mRole.setZoneName("xcdl");*/
 		Log.d("black", "设置好Role参数");
 		YYWOrder order = new YYWOrder(UUID.randomUUID().toString(), "霜之哀伤",
-				600l, "xxxx");
+				100l, "xxxx");
 
 		GameProxy.getInstent().pay(this, order, new YYWPayCallBack() {
 

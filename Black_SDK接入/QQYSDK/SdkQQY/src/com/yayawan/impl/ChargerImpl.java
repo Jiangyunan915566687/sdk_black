@@ -273,12 +273,12 @@ public class ChargerImpl implements YYWCharger {
 								new Handler(Looper.getMainLooper())
 										.post(new Runnable() {
 
-											@Override
-											public void run() {
-												Myconstants.ISFIRSTPAY = false;
-												createOrder(mactivity);
-											}
-										});
+									@Override
+									public void run() {
+										Myconstants.ISFIRSTPAY = false;
+										createOrder(mactivity);
+									}
+								});
 
 								break;
 							// 取消支付

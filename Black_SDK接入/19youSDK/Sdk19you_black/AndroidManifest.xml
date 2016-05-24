@@ -131,7 +131,7 @@
      	    android:value="元宝" />
         <meta-data 
      	    android:name="gamename" 
-     	    android:value="全民攻城" />
+     	    android:value="镇魂召唤" />
         
         
         <!-- 丫丫玩 非必要  Start -->
@@ -163,7 +163,7 @@
         <meta-data
             android:name="union_id"
             android:value="yaya1911011756" />
-        <!-- yaya1911011756 696089580-->
+        <!-- yaya1911011756 696089580 -->
         <meta-data
             android:name="isLandscape"
             android:value="true" />
