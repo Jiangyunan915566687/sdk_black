@@ -1,0 +1,37 @@
+package com.yayawan.impl;
+
+import android.app.Activity;
+import android.app.Dialog;
+import android.app.ProgressDialog;
+
+import com.tencent.msdk.tools.Logger;
+
+public class Myconstants {
+
+	public static boolean ISFASTLOGIN=true;
+	private static ProgressDialog mAutoLoginWaitingDlg;
+	
+	//是否第一次支付
+	public static boolean ISFIRSTPAY=true;
+	
+	public static LoginImpl mloImpl=null;
+	
+	public static Activity mainactivity;
+	
+	public static Payinfo mpayinfo=null;
+	public static Dialog dialog;
+	public static void startWaiting(Activity mActivity) {
+	        Logger.d("startWaiting");
+	        mAutoLoginWaitingDlg = new ProgressDialog(mActivity);
+	        stopWaiting();
+	        mAutoLoginWaitingDlg.setTitle("自动登录中...");
+	        mAutoLoginWaitingDlg.show();
+	    }
+	 
+	 public static void stopWaiting() {
+	        Logger.d("stopWaiting");
+	        if (mAutoLoginWaitingDlg != null && mAutoLoginWaitingDlg.isShowing()) {
+	            mAutoLoginWaitingDlg.dismiss();
+	        }
+	    }
+}

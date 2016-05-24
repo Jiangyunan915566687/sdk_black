@@ -20,7 +20,7 @@ public class Myconstants {
 	//public static Activity mainactivity;
 	
 	public static Payinfo mpayinfo = null;
-	public static Dialog dialog;
+	public static Dialog dialog  = null;
 	/*
 	public static void startWaiting(Activity mActivity) {
 		// Logger.d("startWaiting");

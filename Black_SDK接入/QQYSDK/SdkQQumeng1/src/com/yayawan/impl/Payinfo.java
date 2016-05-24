@@ -2,32 +2,32 @@ package com.yayawan.impl;
 
 public class Payinfo {
 
-	public String opentype = null;
+	public String opentype;
 	
-	public String offerId = null;
-	public String openId = null;
-	public String openKey = null;
+	public String offerId;
+	public String openId;
+	public String openKey;
 	
-	public String sessionId = null;
-	public String sessionType = null;
-	public String zoneId = null;
+	public String sessionId;
+	public String sessionType;
+	public String zoneId;
 	
-	public String pf = null;
-	public String pfKey = null;
-	public String tokenType = null;
+	public String pf;
+	public String pfKey;
+	public String tokenType;
 	
-	public String prodcutId = null;
-	public String saveValue = null;
+	public String prodcutId;
+	public String saveValue;
 	
-	public String goodsTokenUrl = null;
-	public String isCanChange = null;
-	public String resId = null;
+	public String goodsTokenUrl;
+	public String isCanChange;
+	public String resId;
 	
-	public String resData = null;
+	public String resData;
 	
-	public String qq_paytoken = null;
+	public String qq_paytoken;
 
-	public String wx_paytoken = null;
+	public String wx_paytoken;
 
 	@Override
 	public String toString() {

@@ -3,18 +3,21 @@ package com.yayawan.sdktemplate;
 
 import java.util.UUID;
 
+import com.tencent.ysdk.api.YSDKApi;
 import com.yayawan.callback.YYWAnimCallBack;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.callback.YYWPayCallBack;
 import com.yayawan.callback.YYWUserCallBack;
 import com.yayawan.domain.YYWOrder;
 import com.yayawan.domain.YYWUser;
+import com.yayawan.impl.YaYawanconstants;
 import com.yayawan.main.YaYaWan;
 import com.yayawan.proxy.GameProxy;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -54,9 +57,9 @@ public class MainActivity extends Activity {
 		mLinearLayout.addView(animButton, new LinearLayout.LayoutParams( LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
 
 
-		Button lgoinButton = new Button(this);
-		lgoinButton.setText("login");
-		lgoinButton.setOnClickListener(new OnClickListener() {
+		Button loginButton = new Button(this);
+		loginButton.setText("login");
+		loginButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -64,7 +67,19 @@ public class MainActivity extends Activity {
 
 			}
 		});
-		mLinearLayout.addView(lgoinButton, new LinearLayout.LayoutParams( LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
+		mLinearLayout.addView(loginButton, new LinearLayout.LayoutParams( LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
+
+		Button logoutButton = new Button(this);
+		logoutButton.setText("logout");
+		logoutButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				logout(mLinearLayout);
+
+			}
+		});
+		mLinearLayout.addView(logoutButton, new LinearLayout.LayoutParams( LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
 
 
 		Button payButton = new Button(this);
@@ -113,6 +128,7 @@ public class MainActivity extends Activity {
 		
 	}
 
+
 	public void anim(View v) {
         System.out.println("登录");
         GameProxy.getInstent().anim(this, new YYWAnimCallBack() {
@@ -133,7 +149,12 @@ public class MainActivity extends Activity {
 			}
 		});
     }
+	
 
+	public void logout(View v) {
+		YaYawanconstants.logout(this);
+	}
+	
 	public void login(View v) {
         System.out.println("登录");
         GameProxy.getInstent().login(this, new YYWUserCallBack() {

@@ -119,7 +119,8 @@ public class YaYawanconstants {
 	public static void logout(final Activity mactivity) {
 		Yayalog.loger("sdk登出");
 		Log.d(TAG, "sdk登出 - logout");
-		//YSDKApi.logout();
+		YSDKApi.logout();
+		logout();
 	}
 
 	/**

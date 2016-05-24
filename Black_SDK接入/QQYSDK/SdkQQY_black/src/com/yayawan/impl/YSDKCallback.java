@@ -56,14 +56,14 @@ public class YSDKCallback implements UserListener, BuglyListener {
 
 	@Override
 	public void OnLoginNotify(UserLoginRet ret) {
-		Log.d(TAG, "called");
-		Log.d(TAG, "ret.flag" + ret.flag);
+		Log.d(TAG, "OnLoginNotify(UserLoginRet ret)");
+		//Log.d(TAG, "ret.flag" + ret.flag);
 		switch (ret.flag) {
 		case eFlag.Succ:
-			//mActivity.letUserLogin();
-			if (YYWMain.mUser!=null) {
+			Log.d(TAG, "OnLoginNotify - Succ");
+			/*if (YYWMain.mUser!=null) {
 				return;
-			}
+			}*/
 			UserLoginRet ret1 = new UserLoginRet();
 			int platform = YSDKApi.getLoginRecord(ret1);
 			String accessToken = ret1.getAccessToken();
@@ -76,8 +76,10 @@ public class YSDKCallback implements UserListener, BuglyListener {
 			// 支付需要的参数
 
 			// 从手Q登录态或微信登录态中获取的openid的值
+			System.out.println(openId);
+			Log.d(TAG, openId);
 			Myconstants.mpayinfo.openId = openId;
-			Log.d(TAG, "从手Q登录态或微信登录态中获取的openid的值 = "+openId);
+			//Log.d(TAG, "从手Q登录态或微信登录态中获取的openid的值 = " + openId);
 			// 从手Q登录态或微信登录态中获取的access_token 的值
 			Myconstants.mpayinfo.openKey = accessToken;
 
