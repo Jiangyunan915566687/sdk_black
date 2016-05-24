@@ -239,7 +239,13 @@ public class MainActivity extends Activity {
 	    	super.onActivityResult(requestCode, resultCode, data);
 	    	GameProxy.getInstent().onActivityResult(this, requestCode, resultCode, data);
 	    }
-
+	    
+	    @Override
+		protected void onNewIntent(Intent intent) {
+			GameProxy.getInstent().onNewIntent(intent);
+			super.onNewIntent(intent);
+		}
+	    
 	    public boolean onKeyDown(int keyCode, KeyEvent event) {
 	    	// 如果是返回键,直接返回到桌面
 	    	if(keyCode == KeyEvent.KEYCODE_BACK || keyCode == KeyEvent.KEYCODE_HOME){
