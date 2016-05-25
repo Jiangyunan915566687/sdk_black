@@ -25,11 +25,11 @@
             android:layout_marginRight="10dip"
             android:layout_weight="1"
             android:orientation="vertical" >
-
+		<!-- black -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/app_name"
+                android:text="game"
                 android:id="@+id/tv_name"
                 android:textColor="@android:color/black"
                 android:textSize="18dip"

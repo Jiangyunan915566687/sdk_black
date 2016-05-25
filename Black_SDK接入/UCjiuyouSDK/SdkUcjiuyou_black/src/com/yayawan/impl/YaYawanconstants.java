@@ -429,11 +429,9 @@ public class YaYawanconstants {
 			String roleName, String roleLevel, String zoneId, String zoneName,
 			String roleCTime, String ext) {
 		Log.d("black", "进入了SetData");
-		System.out.println("进入了SetData");
 		//if (YYWMain.mRole != null) {
 			try {
 				Log.d("black", "进入了SetData 有YYWMain.mRole");
-				System.out.println("进入了SetData 有YYWMain.mRole");
 				JSONObject jsonExData = new JSONObject();
 				jsonExData.put("roleId", roleId);// 当前登录的玩家角色ID
 				jsonExData.put("roleName", roleName);// 当前登录的玩家角色名

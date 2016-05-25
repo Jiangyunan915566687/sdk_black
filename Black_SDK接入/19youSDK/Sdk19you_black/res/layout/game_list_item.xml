@@ -11,14 +11,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="5.0dip" >
-
+		<!-- black -->
         <ImageView
             android:id="@+id/imv_icon"
             android:layout_width="@dimen/list_icon_height"
             android:layout_height="@dimen/list_icon_height"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:contentDescription="@string/app_name"
+            android:contentDescription="game"
             android:src="@drawable/icon_no" />
 
         <LinearLayout
