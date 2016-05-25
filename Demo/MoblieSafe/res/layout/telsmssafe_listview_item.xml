@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="68dp"
+    android:padding="8dp" >
+
+    <TextView
+       android:id="@+id/tv_telsmsItem_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:text="110" />
+
+    <TextView
+        android:id="@+id/tv_telsmsItem_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_telsmsItem_number"
+        android:paddingLeft="1dp"
+        android:textColor="#a000"
+        android:textSize="16sp"
+        android:text="短信拦截" />
+
+    <ImageView
+        android:id="@+id/im_telsmsItem_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/telsms_delete_selector" />
+
+
+</RelativeLayout>

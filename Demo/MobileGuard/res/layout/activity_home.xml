@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/tv_title"
+        android:text="主界面" />
+
+    <com.itheima62.mobileguard.view.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="你是我的小呀小卫士，怎么爱你都不嫌多，你的强大功能彻底把哥给征服了。。。。。。。" />
+   <!-- 插播广告的自定义View -->
+    <com.startapp.android.publish.banner.Banner
+        android:id="@+id/startAppBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <GridView
+        android:id="@+id/gv_home_menus"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@drawable/gv_list_selector"
+        android:numColumns="3"
+        android:padding="0dip"
+        android:verticalSpacing="5dip" >
+    </GridView>
+
+</LinearLayout>

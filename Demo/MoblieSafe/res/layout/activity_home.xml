@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/titleStyle"
+        android:text="功能列表" />
+	<com.blacknife.mobliesafe.view.FocusedTextview 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:textColor="@color/black"
+	    android:textSize="18sp"
+	    android:layout_marginTop="5dp"
+	    android:layout_marginBottom="5dp"
+	    android:text="I believe that the AndroidMoblieSafe of Blacknife, because I believe in myself !!!!....."
+	    android:singleLine="true"
+	    android:ellipsize="marquee"/>
+	<!-- 不用自定义控件就可以获取焦点,得到跑马灯效果 
+	    android:focusable="true"
+	    android:focusableInTouchMode="true"  -->
+    <GridView
+        android:id="@+id/gv_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:numColumns="3"
+        android:verticalSpacing="20dp" >
+    </GridView>
+
+</LinearLayout>

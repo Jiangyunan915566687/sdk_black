@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="40dip"
+    android:layout_marginRight="40dip"
+    android:layout_marginTop="40dip"
+    android:layout_marginBottom="40dip"
+    android:background="#9000"
+    android:orientation="vertical"
+    android:gravity="center_horizontal" >
+    <TextView 
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="欢迎登录"
+	    android:textColor="#fff"
+	    android:textSize="40sp"/>
+    <LinearLayout 
+        android:paddingTop="25dp"
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:gravity="center_horizontal" >
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="25dp"
+	        android:text="帐号"
+	        android:textColor="#fff"
+	        android:textSize="25sp"/>
+	    <EditText 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="#2fff"
+	        android:hint="请在输入帐号"
+	        android:inputType="number"
+	        android:textColor="#aaa"
+	        android:textSize="25sp"
+	        />
+    </LinearLayout>
+    <LinearLayout 
+        android:paddingTop="25dp"
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:gravity="center_horizontal" >
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="25dp"
+	        android:text="密码"
+	        android:textColor="#fff"
+	        android:textSize="25sp"/>
+	    <EditText 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="#2fff"
+	        android:hint="请在输入密码"
+	        android:inputType="textPassword"
+	        android:textColor="#aaa"
+	        android:textSize="25sp"
+	        />
+    </LinearLayout>
+    <LinearLayout 
+        android:paddingTop="25dp"
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:gravity="center_horizontal" >
+	    <CheckBox 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="15dp"
+	        android:text="记住帐号信息"
+	        android:textColor="#fff"
+	        android:textSize="22sp"/>
+	    <Button 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="登录"
+	        android:textColor="#aaa"
+	        android:textSize="25sp"
+	        />
+    </LinearLayout>
+
+</LinearLayout>

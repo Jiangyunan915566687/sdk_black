@@ -1,0 +1,2121 @@
+android.content.pm.IPackageDataObserver$Stub:
+    private static final java.lang.String DESCRIPTOR
+    static final int TRANSACTION_onRemoveCompleted
+    29:36:public static android.content.pm.IPackageDataObserver asInterface(android.os.IBinder)
+android.content.pm.IPackageDataObserver$Stub$Proxy
+android.content.pm.IPackageStatsObserver$Stub:
+    private static final java.lang.String DESCRIPTOR
+    static final int TRANSACTION_onGetStatsCompleted
+    29:36:public static android.content.pm.IPackageStatsObserver asInterface(android.os.IBinder)
+android.content.pm.IPackageStatsObserver$Stub$Proxy
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoIcsImpl
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoStubImpl
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompatIcs
+android.support.v4.app.ActivityCompat
+android.support.v4.app.ActivityCompatHoneycomb:
+    27:27:ActivityCompatHoneycomb()
+    34:35:static void dump(android.app.Activity,java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])
+android.support.v4.app.BackStackRecord:
+    static final java.lang.String TAG
+    static final int OP_NULL
+    static final int OP_ADD
+    static final int OP_REPLACE
+    static final int OP_REMOVE
+    static final int OP_HIDE
+    static final int OP_SHOW
+    static final int OP_DETACH
+    static final int OP_ATTACH
+    338:338:public int getId()
+    342:342:public int getBreadCrumbTitleRes()
+    346:346:public int getBreadCrumbShortTitleRes()
+    350:353:public java.lang.CharSequence getBreadCrumbTitle()
+    357:360:public java.lang.CharSequence getBreadCrumbShortTitle()
+    379:380:public android.support.v4.app.FragmentTransaction add(android.support.v4.app.Fragment,java.lang.String)
+    384:385:public android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment)
+    434:439:public android.support.v4.app.FragmentTransaction remove(android.support.v4.app.Fragment)
+    443:448:public android.support.v4.app.FragmentTransaction hide(android.support.v4.app.Fragment)
+    452:457:public android.support.v4.app.FragmentTransaction show(android.support.v4.app.Fragment)
+    479:479:public android.support.v4.app.FragmentTransaction setCustomAnimations(int,int)
+    484:488:public android.support.v4.app.FragmentTransaction setCustomAnimations(int,int,int,int)
+    492:493:public android.support.v4.app.FragmentTransaction setTransition(int)
+    497:498:public android.support.v4.app.FragmentTransaction setTransitionStyle(int)
+    502:508:public android.support.v4.app.FragmentTransaction addToBackStack(java.lang.String)
+    512:512:public boolean isAddToBackStackAllowed()
+    516:521:public android.support.v4.app.FragmentTransaction disallowAddToBackStack()
+    525:527:public android.support.v4.app.FragmentTransaction setBreadCrumbTitle(int)
+    531:533:public android.support.v4.app.FragmentTransaction setBreadCrumbTitle(java.lang.CharSequence)
+    537:539:public android.support.v4.app.FragmentTransaction setBreadCrumbShortTitle(int)
+    543:545:public android.support.v4.app.FragmentTransaction setBreadCrumbShortTitle(java.lang.CharSequence)
+    578:578:public int commitAllowingStateLoss()
+    779:779:public int getTransition()
+    783:783:public int getTransitionStyle()
+    787:787:public boolean isEmpty()
+android.support.v4.app.DialogFragment
+android.support.v4.app.Fragment:
+    static final int INITIALIZING
+    static final int CREATED
+    static final int ACTIVITY_CREATED
+    static final int STOPPED
+    static final int STARTED
+    static final int RESUMED
+    481:481:public final int getId()
+    488:488:public final java.lang.String getTag()
+    499:503:public void setArguments(android.os.Bundle)
+    510:510:public final android.os.Bundle getArguments()
+    522:527:public void setInitialSavedState(android.support.v4.app.Fragment$SavedState)
+    541:543:public void setTargetFragment(android.support.v4.app.Fragment,int)
+    549:549:public final android.support.v4.app.Fragment getTargetFragment()
+    556:556:public final int getTargetRequestCode()
+    583:583:public final java.lang.CharSequence getText(int)
+    593:593:public final java.lang.String getString(int)
+    606:606:public final varargs java.lang.String getString(int,java.lang.Object[])
+    620:620:public final android.support.v4.app.FragmentManager getFragmentManager()
+    628:640:public final android.support.v4.app.FragmentManager getChildFragmentManager()
+    648:648:public final android.support.v4.app.Fragment getParentFragment()
+    655:655:public final boolean isAdded()
+    673:673:public final boolean isRemoving()
+    684:684:public final boolean isInLayout()
+    692:692:public final boolean isResumed()
+    701:701:public final boolean isVisible()
+    713:713:public final boolean isHidden()
+    741:746:public void setRetainInstance(boolean)
+    749:749:public final boolean getRetainInstance()
+    760:766:public void setHasOptionsMenu(boolean)
+    778:784:public void setMenuVisibility(boolean)
+    800:805:public void setUserVisibleHint(boolean)
+    812:812:public boolean getUserVisibleHint()
+    819:827:public android.support.v4.app.LoaderManager getLoaderManager()
+    835:839:public void startActivity(android.content.Intent)
+    846:850:public void startActivityForResult(android.content.Intent,int)
+    1001:1001:public android.view.View getView()
+    1288:1289:public void registerForContextMenu(android.view.View)
+    1299:1300:public void unregisterForContextMenu(android.view.View)
+    1410:1416:android.support.v4.app.Fragment findFragmentByWho(java.lang.String)
+android.support.v4.app.Fragment$SavedState:
+    301:303:Fragment$SavedState(android.os.Bundle)
+android.support.v4.app.FragmentActivity:
+    private static final java.lang.String TAG
+    static final java.lang.String FRAGMENTS_TAG
+    private static final int HONEYCOMB
+    static final int MSG_REALLY_STOPPED
+    static final int MSG_RESUME_PENDING
+    612:614:public java.lang.Object getLastCustomNonConfigurationInstance()
+    825:833:public void startActivityFromFragment(android.support.v4.app.Fragment,android.content.Intent,int)
+    854:859:public android.support.v4.app.LoaderManager getSupportLoaderManager()
+android.support.v4.app.FragmentActivity$FragmentTag:
+    public static final int Fragment_id
+    public static final int Fragment_name
+    public static final int Fragment_tag
+    129:129:FragmentActivity$FragmentTag()
+android.support.v4.app.FragmentManager:
+    public static final int POP_BACK_STACK_INCLUSIVE
+    139:139:public android.support.v4.app.FragmentTransaction openTransaction()
+    public abstract android.support.v4.app.Fragment findFragmentById(int)
+    public abstract void popBackStack()
+    public abstract boolean popBackStackImmediate()
+    public abstract void popBackStack(java.lang.String,int)
+    public abstract boolean popBackStackImmediate(java.lang.String,int)
+    public abstract void popBackStack(int,int)
+    public abstract boolean popBackStackImmediate(int,int)
+    public abstract int getBackStackEntryCount()
+    public abstract android.support.v4.app.FragmentManager$BackStackEntry getBackStackEntryAt(int)
+    public abstract void addOnBackStackChangedListener(android.support.v4.app.FragmentManager$OnBackStackChangedListener)
+    public abstract void removeOnBackStackChangedListener(android.support.v4.app.FragmentManager$OnBackStackChangedListener)
+    public abstract void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment)
+    public abstract android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String)
+    public abstract android.support.v4.app.Fragment$SavedState saveFragmentInstanceState(android.support.v4.app.Fragment)
+    public abstract void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])
+    334:335:public static void enableDebugLogging(boolean)
+android.support.v4.app.FragmentManager$BackStackEntry
+android.support.v4.app.FragmentManagerImpl:
+    static final java.lang.String TAG
+    static final java.lang.String TARGET_REQUEST_CODE_STATE_TAG
+    static final java.lang.String TARGET_STATE_TAG
+    static final java.lang.String VIEW_STATE_TAG
+    static final java.lang.String USER_VISIBLE_HINT_TAG
+    static final int ANIM_DUR
+    public static final int ANIM_STYLE_OPEN_ENTER
+    public static final int ANIM_STYLE_OPEN_EXIT
+    public static final int ANIM_STYLE_CLOSE_ENTER
+    public static final int ANIM_STYLE_CLOSE_EXIT
+    public static final int ANIM_STYLE_FADE_ENTER
+    public static final int ANIM_STYLE_FADE_EXIT
+    466:471:public void popBackStack()
+    482:487:public void popBackStack(java.lang.String,int)
+    491:493:public boolean popBackStackImmediate(java.lang.String,int)
+    498:506:public void popBackStack(int,int)
+    510:515:public boolean popBackStackImmediate(int,int)
+    520:520:public int getBackStackEntryCount()
+    525:525:public android.support.v4.app.FragmentManager$BackStackEntry getBackStackEntryAt(int)
+    530:534:public void addOnBackStackChangedListener(android.support.v4.app.FragmentManager$OnBackStackChangedListener)
+    538:541:public void removeOnBackStackChangedListener(android.support.v4.app.FragmentManager$OnBackStackChangedListener)
+    572:580:public android.support.v4.app.Fragment$SavedState saveFragmentInstanceState(android.support.v4.app.Fragment)
+    1314:1322:public android.support.v4.app.Fragment findFragmentByWho(java.lang.String)
+android.support.v4.app.FragmentManagerImpl$2
+android.support.v4.app.FragmentManagerImpl$3
+android.support.v4.app.FragmentManagerImpl$4
+android.support.v4.app.FragmentPagerAdapter
+android.support.v4.app.FragmentStatePagerAdapter
+android.support.v4.app.FragmentTabHost:
+    private android.widget.FrameLayout mRealTabContent
+    130:132:public FragmentTabHost(android.content.Context)
+    135:137:public FragmentTabHost(android.content.Context,android.util.AttributeSet)
+    140:172:private void initFragmentTabHost(android.content.Context,android.util.AttributeSet)
+    186:190:public void setup(android.content.Context,android.support.v4.app.FragmentManager)
+    193:205:public void setup(android.content.Context,android.support.v4.app.FragmentManager,int)
+    208:215:private void ensureContent()
+    223:242:public void addTab(android.widget.TabHost$TabSpec,java.lang.Class,android.os.Bundle)
+android.support.v4.app.FragmentTabHost$DummyTabFactory
+android.support.v4.app.FragmentTabHost$TabInfo:
+    67:71:FragmentTabHost$TabInfo(java.lang.String,java.lang.Class,android.os.Bundle)
+android.support.v4.app.FragmentTransaction:
+    public static final int TRANSIT_ENTER_MASK
+    public static final int TRANSIT_EXIT_MASK
+    public static final int TRANSIT_UNSET
+    public static final int TRANSIT_NONE
+    public static final int TRANSIT_FRAGMENT_OPEN
+    public static final int TRANSIT_FRAGMENT_CLOSE
+    public static final int TRANSIT_FRAGMENT_FADE
+    public abstract android.support.v4.app.FragmentTransaction add(android.support.v4.app.Fragment,java.lang.String)
+    public abstract android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment)
+    public abstract android.support.v4.app.FragmentTransaction replace(int,android.support.v4.app.Fragment,java.lang.String)
+    public abstract android.support.v4.app.FragmentTransaction remove(android.support.v4.app.Fragment)
+    public abstract android.support.v4.app.FragmentTransaction hide(android.support.v4.app.Fragment)
+    public abstract android.support.v4.app.FragmentTransaction show(android.support.v4.app.Fragment)
+    public abstract boolean isEmpty()
+    public abstract android.support.v4.app.FragmentTransaction setCustomAnimations(int,int)
+    public abstract android.support.v4.app.FragmentTransaction setCustomAnimations(int,int,int,int)
+    public abstract android.support.v4.app.FragmentTransaction setTransition(int)
+    public abstract android.support.v4.app.FragmentTransaction setTransitionStyle(int)
+    public abstract android.support.v4.app.FragmentTransaction addToBackStack(java.lang.String)
+    public abstract boolean isAddToBackStackAllowed()
+    public abstract android.support.v4.app.FragmentTransaction disallowAddToBackStack()
+    public abstract android.support.v4.app.FragmentTransaction setBreadCrumbTitle(int)
+    public abstract android.support.v4.app.FragmentTransaction setBreadCrumbTitle(java.lang.CharSequence)
+    public abstract android.support.v4.app.FragmentTransaction setBreadCrumbShortTitle(int)
+    public abstract android.support.v4.app.FragmentTransaction setBreadCrumbShortTitle(java.lang.CharSequence)
+    public abstract int commitAllowingStateLoss()
+android.support.v4.app.ListFragment
+android.support.v4.app.ListFragment$1
+android.support.v4.app.ListFragment$2
+android.support.v4.app.LoaderManager:
+    public abstract android.support.v4.content.Loader initLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
+    public abstract android.support.v4.content.Loader restartLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
+    public abstract void destroyLoader(int)
+    public abstract android.support.v4.content.Loader getLoader(int)
+    public abstract void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])
+    177:178:public static void enableDebugLogging(boolean)
+android.support.v4.app.LoaderManagerImpl:
+    static final java.lang.String TAG
+    boolean mRetainingStarted
+    boolean mCreatingLoader
+    489:492:private android.support.v4.app.LoaderManagerImpl$LoaderInfo createLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
+    498:503:private android.support.v4.app.LoaderManagerImpl$LoaderInfo createAndInstallLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
+    508:515:void installLoader(android.support.v4.app.LoaderManagerImpl$LoaderInfo)
+    543:565:public android.support.v4.content.Loader initLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
+    593:647:public android.support.v4.content.Loader restartLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
+    658:678:public void destroyLoader(int)
+    686:697:public android.support.v4.content.Loader getLoader(int)
+android.support.v4.app.LoaderManagerImpl$LoaderInfo:
+    228:232:public LoaderManagerImpl$LoaderInfo(android.support.v4.app.LoaderManagerImpl,int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
+    362:415:public void onLoadComplete(android.support.v4.content.Loader,java.lang.Object)
+android.support.v4.app.NavUtils
+android.support.v4.app.NavUtils$NavUtilsImpl
+android.support.v4.app.NavUtils$NavUtilsImplBase
+android.support.v4.app.NavUtils$NavUtilsImplJB
+android.support.v4.app.NavUtilsJB
+android.support.v4.app.NotificationCompat
+android.support.v4.app.NotificationCompat$Action
+android.support.v4.app.NotificationCompat$BigPictureStyle
+android.support.v4.app.NotificationCompat$BigTextStyle
+android.support.v4.app.NotificationCompat$Builder
+android.support.v4.app.NotificationCompat$InboxStyle
+android.support.v4.app.NotificationCompat$NotificationCompatImpl
+android.support.v4.app.NotificationCompat$NotificationCompatImplBase
+android.support.v4.app.NotificationCompat$NotificationCompatImplHoneycomb
+android.support.v4.app.NotificationCompat$NotificationCompatImplIceCreamSandwich
+android.support.v4.app.NotificationCompat$NotificationCompatImplJellybean
+android.support.v4.app.NotificationCompat$Style
+android.support.v4.app.NotificationCompatHoneycomb
+android.support.v4.app.NotificationCompatIceCreamSandwich
+android.support.v4.app.NotificationCompatJellybean
+android.support.v4.app.ServiceCompat
+android.support.v4.app.ShareCompat
+android.support.v4.app.ShareCompat$IntentBuilder
+android.support.v4.app.ShareCompat$IntentReader
+android.support.v4.app.ShareCompat$ShareCompatImpl
+android.support.v4.app.ShareCompat$ShareCompatImplBase
+android.support.v4.app.ShareCompat$ShareCompatImplICS
+android.support.v4.app.ShareCompat$ShareCompatImplJB
+android.support.v4.app.ShareCompatICS
+android.support.v4.app.ShareCompatJB
+android.support.v4.app.TaskStackBuilder
+android.support.v4.app.TaskStackBuilder$TaskStackBuilderImpl
+android.support.v4.app.TaskStackBuilder$TaskStackBuilderImplBase
+android.support.v4.app.TaskStackBuilder$TaskStackBuilderImplHoneycomb
+android.support.v4.app.TaskStackBuilder$TaskStackBuilderImplJellybean
+android.support.v4.app.TaskStackBuilderHoneycomb
+android.support.v4.app.TaskStackBuilderJellybean
+android.support.v4.content.AsyncTaskLoader
+android.support.v4.content.AsyncTaskLoader$LoadTask
+android.support.v4.content.ContextCompat
+android.support.v4.content.ContextCompatHoneycomb
+android.support.v4.content.ContextCompatJellybean
+android.support.v4.content.CursorLoader
+android.support.v4.content.IntentCompat
+android.support.v4.content.IntentCompat$IntentCompatImpl
+android.support.v4.content.IntentCompat$IntentCompatImplBase
+android.support.v4.content.IntentCompat$IntentCompatImplHC
+android.support.v4.content.IntentCompat$IntentCompatImplIcsMr1
+android.support.v4.content.IntentCompatHoneycomb
+android.support.v4.content.IntentCompatIcsMr1
+android.support.v4.content.Loader:
+    android.content.Context mContext
+    90:92:public Loader(android.content.Context)
+    102:105:public void deliverResult(java.lang.Object)
+    111:111:public android.content.Context getContext()
+    118:118:public int getId()
+    157:157:public boolean isStarted()
+    166:166:public boolean isAbandoned()
+    175:175:public boolean isReset()
+    217:218:public void forceLoad()
+    225:225:protected void onForceLoad()
+    261:263:public void abandon()
+    275:275:protected void onAbandon()
+    312:314:public boolean takeContentChanged()
+    326:334:public void onContentChanged()
+android.support.v4.content.Loader$ForceLoadContentObserver
+android.support.v4.content.Loader$OnLoadCompleteListener:
+    public abstract void onLoadComplete(android.support.v4.content.Loader,java.lang.Object)
+android.support.v4.content.LocalBroadcastManager
+android.support.v4.content.LocalBroadcastManager$1
+android.support.v4.content.LocalBroadcastManager$BroadcastRecord
+android.support.v4.content.LocalBroadcastManager$ReceiverRecord
+android.support.v4.content.ModernAsyncTask
+android.support.v4.content.ModernAsyncTask$1
+android.support.v4.content.ModernAsyncTask$2
+android.support.v4.content.ModernAsyncTask$3
+android.support.v4.content.ModernAsyncTask$4
+android.support.v4.content.ModernAsyncTask$AsyncTaskResult
+android.support.v4.content.ModernAsyncTask$InternalHandler
+android.support.v4.content.ModernAsyncTask$Status
+android.support.v4.content.ModernAsyncTask$WorkerRunnable
+android.support.v4.content.pm.ActivityInfoCompat
+android.support.v4.database.DatabaseUtilsCompat
+android.support.v4.net.ConnectivityManagerCompat
+android.support.v4.net.ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompat$ConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompat$GingerbreadConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompat$HoneycombMR2ConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompat$JellyBeanConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompatGingerbread
+android.support.v4.net.ConnectivityManagerCompatHoneycombMR2
+android.support.v4.net.ConnectivityManagerCompatJellyBean
+android.support.v4.net.TrafficStatsCompat
+android.support.v4.net.TrafficStatsCompat$1
+android.support.v4.net.TrafficStatsCompat$BaseTrafficStatsCompatImpl
+android.support.v4.net.TrafficStatsCompat$BaseTrafficStatsCompatImpl$1
+android.support.v4.net.TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags
+android.support.v4.net.TrafficStatsCompat$IcsTrafficStatsCompatImpl
+android.support.v4.net.TrafficStatsCompat$TrafficStatsCompatImpl
+android.support.v4.net.TrafficStatsCompatIcs
+android.support.v4.os.ParcelableCompat:
+    26:42:public ParcelableCompat()
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2Stub:
+    22:22:ParcelableCompatCreatorHoneycombMR2Stub()
+android.support.v4.util.AtomicFile
+android.support.v4.util.DebugUtils:
+    25:25:public DebugUtils()
+android.support.v4.util.LongSparseArray
+android.support.v4.util.LruCache
+android.support.v4.util.SparseArrayCompat:
+    52:52:public java.lang.Object get(int)
+    60:65:public java.lang.Object get(int,java.lang.Object)
+    73:81:public void delete(int)
+    87:88:public void remove(int)
+    94:98:public void removeAt(int)
+    107:111:public void removeAtRange(int,int)
+    146:190:public void put(int,java.lang.Object)
+    236:241:public void setValueAt(int,java.lang.Object)
+    249:253:public int indexOfKey(int)
+    265:273:public int indexOfValue(java.lang.Object)
+    296:323:public void append(int,java.lang.Object)
+    326:342:private static int binarySearch(int[],int,int,int)
+android.support.v4.util.TimeUtils
+android.support.v4.view.AccessibilityDelegateCompat
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl$1
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateImpl
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateJellyBeanImpl
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateJellyBeanImpl$1
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateStubImpl
+android.support.v4.view.AccessibilityDelegateCompatIcs
+android.support.v4.view.AccessibilityDelegateCompatIcs$1
+android.support.v4.view.AccessibilityDelegateCompatIcs$AccessibilityDelegateBridge
+android.support.v4.view.AccessibilityDelegateCompatJellyBean
+android.support.v4.view.AccessibilityDelegateCompatJellyBean$1
+android.support.v4.view.AccessibilityDelegateCompatJellyBean$AccessibilityDelegateBridgeJellyBean
+android.support.v4.view.GestureDetectorCompat
+android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImpl
+android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImplBase
+android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImplBase$GestureHandler
+android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImplJellybeanMr1
+android.support.v4.view.KeyEventCompat:
+    25:95:public KeyEventCompat()
+    127:127:public static int normalizeMetaState(int)
+    131:131:public static boolean metaStateHasModifiers(int,int)
+    135:135:public static boolean metaStateHasNoModifiers(int)
+android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl:
+    private static final int META_MODIFIER_MASK
+    private static final int META_ALL_MASK
+android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl:
+    98:98:public int normalizeMetaState(int)
+android.support.v4.view.KeyEventCompat$KeyEventVersionImpl:
+    public abstract int normalizeMetaState(int)
+android.support.v4.view.KeyEventCompatHoneycomb:
+    24:24:KeyEventCompatHoneycomb()
+    26:26:public static int normalizeMetaState(int)
+android.support.v4.view.MenuCompat
+android.support.v4.view.MenuCompat$BaseMenuVersionImpl
+android.support.v4.view.MenuCompat$HoneycombMenuVersionImpl
+android.support.v4.view.MenuCompat$MenuVersionImpl
+android.support.v4.view.MenuItemCompat
+android.support.v4.view.MenuItemCompat$BaseMenuVersionImpl
+android.support.v4.view.MenuItemCompat$HoneycombMenuVersionImpl
+android.support.v4.view.MenuItemCompat$MenuVersionImpl
+android.support.v4.view.MenuItemCompatHoneycomb
+android.support.v4.view.MotionEventCompat:
+    public static final int ACTION_MASK
+    public static final int ACTION_POINTER_DOWN
+    public static final int ACTION_POINTER_UP
+    public static final int ACTION_HOVER_MOVE
+    public static final int ACTION_SCROLL
+    public static final int ACTION_POINTER_INDEX_MASK
+    public static final int ACTION_POINTER_INDEX_SHIFT
+    public static final int ACTION_HOVER_ENTER
+    public static final int ACTION_HOVER_EXIT
+    25:80:public MotionEventCompat()
+    183:183:public static int getActionMasked(android.view.MotionEvent)
+    236:236:public static int getPointerCount(android.view.MotionEvent)
+android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl:
+    73:73:public int getPointerCount(android.view.MotionEvent)
+android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl:
+    99:99:public int getPointerCount(android.view.MotionEvent)
+android.support.v4.view.MotionEventCompat$MotionEventVersionImpl:
+    public abstract int getPointerCount(android.view.MotionEvent)
+android.support.v4.view.MotionEventCompatEclair:
+    24:24:MotionEventCompatEclair()
+    38:38:public static int getPointerCount(android.view.MotionEvent)
+android.support.v4.view.PagerAdapter:
+    public static final int POSITION_UNCHANGED
+    public static final int POSITION_NONE
+    78:79:public PagerAdapter()
+    276:277:public void notifyDataSetChanged()
+    297:297:public java.lang.CharSequence getPageTitle(int)
+android.support.v4.view.PagerTabStrip
+android.support.v4.view.PagerTabStrip$1
+android.support.v4.view.PagerTabStrip$2
+android.support.v4.view.PagerTitleStrip
+android.support.v4.view.PagerTitleStrip$1
+android.support.v4.view.PagerTitleStrip$PageListener
+android.support.v4.view.PagerTitleStrip$PagerTitleStripImpl
+android.support.v4.view.PagerTitleStrip$PagerTitleStripImplBase
+android.support.v4.view.PagerTitleStrip$PagerTitleStripImplIcs
+android.support.v4.view.PagerTitleStripIcs
+android.support.v4.view.PagerTitleStripIcs$SingleLineAllCapsTransform
+android.support.v4.view.VelocityTrackerCompat:
+    25:51:public VelocityTrackerCompat()
+    91:91:public static float getYVelocity(android.view.VelocityTracker,int)
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl:
+    44:44:public float getYVelocity(android.view.VelocityTracker,int)
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl:
+    58:58:public float getYVelocity(android.view.VelocityTracker,int)
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl:
+    public abstract float getYVelocity(android.view.VelocityTracker,int)
+android.support.v4.view.VelocityTrackerCompatHoneycomb:
+    24:24:VelocityTrackerCompatHoneycomb()
+    29:29:public static float getYVelocity(android.view.VelocityTracker,int)
+android.support.v4.view.ViewCompat:
+    public static final int OVER_SCROLL_ALWAYS
+    public static final int OVER_SCROLL_IF_CONTENT_SCROLLS
+    public static final int OVER_SCROLL_NEVER
+    private static final long FAKE_FRAME_TIME
+    public static final int IMPORTANT_FOR_ACCESSIBILITY_AUTO
+    public static final int IMPORTANT_FOR_ACCESSIBILITY_YES
+    public static final int IMPORTANT_FOR_ACCESSIBILITY_NO
+    public static final int LAYER_TYPE_NONE
+    public static final int LAYER_TYPE_SOFTWARE
+    public static final int LAYER_TYPE_HARDWARE
+    31:308:public ViewCompat()
+    358:358:public static boolean canScrollVertically(android.view.View,int)
+    387:388:public static void setOverScrollMode(android.view.View,int)
+    424:425:public static void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    457:458:public static void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    493:494:public static void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat)
+    508:509:public static void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat)
+    520:520:public static boolean hasTransientState(android.view.View)
+    531:532:public static void setHasTransientState(android.view.View,boolean)
+    562:563:public static void postInvalidateOnAnimation(android.view.View,int,int,int,int)
+    593:594:public static void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    609:609:public static int getImportantForAccessibility(android.view.View)
+    625:626:public static void setImportantForAccessibility(android.view.View,int)
+    643:643:public static boolean performAccessibilityAction(android.view.View,int,android.os.Bundle)
+    670:670:public static android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View)
+    733:733:public static int getLayerType(android.view.View)
+    744:744:public static int getLabelFor(android.view.View)
+    755:756:public static void setLabelFor(android.view.View,int)
+android.support.v4.view.ViewCompat$BaseViewCompatImpl:
+    144:144:public boolean canScrollVertically(android.view.View,int)
+    151:151:public void setOverScrollMode(android.view.View,int)
+    154:154:public void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat)
+    157:157:public void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    160:160:public void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    163:163:public void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat)
+    166:166:public boolean hasTransientState(android.view.View)
+    170:170:public void setHasTransientState(android.view.View,boolean)
+    175:176:public void postInvalidateOnAnimation(android.view.View,int,int,int,int)
+    181:182:public void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    187:187:public int getImportantForAccessibility(android.view.View)
+    191:191:public void setImportantForAccessibility(android.view.View,int)
+    193:193:public boolean performAccessibilityAction(android.view.View,int,android.os.Bundle)
+    196:196:public android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View)
+    201:201:public int getLayerType(android.view.View)
+    204:204:public int getLabelFor(android.view.View)
+    208:208:public void setLabelFor(android.view.View,int)
+android.support.v4.view.ViewCompat$GBViewCompatImpl:
+    218:219:public void setOverScrollMode(android.view.View,int)
+android.support.v4.view.ViewCompat$HCViewCompatImpl:
+    230:230:public int getLayerType(android.view.View)
+android.support.v4.view.ViewCompat$ICSViewCompatImpl:
+    241:241:public boolean canScrollVertically(android.view.View,int)
+    245:246:public void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    249:250:public void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    253:254:public void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat)
+    257:258:public void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat)
+android.support.v4.view.ViewCompat$JBViewCompatImpl:
+    264:264:public boolean hasTransientState(android.view.View)
+    268:269:public void setHasTransientState(android.view.View,boolean)
+    276:277:public void postInvalidateOnAnimation(android.view.View,int,int,int,int)
+    284:285:public void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    288:288:public int getImportantForAccessibility(android.view.View)
+    292:293:public void setImportantForAccessibility(android.view.View,int)
+    296:296:public boolean performAccessibilityAction(android.view.View,int,android.os.Bundle)
+    300:304:public android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View)
+android.support.v4.view.ViewCompat$JbMr1ViewCompatImpl:
+    312:312:public int getLabelFor(android.view.View)
+    317:318:public void setLabelFor(android.view.View,int)
+android.support.v4.view.ViewCompat$ViewCompatImpl:
+    public abstract boolean canScrollVertically(android.view.View,int)
+    public abstract void setOverScrollMode(android.view.View,int)
+    public abstract void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    public abstract void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    public abstract void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat)
+    public abstract void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat)
+    public abstract boolean hasTransientState(android.view.View)
+    public abstract void setHasTransientState(android.view.View,boolean)
+    public abstract void postInvalidateOnAnimation(android.view.View,int,int,int,int)
+    public abstract void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    public abstract int getImportantForAccessibility(android.view.View)
+    public abstract void setImportantForAccessibility(android.view.View,int)
+    public abstract boolean performAccessibilityAction(android.view.View,int,android.os.Bundle)
+    public abstract android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View)
+    public abstract int getLayerType(android.view.View)
+    public abstract int getLabelFor(android.view.View)
+    public abstract void setLabelFor(android.view.View,int)
+android.support.v4.view.ViewCompatGingerbread:
+    21:21:ViewCompatGingerbread()
+    27:28:public static void setOverScrollMode(android.view.View,int)
+android.support.v4.view.ViewCompatHC:
+    23:23:ViewCompatHC()
+    33:33:public static int getLayerType(android.view.View)
+android.support.v4.view.ViewCompatICS:
+    27:27:ViewCompatICS()
+    34:34:public static boolean canScrollVertically(android.view.View,int)
+    38:39:public static void setAccessibilityDelegate(android.view.View,java.lang.Object)
+    42:43:public static void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    46:47:public static void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    50:51:public static void onInitializeAccessibilityNodeInfo(android.view.View,java.lang.Object)
+android.support.v4.view.ViewCompatJB:
+    25:25:public ViewCompatJB()
+    28:28:public static boolean hasTransientState(android.view.View)
+    32:33:public static void setHasTransientState(android.view.View,boolean)
+    41:42:public static void postInvalidateOnAnimation(android.view.View,int,int,int,int)
+    49:50:public static void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    53:53:public static int getImportantForAccessibility(android.view.View)
+    57:58:public static void setImportantForAccessibility(android.view.View,int)
+    61:61:public static boolean performAccessibilityAction(android.view.View,int,android.os.Bundle)
+    65:65:public static java.lang.Object getAccessibilityNodeProvider(android.view.View)
+android.support.v4.view.ViewCompatJellybeanMr1
+android.support.v4.view.ViewConfigurationCompat
+android.support.v4.view.ViewConfigurationCompat$BaseViewConfigurationVersionImpl
+android.support.v4.view.ViewConfigurationCompat$FroyoViewConfigurationVersionImpl
+android.support.v4.view.ViewConfigurationCompat$ViewConfigurationVersionImpl
+android.support.v4.view.ViewConfigurationCompatFroyo
+android.support.v4.view.ViewGroupCompat
+android.support.v4.view.ViewGroupCompat$ViewGroupCompatIcsImpl
+android.support.v4.view.ViewGroupCompat$ViewGroupCompatImpl
+android.support.v4.view.ViewGroupCompat$ViewGroupCompatStubImpl
+android.support.v4.view.ViewGroupCompatIcs
+android.support.v4.view.ViewPager:
+    private static final java.lang.String TAG
+    private static final boolean DEBUG
+    private static final boolean USE_CACHE
+    private static final int DEFAULT_OFFSCREEN_PAGES
+    private static final int MAX_SETTLE_DURATION
+    private static final int MIN_DISTANCE_FOR_FLING
+    private static final int DEFAULT_GUTTER_SIZE
+    private boolean mIgnoreGutter
+    private static final int INVALID_POINTER
+    private static final int CLOSE_ENOUGH
+    private long mFakeDragBeginTime
+    private static final int DRAW_ORDER_DEFAULT
+    private static final int DRAW_ORDER_FORWARD
+    private static final int DRAW_ORDER_REVERSE
+    public static final int SCROLL_STATE_IDLE
+    public static final int SCROLL_STATE_DRAGGING
+    public static final int SCROLL_STATE_SETTLING
+    337:339:public ViewPager(android.content.Context)
+    342:344:public ViewPager(android.content.Context,android.util.AttributeSet)
+    347:371:void initViewPager()
+    579:591:public void setPageTransformer(boolean,android.support.v4.view.ViewPager$PageTransformer)
+    623:625:android.support.v4.view.ViewPager$OnPageChangeListener setInternalPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
+    747:748:void smoothScrollTo(int,int)
+    2196:2212:public boolean beginFakeDrag()
+    2222:2243:public void endFakeDrag()
+    2253:2291:public void fakeDragBy(float)
+    2303:2303:public boolean isFakeDragging()
+    84:84:static synthetic void access$000(android.support.v4.view.ViewPager,int)
+    84:84:static synthetic android.support.v4.view.PagerAdapter access$200(android.support.v4.view.ViewPager)
+    84:84:static synthetic int access$300(android.support.v4.view.ViewPager)
+android.support.v4.view.ViewPager$3
+android.support.v4.view.ViewPager$MyAccessibilityDelegate
+android.support.v4.view.ViewPager$SimpleOnPageChangeListener
+android.support.v4.view.accessibility.AccessibilityEventCompat
+android.support.v4.view.accessibility.AccessibilityEventCompat$AccessibilityEventIcsImpl
+android.support.v4.view.accessibility.AccessibilityEventCompat$AccessibilityEventStubImpl
+android.support.v4.view.accessibility.AccessibilityEventCompat$AccessibilityEventVersionImpl
+android.support.v4.view.accessibility.AccessibilityEventCompatIcs
+android.support.v4.view.accessibility.AccessibilityManagerCompat
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityManagerIcsImpl
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityManagerIcsImpl$1
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityManagerStubImpl
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityManagerVersionImpl
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat
+android.support.v4.view.accessibility.AccessibilityManagerCompatIcs
+android.support.v4.view.accessibility.AccessibilityManagerCompatIcs$1
+android.support.v4.view.accessibility.AccessibilityManagerCompatIcs$AccessibilityStateChangeListenerBridge
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoIcsImpl
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoJellybeanImpl
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoStubImpl
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompatIcs
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompatJellyBean
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderImpl
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderJellyBeanImpl
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderJellyBeanImpl$1
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderStubImpl
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean$1
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean$AccessibilityNodeInfoBridge
+android.support.v4.view.accessibility.AccessibilityRecordCompat
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordIcsImpl
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordIcsMr1Impl
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordImpl
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordJellyBeanImpl
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordStubImpl
+android.support.v4.view.accessibility.AccessibilityRecordCompatIcs
+android.support.v4.view.accessibility.AccessibilityRecordCompatIcsMr1
+android.support.v4.view.accessibility.AccessibilityRecordCompatJellyBean
+android.support.v4.widget.CursorAdapter
+android.support.v4.widget.CursorAdapter$1
+android.support.v4.widget.CursorAdapter$ChangeObserver
+android.support.v4.widget.CursorAdapter$MyDataSetObserver
+android.support.v4.widget.CursorFilter
+android.support.v4.widget.CursorFilter$CursorFilterClient
+android.support.v4.widget.EdgeEffectCompat:
+    132:134:public EdgeEffectCompat(android.content.Context)
+    204:204:public boolean onAbsorb(int)
+android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl:
+    60:60:public java.lang.Object newEdgeEffect(android.content.Context)
+    82:82:public boolean onAbsorb(java.lang.Object,int)
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl:
+    92:92:public java.lang.Object newEdgeEffect(android.content.Context)
+    116:116:public boolean onAbsorb(java.lang.Object,int)
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl:
+    public abstract java.lang.Object newEdgeEffect(android.content.Context)
+    public abstract boolean onAbsorb(java.lang.Object,int)
+android.support.v4.widget.EdgeEffectCompatIcs:
+    28:28:EdgeEffectCompatIcs()
+    30:30:public static java.lang.Object newEdgeEffect(android.content.Context)
+    57:58:public static boolean onAbsorb(java.lang.Object,int)
+android.support.v4.widget.ResourceCursorAdapter
+android.support.v4.widget.ScrollerCompat
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImplIcs
+android.support.v4.widget.ScrollerCompatIcs
+android.support.v4.widget.SearchViewCompat
+android.support.v4.widget.SearchViewCompat$OnQueryTextListenerCompat
+android.support.v4.widget.SearchViewCompat$SearchViewCompatHoneycombImpl
+android.support.v4.widget.SearchViewCompat$SearchViewCompatHoneycombImpl$1
+android.support.v4.widget.SearchViewCompat$SearchViewCompatImpl
+android.support.v4.widget.SearchViewCompat$SearchViewCompatStubImpl
+android.support.v4.widget.SearchViewCompatHoneycomb
+android.support.v4.widget.SearchViewCompatHoneycomb$1
+android.support.v4.widget.SearchViewCompatHoneycomb$OnQueryTextListenerCompatBridge
+android.support.v4.widget.SimpleCursorAdapter
+android.support.v4.widget.SimpleCursorAdapter$CursorToStringConverter
+android.support.v4.widget.SimpleCursorAdapter$ViewBinder
+cn.sharesdk.facebook.Facebook
+cn.sharesdk.facebook.Facebook$ShareParams
+cn.sharesdk.facebook.a
+cn.sharesdk.facebook.b
+cn.sharesdk.facebook.c
+cn.sharesdk.facebook.d
+cn.sharesdk.facebook.e
+cn.sharesdk.facebook.f
+cn.sharesdk.framework.CustomPlatform:
+    public CustomPlatform(android.content.Context)
+    protected final void initDevInfo(java.lang.String)
+    public abstract java.lang.String getName()
+    public int getVersion()
+    protected final int getPlatformId()
+    protected int getCustomPlatformId()
+    protected final void setNetworkDevinfo()
+    protected void doAuthorize(java.lang.String[])
+    protected abstract boolean checkAuthorize(int,java.lang.Object)
+    protected void doShare(cn.sharesdk.framework.Platform$ShareParams)
+    protected void follow(java.lang.String)
+    protected void timeline(int,int,java.lang.String)
+    protected void userInfor(java.lang.String)
+    protected void getFriendList(int,int,java.lang.String)
+    protected void doCustomerProtocol(java.lang.String,java.lang.String,int,java.util.HashMap,java.util.HashMap)
+    protected final cn.sharesdk.framework.statistics.b.f$a filterShareContent(cn.sharesdk.framework.Platform$ShareParams,java.util.HashMap)
+cn.sharesdk.framework.Platform:
+    public static final int ACTION_AUTHORIZING
+    public static final int ACTION_GETTING_FRIEND_LIST
+    public static final int ACTION_SENDING_DIRECT_MESSAGE
+    public static final int ACTION_FOLLOWING_USER
+    public static final int ACTION_TIMELINE
+    public static final int ACTION_USER_INFOR
+    public static final int ACTION_SHARE
+    protected static final int ACTION_CUSTOMER
+    public static final int CUSTOMER_ACTION_MASK
+    public static final int SHARE_TEXT
+    public static final int SHARE_IMAGE
+    public static final int SHARE_WEBPAGE
+    public static final int SHARE_MUSIC
+    public static final int SHARE_VIDEO
+    public static final int SHARE_APPS
+    public static final int SHARE_FILE
+    public static final int SHARE_EMOJI
+    protected cn.sharesdk.framework.PlatformActionListener listener
+    public Platform(android.content.Context)
+    protected void copyDevinfo(java.lang.String,java.lang.String)
+    protected void copyNetworkDevinfo(int,int)
+    protected java.lang.String getNetworkDevinfo(java.lang.String,java.lang.String)
+    protected java.lang.String getNetworkDevinfo(int,java.lang.String,java.lang.String)
+    public abstract int getVersion()
+    public int getId()
+    public cn.sharesdk.framework.PlatformActionListener getPlatformActionListener()
+    public boolean isAuthValid()
+    public boolean isValid()
+    public boolean isSSODisable()
+    public void authorize()
+    public void authorize(java.lang.String[])
+    protected abstract void doAuthorize(java.lang.String[])
+    protected void innerAuthorize(int,java.lang.Object)
+    public void followFriend(java.lang.String)
+    public void getTimeLine(java.lang.String,int,int)
+    public void listFriend(int,int,java.lang.String)
+    public void customerProtocol(java.lang.String,java.lang.String,short,java.util.HashMap,java.util.HashMap)
+    protected void afterRegister(int,java.lang.Object)
+    public void removeAccount()
+    public void removeAccount(boolean)
+    public java.lang.String getShortLintk(java.lang.String,boolean)
+    protected java.lang.String uploadImageToFileServer(java.lang.String)
+    protected java.lang.String uploadImageToFileServer(android.graphics.Bitmap)
+cn.sharesdk.framework.Platform$ShareParams:
+    public java.lang.String text
+    public java.lang.String imagePath
+    public Platform$ShareParams(java.lang.String)
+cn.sharesdk.framework.PlatformDb:
+    private static final java.lang.String DB_NAME
+    private java.lang.String platformNname
+    private int platformVersion
+    public PlatformDb(android.content.Context,java.lang.String,int)
+    public java.lang.String getToken()
+    public java.lang.String getTokenSecret()
+    public void putTokenSecret(java.lang.String)
+    public long getExpiresIn()
+    public long getExpiresTime()
+    public int getPlatformVersion()
+    public java.lang.String getPlatformNname()
+    public void putUserId(java.lang.String)
+    public java.lang.String getUserName()
+    public java.lang.String getUserIcon()
+    public void removeAccount()
+    public java.lang.String exportData()
+    public void importData(java.lang.String)
+    public boolean isValid()
+    public java.lang.String getUserGender()
+cn.sharesdk.framework.ReflectablePlatformActionListener
+cn.sharesdk.framework.Service:
+    private android.content.Context a
+    private java.lang.String b
+    void a(android.content.Context)
+    public android.content.Context getContext()
+    void a(java.lang.String)
+    public java.lang.String getAppKey()
+    public java.lang.String getDeviceKey()
+    protected abstract int getServiceVersionInt()
+    public abstract java.lang.String getServiceVersionName()
+    public void onBind()
+    static synthetic android.content.Context a(cn.sharesdk.framework.Service)
+cn.sharesdk.framework.Service$ServiceEvent
+cn.sharesdk.framework.ShareSDK:
+    public ShareSDK()
+    public static void initSDK(android.content.Context,boolean)
+    public static void initSDK(android.content.Context,java.lang.String)
+    public static void stopSDK(android.content.Context)
+    public static void stopSDK()
+    public static void registerService(java.lang.Class)
+    public static void unregisterService(java.lang.Class)
+    public static cn.sharesdk.framework.Service getService(java.lang.Class)
+    public static void registerPlatform(java.lang.Class)
+    public static void unregisterPlatform(java.lang.Class)
+    public static void setConnTimeout(int)
+    public static void setReadTimeout(int)
+    public static void removeCookieOnAuthorize(boolean)
+    public static void deleteCache()
+    public static synchronized cn.sharesdk.framework.Platform[] getPlatformList(android.content.Context)
+    public static cn.sharesdk.framework.Platform getPlatform(android.content.Context,java.lang.String)
+    public static void setPlatformDevInfo(java.lang.String,java.util.HashMap)
+    public static java.lang.String platformIdToName(int)
+    public static int platformNameToId(java.lang.String)
+    public static boolean isRemoveCookieOnAuthorize()
+    public static void closeDebug()
+    static void a(java.lang.String,java.lang.String)
+    static void a(int,int)
+    static java.lang.String a(java.lang.String,boolean,int,java.lang.String)
+    static java.lang.String a(java.lang.String)
+    static java.lang.String a(android.graphics.Bitmap)
+cn.sharesdk.framework.TitleLayout
+cn.sharesdk.framework.a:
+    a()
+    cn.sharesdk.framework.PlatformActionListener a()
+    void a(cn.sharesdk.framework.Platform,int,java.lang.Object)
+cn.sharesdk.framework.a.a:
+    private a()
+    public static cn.sharesdk.framework.a.a a()
+    public java.lang.String b(java.lang.String,java.util.ArrayList,java.lang.String,int)
+    public java.lang.String a(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,java.lang.String,int)
+    public java.lang.String a(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,java.util.ArrayList,java.lang.String,int)
+    public java.lang.String a(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,java.util.ArrayList,java.util.ArrayList,java.lang.String,int)
+    public java.lang.String b(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,java.util.ArrayList,java.util.ArrayList,java.lang.String,int)
+    public void a(java.lang.String,java.util.ArrayList,com.mob.tools.network.HTTPPart,com.mob.tools.network.RawNetworkCallback,java.lang.String,int)
+    public java.lang.String b(java.lang.String,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList,java.lang.String,int)
+cn.sharesdk.framework.authorize.AuthorizeAdapter
+cn.sharesdk.framework.authorize.AuthorizeHelper
+cn.sharesdk.framework.authorize.RegisterView
+cn.sharesdk.framework.authorize.ResizeLayout
+cn.sharesdk.framework.authorize.ResizeLayout$OnResizeListener
+cn.sharesdk.framework.authorize.SSOListener
+cn.sharesdk.framework.authorize.a
+cn.sharesdk.framework.authorize.b
+cn.sharesdk.framework.authorize.c
+cn.sharesdk.framework.authorize.d
+cn.sharesdk.framework.authorize.e
+cn.sharesdk.framework.authorize.f
+cn.sharesdk.framework.authorize.g
+cn.sharesdk.framework.authorize.g$a
+cn.sharesdk.framework.authorize.h
+cn.sharesdk.framework.authorize.i
+cn.sharesdk.framework.authorize.j
+cn.sharesdk.framework.c
+cn.sharesdk.framework.d:
+    protected static final java.lang.String TEXT
+    protected static final java.lang.String IMAGE_PATH
+    protected static final java.lang.String FILE_PATH
+    protected static final java.lang.String TITLE
+    protected static final java.lang.String NOTEBOOK
+    protected static final java.lang.String STACK
+    protected static final java.lang.String TAGS
+    protected static final java.lang.String IS_PUBLIC
+    protected static final java.lang.String IS_FRIEND
+    protected static final java.lang.String IS_FAMILY
+    protected static final java.lang.String SAFETY_LEVEL
+    protected static final java.lang.String CONTENT_TYPE
+    protected static final java.lang.String HIDDEN
+    protected static final java.lang.String VENUE_NAME
+    protected static final java.lang.String VENUE_DESCRIPTION
+    protected static final java.lang.String LATITUDE
+    protected static final java.lang.String LONGITUDE
+    protected static final java.lang.String IMAGE_URL
+    protected static final java.lang.String COMMENT
+    protected static final java.lang.String TITLE_URL
+    protected static final java.lang.String URL
+    protected static final java.lang.String ADDRESS
+    protected static final java.lang.String SITE
+    protected static final java.lang.String SITE_URL
+    protected static final java.lang.String GROPU_ID
+    protected static final java.lang.String EXT_INFO
+    protected static final java.lang.String SHARE_TYPE
+    protected static final java.lang.String MUSIC_URL
+    protected static final java.lang.String IMAGE_DATA
+    protected static final java.lang.String AUTHOR
+    protected static final java.lang.String SCENCE
+    protected static final java.lang.String CUSTOM_FLAG
+    protected static final java.lang.String EXECUTE_URL
+    protected static final java.lang.String INSTALL_URL
+    protected static final java.lang.String IS_SHARE_TENCENT_WEIBO
+    protected static final java.lang.String IMAGE_ARRAY
+    public d(java.lang.String)
+    public void set(java.lang.String,java.lang.Object)
+    public void setText(java.lang.String)
+    public java.lang.String getText()
+    public void setImagePath(java.lang.String)
+    public java.lang.String getImagePath()
+    public void setImageUrl(java.lang.String)
+    public java.lang.String getImageUrl()
+    public void setFilePath(java.lang.String)
+    public java.lang.String getFilePath()
+    public java.lang.String getTitle()
+    public void setTitle(java.lang.String)
+    public java.lang.String getNotebook()
+    public void setNotebook(java.lang.String)
+    public java.lang.String getStack()
+    public void setStack(java.lang.String)
+    public java.lang.String[] getTags()
+    public void setTags(java.lang.String[])
+    public boolean isPublic()
+    public void setPublic(boolean)
+    public boolean isFriend()
+    public void setFriend(boolean)
+    public boolean isFamily()
+    public void setFamily(boolean)
+    public int getSafetyLevel()
+    public void setSafetyLevel(int)
+    public int getContentType()
+    public void setContentType(int)
+    public int getHidden()
+    public void setHidden(int)
+    public void setVenueName(java.lang.String)
+    public java.lang.String getVenueName()
+    public java.lang.String getVenueDescription()
+    public void setVenueDescription(java.lang.String)
+    public float getLatitude()
+    public void setLatitude(float)
+    public float getLongitude()
+    public void setLongitude(float)
+    public java.lang.String getTitleUrl()
+    public void setTitleUrl(java.lang.String)
+    public java.lang.String getComment()
+    public void setComment(java.lang.String)
+    public java.lang.String getUrl()
+    public void setUrl(java.lang.String)
+    public java.lang.String getAddress()
+    public void setAddress(java.lang.String)
+    public java.lang.String getMusicUrl()
+    public void setMusicUrl(java.lang.String)
+    public java.lang.String getSite()
+    public void setSite(java.lang.String)
+    public java.lang.String getSiteUrl()
+    public void setSiteUrl(java.lang.String)
+    public java.lang.String getGroupId()
+    public void setGroupId(java.lang.String)
+    public java.lang.String getAuthor()
+    public void setAuthor(java.lang.String)
+    public android.graphics.Bitmap getImageData()
+    public void setImageData(android.graphics.Bitmap)
+    public int getShareType()
+    public void setShareType(int)
+    public int getScence()
+    public void setScence(int)
+    public java.lang.String getExtInfo()
+    public void setExtInfo(java.lang.String)
+    public void setCustomFlag(java.lang.String[])
+    public java.lang.String getExecuteUrl()
+    public void setExecuteUrl()
+    public java.lang.String getInstallUrl()
+    public void setInstallUrl()
+    public boolean isShareTencentWeibo()
+    public void setShareTencentWeibo(boolean)
+    public java.lang.String[] getImageArray()
+    public void setImageArray(java.lang.String[])
+cn.sharesdk.framework.e
+cn.sharesdk.framework.f:
+    private android.content.Context b
+    private cn.sharesdk.framework.PlatformDb c
+    public f(cn.sharesdk.framework.Platform,android.content.Context)
+    public int a()
+    public cn.sharesdk.framework.PlatformActionListener c()
+    public boolean d()
+    public boolean e()
+    public void a(int,java.lang.Object)
+    public void a(java.lang.String[])
+    public void b(java.lang.String)
+    public void a(java.lang.String,int,int)
+    public void a(int,int,java.lang.String)
+    public void a(java.lang.String,java.lang.String,short,java.util.HashMap,java.util.HashMap)
+    public cn.sharesdk.framework.PlatformDb g()
+    public void h()
+    public java.lang.String a(java.lang.String,boolean)
+    private java.lang.String k()
+    protected cn.sharesdk.framework.PlatformActionListener i()
+    public java.lang.String d(java.lang.String)
+    public java.lang.String a(android.graphics.Bitmap)
+cn.sharesdk.framework.h
+cn.sharesdk.framework.i:
+    public java.lang.String a(android.content.Context,java.lang.String,java.lang.String,boolean,int,java.lang.String)
+    public java.lang.String a(android.content.Context,java.lang.String)
+    public java.lang.String a(android.content.Context,android.graphics.Bitmap)
+    public void a(int,int,java.util.HashMap)
+cn.sharesdk.framework.k:
+    private boolean m
+    public void a(java.lang.Class)
+    public void b(java.lang.Class)
+    public cn.sharesdk.framework.Service c(java.lang.Class)
+    public void d(java.lang.Class)
+    public void e(java.lang.Class)
+    public void a(int)
+    public void b(int)
+    public void b(boolean)
+    public boolean d()
+    public void a(java.lang.String,java.util.HashMap)
+    public java.lang.String c(int)
+    public int c(java.lang.String)
+    public void a(java.lang.String,java.lang.String)
+    public void a(int,int)
+    public java.lang.String a(java.lang.String,boolean,int,java.lang.String)
+    public java.lang.String d(java.lang.String)
+    public java.lang.String a(android.graphics.Bitmap)
+    public void g()
+cn.sharesdk.framework.n
+cn.sharesdk.framework.statistics.a:
+    public java.lang.String e(java.lang.String)
+    public java.lang.String a(android.graphics.Bitmap)
+    private java.lang.String a(java.lang.String,byte[])
+    public java.lang.String a(java.lang.String,java.lang.String,int,boolean,java.lang.String)
+    private java.lang.String a(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)
+    private java.lang.String d(java.lang.String,java.lang.String)
+cn.sharesdk.framework.utils.Escaper
+cn.sharesdk.framework.utils.a
+cn.sharesdk.framework.utils.a$1
+cn.sharesdk.framework.utils.a$a
+cn.sharesdk.framework.utils.a$b
+cn.sharesdk.framework.utils.b
+cn.sharesdk.framework.utils.c
+cn.sharesdk.framework.utils.d
+cn.sharesdk.framework.utils.e
+cn.sharesdk.framework.utils.f
+cn.sharesdk.framework.utils.g
+cn.sharesdk.framework.utils.g$a
+cn.sharesdk.onekeyshare.EditPageFakeActivity:
+    protected java.util.ArrayList toFriendList
+    71:76:public java.lang.String getLogoName(java.lang.String)
+    80:80:protected boolean isShowAtUserLayout(java.lang.String)
+    86:86:protected java.lang.String getAtUserButtonText(java.lang.String)
+    90:104:protected java.lang.String getJoinSelectedUser(java.util.HashMap)
+    108:123:public boolean haveImage()
+    127:196:protected boolean initImageList(cn.sharesdk.onekeyshare.EditPageFakeActivity$ImageListResultsCallback)
+    200:203:protected void removeImage(cn.sharesdk.onekeyshare.EditPageFakeActivity$ImageInfo)
+    206:255:protected void setResultAndFinish()
+    38:38:static synthetic java.util.ArrayList access$0(cn.sharesdk.onekeyshare.EditPageFakeActivity)
+    29:29:static synthetic android.app.Activity access$1(cn.sharesdk.onekeyshare.EditPageFakeActivity)
+cn.sharesdk.onekeyshare.EditPageFakeActivity$1
+cn.sharesdk.onekeyshare.EditPageFakeActivity$ImageInfo
+cn.sharesdk.onekeyshare.EditPageFakeActivity$ImageListResultsCallback
+cn.sharesdk.onekeyshare.FollowerListFakeActivity
+cn.sharesdk.onekeyshare.FollowerListFakeActivity$FollowersResult
+cn.sharesdk.onekeyshare.FollowerListFakeActivity$Following
+cn.sharesdk.onekeyshare.OnekeyShare:
+    private static final int MSG_TOAST
+    private static final int MSG_ACTION_CCALLBACK
+    private static final int MSG_CANCEL_NOTIFY
+    131:132:public void setTheme(cn.sharesdk.onekeyshare.OnekeyShareTheme)
+    136:137:public void setAddress(java.lang.String)
+    159:159:public java.lang.String getText()
+    170:172:public void setImageUrl(java.lang.String)
+    181:182:public void setFilePath(java.lang.String)
+    201:202:public void setVenueName(java.lang.String)
+    206:207:public void setVenueDescription(java.lang.String)
+    211:212:public void setLatitude(float)
+    216:217:public void setLongitude(float)
+    221:222:public void setSilent(boolean)
+    226:227:public void setPlatform(java.lang.String)
+    231:232:public void setInstallUrl(java.lang.String)
+    236:237:public void setExecuteUrl(java.lang.String)
+    241:242:public void setMusicUrl(java.lang.String)
+    246:247:public void setCallback(cn.sharesdk.framework.PlatformActionListener)
+    251:251:public cn.sharesdk.framework.PlatformActionListener getCallback()
+    256:257:public void setShareContentCustomizeCallback(cn.sharesdk.onekeyshare.ShareContentCustomizeCallback)
+    261:261:public cn.sharesdk.onekeyshare.ShareContentCustomizeCallback getShareContentCustomizeCallback()
+    266:272:public void setCustomerLogo(android.graphics.Bitmap,android.graphics.Bitmap,java.lang.String,android.view.View$OnClickListener)
+    281:283:public void setDialogMode()
+    287:288:public void addHiddenPlatform(java.lang.String)
+    293:298:public void setViewToShare(android.view.View)
+    302:303:public void setImageArray(java.lang.String[])
+    306:307:public void setEditPageBackground(android.view.View)
+    310:311:public void setOnShareButtonClickListener(cn.sharesdk.onekeyshare.PlatformListFakeActivity$OnShareButtonClickListener)
+    598:599:public void setShareFromQQAuthSupport(boolean)
+cn.sharesdk.onekeyshare.PicViewer
+cn.sharesdk.onekeyshare.PlatformListFakeActivity:
+    69:69:public java.util.HashMap getShareParamsMap()
+    77:77:public boolean isSilent()
+    85:85:public java.util.ArrayList getCustomerLogos()
+    93:93:public java.util.HashMap getHiddenPlatforms()
+    109:109:public cn.sharesdk.onekeyshare.PlatformListFakeActivity$OnShareButtonClickListener getOnShareButtonClickListener()
+    117:117:public boolean isDialogMode()
+    125:125:public cn.sharesdk.onekeyshare.ThemeShareCallback getThemeShareCallback()
+cn.sharesdk.onekeyshare.ReflectableShareContentCustomizeCallback
+cn.sharesdk.onekeyshare.Shake2Share
+cn.sharesdk.onekeyshare.Shake2Share$OnShakeListener
+cn.sharesdk.onekeyshare.ShareCore:
+    113:113:public static boolean canAuthorize(android.content.Context,java.lang.String)
+    126:126:public static boolean canGetUserInfo(android.content.Context,java.lang.String)
+cn.sharesdk.onekeyshare.theme.classic.EditPage
+cn.sharesdk.onekeyshare.theme.classic.EditPage$1
+cn.sharesdk.onekeyshare.theme.classic.EditPage$1$1
+cn.sharesdk.onekeyshare.theme.classic.EditPage$2
+cn.sharesdk.onekeyshare.theme.classic.EditPage$3
+cn.sharesdk.onekeyshare.theme.classic.EditPage$4
+cn.sharesdk.onekeyshare.theme.classic.EditPage$5
+cn.sharesdk.onekeyshare.theme.classic.EditPage$6
+cn.sharesdk.onekeyshare.theme.classic.EditPage$7
+cn.sharesdk.onekeyshare.theme.classic.EditPage$8
+cn.sharesdk.onekeyshare.theme.classic.FollowListPage
+cn.sharesdk.onekeyshare.theme.classic.FollowListPage$FollowAdapter
+cn.sharesdk.onekeyshare.theme.classic.FollowListPage$FollowListItem
+cn.sharesdk.onekeyshare.theme.classic.FollowListPage$PRTHeader
+cn.sharesdk.onekeyshare.theme.classic.FollowListPage$RotateImageView
+cn.sharesdk.onekeyshare.theme.classic.PlatformGridView:
+    private static final int MIN_CLICK_INTERVAL
+    private static final int MSG_PLATFORM_LIST_GOT
+    77:79:public PlatformGridView(android.content.Context,android.util.AttributeSet)
+cn.sharesdk.onekeyshare.theme.skyblue.EditPage
+cn.sharesdk.onekeyshare.theme.skyblue.EditPage$1
+cn.sharesdk.onekeyshare.theme.skyblue.EditPage$2
+cn.sharesdk.onekeyshare.theme.skyblue.EditPage$3
+cn.sharesdk.onekeyshare.theme.skyblue.EditPage$4
+cn.sharesdk.onekeyshare.theme.skyblue.FollowListPage
+cn.sharesdk.onekeyshare.theme.skyblue.FollowListPage$FollowAdapter
+cn.sharesdk.onekeyshare.theme.skyblue.FollowListPage$FollowListItem
+cn.sharesdk.onekeyshare.theme.skyblue.FollowListPage$PRTHeader
+cn.sharesdk.onekeyshare.theme.skyblue.FollowListPage$RotateImageView
+cn.sharesdk.sina.weibo.SinaActivity
+cn.sharesdk.sina.weibo.SinaWeibo
+cn.sharesdk.sina.weibo.SinaWeibo$ShareParams
+cn.sharesdk.sina.weibo.a
+cn.sharesdk.sina.weibo.b
+cn.sharesdk.sina.weibo.c
+cn.sharesdk.sina.weibo.d
+cn.sharesdk.sina.weibo.e
+cn.sharesdk.sina.weibo.f
+cn.sharesdk.sina.weibo.g
+cn.sharesdk.sina.weibo.h
+cn.sharesdk.sina.weibo.i
+cn.sharesdk.sina.weibo.j
+cn.sharesdk.sina.weibo.k
+cn.sharesdk.system.email.ActionListener
+cn.sharesdk.system.email.Email
+cn.sharesdk.system.email.Email$ShareParams
+cn.sharesdk.system.email.a
+cn.sharesdk.system.email.b
+cn.sharesdk.system.email.c
+cn.sharesdk.system.text.ActionListener
+cn.sharesdk.system.text.ShortMessage
+cn.sharesdk.system.text.ShortMessage$ShareParams
+cn.sharesdk.system.text.a
+cn.sharesdk.system.text.b
+cn.sharesdk.system.text.c
+cn.sharesdk.tencent.qq.QQ
+cn.sharesdk.tencent.qq.QQ$ShareParams
+cn.sharesdk.tencent.qq.QQClientNotExistException
+cn.sharesdk.tencent.qq.QQWebShareAdapter
+cn.sharesdk.tencent.qq.TencentSSOClientNotInstalledException
+cn.sharesdk.tencent.qq.a
+cn.sharesdk.tencent.qq.b
+cn.sharesdk.tencent.qq.c
+cn.sharesdk.tencent.qq.d
+cn.sharesdk.tencent.qq.e
+cn.sharesdk.tencent.qq.f
+cn.sharesdk.tencent.qq.g
+cn.sharesdk.tencent.qq.h
+cn.sharesdk.tencent.qq.i
+cn.sharesdk.tencent.qq.j
+cn.sharesdk.tencent.qq.k
+cn.sharesdk.tencent.qq.l
+cn.sharesdk.tencent.qq.m
+cn.sharesdk.tencent.qq.n
+cn.sharesdk.tencent.qzone.QZone
+cn.sharesdk.tencent.qzone.QZone$ShareParams
+cn.sharesdk.tencent.qzone.QZoneWebShareAdapter
+cn.sharesdk.tencent.qzone.TencentSSOClientNotInstalledException
+cn.sharesdk.tencent.qzone.a
+cn.sharesdk.tencent.qzone.b
+cn.sharesdk.tencent.qzone.c
+cn.sharesdk.tencent.qzone.d
+cn.sharesdk.tencent.qzone.e
+cn.sharesdk.tencent.qzone.f
+cn.sharesdk.tencent.qzone.g
+cn.sharesdk.tencent.qzone.h
+cn.sharesdk.tencent.qzone.i
+cn.sharesdk.tencent.qzone.j
+cn.sharesdk.tencent.qzone.k
+cn.sharesdk.tencent.qzone.l
+cn.sharesdk.tencent.weibo.TencentWeibo
+cn.sharesdk.tencent.weibo.TencentWeibo$ShareParams
+cn.sharesdk.tencent.weibo.a
+cn.sharesdk.tencent.weibo.b
+cn.sharesdk.tencent.weibo.c
+cn.sharesdk.tencent.weibo.d
+cn.sharesdk.tencent.weibo.e
+cn.sharesdk.tencent.weibo.f
+cn.sharesdk.tencent.weibo.g
+cn.sharesdk.tencent.weibo.g$a
+cn.sharesdk.tencent.weibo.h
+cn.sharesdk.tencent.weibo.i
+cn.sharesdk.twitter.Twitter
+cn.sharesdk.twitter.Twitter$ShareParams
+cn.sharesdk.twitter.a
+cn.sharesdk.twitter.b
+cn.sharesdk.twitter.c
+cn.sharesdk.twitter.d
+cn.sharesdk.twitter.e
+cn.sharesdk.wechat.favorite.WechatFavorite
+cn.sharesdk.wechat.favorite.WechatFavorite$ShareParams
+cn.sharesdk.wechat.favorite.a
+cn.sharesdk.wechat.friends.Wechat
+cn.sharesdk.wechat.friends.Wechat$ShareParams
+cn.sharesdk.wechat.friends.a
+cn.sharesdk.wechat.moments.WechatMoments
+cn.sharesdk.wechat.moments.WechatMoments$ShareParams
+cn.sharesdk.wechat.moments.a
+cn.sharesdk.wechat.utils.WXAppExtendObject:
+    public WXAppExtendObject(java.lang.String,byte[])
+    public WXAppExtendObject(java.lang.String,java.lang.String)
+    public int type()
+    public boolean checkArgs()
+cn.sharesdk.wechat.utils.WXEmojiObject
+cn.sharesdk.wechat.utils.WXFileObject
+cn.sharesdk.wechat.utils.WXImageObject
+cn.sharesdk.wechat.utils.WXMediaMessage:
+    public static final java.lang.String ACTION_WXAPPMESSAGE
+    public final int getType()
+    public final void setThumbImage(android.graphics.Bitmap)
+cn.sharesdk.wechat.utils.WXMediaMessage$IMediaObject:
+    public static final int TYPE_UNKNOWN
+    public static final int TYPE_TEXT
+    public static final int TYPE_IMAGE
+    public static final int TYPE_MUSIC
+    public static final int TYPE_VIDEO
+    public static final int TYPE_URL
+    public static final int TYPE_FILE
+    public static final int TYPE_APPDATA
+    public static final int TYPE_EMOJI
+    public abstract int type()
+    public abstract boolean checkArgs()
+cn.sharesdk.wechat.utils.WXMusicObject
+cn.sharesdk.wechat.utils.WXTextObject
+cn.sharesdk.wechat.utils.WXVideoObject
+cn.sharesdk.wechat.utils.WXWebpageObject
+cn.sharesdk.wechat.utils.WechatClientNotExistException
+cn.sharesdk.wechat.utils.WechatFavoriteNotSupportedException
+cn.sharesdk.wechat.utils.WechatHelper:
+    public void a(cn.sharesdk.wechat.utils.k)
+    public boolean b()
+    public void a(cn.sharesdk.wechat.utils.k,cn.sharesdk.framework.Platform$ShareParams,cn.sharesdk.framework.PlatformActionListener)
+    public void b(cn.sharesdk.wechat.utils.k)
+    private void a(java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void a(android.content.Context,java.lang.String,java.lang.String,android.graphics.Bitmap,int,cn.sharesdk.wechat.utils.k)
+    private void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,android.graphics.Bitmap,int,cn.sharesdk.wechat.utils.k)
+    private void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,android.graphics.Bitmap,int,cn.sharesdk.wechat.utils.k)
+    private void b(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void b(android.content.Context,java.lang.String,java.lang.String,java.lang.String,android.graphics.Bitmap,int,cn.sharesdk.wechat.utils.k)
+    private void b(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void b(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,android.graphics.Bitmap,int,cn.sharesdk.wechat.utils.k)
+    private void c(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void c(android.content.Context,java.lang.String,java.lang.String,java.lang.String,android.graphics.Bitmap,int,cn.sharesdk.wechat.utils.k)
+    private void b(android.content.Context,java.lang.String,java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void b(android.content.Context,java.lang.String,java.lang.String,android.graphics.Bitmap,int,cn.sharesdk.wechat.utils.k)
+    private byte[] a(java.lang.String)
+    private int a(android.graphics.Bitmap,android.graphics.Bitmap$CompressFormat)
+    private android.graphics.Bitmap a(android.graphics.Bitmap,int)
+    private static int a(android.graphics.BitmapFactory$Options,int,int)
+    private byte[] b(android.content.Context,java.lang.String)
+    private byte[] a(android.content.Context,byte[])
+    private byte[] a(android.content.Context,android.graphics.Bitmap,android.graphics.Bitmap$CompressFormat)
+    public boolean a(android.content.Context,java.lang.String)
+    public boolean c()
+    public boolean d()
+    private void a(cn.sharesdk.wechat.utils.WXMediaMessage,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+cn.sharesdk.wechat.utils.WechatHelper$ShareParams
+cn.sharesdk.wechat.utils.WechatResp$ErrCode
+cn.sharesdk.wechat.utils.WechatTimelineNotSupportedException
+cn.sharesdk.wechat.utils.a
+cn.sharesdk.wechat.utils.d
+cn.sharesdk.wechat.utils.g:
+    public g(cn.sharesdk.framework.Platform,int)
+    public void a(java.lang.String,java.lang.String)
+    public void a(cn.sharesdk.framework.PlatformActionListener)
+    static synthetic cn.sharesdk.framework.Platform a(cn.sharesdk.wechat.utils.g)
+cn.sharesdk.wechat.utils.i
+cn.sharesdk.wechat.utils.j:
+    private android.content.Context a
+    private java.lang.String b
+    public boolean a(android.content.Context,java.lang.String)
+    public void a(cn.sharesdk.wechat.utils.m)
+    public boolean a()
+    public boolean b()
+    private boolean d()
+    private java.lang.String a(java.lang.String)
+    public boolean c()
+cn.sharesdk.wechat.utils.k:
+    public k(cn.sharesdk.framework.Platform)
+    public void a(cn.sharesdk.framework.authorize.AuthorizeListener)
+    public void a(cn.sharesdk.framework.Platform$ShareParams,cn.sharesdk.framework.PlatformActionListener)
+    public void a(cn.sharesdk.wechat.utils.g)
+    public cn.sharesdk.framework.Platform$ShareParams a()
+    public cn.sharesdk.framework.Platform b()
+    public cn.sharesdk.framework.PlatformActionListener c()
+cn.sharesdk.wechat.utils.l
+cn.sharesdk.wechat.utils.m
+com.android.internal.telephony.ITelephony$Stub:
+    private static final java.lang.String DESCRIPTOR
+    static final int TRANSACTION_dial
+    static final int TRANSACTION_call
+    static final int TRANSACTION_showCallScreen
+    static final int TRANSACTION_showCallScreenWithDialpad
+    static final int TRANSACTION_endCall
+    static final int TRANSACTION_answerRingingCall
+    static final int TRANSACTION_silenceRinger
+    static final int TRANSACTION_isOffhook
+    static final int TRANSACTION_isRinging
+    static final int TRANSACTION_isIdle
+    static final int TRANSACTION_isRadioOn
+    static final int TRANSACTION_isSimPinEnabled
+    static final int TRANSACTION_cancelMissedCallsNotification
+    static final int TRANSACTION_supplyPin
+    static final int TRANSACTION_handlePinMmi
+    static final int TRANSACTION_toggleRadioOnOff
+    static final int TRANSACTION_setRadio
+    static final int TRANSACTION_updateServiceLocation
+    static final int TRANSACTION_enableLocationUpdates
+    static final int TRANSACTION_disableLocationUpdates
+    static final int TRANSACTION_enableApnType
+    static final int TRANSACTION_disableApnType
+    static final int TRANSACTION_enableDataConnectivity
+    static final int TRANSACTION_disableDataConnectivity
+    static final int TRANSACTION_isDataConnectivityPossible
+    static final int TRANSACTION_getCellLocation
+    static final int TRANSACTION_getNeighboringCellInfo
+    static final int TRANSACTION_getCallState
+    static final int TRANSACTION_getDataActivity
+    static final int TRANSACTION_getDataState
+    static final int TRANSACTION_getActivePhoneType
+    static final int TRANSACTION_getCdmaEriIconIndex
+    static final int TRANSACTION_getCdmaEriIconMode
+    static final int TRANSACTION_getCdmaEriText
+    static final int TRANSACTION_getCdmaNeedsProvisioning
+    static final int TRANSACTION_getVoiceMessageCount
+    static final int TRANSACTION_getNetworkType
+    static final int TRANSACTION_hasIccCard
+    20:23:public ITelephony$Stub()
+    41:41:public android.os.IBinder asBinder()
+com.android.internal.telephony.ITelephony$Stub$Proxy:
+    385:385:public java.lang.String getInterfaceDescriptor()
+com.itheima62.mobileguard.BuildConfig
+com.itheima62.mobileguard.R
+com.itheima62.mobileguard.R$anim
+com.itheima62.mobileguard.R$attr
+com.itheima62.mobileguard.R$color
+com.itheima62.mobileguard.R$dimen
+com.itheima62.mobileguard.R$drawable
+com.itheima62.mobileguard.R$id
+com.itheima62.mobileguard.R$layout
+com.itheima62.mobileguard.R$menu
+com.itheima62.mobileguard.R$raw
+com.itheima62.mobileguard.R$string
+com.itheima62.mobileguard.R$style
+com.itheima62.mobileguard.R$styleable
+com.itheima62.mobileguard.R$xml
+com.itheima62.mobileguard.activities.AntivirusActivity:
+    protected static final int SCANNING
+    protected static final int FINISH
+    protected static final int MESSAGE
+    228:228:static synthetic com.itheima62.mobileguard.dao.AntiVirusDao access$11(com.itheima62.mobileguard.activities.AntivirusActivity)
+com.itheima62.mobileguard.activities.AppManagerActivity:
+    protected static final int LOADING
+    protected static final int FINISH
+com.itheima62.mobileguard.activities.BaseFriendsCallSmsActivity:
+    protected static final int LOADING
+    protected static final int FINISH
+com.itheima62.mobileguard.activities.CacheActivity:
+    protected static final int SCANNING
+    protected static final int FINISH
+    protected static final int CLEARALL
+    private com.itheima62.mobileguard.activities.CacheActivity$GetCacheInfo getcacheInfo
+com.itheima62.mobileguard.activities.ConnectivityActivity:
+    private android.widget.ListView lv_datas
+    128:144:private void initData()
+    147:155:private void initView()
+    125:125:static synthetic void access$4(com.itheima62.mobileguard.activities.ConnectivityActivity,java.util.List)
+    44:44:static synthetic android.os.Handler access$5(com.itheima62.mobileguard.activities.ConnectivityActivity)
+com.itheima62.mobileguard.activities.ConnectivityActivity$2
+com.itheima62.mobileguard.activities.ConnectivityActivity$MyAdapter:
+    51:51:private ConnectivityActivity$MyAdapter(com.itheima62.mobileguard.activities.ConnectivityActivity)
+    51:51:synthetic ConnectivityActivity$MyAdapter(com.itheima62.mobileguard.activities.ConnectivityActivity,com.itheima62.mobileguard.activities.ConnectivityActivity$MyAdapter)
+com.itheima62.mobileguard.activities.SettingCenterActivity:
+    private android.widget.ImageView iv_changeStyle
+    private android.widget.CheckBox iv_changeStyle2
+com.itheima62.mobileguard.activities.SplashActivity:
+    private static final int LOADMAIN
+    private static final int SHOWUPDATEDIALOG
+    protected static final int ERROR
+    574:581:private void showAlpha()
+com.itheima62.mobileguard.activities.TastManagerActivity:
+    protected static final int LOADING
+    protected static final int FINISH
+com.itheima62.mobileguard.activities.TelSmsSafeActivity:
+    protected static final int LOADING
+    protected static final int FINISH
+com.itheima62.mobileguard.activities.TelSmsSafeActivityPage:
+    protected static final int LOADING
+    protected static final int FINISH
+com.itheima62.mobileguard.dao.BlackDao:
+    151:174:public java.util.List getAllDatas()
+    198:210:public void update(java.lang.String,int)
+com.itheima62.mobileguard.dao.LockedDao:
+    35:46:public boolean isLocked(java.lang.String)
+com.itheima62.mobileguard.domain.BlackTable
+com.itheima62.mobileguard.domain.LockedTable:
+    public static final java.lang.String TABLENAME
+    public static final java.lang.String PACKNAME
+com.itheima62.mobileguard.engine.AppManagerEngine:
+    20:20:public AppManagerEngine()
+com.itheima62.mobileguard.engine.ConnectivityEngine:
+    17:17:public ConnectivityEngine()
+com.itheima62.mobileguard.engine.PhoneLocationEngine:
+    16:16:public PhoneLocationEngine()
+com.itheima62.mobileguard.engine.ReadContantsEngine:
+    16:16:public ReadContantsEngine()
+com.itheima62.mobileguard.engine.SmsEngine:
+    35:35:public SmsEngine()
+    278:354:public static void smsBaikeXml(android.app.Activity,com.itheima62.mobileguard.engine.SmsEngine$BaikeProgress)
+com.itheima62.mobileguard.engine.SmsEngine$3
+com.itheima62.mobileguard.engine.SmsEngine$4
+com.itheima62.mobileguard.engine.SmsEngine$5
+com.itheima62.mobileguard.engine.TaskManagerEngine:
+    27:27:public TaskManagerEngine()
+com.itheima62.mobileguard.fragment.BaseLockOrUnlockFragment:
+    protected static final int LOADING
+    protected static final int FINISH
+    46:46:public java.util.List getAllLockedPacks()
+com.itheima62.mobileguard.service.WatchDogService:
+    private com.itheima62.mobileguard.dao.LockedDao dao
+com.itheima62.mobileguard.unittest.MyTest
+com.itheima62.mobileguard.utils.DensityUtil:
+    5:5:public DensityUtil()
+    18:19:public static int px2dip(android.content.Context,float)
+com.itheima62.mobileguard.utils.EncryptTools:
+    3:3:public EncryptTools()
+com.itheima62.mobileguard.utils.JsonStrTools:
+    7:7:public JsonStrTools()
+com.itheima62.mobileguard.utils.MyConstants
+com.itheima62.mobileguard.utils.ServiceUtils:
+    13:13:public ServiceUtils()
+com.itheima62.mobileguard.utils.SpTools:
+    6:6:public SpTools()
+com.lidroid.xutils.BitmapUtils
+com.lidroid.xutils.BitmapUtils$BitmapLoadTask
+com.lidroid.xutils.DbUtils
+com.lidroid.xutils.DbUtils$DaoConfig
+com.lidroid.xutils.DbUtils$DbUpgradeListener
+com.lidroid.xutils.DbUtils$FindTempCache
+com.lidroid.xutils.HttpUtils:
+    private static final int DEFAULT_CONN_TIMEOUT
+    private static final int DEFAULT_RETRY_TIMES
+    private static final java.lang.String HEADER_ACCEPT_ENCODING
+    private static final java.lang.String ENCODING_GZIP
+    private static final int DEFAULT_POOL_SIZE
+    66:67:public HttpUtils(int)
+    70:71:public HttpUtils(java.lang.String)
+    146:146:public org.apache.http.client.HttpClient getHttpClient()
+    152:155:public com.lidroid.xutils.HttpUtils configResponseTextCharset(java.lang.String)
+    159:160:public com.lidroid.xutils.HttpUtils configHttpRedirectHandler(com.lidroid.xutils.http.callback.HttpRedirectHandler)
+    164:165:public com.lidroid.xutils.HttpUtils configHttpCacheSize(int)
+    169:171:public com.lidroid.xutils.HttpUtils configDefaultHttpCacheExpiry(long)
+    175:176:public com.lidroid.xutils.HttpUtils configCurrentHttpCacheExpiry(long)
+    180:181:public com.lidroid.xutils.HttpUtils configCookieStore(org.apache.http.client.CookieStore)
+    185:186:public com.lidroid.xutils.HttpUtils configUserAgent(java.lang.String)
+    197:199:public com.lidroid.xutils.HttpUtils configSoTimeout(int)
+    203:204:public com.lidroid.xutils.HttpUtils configRegisterScheme(org.apache.http.conn.scheme.Scheme)
+    208:210:public com.lidroid.xutils.HttpUtils configSSLSocketFactory(org.apache.http.conn.ssl.SSLSocketFactory)
+    214:215:public com.lidroid.xutils.HttpUtils configRequestRetryCount(int)
+    219:220:public com.lidroid.xutils.HttpUtils configRequestThreadPoolSize(int)
+    239:239:public com.lidroid.xutils.http.ResponseStream sendSync(com.lidroid.xutils.http.client.HttpRequest$HttpMethod,java.lang.String)
+    243:246:public com.lidroid.xutils.http.ResponseStream sendSync(com.lidroid.xutils.http.client.HttpRequest$HttpMethod,java.lang.String,com.lidroid.xutils.http.RequestParams)
+    258:258:public com.lidroid.xutils.http.HttpHandler download(java.lang.String,java.lang.String,boolean,com.lidroid.xutils.http.callback.RequestCallBack)
+    263:263:public com.lidroid.xutils.http.HttpHandler download(java.lang.String,java.lang.String,boolean,boolean,com.lidroid.xutils.http.callback.RequestCallBack)
+    268:268:public com.lidroid.xutils.http.HttpHandler download(java.lang.String,java.lang.String,com.lidroid.xutils.http.RequestParams,com.lidroid.xutils.http.callback.RequestCallBack)
+    273:273:public com.lidroid.xutils.http.HttpHandler download(java.lang.String,java.lang.String,com.lidroid.xutils.http.RequestParams,boolean,com.lidroid.xutils.http.callback.RequestCallBack)
+    278:278:public com.lidroid.xutils.http.HttpHandler download(java.lang.String,java.lang.String,com.lidroid.xutils.http.RequestParams,boolean,boolean,com.lidroid.xutils.http.callback.RequestCallBack)
+    283:283:public com.lidroid.xutils.http.HttpHandler download(com.lidroid.xutils.http.client.HttpRequest$HttpMethod,java.lang.String,java.lang.String,com.lidroid.xutils.http.RequestParams,com.lidroid.xutils.http.callback.RequestCallBack)
+    288:288:public com.lidroid.xutils.http.HttpHandler download(com.lidroid.xutils.http.client.HttpRequest$HttpMethod,java.lang.String,java.lang.String,com.lidroid.xutils.http.RequestParams,boolean,com.lidroid.xutils.http.callback.RequestCallBack)
+    330:336:private com.lidroid.xutils.http.ResponseStream sendSyncRequest(com.lidroid.xutils.http.client.HttpRequest,com.lidroid.xutils.http.RequestParams)
+com.lidroid.xutils.ViewUtils
+com.lidroid.xutils.bitmap.BitmapCacheListener
+com.lidroid.xutils.bitmap.BitmapCommonUtils
+com.lidroid.xutils.bitmap.BitmapDisplayConfig
+com.lidroid.xutils.bitmap.BitmapGlobalConfig
+com.lidroid.xutils.bitmap.BitmapGlobalConfig$BitmapCacheManagementTask
+com.lidroid.xutils.bitmap.PauseOnScrollListener
+com.lidroid.xutils.bitmap.callback.BitmapLoadCallBack
+com.lidroid.xutils.bitmap.callback.BitmapLoadFrom
+com.lidroid.xutils.bitmap.callback.BitmapSetter
+com.lidroid.xutils.bitmap.callback.DefaultBitmapLoadCallBack
+com.lidroid.xutils.bitmap.core.AsyncDrawable
+com.lidroid.xutils.bitmap.core.BitmapCache
+com.lidroid.xutils.bitmap.core.BitmapCache$1
+com.lidroid.xutils.bitmap.core.BitmapCache$BitmapMeta
+com.lidroid.xutils.bitmap.core.BitmapCache$MemoryCacheKey
+com.lidroid.xutils.bitmap.core.BitmapDecoder
+com.lidroid.xutils.bitmap.core.BitmapSize
+com.lidroid.xutils.bitmap.download.DefaultDownloader
+com.lidroid.xutils.bitmap.download.Downloader
+com.lidroid.xutils.bitmap.factory.BitmapFactory
+com.lidroid.xutils.cache.FileNameGenerator
+com.lidroid.xutils.cache.KeyExpiryMap:
+    private static final long serialVersionUID
+    private static final int DEFAULT_CONCURRENCY_LEVEL
+    35:36:public KeyExpiryMap(int,float,int)
+    43:44:public KeyExpiryMap(int)
+com.lidroid.xutils.cache.LruDiskCache
+com.lidroid.xutils.cache.LruDiskCache$1
+com.lidroid.xutils.cache.LruDiskCache$2
+com.lidroid.xutils.cache.LruDiskCache$Editor
+com.lidroid.xutils.cache.LruDiskCache$Editor$FaultHidingOutputStream
+com.lidroid.xutils.cache.LruDiskCache$Entry
+com.lidroid.xutils.cache.LruDiskCache$Snapshot
+com.lidroid.xutils.cache.LruDiskCache$StrictLineReader
+com.lidroid.xutils.cache.LruDiskCache$StrictLineReader$1
+com.lidroid.xutils.cache.LruMemoryCache:
+    57:59:public void setMaxSize(int)
+    129:129:public final java.lang.Object put(java.lang.Object,java.lang.Object)
+    215:215:public final boolean containsKey(java.lang.Object)
+    281:283:public final void evictAll()
+    291:291:public final synchronized int size()
+    300:300:public final synchronized int maxSize()
+    307:307:public final synchronized int hitCount()
+    315:315:public final synchronized int missCount()
+    322:322:public final synchronized int createCount()
+    329:329:public final synchronized int putCount()
+    336:336:public final synchronized int evictionCount()
+    344:344:public final synchronized java.util.Map snapshot()
+com.lidroid.xutils.cache.MD5FileNameGenerator
+com.lidroid.xutils.db.annotation.Check
+com.lidroid.xutils.db.annotation.Column
+com.lidroid.xutils.db.annotation.Finder
+com.lidroid.xutils.db.annotation.Foreign
+com.lidroid.xutils.db.annotation.Id
+com.lidroid.xutils.db.annotation.NoAutoIncrement
+com.lidroid.xutils.db.annotation.NotNull
+com.lidroid.xutils.db.annotation.Table
+com.lidroid.xutils.db.annotation.Transient
+com.lidroid.xutils.db.annotation.Unique
+com.lidroid.xutils.db.converter.BooleanColumnConverter
+com.lidroid.xutils.db.converter.ByteArrayColumnConverter
+com.lidroid.xutils.db.converter.ByteColumnConverter
+com.lidroid.xutils.db.converter.CharColumnConverter
+com.lidroid.xutils.db.converter.ColumnConverter
+com.lidroid.xutils.db.converter.ColumnConverterFactory
+com.lidroid.xutils.db.converter.DateColumnConverter
+com.lidroid.xutils.db.converter.DoubleColumnConverter
+com.lidroid.xutils.db.converter.FloatColumnConverter
+com.lidroid.xutils.db.converter.IntegerColumnConverter
+com.lidroid.xutils.db.converter.LongColumnConverter
+com.lidroid.xutils.db.converter.ShortColumnConverter
+com.lidroid.xutils.db.converter.SqlDateColumnConverter
+com.lidroid.xutils.db.converter.StringColumnConverter
+com.lidroid.xutils.db.sqlite.ColumnDbType
+com.lidroid.xutils.db.sqlite.CursorUtils
+com.lidroid.xutils.db.sqlite.CursorUtils$EntityTempCache
+com.lidroid.xutils.db.sqlite.CursorUtils$FindCacheSequence
+com.lidroid.xutils.db.sqlite.DbModelSelector
+com.lidroid.xutils.db.sqlite.FinderLazyLoader
+com.lidroid.xutils.db.sqlite.ForeignLazyLoader
+com.lidroid.xutils.db.sqlite.Selector
+com.lidroid.xutils.db.sqlite.Selector$OrderBy
+com.lidroid.xutils.db.sqlite.SqlInfo
+com.lidroid.xutils.db.sqlite.SqlInfoBuilder
+com.lidroid.xutils.db.sqlite.WhereBuilder
+com.lidroid.xutils.db.table.Column
+com.lidroid.xutils.db.table.ColumnUtils
+com.lidroid.xutils.db.table.DbModel
+com.lidroid.xutils.db.table.Finder
+com.lidroid.xutils.db.table.Foreign
+com.lidroid.xutils.db.table.Id
+com.lidroid.xutils.db.table.KeyValue
+com.lidroid.xutils.db.table.Table
+com.lidroid.xutils.db.table.TableUtils
+com.lidroid.xutils.exception.BaseException:
+    private static final long serialVersionUID
+    34:35:public BaseException(java.lang.String,java.lang.Throwable)
+com.lidroid.xutils.exception.DbException
+com.lidroid.xutils.exception.HttpException:
+    private static final long serialVersionUID
+    31:32:public HttpException(java.lang.String,java.lang.Throwable)
+    41:43:public HttpException(int)
+    60:62:public HttpException(int,java.lang.String,java.lang.Throwable)
+    69:71:public HttpException(int,java.lang.Throwable)
+    77:77:public int getExceptionCode()
+com.lidroid.xutils.http.HttpCache:
+    private static final int DEFAULT_CACHE_SIZE
+    private static final long DEFAULT_EXPIRY_TIME
+    65:66:public void setCacheSize(int)
+    69:70:public static void setDefaultExpiryTime(long)
+    77:78:public void put(java.lang.String,java.lang.String)
+    91:92:public void clear()
+    95:98:public boolean isEnabled(com.lidroid.xutils.http.client.HttpRequest$HttpMethod)
+    109:110:public void setEnabled(com.lidroid.xutils.http.client.HttpRequest$HttpMethod,boolean)
+com.lidroid.xutils.http.HttpHandler:
+    private static final int UPDATE_START
+    private static final int UPDATE_LOADING
+    private static final int UPDATE_FAILURE
+    private static final int UPDATE_SUCCESS
+    80:80:public com.lidroid.xutils.http.HttpHandler$State getState()
+    90:91:public void setRequestCallBack(com.lidroid.xutils.http.callback.RequestCallBack)
+    94:94:public com.lidroid.xutils.http.callback.RequestCallBack getRequestCallBack()
+    275:293:public void cancel()
+com.lidroid.xutils.http.HttpHandler$State:
+    322:336:public static com.lidroid.xutils.http.HttpHandler$State valueOf(int)
+    341:341:public int value()
+com.lidroid.xutils.http.RequestParams:
+    57:58:public RequestParams()
+    60:64:public RequestParams(java.lang.String)
+    71:72:public void setPriority(com.lidroid.xutils.task.Priority)
+    79:80:public void setContentType(java.lang.String)
+    88:92:public void addHeader(org.apache.http.Header)
+    101:105:public void addHeader(java.lang.String,java.lang.String)
+    113:119:public void addHeaders(java.util.List)
+    128:132:public void setHeader(org.apache.http.Header)
+    142:146:public void setHeader(java.lang.String,java.lang.String)
+    154:160:public void setHeaders(java.util.List)
+    163:167:public void addQueryStringParameter(java.lang.String,java.lang.String)
+    170:174:public void addQueryStringParameter(org.apache.http.NameValuePair)
+    177:185:public void addQueryStringParameter(java.util.List)
+    188:192:public void addBodyParameter(java.lang.String,java.lang.String)
+    195:199:public void addBodyParameter(org.apache.http.NameValuePair)
+    202:210:public void addBodyParameter(java.util.List)
+    213:217:public void addBodyParameter(java.lang.String,java.io.File)
+    220:224:public void addBodyParameter(java.lang.String,java.io.File,java.lang.String)
+    227:231:public void addBodyParameter(java.lang.String,java.io.File,java.lang.String,java.lang.String)
+    234:238:public void addBodyParameter(java.lang.String,java.io.File,java.lang.String,java.lang.String,java.lang.String)
+    241:245:public void addBodyParameter(java.lang.String,java.io.InputStream,long)
+    248:252:public void addBodyParameter(java.lang.String,java.io.InputStream,long,java.lang.String)
+    255:259:public void addBodyParameter(java.lang.String,java.io.InputStream,long,java.lang.String,java.lang.String)
+    262:271:public void setBodyEntity(org.apache.http.HttpEntity)
+com.lidroid.xutils.http.RequestParams$HeaderItem:
+    final synthetic com.lidroid.xutils.http.RequestParams this$0
+    322:325:public RequestParams$HeaderItem(com.lidroid.xutils.http.RequestParams,org.apache.http.Header)
+    327:330:public RequestParams$HeaderItem(com.lidroid.xutils.http.RequestParams,org.apache.http.Header,boolean)
+    332:335:public RequestParams$HeaderItem(com.lidroid.xutils.http.RequestParams,java.lang.String,java.lang.String)
+    337:340:public RequestParams$HeaderItem(com.lidroid.xutils.http.RequestParams,java.lang.String,java.lang.String,boolean)
+com.lidroid.xutils.http.ResponseInfo:
+    31:32:public org.apache.http.Header[] getAllHeaders()
+    36:37:public org.apache.http.Header[] getHeaders(java.lang.String)
+    41:42:public org.apache.http.Header getFirstHeader(java.lang.String)
+    46:47:public org.apache.http.Header getLastHeader(java.lang.String)
+com.lidroid.xutils.http.ResponseStream
+com.lidroid.xutils.http.SyncHttpHandler
+com.lidroid.xutils.http.callback.RequestCallBack:
+    private static final int DEFAULT_RATE
+    private static final int MIN_RATE
+    protected java.lang.Object userTag
+    36:38:public RequestCallBack(int)
+    40:43:public RequestCallBack(java.lang.Object)
+    45:48:public RequestCallBack(int,java.lang.Object)
+    60:61:public final void setRate(int)
+    64:64:public java.lang.Object getUserTag()
+    68:69:public void setUserTag(java.lang.Object)
+    72:72:public final java.lang.String getRequestUrl()
+    83:83:public void onCancelled()
+com.lidroid.xutils.http.client.DefaultSSLSocketFactory:
+    1:1:public static bridge synthetic org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()
+com.lidroid.xutils.http.client.HttpRequest:
+    53:55:public HttpRequest(com.lidroid.xutils.http.client.HttpRequest$HttpMethod)
+    64:67:public HttpRequest(com.lidroid.xutils.http.client.HttpRequest$HttpMethod,java.net.URI)
+    70:71:public com.lidroid.xutils.http.client.HttpRequest addQueryStringParameter(java.lang.String,java.lang.String)
+    75:76:public com.lidroid.xutils.http.client.HttpRequest addQueryStringParameter(org.apache.http.NameValuePair)
+    89:106:public void setRequestParams(com.lidroid.xutils.http.RequestParams)
+com.lidroid.xutils.http.client.RetryHandler:
+    private static final int RETRY_SLEEP_INTERVAL
+com.lidroid.xutils.http.client.entity.BodyParamsEntity:
+    58:59:public BodyParamsEntity(java.util.List)
+    72:74:public com.lidroid.xutils.http.client.entity.BodyParamsEntity addParameter(java.lang.String,java.lang.String)
+    78:80:public com.lidroid.xutils.http.client.entity.BodyParamsEntity addParams(java.util.List)
+com.lidroid.xutils.http.client.entity.FileUploadEntity
+com.lidroid.xutils.http.client.entity.InputStreamUploadEntity
+com.lidroid.xutils.http.client.multipart.FormBodyPart:
+    52:70:public FormBodyPart(java.lang.String,com.lidroid.xutils.http.client.multipart.content.ContentBody,java.lang.String)
+com.lidroid.xutils.http.client.multipart.HttpMultipart:
+    128:129:public HttpMultipart(java.lang.String,java.nio.charset.Charset,java.lang.String)
+    132:133:public HttpMultipart(java.lang.String,java.lang.String)
+    136:137:public void setSubType(java.lang.String)
+    140:140:public java.lang.String getSubType()
+    144:144:public java.nio.charset.Charset getCharset()
+    148:148:public com.lidroid.xutils.http.client.multipart.HttpMultipartMode getMode()
+com.lidroid.xutils.http.client.multipart.MIME:
+    public static final java.lang.String CONTENT_TYPE
+    public static final java.lang.String CONTENT_TRANSFER_ENC
+    public static final java.lang.String CONTENT_DISPOSITION
+    public static final java.lang.String ENC_8BIT
+    public static final java.lang.String ENC_BINARY
+    25:25:public MIME()
+com.lidroid.xutils.http.client.multipart.MinimalFieldHeader:
+    49:49:public java.util.List getFields()
+    65:73:public java.util.List getFields(java.lang.String)
+    78:87:public int removeFields(java.lang.String)
+    91:114:public void setField(com.lidroid.xutils.http.client.multipart.MinimalField)
+com.lidroid.xutils.http.client.multipart.MultipartEntity:
+    117:118:public MultipartEntity(com.lidroid.xutils.http.client.multipart.HttpMultipartMode)
+    134:139:public void setMultipartSubtype(java.lang.String)
+    174:175:public void addPart(java.lang.String,com.lidroid.xutils.http.client.multipart.content.ContentBody,java.lang.String)
+com.lidroid.xutils.http.client.multipart.content.AbstractContentBody:
+    50:50:public java.lang.String getMediaType()
+    54:54:public java.lang.String getSubType()
+com.lidroid.xutils.http.client.multipart.content.ByteArrayBody
+com.lidroid.xutils.http.client.multipart.content.ContentDescriptor:
+    public abstract java.lang.String getMediaType()
+    public abstract java.lang.String getSubType()
+com.lidroid.xutils.http.client.multipart.content.FileBody
+com.lidroid.xutils.http.client.multipart.content.InputStreamBody
+com.lidroid.xutils.http.client.multipart.content.StringBody:
+    40:42:public static com.lidroid.xutils.http.client.multipart.content.StringBody create(java.lang.String,java.lang.String,java.nio.charset.Charset)
+    51:51:public static com.lidroid.xutils.http.client.multipart.content.StringBody create(java.lang.String,java.nio.charset.Charset)
+    58:58:public static com.lidroid.xutils.http.client.multipart.content.StringBody create(java.lang.String)
+    97:98:public StringBody(java.lang.String,java.nio.charset.Charset)
+    115:115:public java.io.Reader getReader()
+com.lidroid.xutils.http.client.util.URIBuilder:
+    160:161:public com.lidroid.xutils.http.client.util.URIBuilder setScheme(java.lang.String)
+    169:173:public com.lidroid.xutils.http.client.util.URIBuilder setUserInfo(java.lang.String)
+    181:181:public com.lidroid.xutils.http.client.util.URIBuilder setUserInfo(java.lang.String,java.lang.String)
+    188:191:public com.lidroid.xutils.http.client.util.URIBuilder setHost(java.lang.String)
+    198:201:public com.lidroid.xutils.http.client.util.URIBuilder setPort(int)
+    208:211:public com.lidroid.xutils.http.client.util.URIBuilder setPath(java.lang.String)
+    220:223:public com.lidroid.xutils.http.client.util.URIBuilder setQuery(java.lang.String)
+    245:259:public com.lidroid.xutils.http.client.util.URIBuilder setParameter(java.lang.String,java.lang.String)
+    267:269:public com.lidroid.xutils.http.client.util.URIBuilder setFragment(java.lang.String)
+    273:273:public java.lang.String getScheme()
+    277:277:public java.lang.String getUserInfo()
+    281:281:public java.lang.String getHost()
+    285:285:public int getPort()
+    289:289:public java.lang.String getPath()
+    293:296:public java.util.List getQueryParams()
+    301:301:public java.lang.String getFragment()
+com.lidroid.xutils.http.client.util.URLEncodedUtils:
+    public static final java.lang.String CONTENT_TYPE
+    private static final java.lang.String PARAMETER_SEPARATOR
+    private static final java.lang.String NAME_VALUE_SEPARATOR
+    private static final int RADIX
+    40:40:public URLEncodedUtils()
+    51:61:public static boolean isEncoded(org.apache.http.HttpEntity)
+    76:83:public static java.util.List parse(java.net.URI)
+    99:113:public static void parse(java.util.List,java.util.Scanner)
+    342:368:private static java.lang.String urldecode(java.lang.String,java.nio.charset.Charset,boolean)
+    379:382:private static java.lang.String decodeFormFields(java.lang.String,java.lang.String)
+    393:396:private static java.lang.String decodeFormFields(java.lang.String,java.nio.charset.Charset)
+com.lidroid.xutils.task.PriorityAsyncTask:
+    private static final int MESSAGE_POST_RESULT
+    private static final int MESSAGE_POST_PROGRESS
+    50:50:public com.lidroid.xutils.task.Priority getPriority()
+    213:214:public final boolean cancel(boolean)
+    219:219:public boolean supportPause()
+    224:224:public boolean supportResume()
+    229:229:public boolean supportCancel()
+    234:234:public void pause()
+    238:238:public void resume()
+    242:243:public void cancel()
+    247:247:public boolean isPaused()
+    261:261:public final java.lang.Object get()
+    279:279:public final java.lang.Object get(long,java.util.concurrent.TimeUnit)
+    290:290:public final varargs com.lidroid.xutils.task.PriorityAsyncTask execute(java.lang.Object[])
+    326:327:public static void execute(java.lang.Runnable)
+    338:339:public static void execute(java.lang.Runnable,com.lidroid.xutils.task.Priority)
+com.lidroid.xutils.task.PriorityExecutor:
+    private static final int CORE_POOL_SIZE
+    private static final int MAXIMUM_POOL_SIZE
+    private static final int KEEP_ALIVE
+    44:44:public int getPoolSize()
+    48:51:public void setPoolSize(int)
+    54:54:public boolean isBusy()
+com.lidroid.xutils.task.PriorityObjectBlockingQueue:
+    private static final long serialVersionUID
+    164:181:public PriorityObjectBlockingQueue(java.util.Collection)
+    567:581:private void writeObject(java.io.ObjectOutputStream)
+    589:602:private void readObject(java.io.ObjectInputStream)
+com.lidroid.xutils.task.TaskHandler
+com.lidroid.xutils.util.CharsetUtils:
+    public static final java.lang.String DEFAULT_ENCODING_CHARSET
+    28:29:private CharsetUtils()
+com.lidroid.xutils.util.DoubleKeyValueMap
+com.lidroid.xutils.util.IOUtils:
+    29:30:private IOUtils()
+    42:48:public static void closeQuietly(android.database.Cursor)
+com.lidroid.xutils.util.LogUtils:
+    34:35:private LogUtils()
+    98:107:public static void d(java.lang.String,java.lang.Throwable)
+    134:143:public static void i(java.lang.String)
+    146:155:public static void i(java.lang.String,java.lang.Throwable)
+    158:167:public static void v(java.lang.String)
+    170:179:public static void v(java.lang.String,java.lang.Throwable)
+    182:191:public static void w(java.lang.String)
+    194:203:public static void w(java.lang.String,java.lang.Throwable)
+    219:228:public static void wtf(java.lang.String)
+    231:240:public static void wtf(java.lang.String,java.lang.Throwable)
+    243:252:public static void wtf(java.lang.Throwable)
+com.lidroid.xutils.util.LogUtils$CustomLogger:
+    public abstract void d(java.lang.String,java.lang.String,java.lang.Throwable)
+    public abstract void i(java.lang.String,java.lang.String)
+    public abstract void i(java.lang.String,java.lang.String,java.lang.Throwable)
+    public abstract void v(java.lang.String,java.lang.String)
+    public abstract void v(java.lang.String,java.lang.String,java.lang.Throwable)
+    public abstract void w(java.lang.String,java.lang.String)
+    public abstract void w(java.lang.String,java.lang.String,java.lang.Throwable)
+    public abstract void wtf(java.lang.String,java.lang.String)
+    public abstract void wtf(java.lang.String,java.lang.String,java.lang.Throwable)
+    public abstract void wtf(java.lang.String,java.lang.Throwable)
+com.lidroid.xutils.util.MimeTypeUtils
+com.lidroid.xutils.util.OtherUtils:
+    private static final int STRING_BUFFER_LENGTH
+    private static javax.net.ssl.SSLSocketFactory sslSocketFactory
+    42:43:private OtherUtils()
+    110:124:public static java.lang.String getDiskCacheDir(android.content.Context,java.lang.String)
+    129:133:public static long getAvailableSpace(java.io.File)
+    221:221:public static java.lang.StackTraceElement getCurrentStackTraceElement()
+    232:262:public static void trustAllHttpsURLConnection()
+com.lidroid.xutils.util.OtherUtils$1
+com.lidroid.xutils.util.PreferencesCookieStore
+com.lidroid.xutils.util.PreferencesCookieStore$SerializableCookie
+com.lidroid.xutils.view.EventListenerManager
+com.lidroid.xutils.view.EventListenerManager$DynamicHandler
+com.lidroid.xutils.view.ResLoader
+com.lidroid.xutils.view.ResType
+com.lidroid.xutils.view.ViewFinder
+com.lidroid.xutils.view.ViewInjectInfo
+com.lidroid.xutils.view.annotation.ContentView
+com.lidroid.xutils.view.annotation.PreferenceInject
+com.lidroid.xutils.view.annotation.ResInject
+com.lidroid.xutils.view.annotation.ViewInject
+com.lidroid.xutils.view.annotation.event.EventBase
+com.lidroid.xutils.view.annotation.event.OnChildClick
+com.lidroid.xutils.view.annotation.event.OnClick
+com.lidroid.xutils.view.annotation.event.OnCompoundButtonCheckedChange
+com.lidroid.xutils.view.annotation.event.OnFocusChange
+com.lidroid.xutils.view.annotation.event.OnGroupClick
+com.lidroid.xutils.view.annotation.event.OnGroupCollapse
+com.lidroid.xutils.view.annotation.event.OnGroupExpand
+com.lidroid.xutils.view.annotation.event.OnItemClick
+com.lidroid.xutils.view.annotation.event.OnItemLongClick
+com.lidroid.xutils.view.annotation.event.OnItemSelected
+com.lidroid.xutils.view.annotation.event.OnKey
+com.lidroid.xutils.view.annotation.event.OnLongClick
+com.lidroid.xutils.view.annotation.event.OnNothingSelected
+com.lidroid.xutils.view.annotation.event.OnPreferenceChange
+com.lidroid.xutils.view.annotation.event.OnPreferenceClick
+com.lidroid.xutils.view.annotation.event.OnProgressChanged
+com.lidroid.xutils.view.annotation.event.OnRadioGroupCheckedChange
+com.lidroid.xutils.view.annotation.event.OnScroll
+com.lidroid.xutils.view.annotation.event.OnScrollStateChanged
+com.lidroid.xutils.view.annotation.event.OnStartTrackingTouch
+com.lidroid.xutils.view.annotation.event.OnStopTrackingTouch
+com.lidroid.xutils.view.annotation.event.OnTabChange
+com.lidroid.xutils.view.annotation.event.OnTouch
+com.mob.tools.FakeActivity:
+    public static void setShell(java.lang.Class)
+    public void setContentViewLayoutResName(java.lang.String)
+    public android.view.View getContentView()
+    public android.view.View findViewByResName(android.view.View,java.lang.String)
+    public void startActivity(android.content.Intent)
+    public void startActivityForResult(android.content.Intent,int)
+    public com.mob.tools.FakeActivity getParent()
+    public final void setResult(java.util.HashMap)
+    public void runOnUIThread(java.lang.Runnable)
+    public void runOnUIThread(java.lang.Runnable,long)
+    public void setRequestedOrientation(int)
+    public void requestPortraitOrientation()
+    public void requestLandscapeOrientation()
+    public int getOrientation()
+    public void requestFullScreen(boolean)
+com.mob.tools.FakeActivity$2
+com.mob.tools.FakeActivity$3
+com.mob.tools.MobUIShell:
+    public com.mob.tools.FakeActivity getExecutor()
+com.mob.tools.SSDKHandlerThread:
+    private static final int MSG_START
+    private static final int MSG_STOP
+    public java.lang.String getName()
+com.mob.tools.SSDKWebViewClient
+com.mob.tools.gui.AsyncImageView
+com.mob.tools.gui.BitmapProcessor
+com.mob.tools.gui.BitmapProcessor$BitmapCallback
+com.mob.tools.gui.BitmapProcessor$ImageReq
+com.mob.tools.gui.BitmapProcessor$ManagerThread
+com.mob.tools.gui.BitmapProcessor$ManagerThread$1
+com.mob.tools.gui.BitmapProcessor$PatchInputStream
+com.mob.tools.gui.BitmapProcessor$WorkerThread
+com.mob.tools.gui.BitmapProcessor$WorkerThread$1
+com.mob.tools.gui.ListInnerAdapter
+com.mob.tools.gui.OnListStopScrollListener
+com.mob.tools.gui.PullToRefreshAdatper
+com.mob.tools.gui.PullToRefreshBaseListAdapter
+com.mob.tools.gui.PullToRefreshGridAdapter
+com.mob.tools.gui.PullToRefreshGridAdapter$1
+com.mob.tools.gui.PullToRefreshListAdapter
+com.mob.tools.gui.PullToRefreshListAdapter$1
+com.mob.tools.gui.PullToRefreshView
+com.mob.tools.gui.PullToRefreshView$1
+com.mob.tools.gui.ScaledImageView
+com.mob.tools.gui.ScaledImageView$OnMatrixChangedListener
+com.mob.tools.gui.Scrollable
+com.mob.tools.gui.Scrollable$OnScrollListener
+com.mob.tools.gui.ScrollableGridView
+com.mob.tools.gui.ScrollableGridView$1
+com.mob.tools.gui.ScrollableListView
+com.mob.tools.gui.ScrollableListView$1
+com.mob.tools.gui.ViewPagerClassic:
+    private static final int SNAP_VELOCITY
+    private static final int TOUCH_STATE_REST
+    private static final int TOUCH_STATE_SCROLLING
+    public void scrollLeft()
+    public void scrollRight()
+com.mob.tools.network.BufferedByteArrayOutputStream
+com.mob.tools.network.ByteArrayPart
+com.mob.tools.network.FilePart:
+    public void setFile(java.io.File)
+com.mob.tools.network.HTTPPart:
+    public void setOffset(long)
+    public void setOnReadListener(com.mob.tools.network.OnReadListener)
+com.mob.tools.network.HttpPatch
+com.mob.tools.network.NetworkHelper:
+    public java.lang.String downloadCache(android.content.Context,java.lang.String,java.lang.String,boolean)
+    public void rawGet(java.lang.String,com.mob.tools.network.RawNetworkCallback)
+    public java.lang.String jsonPost(java.lang.String,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList)
+    public void rawPost(java.lang.String,java.util.ArrayList,com.mob.tools.network.HTTPPart,com.mob.tools.network.RawNetworkCallback)
+    public void rawPost(java.lang.String,java.util.ArrayList,com.mob.tools.network.HTTPPart,com.mob.tools.network.HttpResponseCallback)
+    public java.lang.String httpPut(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,java.util.ArrayList,java.util.ArrayList)
+    public java.util.ArrayList httpHead(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,java.util.ArrayList,java.util.ArrayList)
+    public void httpPatch(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,long,java.util.ArrayList,java.util.ArrayList,com.mob.tools.network.OnReadListener,com.mob.tools.network.HttpResponseCallback)
+    public java.lang.String httpPatch(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,long,java.util.ArrayList,java.util.ArrayList,com.mob.tools.network.OnReadListener)
+    public void getHttpPostResponse(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,java.util.ArrayList,java.util.ArrayList,com.mob.tools.network.HttpResponseCallback)
+com.mob.tools.network.NetworkHelper$2
+com.mob.tools.network.ProgressCallback
+com.mob.tools.network.RawNetworkCallback
+com.mob.tools.utils.BitmapHelper:
+    public BitmapHelper()
+    public static android.graphics.Bitmap getBitmap(java.lang.String,int)
+    public static android.graphics.Bitmap getBitmap(java.io.File,int)
+    public static android.graphics.Bitmap getBitmap(java.io.InputStream,int)
+    public static android.graphics.Bitmap getBitmap(java.lang.String)
+    public static android.graphics.Bitmap getBitmap(android.content.Context,java.lang.String)
+    public static java.lang.String downloadBitmap(android.content.Context,java.lang.String)
+    public static java.lang.String saveViewToImage(android.view.View)
+    public static java.lang.String saveViewToImage(android.view.View,int,int)
+    public static android.graphics.Bitmap captureView(android.view.View,int,int)
+    public static android.graphics.Bitmap blur(android.graphics.Bitmap,int,int)
+    private static android.graphics.Bitmap blur(android.graphics.Bitmap,int,boolean)
+    public static android.graphics.Bitmap roundBitmap(android.graphics.Bitmap,int,int,float,float,float,float)
+    public static int[] fixRect(int[],int[])
+    public static int[] fixRect_2(int[],int[])
+    public static java.lang.String saveBitmap(android.content.Context,android.graphics.Bitmap,android.graphics.Bitmap$CompressFormat,int)
+    public static java.lang.String saveBitmap(android.content.Context,android.graphics.Bitmap)
+    public static android.graphics.Bitmap$CompressFormat getBmpFormat(byte[])
+    public static android.graphics.Bitmap cropBitmap(android.graphics.Bitmap,int,int,int,int)
+    public static boolean isBlackBitmap(android.graphics.Bitmap)
+    public static int mixAlpha(int,int)
+    public static android.graphics.Bitmap scaleBitmapByHeight(android.content.Context,int,int)
+    public static android.graphics.Bitmap scaleBitmapByHeight(android.graphics.Bitmap,int)
+com.mob.tools.utils.Data:
+    private static final java.lang.String CHAT_SET
+    public Data()
+    public static byte[] AES128Encode(byte[],java.lang.String)
+    public static java.lang.String AES128Decode(java.lang.String,byte[])
+    public static java.lang.String base62(long)
+    public static java.lang.String MD5(java.lang.String)
+    public static java.lang.String MD5(java.io.File)
+    public static java.lang.String urlEncode(java.lang.String)
+    public static java.lang.String CRC32(byte[])
+com.mob.tools.utils.DeviceHelper:
+    public boolean isRooted()
+    public java.lang.String getDeviceDataNotAES()
+    public java.lang.String getOSVersionName()
+    public java.lang.String getOSLanguage()
+    public java.lang.String getSimSerialNumber()
+    public java.lang.String getLine1Number()
+    public java.lang.String getNetworkTypeForStatic()
+    public org.json.JSONArray getRunningApp()
+    public java.lang.String getRunningAppStr()
+    public java.lang.String getAppName()
+    public java.lang.String getNetworkOperator()
+    public void hideSoftInput(android.view.View)
+    public void showSoftInput(android.view.View)
+com.mob.tools.utils.HEX:
+    public HEX()
+    public static byte[] toByte(java.lang.String)
+    public static java.lang.String encodeHexString(byte[])
+    public static byte[] decodeHexString(java.lang.String)
+    public static byte[] decodeHex(char[])
+    protected static int toDigit(char,int)
+    public static char[] encodeHex(byte[])
+    public byte[] decode(byte[])
+    public byte[] decode(java.lang.Object)
+    public byte[] encode(byte[])
+    public char[] encode(java.lang.Object)
+com.mob.tools.utils.Hashon:
+    public java.lang.String format(java.lang.String)
+    private java.lang.String format(java.lang.String,java.util.HashMap)
+    private java.lang.String format(java.lang.String,java.util.ArrayList)
+com.mob.tools.utils.Ln:
+    private Ln()
+    public static int v(java.lang.Throwable)
+    public static varargs int v(java.lang.Object,java.lang.Object[])
+    public static varargs int v(java.lang.Throwable,java.lang.Object,java.lang.Object[])
+    public static varargs int d(java.lang.Throwable,java.lang.Object,java.lang.Object[])
+    public static int i(java.lang.Throwable)
+    public static varargs int i(java.lang.Throwable,java.lang.Object,java.lang.Object[])
+    public static varargs int w(java.lang.Object,java.lang.Object[])
+    public static varargs int w(java.lang.Throwable,java.lang.Object,java.lang.Object[])
+    public static boolean isDebugEnabled()
+    public static boolean isVerboseEnabled()
+    public static java.lang.String logLevelToString(int)
+com.mob.tools.utils.LocalDB:
+    public void putBoolean(java.lang.String,java.lang.Boolean)
+    public boolean getBoolean(java.lang.String)
+    public void putInt(java.lang.String,java.lang.Integer)
+    public int getInt(java.lang.String)
+    public void putFloat(java.lang.String,java.lang.Float)
+    public float getFloat(java.lang.String)
+    public void remove(java.lang.String)
+com.mob.tools.utils.R:
+    public R()
+    public static int pxToDip(android.content.Context,int)
+    public static int getStringArrayRes(android.content.Context,java.lang.String)
+    public static int getStyleRes(android.content.Context,java.lang.String)
+    public static int getColorRes(android.content.Context,java.lang.String)
+    public static int getRawRes(android.content.Context,java.lang.String)
+    public static int getPluralsRes(android.content.Context,java.lang.String)
+    public static void setCacheRoot(java.lang.String)
+    public static java.lang.String getImageCachePath(android.content.Context)
+    public static void clearCache(android.content.Context)
+    public static void deleteFileAndFolder(java.io.File)
+    public static java.lang.String toWordText(java.lang.String,int)
+    public static int getTextLengthInWord(java.lang.String)
+    public static long strToDate(java.lang.String)
+    public static long dateStrToLong(java.lang.String)
+    public static java.util.Date longToDate(long)
+    public static java.lang.String longToTime(long,int)
+    public static long dateToLong(java.lang.String)
+    public static int[] covertTimeInYears(long)
+    public static android.net.Uri pathToContentUri(android.content.Context,java.lang.String)
+    public static java.lang.String contentUriToPath(android.content.Context,android.net.Uri)
+    public static java.lang.String encodeUrl(android.os.Bundle)
+    public static java.lang.String encodeUrl(java.util.ArrayList)
+    public static boolean copyFile(java.lang.String,java.lang.String)
+    public static void copyFile(java.io.FileInputStream,java.io.FileOutputStream)
+    public static boolean saveObjectToFile(java.lang.String,java.lang.Object)
+    public static java.lang.Object readObjectFromFile(java.lang.String)
+com.mob.tools.utils.SharePrefrenceHelper
+com.mob.tools.utils.UIHandler:
+    public UIHandler()
+    public static boolean sendMessageDelayed(android.os.Message,long,android.os.Handler$Callback)
+    public static boolean sendMessageAtTime(android.os.Message,long,android.os.Handler$Callback)
+    public static boolean sendMessageAtFrontOfQueue(android.os.Message,android.os.Handler$Callback)
+    public static boolean sendEmptyMessageAtTime(int,long,android.os.Handler$Callback)
+    public static boolean sendEmptyMessageDelayed(int,long,android.os.Handler$Callback)
+com.sina.sso.RemoteSSO
+com.sina.sso.RemoteSSO$Stub
+com.sina.sso.RemoteSSO$Stub$Proxy
+com.stericson.RootTools.IResult:
+    public abstract java.lang.Process getProcess()
+    public abstract com.stericson.RootTools.IResult setData(java.io.Serializable)
+    public abstract java.io.Serializable getData()
+    public abstract com.stericson.RootTools.IResult setError(int)
+    public abstract int getError()
+com.stericson.RootTools.Installer
+com.stericson.RootTools.InternalMethods:
+    108:125:protected java.util.ArrayList getMounts()
+    132:147:protected java.util.ArrayList getSymLinks()
+    155:193:protected com.stericson.RootTools.Permissions getPermissions(java.lang.String)
+    199:223:protected int parsePermissions(java.lang.String)
+    231:250:protected long getConvertedSpace(java.lang.String)
+com.stericson.RootTools.InternalVariables:
+    protected static java.lang.String getSpaceFor
+    protected static java.util.ArrayList mounts
+    protected static java.util.ArrayList symlinks
+    30:30:InternalVariables()
+com.stericson.RootTools.Mount
+com.stericson.RootTools.Permissions
+com.stericson.RootTools.Remounter
+com.stericson.RootTools.RootTools:
+    public static java.lang.String utilPath
+    41:41:public RootTools()
+    84:94:public static java.lang.String getWorkingToolbox()
+    113:132:public static boolean checkUtils(java.lang.String[])
+    146:165:public static boolean checkUtil(java.lang.String)
+    182:196:public static void fixUtil(java.lang.String,java.lang.String)
+    230:234:public static java.util.ArrayList getMounts()
+    252:257:public static java.util.ArrayList getSymlinks(java.lang.String)
+    271:290:public static java.lang.String getSymlink(java.io.File)
+    299:303:public static void offerBusyBox(android.app.Activity)
+    314:318:public static android.content.Intent offerBusyBox(android.app.Activity,int)
+    327:331:public static void offerSuperUser(android.app.Activity)
+    342:346:public static android.content.Intent offerSuperUser(android.app.Activity,int)
+    360:360:public static boolean isBusyboxAvailable()
+    437:489:public static com.stericson.RootTools.Permissions getFilePermissionsSymlinks(java.lang.String)
+    503:503:public static com.stericson.RootTools.Permissions getFilePermissions(java.lang.String)
+    510:520:public static java.lang.String getBusyBoxVersion()
+    532:536:public static java.util.List getBusyBoxApplets()
+    551:563:public static boolean isAppletAvailable(java.lang.String)
+    586:605:public static boolean isNativeToolsReady(int,android.content.Context)
+    618:627:public static boolean hasEnoughSpaceOnSdCard(long)
+    648:650:public static boolean remount(java.lang.String,java.lang.String)
+    670:678:public static boolean installBinary(android.content.Context,int,java.lang.String,java.lang.String)
+    694:694:public static boolean installBinary(android.content.Context,int,java.lang.String)
+    707:709:public static void runBinary(android.content.Context,java.lang.String,java.lang.String)
+    718:735:public static boolean killProcess(java.lang.String)
+    747:754:public static boolean isProcessRunning(java.lang.String)
+    766:768:public static void restartAndroid()
+    851:851:public static java.util.List sendShell(java.lang.String[],int,int)
+    916:962:public static long getSpace(java.lang.String)
+com.stericson.RootTools.RootTools$Result:
+    private java.io.Serializable data
+    private int error
+    994:994:public RootTools$Result()
+    public abstract void process(java.lang.String)
+    public abstract void processError(java.lang.String)
+    public abstract void onFailure(java.lang.Exception)
+    public abstract void onComplete(int)
+    1013:1013:public java.lang.Process getProcess()
+    1017:1018:public com.stericson.RootTools.RootTools$Result setData(java.io.Serializable)
+    1022:1022:public java.io.Serializable getData()
+    1026:1027:public com.stericson.RootTools.RootTools$Result setError(int)
+    1031:1031:public int getError()
+    1:1:public bridge synthetic com.stericson.RootTools.IResult setData(java.io.Serializable)
+    1:1:public bridge synthetic com.stericson.RootTools.IResult setError(int)
+com.stericson.RootTools.RootToolsException:
+    private static final long serialVersionUID
+    34:35:public RootToolsException(java.lang.Throwable)
+com.stericson.RootTools.Runner
+com.stericson.RootTools.SanityCheckRootTools
+com.stericson.RootTools.SanityCheckRootTools$1
+com.stericson.RootTools.SanityCheckRootTools$SanityCheckThread
+com.stericson.RootTools.SanityCheckRootTools$SanityCheckThread$1
+com.stericson.RootTools.SanityCheckRootTools$SanityCheckThread$2
+com.stericson.RootTools.SanityCheckRootTools$TestHandler
+com.stericson.RootTools.Symlink

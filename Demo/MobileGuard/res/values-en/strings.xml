@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MobileGuard</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="activity_sample_device_admin">devicedadmin</string>
+    <string name="sample_device_admin">device</string>
+    <string name="sample_device_admin_description">device desc</string>
+
+</resources>

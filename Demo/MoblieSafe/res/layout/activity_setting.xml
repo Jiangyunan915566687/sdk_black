@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:itblacknife="http://schemas.android.com/apk/res/com.blacknife.mobliesafe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/titleStyle"
+        android:text="设置中心" />
+
+    <com.blacknife.mobliesafe.view.SettingItemView
+        android:id="@+id/siv_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        itblacknife:desc_off="自动更新已关闭"
+        itblacknife:desc_on="自动更新已开启"
+        itblacknife:title="自动更新设置" />
+
+    <com.blacknife.mobliesafe.view.SettingItemView
+        android:id="@+id/siv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        itblacknife:desc_off="归属地显示已经关闭"
+        itblacknife:desc_on="归属地显示已经开启"
+        itblacknife:title="电话归属地显示设置" />
+
+    <com.blacknife.mobliesafe.view.SettingItemView
+        android:id="@+id/siv_blacknumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        itblacknife:desc_off="归属地显示已经关闭"
+        itblacknife:desc_on="归属地显示已经开启"
+        itblacknife:title="通讯拦截开关设置" />
+
+    <com.blacknife.mobliesafe.view.SettingClickView
+        android:id="@+id/scv_address_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp" />
+
+    <com.blacknife.mobliesafe.view.SettingClickView
+        android:id="@+id/scv_address_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp" />
+
+</LinearLayout>

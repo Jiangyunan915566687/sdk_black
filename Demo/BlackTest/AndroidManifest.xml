@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.black.blacktest"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="17" />
+    
+	<!-- 打包SDK时，请把以下内容删除   Strat 共2处 此为第1处-->
+	<uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+	<instrumentation android:name="android.test.InstrumentationTestRunner" 
+	    android:targetPackage="com.black.blacktest"
+	    android:label="Test for BlackSDK"/>
+	<!-- 打包SDK时，请把以上内容删除  END 共2处 此为第1处-->
+	
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="BlackTest"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

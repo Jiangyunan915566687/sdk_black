@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <TextView  style="@style/tv_title"
+        android:text="高级工具"/>
+    <TextView
+        android:id="@+id/tv_popup_black_shoudong"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="phoneQuery"
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:background="#ffffff"
+        android:text="手机归属地查询"
+        android:textSize="18sp" />
+
+    <TextView
+        android:onClick="smsBaike"
+        android:textColor="#000000"
+        android:id="@+id/tv_popup_black_contacts"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:gravity="center_vertical"
+        android:text="短信的备份"
+        android:background="#ffffff"
+        android:textSize="18sp" />
+
+    <ProgressBar
+        android:id="@+id/pb_smsbeike_progress"
+       android:visibility="gone"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:onClick="smsResumn"
+        android:textColor="#000000"
+        android:id="@+id/tv_popup_black_phonelog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="#ffffff"
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:gravity="center_vertical"
+        android:text="短信的还原"
+        android:textSize="18sp" />
+
+    <TextView
+        android:onClick="lockActivity"
+        android:textColor="#000000"
+        android:id="@+id/tv_popup_black_smslog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:gravity="center_vertical"
+        android:text="程序锁"
+        android:background="#ffffff"
+        android:textSize="18sp" />
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/titleStyle"
+        android:text="高级工具" />
+	<!-- android:background="@drawable/button_normal" -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:onClick="numberAddressQuery"
+        android:padding="10dp"
+        android:text="电话归属地查询"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableLeft="@android:drawable/ic_menu_set_as"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:onClick="smsBaike"
+        android:padding="10dp"
+        android:text="短信备份"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+    <ProgressBar
+        android:id="@+id/pb_smsbeike_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"
+        android:layout_marginRight="5dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableLeft="@android:drawable/ic_menu_call"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:onClick="smsResumn"
+        android:padding="10dp"
+        android:text="短信还原"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+    <ProgressBar
+        android:id="@+id/pb_smsresumn_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"
+        android:layout_marginRight="5dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableLeft="@android:drawable/ic_lock_lock"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:onClick="lockActivity"
+        android:padding="10dp"
+        android:text="程序锁"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+</LinearLayout>

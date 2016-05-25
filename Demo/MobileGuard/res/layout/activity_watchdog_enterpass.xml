@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/tv_title"
+        android:text="输入密码" />
+
+    <ImageView
+        android:id="@+id/iv_watchdog_enterpass_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/app" />
+
+    <EditText
+        android:id="@+id/et_watchdog_enterpass_password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_watchdog_enterpass_enter"
+        android:layout_width="wrap_content"
+        android:text="确定"
+        android:background="@drawable/bt_selector"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

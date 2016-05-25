@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="5dip"
+    android:clickable="true"
+    android:background="@drawable/gv_list_selector"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/iv_taskmanager_listview_item_icon"
+        android:layout_width="45dip"
+        android:layout_height="45dip" 
+        android:src="@drawable/app"/>
+
+    <TextView
+         android:layout_margin="5dip"
+        android:layout_toRightOf="@id/iv_taskmanager_listview_item_icon"
+        android:id="@+id/tv_taskmanager_listview_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="计算器" />
+    
+    <TextView
+        android:layout_marginLeft="5dip"
+        
+        android:layout_below="@id/tv_taskmanager_listview_item_title"
+        android:layout_alignLeft="@id/tv_taskmanager_listview_item_title"
+        android:id="@+id/tv_taskmanager_listview_item_memsize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="位置" />
+    
+    <CheckBox
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_taskmanager_listview_item_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       />
+
+</RelativeLayout>

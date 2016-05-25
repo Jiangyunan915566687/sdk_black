@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.blacknife.howold.MainActivity" >
+	<ImageView 
+	    android:layout_height="fill_parent"
+	    android:layout_width="fill_parent"
+	    android:src="@drawable/t4"/>
+	<Button 
+	    android:id="@+id/bt_getimage"
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="Get Image"
+        android:layout_marginRight="10dp"/>
+	<Button 
+	    android:id="@+id/bt_detect"
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/bt_getimage"
+        android:layout_alignParentBottom="true"
+        android:text="Detect"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/bt_detect"
+        android:layout_alignTop="@id/bt_detect"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="@string/hello_world" />
+
+</RelativeLayout>

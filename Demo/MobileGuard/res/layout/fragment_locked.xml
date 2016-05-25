@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_fragment_locked_lab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="已加锁软件(12)" />
+
+    <ListView
+        android:id="@+id/lv_fragment_locked_datas"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </ListView>
+
+</LinearLayout>

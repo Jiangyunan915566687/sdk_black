@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_popup_black_shoudong"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:text="手动导入"
+        android:textSize="18sp" />
+
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/tv_popup_black_contacts"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:gravity="center_vertical"
+        android:text="联系人导入"
+        android:textSize="18sp" />
+
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/tv_popup_black_phonelog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:gravity="center_vertical"
+        android:text="通话记录"
+        android:textSize="18sp" />
+
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/tv_popup_black_smslog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:gravity="center_vertical"
+        android:text="短信记录"
+        android:textSize="18sp" />
+
+</LinearLayout>

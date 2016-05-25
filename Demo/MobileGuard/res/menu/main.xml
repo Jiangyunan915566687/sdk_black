@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/mn_modify_name"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="修改手机防盗名"/>
+     <item
+        android:id="@+id/mn_test_menu"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="测试菜单"/>
+
+</menu>
