@@ -4,6 +4,9 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.HashMap;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
@@ -259,7 +262,9 @@ public class YaYawanconstants {
 				@Override
 				public void onNoExiterProvide() {
 					Log.d(TAG, "onNoExiterProvide");
+					paramActivity.finish();
 					callback.onExit();
+					System.exit(0);
 				}
 			});
 		}
@@ -275,6 +280,37 @@ public class YaYawanconstants {
 				YYWMain.mRole.getRoleId(), YYWMain.mRole.getRoleName(), 
 				YYWMain.mRole.getRoleLevel(), YYWMain.mRole.getZoneId(), 
 				YYWMain.mRole.getZoneName());
+	}
+	/**
+	 * 设置角色数据
+	 * 创建角色，角色升级调用的方法
+	 * @param activity 游戏上下文  ext 附加内容 roleCTime 角色创建时间 zoneName 游戏区服名称
+	 * @param zoneId 游戏区服ID roleLevel 角色等级 roleName 角色名称 roleId 角色ID
+	 */
+	public static void setData(Activity activity, String roleId, String roleName, 
+			String roleLevel, String zoneId, String zoneName, String roleCTime, String ext) {
+		Log.d(TAG, "设置角色数据 - setData （此方法暂时无效）");
+		/*
+		try{
+			JSONObject roleInfo = new JSONObject();
+			roleInfo.put("roleId", roleId); //当前登录的玩家角色ID，必须为数字
+			roleInfo.put("roleName", roleName); //当前登录的玩家角色名，不能为空，不能为null
+			roleInfo.put("roleLevel", roleLevel); //当前登录的玩家角色等级，必须为数字，且不能为0，若无，传入1
+			roleInfo.put("zoneId", zoneId); //当前登录的游戏区服ID，必须为数字，且不能为0，若无，传入1
+			roleInfo.put("zoneName", zoneName);//当前登录的游戏区服名称，不能为空，不能为null
+			roleInfo.put("balance", "0"); //用户游戏币余额，必须为数字，若无，传入0
+			roleInfo.put("vip", "1"); //当前用户VIP等级，必须为数字，若无，传入1
+			roleInfo.put("partyName", "无帮派");//当前角色所属帮派，不能为空，不能为null，若无，传入“无帮派”
+			roleInfo.put("roleCTime", roleCTime); //单位为秒，创建角色的时间
+			roleInfo.put("roleLevelMTime", System.currentTimeMillis()/1000); //单位为秒，角色等级变化时间
+			//"createrole"	角色创建
+			//"levelup"		角色升级
+			//"enterServer"	角色登录
+			SFOnlineHelper.setData(activity,"",roleInfo.toString());
+		}catch(JSONException e){
+			Log.d(TAG, "JSONException = " + e.toString());
+		}
+		*/
 	}
 	/**
 	 * 若接入要求重写activity的生命周期,在此处接入

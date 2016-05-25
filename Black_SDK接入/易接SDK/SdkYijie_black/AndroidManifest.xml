@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.yayawan.sdktemplate"
+    package="com.yayawan.sdktemplate.yijie"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -30,8 +30,8 @@
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
             android:name="com.yayawan.sdktemplate.MainActivity"
-            android:label="Black_SDKname"
-            android:screenOrientation="portrait" >
+            android:label="Yijie_SDK"
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,7 +42,7 @@
         <activity
             android:name="com.yayawan.impl.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="behind" >
         </activity>
         <!-- Yijie 闪屏页 -->
         <!-- Yijie SDK Start -->
@@ -88,9 +88,6 @@
             android:name="need_yayaanim"
             android:value="no" />
         
-        <meta-data
-            android:name="CallbackUrl"
-            android:value="http://union.yayawan.com/pay/notify/" />
         <!-- 丫丫玩 非必要   End -->
 
         <meta-data

@@ -104,28 +104,6 @@ public class YaYawanconstants {
 	public static void logout(final Activity mactivity) {
 		Yayalog.loger("sdk登出");
 		Log.d(TAG, "sdk登出 - logout");
-		/*
-		OneNineGame.changeAccount(mactivity, new OneNineGameCallback() {
-			
-			@Override
-			public void onOneNineGameSucess(String arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void onOneNineGameFailure() {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void onOneNineGameCancel() {
-				// TODO Auto-generated method stub
-				
-			}
-		});
-		*/
 	}
 
 	/**
@@ -135,18 +113,11 @@ public class YaYawanconstants {
 	public static void pay(Activity mactivity, String morderid) {
 		Yayalog.loger("sdk支付");
 		Log.d(TAG, "sdk支付 - pay");
-		/*
-		Log.d(TAG, YYWMain.mRole.getRoleId());
-		Log.d(TAG, YYWMain.mRole.getRoleName());
-		Log.d(TAG, YYWMain.mRole.getRoleLevel());
-		Log.d(TAG, YYWMain.mRole.getZoneId());
-		Log.d(TAG, YYWMain.mRole.getZoneName());
-		*/
 		String yuanbao = DeviceUtil.getGameInfo(mactivity, "yuanbao");//元宝 & 钻石
 		int amount = Integer.parseInt(YYWMain.mOrder.money+"");
 		String gameName = DeviceUtil.getGameInfo(mactivity, "gamename");
 		OneNineGame.pay(mactivity, userid, morderid, amount, 
-				YYWMain.mOrder.goods_id, YYWMain.mOrder.ext, YYWMain.mOrder.goods,
+				YYWMain.mOrder.goods_id, YYWMain.mOrder.goods, YYWMain.mOrder.goods,
 				yuanbao, "vip1",Integer.parseInt(YYWMain.mRole.getRoleLevel()), 
 				"公会", YYWMain.mRole.getRoleId(), 
 				YYWMain.mRole.getRoleName(), YYWMain.mRole.getZoneId(), 

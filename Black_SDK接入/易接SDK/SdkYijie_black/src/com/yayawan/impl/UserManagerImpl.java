@@ -39,7 +39,7 @@ public class UserManagerImpl implements YYWUserManager {
 	public void exit(Activity paramActivity, YYWExitCallback callback) {
 		// TODO Auto-generated method stub
 		// Toast.makeText(paramActivity, "退出游戏", Toast.LENGTH_SHORT).show();
-System.out.println("来这里了");
+		System.out.println("来这里了");
 		YaYawanconstants.exit(paramActivity, callback);
 		
 		
@@ -49,6 +49,12 @@ System.out.println("来这里了");
 	public void setRoleData(Activity arg0) {
 		// TODO Auto-generated method stub
 		YaYawanconstants.setRoleData(arg0);
+	}
+	// 3.15版兼容角色信息接口
+	public void setData(Activity activity, String roleId, String roleName,String roleLevel,
+			String zoneId, String zoneName, String roleCTime,String ext) {
+		YaYawanconstants.setData(activity,roleId,roleName,roleLevel,
+					zoneId,zoneName,roleCTime,ext);
 	}
 
 }
