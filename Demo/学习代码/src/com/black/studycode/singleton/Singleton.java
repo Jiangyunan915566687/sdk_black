@@ -1,4 +1,7 @@
 package com.black.studycode.singleton;
+
+import android.util.Log;
+
 /**
  * 单例模式 
  * @author Blacknife
@@ -7,7 +10,7 @@ package com.black.studycode.singleton;
 public class Singleton {
 	
 	//私有化构造方法，保证外部的类不能通过构造器来进行实例化
-	private Singleton(){
+	public Singleton(){
 		
 	}
 	
@@ -22,7 +25,8 @@ public class Singleton {
 	}
 	
 	//业务方法
-	protected void method(){
+	public void method(){
 		System.out.println("SingletonInner");
+		Log.d("black", "ClassFound - Success！");
 	}
 }

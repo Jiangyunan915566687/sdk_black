@@ -89,6 +89,7 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				
 				exit(mLinearLayout);
 
 			}
@@ -174,11 +175,6 @@ public class MainActivity extends Activity {
 	public void pay(View v) {
 		Log.d("black", "进来了pay()");
 		YaYaWan.getInstance().setRoleData(this,"111","jyn","1","1008", "xcdl");
-		/*YYWMain.mRole.setRoleId("111");
-		YYWMain.mRole.setRoleName("jyn");
-		YYWMain.mRole.setRoleLevel("1");
-		YYWMain.mRole.setZoneId("2");
-		YYWMain.mRole.setZoneName("xcdl");*/
 		Log.d("black", "设置好Role参数");
 		YYWOrder order = new YYWOrder(UUID.randomUUID().toString(), "霜之哀伤",
 				100l, "xxxx");

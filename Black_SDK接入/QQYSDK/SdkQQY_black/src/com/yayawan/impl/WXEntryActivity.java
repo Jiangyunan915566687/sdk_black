@@ -1,4 +1,4 @@
-package com.tencent.tmgp.xjxzzgzlc.wxapi;
+package com.yayawan.impl;
 
 
 /**

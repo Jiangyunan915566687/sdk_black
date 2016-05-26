@@ -61,10 +61,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 
-                <data android:scheme="tencent1105258885" />
+                <data android:scheme="tencentstring_appid" />
             </intent-filter>
         </activity>
         <!-- black1 android:scheme="tencent1105258885"  tencent+qqappid -->
+        <!-- 生成后台sdk  tencentstring_appid -->
         <activity
             android:name="com.tencent.connect.common.AssistActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
@@ -76,19 +77,24 @@
         <!-- TODO SDK接入 微信接入配置 START -->
         <!-- black2 注意：此处应改为 游戏包名.wxapi.WXEntryActivity -->
         <!-- black3 注意：此处应改为 游戏包名.diff -->
+        <!-- 1  string_package.wxapi.WXEntryActivity -->
+        <!-- 2  string_package.diff -->
+        <!-- 3  string_appwxid -->
+        <!-- com.tencent.tmgp.xjxzzgzlc -->
         <activity
-            android:name="com.tencent.tmgp.xjxzzgzlc.wxapi.WXEntryActivity"
+            android:name="string_package.wxapi.WXEntryActivity"
             android:excludeFromRecents="true"
             android:exported="true"
             android:label="WXEntryActivity"
             android:launchMode="singleTop"
-            android:taskAffinity="com.tencent.tmgp.xjxzzgzlc.diff" >
+            android:taskAffinity="string_package.diff" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <!-- black4 注意：此处应改为 游戏的微信appid -->
-                <data android:scheme="wxf1bc308ce4dad1c8" />
+                <!-- wxf1bc308ce4dad1c8 -->
+                <data android:scheme="string_appwxid" />
             </intent-filter>
         </activity>
         <!-- TODO SDK接入 微信接入配置 END -->
@@ -127,10 +133,12 @@
         <meta-data
             android:name="qqAppId"
             android:value="string1105258885" />
+        <!-- stringstring_appid -->
+        <!-- 
         <meta-data
             android:name="qqAppKey"
             android:value="0JAPgMs2gq4Ct4jT" />
-        
+         -->
         <meta-data
             android:name="wxAppId"
             android:value="wxf9b0eff5ff57d374" />

@@ -71,8 +71,8 @@ public class YSDKCallback implements UserListener, BuglyListener {
 			payToken = ret1.getPayToken();
 			pf = ret1.pf;
 			pf_key = ret1.pf_key;
-			//flag = ret1.flag;
-			//msg = ret.msg;
+			flag = ret1.flag;
+			msg = ret.msg;
 			// 支付需要的参数
 
 			// 从手Q登录态或微信登录态中获取的openid的值
@@ -83,7 +83,7 @@ public class YSDKCallback implements UserListener, BuglyListener {
 			// 从手Q登录态或微信登录态中获取的access_token 的值
 			Myconstants.mpayinfo.openKey = accessToken;
 
-			// 从手Q登录态中获取的pay_token的值; 微信登录时特别注意该参数传空。
+			// 从手Q登录态中获取的pay_token的值; 微信登录时特别注意该参数传空。支付时使用
 			Myconstants.mpayinfo.qq_paytoken = ret.getPayToken();
 
 			// 登录获取的pf值

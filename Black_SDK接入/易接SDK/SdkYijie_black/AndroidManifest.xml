@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.yayawan.sdktemplate.yijie"
+    package="com.lefan.sycqj"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -92,10 +92,10 @@
 
         <meta-data
             android:name="yayawan_game_id"
-            android:value="yaya4098818794" />
+            android:value="yaya1700420648" />
         <meta-data
             android:name="union_id"
-            android:value="yaya696089580" />
+            android:value="yaya2442081559" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
