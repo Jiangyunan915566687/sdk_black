@@ -12,6 +12,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -19,7 +20,8 @@ import android.widget.ProgressBar;
 public class AsyncTaskActivity extends Activity {
 	private ImageView mImageView;
 	private ProgressBar mProgressBar;
-	private static String url = "http://img.my.csdn.net/uploads/201504/12/1428806103_9476.png";
+	private static final String url = "http://img.my.csdn.net/uploads/201504/12/1428806103_9476.png";
+	public static final String TAG = "black";
 	private MyAsyncTask mTask;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class AsyncTaskActivity extends Activity {
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
+			Log.d(TAG, "onPreExecute");
 			mImageView.setVisibility(View.GONE);
 			mProgressBar.setVisibility(View.VISIBLE);
 		}
@@ -51,6 +54,7 @@ public class AsyncTaskActivity extends Activity {
 		@Override
 		protected void onPostExecute(Bitmap bitmap) {
 			super.onPostExecute(bitmap);
+			Log.d(TAG, "onPostExecute");
 			mProgressBar.setVisibility(View.GONE);
 			mImageView.setVisibility(View.VISIBLE);
 			mImageView.setImageBitmap(bitmap);
@@ -61,6 +65,7 @@ public class AsyncTaskActivity extends Activity {
 			String url = params[0];
 			URLConnection connection;
 			InputStream is;
+			Log.d(TAG, "doInBackground");
 			try {
 				connection = new URL(url).openConnection();
 				is = connection.getInputStream();
@@ -89,6 +94,8 @@ public class AsyncTaskActivity extends Activity {
 		@Override
 		protected void onProgressUpdate(Integer... values) {
 			super.onProgressUpdate(values);
+			if(values[0] == 1||values[0] == 99)
+				Log.d(TAG, "onProgressUpdate");
 			if (isCancelled()) {
 				return;
 			}

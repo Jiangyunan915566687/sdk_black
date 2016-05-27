@@ -4,11 +4,13 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.HashMap;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Activity;
-import android.content.Intent;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -27,11 +29,10 @@ import com.yayawan.utils.DeviceUtil;
 import com.yayawan.utils.Handle;
 import com.yayawan.utils.JSONUtil;
 /**
- * 闪屏页未接入 o 完成
- * 登录成功appid跟channelid渠道SDKid 未处理
- * 登录验证LoginChack 未完成 
- * callBackInfo 未完成
- * @author Administrator
+ * 闪屏页 接入方式 改为 易接接入所要求
+ * 登录验证LoginChack callBackInfo  
+ * 如果需要修改，在 LoginHelper.class
+ * @author Black
  *
  */
 public class YaYawanconstants {
@@ -42,6 +43,16 @@ public class YaYawanconstants {
 	public static final String TAG = "black";
 
 	static LoginHelper helper = null;
+	/*
+	private static Handler handler = new Handler(){
+		public void handleMessage(android.os.Message msg) {
+			String[] userinfo = (String[]) msg.obj;
+			loginSuce(mActivity, userinfo[0], userinfo[1], userinfo[2]+"||"+userinfo[3]);
+			
+		};
+		
+	};
+	*/
 	/**
 	 * 初始化sdk
 	 */
@@ -80,18 +91,14 @@ public class YaYawanconstants {
 				String username = uid;
 				String session = user.getToken();
 				String getChannelid = user.getChannelId();
-				//SFOnlineHelper.LoginChack();//登录验证
-				//loginSuce(mactivity, uid, username, session);
-				loginSuce(mactivity, uid, username, session+"||"+getChannelid);
-				
+				Log.d(TAG, "uid="+uid+" username="+username+" session="+session +" getChannelid=" + getChannelid);
 				/*
-				String uid = user.getChannelUserId();
-				String username = uid;
-				String session = user.getToken();
-				String getChannelid=user.getChannelId();
-				//SFOnlineHelper.LoginChack();//登录验证
-				loginSuce(mactivity, uid, username, session+"||"+getChannelid);
+				if(helper != null){
+					helper.setOnlineUser(user);
+				}
+				LoginCheck(user);//登录验证
 				*/
+				loginSuce(mactivity, uid, username, session+"||"+getChannelid);
 			}
 			//登录失败回调
 			@Override
@@ -99,15 +106,15 @@ public class YaYawanconstants {
 				loginFail();
 			}
 		});
-		helper = LoginHelper.instance();
+		//helper = LoginHelper.instance();
 	}
 	/**
 	 * 闪屏
 	 */
 	public static void logoAnim(final Activity mactivity){
 		Yayalog.loger("sdk闪屏");
-		Intent intent = new Intent(mactivity, SplashActivity.class);
-		mactivity.startActivity(intent);
+		//Intent intent = new Intent(mactivity, SplashActivity.class);
+		//mactivity.startActivity(intent);
 	}
 	/**
 	 * 登录 
@@ -122,9 +129,10 @@ public class YaYawanconstants {
      *  从服务器端验证用户是否登陆
      * @param user 登陆账户
      */
-	public void LoginCheck(final SFOnlineUser user) {
+	public static void LoginCheck(final SFOnlineUser user) {
         if(helper == null){
         	Toast.makeText(mActivity, "Error, helper为null", Toast.LENGTH_SHORT).show();
+        	Log.d(TAG, "Error, helper为null");
         	return;
         }
 		if (helper.isDebug()) {
@@ -132,56 +140,46 @@ public class YaYawanconstants {
 			//goChargeView();
 			return;
 		}
-		Log.e("ganga", "LoginCheck user:"+user.toString());
+		Log.e(TAG, "LoginCheck user:"+user.toString());
 		new Thread(new Runnable() {
 			@Override
 			public void run() { 
 				try {
 					//CP服务器地址进行验证
 					String url = LoginHelper.CP_LOGIN_CHECK_URL + createLoginURL();
-					if (url == null)
-						return;
+					//if (url == null)
+					//	return;
 
  					String result = LoginHelper.executeHttpGet(url);
- 					Log.e("ganga", "LoginCheck result:"+result);
+ 					Log.e(TAG, "LoginCheck result:"+result);
 					if (result == null || !result.equalsIgnoreCase("SUCCESS")) {
 						if(helper != null){
 							helper.setLogin(false);
 						}
-						LoginHelper.showMessage("未登录", mActivity);
+						//LoginHelper.showMessage("未登录", mActivity);
 					} else {
 						if(helper != null){
 							helper.setLogin(true);
 						}
-					  /* 部分渠道如UC渠道，要对游戏人物数据进行统计，而且为接入规范，调用时间：在游戏角色登录成功后调用
-					   *  public static void setRoleData(Context context, String roleId，
-					   *  	String roleName, String roleLevel, String zoneId, String zoneName)
-					   *  
-					   *  @param context   上下文Activity
-					   *  @param roleId    角色唯一标识
-					   *  @param roleName  角色名
-					   *  @param roleLevel 角色等级
-					   *  @param zoneId    区域唯一标识
-					   *  @param zoneName  区域名称
-					   *  
-						SFOnlineHelper.setRoleData(mActivity, "1",
-								"猎人", "100", "1", "阿狸一区");*/
-						LoginHelper.showMessage("已验证成功登录", mActivity);
-						/*UserLoginView.this.post(new Runnable() {
-							
-							@Override
-							public void run() {
-								//goChargeView();								
-							}
-						});*/
+						//LoginHelper.showMessage("已验证成功登录", mActivity);
+						String uid = user.getChannelUserId();
+						String username = uid;
+						String session = user.getToken();
+						String getChannelid = user.getChannelId();
+						Log.d(TAG, "uid="+uid+" username="+username+" session="+session +" getChannelid=" + getChannelid);
+						Message msg = new Message();
+						String userinfo[] = {uid,username,session,getChannelid};
+						msg.obj = userinfo;
+						//handler.sendMessage(msg);
+						//loginSuce(mActivity, uid, username, session+"||"+getChannelid);
 					}
 				} catch (Exception e) {
-					Log.e("ganga", "LoginCheck ERROR:"+e.toString());
+					Log.e("black", "LoginCheck ERROR:"+e.toString());
 				}
 			}
 		}).start(); 
 	}
-	private String createLoginURL() throws UnsupportedEncodingException {
+	private static String createLoginURL() throws UnsupportedEncodingException {
 		if (helper == null || helper.getOnlineUser()  == null) {
 			Toast.makeText(mActivity, "未登录", Toast.LENGTH_SHORT).show();
 			return null;
@@ -204,8 +202,10 @@ public class YaYawanconstants {
 	 */
 	public static void pay(Activity mactivity, String morderid) {
 		Yayalog.loger("sdk支付");
+		Log.d("black","YYW支付回调地址 ： " + LoginHelper.CP_PAY_SYNC_URL);
+		Log.d("black", "有传订单号 = " + morderid);
 		SFOnlineHelper.pay(mactivity, Integer.parseInt(YYWMain.mOrder.money+""), 
-				YYWMain.mOrder.goods, 1, "callBackInfo", LoginHelper.CP_PAY_SYNC_URL,
+				YYWMain.mOrder.goods, 1, morderid, LoginHelper.CP_PAY_SYNC_URL,
 				new SFOnlinePayResultListener() {
 					
 					@Override
@@ -217,7 +217,8 @@ public class YaYawanconstants {
 					@Override
 					public void onOderNo(String orderNo) {
 						//订单生成失败
-						LoginHelper.showMessage("订单号:" + orderNo, mActivity);
+						//LoginHelper.showMessage("订单号:" + orderNo, mActivity);
+						Log.d(TAG, "订单号:" + orderNo);
 						payFail();
 					}
 					
@@ -262,9 +263,35 @@ public class YaYawanconstants {
 				@Override
 				public void onNoExiterProvide() {
 					Log.d(TAG, "onNoExiterProvide");
-					paramActivity.finish();
-					callback.onExit();
-					System.exit(0);
+					new AlertDialog.Builder(paramActivity)
+					.setTitle("退出游戏提示")
+					.setMessage("是否退出游戏？")
+					.setPositiveButton("确认", new OnClickListener() {
+						
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							Log.d(TAG, "确认退出");
+							paramActivity.finish();
+							callback.onExit();
+							System.exit(0);
+						}
+					})
+					.setNegativeButton("返回", new OnClickListener() {
+						
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							Log.d(TAG, "取消退出");
+						}
+					})
+					.setCancelable(true)
+					.setOnCancelListener(new OnCancelListener() {
+						
+						@Override
+						public void onCancel(DialogInterface dialog) {
+							Log.d(TAG, "撤销Dialog");
+						}
+					})
+					.create().show();
 				}
 			});
 		}

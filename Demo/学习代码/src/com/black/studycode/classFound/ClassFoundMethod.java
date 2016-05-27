@@ -13,13 +13,13 @@ public class ClassFoundMethod {
 			for (Method method : methods) {
 				if(method.getName().equals("method")){
 					Log.d("black", "进入方法");
-					//Singleton.getInstance().method();
-					new Singleton();
+					Singleton.getInstance().method();
+					//生成SDK时，此方法必须存在，但是不确定打包后是否还有此方法
 				}
 				Log.d("black", "未找到方法");
 			}
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+			//找不到该Class时走此方法
 			e.printStackTrace();
 		}
 	}

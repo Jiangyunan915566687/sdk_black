@@ -30,19 +30,20 @@
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
             android:name="com.yayawan.sdktemplate.MainActivity"
-            android:label="Yijie_SDK"
+            
+            android:screenOrientation="landscape" >
+
+        </activity>
+        <!-- Yijie 闪屏页   android:label="@string/app_name" -->
+        <activity
+            android:name="com.yayawan.impl.SplashActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- Yijie 闪屏页 -->
-        <activity
-            android:name="com.yayawan.impl.SplashActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="behind" >
         </activity>
         <!-- Yijie 闪屏页 -->
         <!-- Yijie SDK Start -->
@@ -76,6 +77,10 @@
         <meta-data
             android:name="com.snowfish.channelid"
             android:value="{4ff036a1-3254eafe}" >
+        </meta-data>
+        <meta-data
+            android:name="GameMainActivity"
+            android:value="org.cocos2dx.lua.AppActivity" >
         </meta-data>
         <!-- Yijie SDK End -->
 

@@ -11,10 +11,14 @@ import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.graphics.Color;
 import android.os.SystemClock;
+import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.snowfish.cn.ganga.helper.SFOnlineSplashActivity;
 import com.yayawan.main.YYWMain;
+import com.yayawan.sdktemplate.MainActivity;
+import com.yayawan.utils.DeviceUtil;
 
 public class SplashActivity extends SFOnlineSplashActivity {
 
@@ -24,11 +28,24 @@ public class SplashActivity extends SFOnlineSplashActivity {
 
 	@Override
 	public void onSplashStop() {
-		//Intent intent = new Intent(this, DemoMainActivity.class);
-		//startActivity(intent);
-		SystemClock.sleep(2000);
-		YYWMain.mAnimCallBack.onAnimSuccess("success", "");
-		this.finish();
+		try {
+			String Mainclass = DeviceUtil.getGameInfo(this, "GameMainActivity");
+			Log.d("black", Mainclass);
+			Intent intent = new Intent(this,Class.forName(Mainclass));
+			Log.d("black", "Found Class");
+			startActivity(intent);
+			//SystemClock.sleep(2000);
+			//YYWMain.mAnimCallBack.onAnimSuccess("success", "");
+			this.finish();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			Log.d("black", "Nofound Class");
+			Toast.makeText(getApplicationContext(), "Nofound GameMainActivity Class", Toast.LENGTH_SHORT).show();
+			Intent intent = new Intent(this,MainActivity.class);
+			startActivity(intent);
+			this.finish();
+		}
+		
 	}
 
 	public void getSingInfo() {

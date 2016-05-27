@@ -40,7 +40,7 @@ public class LoginHelper {
 	 * 如果客户端不设置，将以在易接后台创建游戏时设置的数据同步地址进行同步
 	 * */
 	static public final String CP_PAY_SYNC_URL = 
-			"http://testomsdk.xiaobalei.com:5555/cp/user/paylog/sync";
+			"http://union.yayawan.com/pay/notify/2442081559/1700420648/";
 	
 	public static final boolean DEBUG	= false;
     private static LoginHelper instance = null;

@@ -45,7 +45,7 @@ public class AnimationImpl implements YYWAnimation {
 				}else{
 					//调用接入的SDK闪屏动画
 					YaYawanconstants.logoAnim(paramActivity);
-					//YYWMain.mAnimCallBack.onAnimSuccess("success", "");
+					YYWMain.mAnimCallBack.onAnimSuccess("success", "");
 				}
 				//闪屏动画播放完后,黑屏时间较长
 				//请在此处直接发送 AnimSuccess闪屏播放成功的通知

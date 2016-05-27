@@ -342,7 +342,7 @@ public class YaYawanconstants {
 
 		YYWMain.mUser.token = JSONUtil.formatToken(mactivity, session,
 				YYWMain.mUser.userName);
-
+		//登录验证
 		if (YYWMain.mUserCallBack != null) {
 			YYWMain.mUserCallBack.onLoginSuccess(YYWMain.mUser, "success");
 			Handle.login_handler(mactivity, YYWMain.mUser.uid,

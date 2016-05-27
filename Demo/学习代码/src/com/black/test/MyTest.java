@@ -1,4 +1,4 @@
-package com.black;
+package com.black.test;
 
 import com.black.studycode.classFound.ClassFoundMethod;
 
