@@ -64,7 +64,7 @@ public class MainActivity extends Activity {
 	private Handler mHandler = new Handler(){
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
-			Log.d("balck", "我来到了handler");
+			Log.d("black", "我来到了handler");
 			Toast.makeText(getApplicationContext(), "我来到了handler", Toast.LENGTH_SHORT).show();
 			List<NewsBean> result = (List<NewsBean>) msg.obj;
 			

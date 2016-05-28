@@ -80,6 +80,16 @@ public class YaYawanconstants {
 			//登出回调
 			@Override
 			public void onLogout(Object customParams) {
+				/*
+				if(!isLogin){
+					logout();
+					Log.d(TAG, "调用到游戏方logout");
+					return;
+				}
+				Log.d(TAG, "调用不到游戏方logout");
+				*/
+				//注释掉这里的logout，易接打包的渠道包就不能调用到我们logout方法 -
+				//从而没法调用到CP接入在我们 logout方法中的  游戏登出方法
 				logout();
 			}
 			//登录成功回调
@@ -99,6 +109,7 @@ public class YaYawanconstants {
 				LoginCheck(user);//登录验证
 				*/
 				loginSuce(mactivity, uid, username, session+"||"+getChannelid);
+				isLogin = true;
 			}
 			//登录失败回调
 			@Override
@@ -116,13 +127,20 @@ public class YaYawanconstants {
 		//Intent intent = new Intent(mactivity, SplashActivity.class);
 		//mactivity.startActivity(intent);
 	}
+	private static boolean isLogin = false;
 	/**
 	 * 登录 
 	 */
 	public static void login(final Activity mactivity) {
 		Yayalog.loger("sdk登录");
+		Log.d(TAG, "login");
+		if(isLogin){
+			SFOnlineHelper.logout(mactivity, "LoginOut");//登出接口
+			isLogin = false;
+			Log.d(TAG, "LoginOut - Login");
+			return;
+		}
 		SFOnlineHelper.login(mactivity, "Login");
-		//SFOnlineHelper.logout(activity, "LoginOut");//登出接口
 	}
 	/**
      *  LoginCheck

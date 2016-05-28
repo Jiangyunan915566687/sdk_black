@@ -1,8 +1,6 @@
 package com.yayawan.impl;
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.HashMap;
 
 import android.app.Activity;
@@ -11,7 +9,6 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
@@ -19,7 +16,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.tencent.tmgp.xjxzzgzlc.R;
+import com.tencent.tmgp.mhxdgzlj.R;
 import com.tencent.ysdk.api.YSDKApi;
 import com.tencent.ysdk.framework.common.eFlag;
 import com.tencent.ysdk.framework.common.ePlatform;
@@ -46,7 +43,7 @@ public class YaYawanconstants {
 		Yayalog.loger("sdk初始化");
 		Log.d(TAG, "sdk初始化 - inintsdk");
 		YSDKApi.onCreate(mactivity);
-		//Myconstants.mpayinfo=new Payinfo();
+		Myconstants.mpayinfo=new Payinfo();
 		YSDKApi.handleIntent(mactivity.getIntent());
 		YSDKApi.setUserListener(new YSDKCallback(mactivity));
 		YSDKApi.setBuglyListener(new YSDKCallback(mactivity));
@@ -81,8 +78,8 @@ public class YaYawanconstants {
 			@Override
 			public void onClick(View v) {
 				Log.d(TAG, "iv_loginQQ");
-				Myconstants.mpayinfo=null;
-				Myconstants.mpayinfo=new Payinfo();
+				//Myconstants.mpayinfo=null;
+				//Myconstants.mpayinfo=new Payinfo();
 				YSDKApi.login(ePlatform.QQ);
 				Myconstants.platform="qq";
 				Myconstants.mpayinfo.opentype = "qq";
@@ -94,8 +91,8 @@ public class YaYawanconstants {
 			@Override
 			public void onClick(View v) {
 				Log.d(TAG, "iv_loginWX");
-				Myconstants.mpayinfo=null;
-				Myconstants.mpayinfo=new Payinfo();
+				//Myconstants.mpayinfo=null;
+				//Myconstants.mpayinfo=new Payinfo();
 				YSDKApi.login(ePlatform.WX);
 				Myconstants.platform="wx";
 				Myconstants.mpayinfo.opentype = "wx";

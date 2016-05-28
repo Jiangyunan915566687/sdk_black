@@ -70,7 +70,7 @@ public class AsyncTaskActivity extends Activity {
 				connection = new URL(url).openConnection();
 				is = connection.getInputStream();
 				BufferedInputStream bis = new BufferedInputStream(is);
-				bitmap = BitmapFactory.decodeStream(bis);
+				bitmap = BitmapFactory.decodeStream(is);
 				is.close();
 				bis.close();
 			} catch (MalformedURLException e) {

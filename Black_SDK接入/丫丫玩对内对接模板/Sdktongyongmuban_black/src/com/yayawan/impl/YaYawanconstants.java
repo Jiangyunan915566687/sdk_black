@@ -24,7 +24,7 @@ public class YaYawanconstants {
 	private static Activity mActivity;
 	
 	/**
-	 * 初始化sdk
+	 * 丫丫玩接入接口 ： 初始化sdk
 	 */
 	public static void inintsdk(Activity mactivity) {
 		mActivity = mactivity;
@@ -33,7 +33,7 @@ public class YaYawanconstants {
 		
 	}
 	/**
-	 * 闪屏
+	 * 丫丫玩接入接口 ：闪屏
 	 */
 	public static void logoAnim(final Activity mactivity){
 		Yayalog.loger("sdk闪屏");
@@ -41,7 +41,7 @@ public class YaYawanconstants {
 		
 	}
 	/**
-	 * 登录 
+	 * 丫丫玩接入接口 ：登录 
 	 */
 	public static void login(final Activity mactivity) {
 		Yayalog.loger("sdk登录");
@@ -49,7 +49,7 @@ public class YaYawanconstants {
 		
 	}
 	/**
-	 * 登出 
+	 * 丫丫玩接入接口 ：登出 
 	 */
 	public static void logout(final Activity mactivity) {
 		Yayalog.loger("sdk登出");
@@ -58,7 +58,7 @@ public class YaYawanconstants {
 	}
 
 	/**
-	 * 支付
+	 * 丫丫玩接入接口 ：支付
 	 * @param mactivity
 	 */
 	public static void pay(Activity mactivity, String morderid) {
@@ -68,7 +68,7 @@ public class YaYawanconstants {
 	}
 
 	/**
-	 * 退出游戏
+	 * 丫丫玩接入接口 ：退出游戏
 	 * @param paramActivity
 	 * @param callback
 	 */
@@ -87,7 +87,7 @@ public class YaYawanconstants {
 	}
 
 	/**
-	 * 设置角色信息
+	 * 丫丫玩接入接口 ：设置角色信息
 	 * 一般在登录成功开始获取信息的时候，可用于上传用户帐号、游戏角色的信息
 	 * @param paramActivity
 	 */
@@ -96,7 +96,7 @@ public class YaYawanconstants {
 	}
 
 	/**
-	 * 设置角色数据
+	 * 丫丫玩接入接口 ：上传角色数据
 	 * 创建角色，角色升级调用的方法
 	 * @param activity 游戏上下文  ext 附加内容 roleCTime 角色创建时间 zoneName 游戏区服名称
 	 * @param zoneId 游戏区服ID roleLevel 角色等级 roleName 角色名称 roleId 角色ID
@@ -129,14 +129,14 @@ public class YaYawanconstants {
 	}
 
 	/**
-	 * 登录成功调用
+	 * YaYawanconstants封装 ： 登录成功调用
 	 * 
 	 * @param mactivity 
 	 * @param uid 唯一识别id
 	 * @param username 用户名(昵称) 如果用户名为空.则拿uid作为用户名
 	 * @param session token验证码 ticket用户令牌 等类似的用户识别码
 	 */
-	public static void loginSuce(Activity mactivity, String uid,
+	private static void loginSuce(Activity mactivity, String uid,
 			String username, String session) {
 
 		YYWMain.mUser = new YYWUser();
@@ -162,29 +162,29 @@ public class YaYawanconstants {
 	}
 
 	/**
-	 * 登录失败
+	 * YaYawanconstants封装 ： 登录失败
 	 */
-	public static void loginFail() {
+	private static void loginFail() {
 		if (YYWMain.mUserCallBack != null) {
 			YYWMain.mUserCallBack.onLoginFailed(null, null);
 		}
 	}
 	/**
-	 * 登录取消
+	 * YaYawanconstants封装 ： 登录取消
 	 */
-	public static void loginCancle() {
+	private static void loginCancle() {
 		if (YYWMain.mUserCallBack != null) {
 			YYWMain.mUserCallBack.onCancel();
 		}
 	}
 	/**
-	 * 切换登录 切换帐号
+	 * YaYawanconstants封装 ： 切换登录 切换帐号
 	 * @param mactivity
 	 * @param uid 唯一id
 	 * @param username 用户名(昵称)如果用户名为空.则拿uid作为用户名
 	 * @param session token验证码 或 ticket 用户令牌
 	 */
-	public static void loginSwitch(String uid,
+	private static void loginSwitch(String uid,
 			String username, String session){
 		//切换登录第一步 :退出原有的帐号
 		logout();
@@ -192,44 +192,44 @@ public class YaYawanconstants {
 		loginSuce(mActivity, uid, username, session);
 	}
 	/**
-	 * 退出登录
+	 * YaYawanconstants封装 ： 退出登录
 	 */
-	public static void logout(){
+	private static void logout(){
 		if(YYWMain.mUserCallBack != null){
 			YYWMain.mUserCallBack.onLogout(null);
 		}
 	}
 	/**
-	 * 支付成功
+	 * YaYawanconstants封装 ： 支付成功
 	 */
-	public static void paySuce() {
+	private static void paySuce() {
 		if (YYWMain.mPayCallBack != null) {
 			YYWMain.mPayCallBack.onPaySuccess(YYWMain.mUser, YYWMain.mOrder,
 					"success");
 		}
 	}
 	/**
-	 * 支付失败
+	 * YaYawanconstants封装 ： 支付失败
 	 */
-	public static void payFail() {
+	private static void payFail() {
 		if (YYWMain.mPayCallBack != null) {
 			YYWMain.mPayCallBack.onPayFailed(null, null);
 		}
 	}
 	/**
-	 * 支付取消
+	 * YaYawanconstants封装 ： 支付取消
 	 */
-	public static void payCancel(){
+	private static void payCancel(){
 		if(YYWMain.mPayCallBack != null){
 			YYWMain.mPayCallBack.onPayCancel(null, null);
 		}
 	}
 	/**
-	 * YYW提供的退出接口
+	 * YaYawanconstants封装 ： YYW提供的退出接口
 	 * @param paramActivity activity
 	 * @param callback YYW退出回调
 	 */
-	public static void exitgameFromYyw(final Activity paramActivity,final YYWExitCallback callback){
+	private static void exitgameFromYyw(final Activity paramActivity,final YYWExitCallback callback){
 		Log.d(TAG, "退出弹窗");
 		new AlertDialog.Builder(paramActivity)
 		.setTitle("退出游戏提示")

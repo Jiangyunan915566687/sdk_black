@@ -8,20 +8,20 @@ import android.app.ProgressDialog;
 public class Myconstants {
 
 	public static boolean ISFASTLOGIN=true;
-	//private static ProgressDialog mAutoLoginWaitingDlg;
+	private static ProgressDialog mAutoLoginWaitingDlg;
 	
 	//是否第一次支付
 	public static boolean ISFIRSTPAY = true;
 	
-	//public static LoginImpl mloImpl = null;
+	public static LoginImpl mloImpl = null;
 	
 	public static String platform = null;
 	
-	//public static Activity mainactivity;
+	public static Activity mainactivity;
 	
 	public static Payinfo mpayinfo = null;
 	public static Dialog dialog  = null;
-	/*
+	
 	public static void startWaiting(Activity mActivity) {
 		// Logger.d("startWaiting");
 		mAutoLoginWaitingDlg = new ProgressDialog(mActivity);
@@ -36,5 +36,5 @@ public class Myconstants {
 			mAutoLoginWaitingDlg.dismiss();
 		}
 	}
-	*/
+	
 }

@@ -1,6 +1,7 @@
 package com.yayawan.impl;
 
 import android.app.Activity;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.yayawan.callback.YYWExitCallback;
@@ -25,7 +26,7 @@ public class UserManagerImpl implements YYWUserManager {
 	@Override
 	public void logout(Activity paramActivity, String paramString,
 			Object paramObject) {
-
+		Log.d("black", "调用到了UserManagerImpl中的logout");
 	}
 
 	@Override

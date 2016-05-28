@@ -11,7 +11,7 @@ public class SQLiteOpenHelperTest extends SQLiteOpenHelper {
 			CursorFactory factory, int version) {
 		super(context, name, factory, version);
 	}
-
+	
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		String sql = "create table dbtest(_id integer primary key autoincrement,name text)";

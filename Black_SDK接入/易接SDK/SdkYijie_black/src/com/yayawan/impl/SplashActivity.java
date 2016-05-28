@@ -41,9 +41,10 @@ public class SplashActivity extends SFOnlineSplashActivity {
 			e.printStackTrace();
 			Log.d("black", "Nofound Class");
 			Toast.makeText(getApplicationContext(), "Nofound GameMainActivity Class", Toast.LENGTH_SHORT).show();
-			Intent intent = new Intent(this,MainActivity.class);
-			startActivity(intent);
-			this.finish();
+			//为了避免当找不到游戏启动界面的类而弹出sdk测试界面，打包成功sdk前应该注释掉这个Intent
+			//Intent intent = new Intent(this,MainActivity.class);
+			//startActivity(intent);
+			//this.finish();
 		}
 		
 	}

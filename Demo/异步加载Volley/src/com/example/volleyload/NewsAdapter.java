@@ -4,6 +4,7 @@ package com.example.volleyload;
 import java.util.List;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class NewsAdapter extends BaseAdapter implements OnScrollListener{
+	private static final String TAG = "black";
 	private List<NewsBean> mList;
 	private LayoutInflater mInflater;
 	private ImageLoader mImageLoader;
@@ -76,23 +78,31 @@ public class NewsAdapter extends BaseAdapter implements OnScrollListener{
 		public ImageView ivIcon;
 		
 	}
-	
+	/**
+	 * 按下滚动之后调用
+	 */
 	@Override
 	public void onScroll(AbsListView view, int fristVisibleItem, int visibleItemCount, int totalItem) {
 		mStart = fristVisibleItem;
 		mEnd = fristVisibleItem + visibleItemCount;
+		//Log.d(TAG, "onScroll ->"+ "visibleItemCount= " +visibleItemCount);
+		//判断为进入界面，立即进行下载图片
 		if(mFirstIn && visibleItemCount > 0 ){
 			mImageLoader.loadImages(mStart, mEnd);
 			mFirstIn = false;
 		}
 	}
+	/**
+	 * 释放滚动之后调用
+	 */
 	@Override
 	public void onScrollStateChanged(AbsListView view, int scrollState) {
-		if(scrollState == SCROLL_STATE_IDLE){//是否为停止状态
+		if(scrollState == SCROLL_STATE_IDLE){//是否为停止状态 0  运动状态 1		
 			mImageLoader.loadImages(mStart, mEnd);
 		}else{
 			mImageLoader.cancelAllTasks();
 		}
+		Log.d(TAG, "onScrollStateChanged - " + scrollState);	
 	}
 	
 }

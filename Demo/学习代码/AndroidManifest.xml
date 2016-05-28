@@ -4,19 +4,25 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="16" />
-	<instrumentation 
-	    android:name="android.test.InstrumentationTestRunner"  
-        android:targetPackage="com.blacknife.studycode" 
-        android:label="Tests for My App" />  
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Tests for My App"
+        android:targetPackage="com.blacknife.studycode" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <uses-library android:name="android.test.runner" />
+
+
         <activity
             android:name="com.black.studycode.MainActivity"
             android:label="@string/app_name" >
@@ -26,6 +32,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.black.studycode.asyncTask.AsyncTaskActivity"
+            android:label="AsyncTask">
+          
+        </activity>
+        
+        <activity-alias
+            android:name="AsyncTask_copy"
+            android:icon="@drawable/ic_async"
+            android:label="AsyncTask"
+            android:targetActivity="com.black.studycode.asyncTask.AsyncTaskActivity"  >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+		
     </application>
 
 </manifest>

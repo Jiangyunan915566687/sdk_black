@@ -113,7 +113,6 @@ public class TaskManager {
 				datas.add(bean);
 			}
 		} catch (NameNotFoundException e) {
-			// TODO 自动生成的 catch 块
 			e.printStackTrace();
 		}
 		return datas;

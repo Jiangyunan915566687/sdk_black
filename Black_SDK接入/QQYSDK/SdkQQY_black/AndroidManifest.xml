@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tencent.tmgp.xjxzzgzlc"
+    package="com.tencent.tmgp.mhxdgzlj"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -61,10 +61,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 
-                <data android:scheme="tencentstring_appid" />
+                <data android:scheme="tencent1105326592" />
             </intent-filter>
         </activity>
-        <!-- black1 android:scheme="tencent1105258885"  tencent+qqappid -->
+        <!-- black1 android:scheme="tencent1105326592"  tencentstring_appid -->
         <!-- 生成后台sdk  tencentstring_appid -->
         <activity
             android:name="com.tencent.connect.common.AssistActivity"
@@ -80,21 +80,21 @@
         <!-- 1  string_package.wxapi.WXEntryActivity -->
         <!-- 2  string_package.diff -->
         <!-- 3  string_appwxid -->
-        <!-- com.tencent.tmgp.xjxzzgzlc -->
+        <!-- com.tencent.tmgp.mhxdgzlj -->
         <activity
-            android:name="string_package.wxapi.WXEntryActivity"
+            android:name="com.tencent.tmgp.mhxdgzlj.wxapi.WXEntryActivity"
             android:excludeFromRecents="true"
             android:exported="true"
             android:label="WXEntryActivity"
             android:launchMode="singleTop"
-            android:taskAffinity="string_package.diff" >
+            android:taskAffinity="com.tencent.tmgp.mhxdgzlj.diff" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <!-- black4 注意：此处应改为 游戏的微信appid -->
-                <!-- wxf1bc308ce4dad1c8 -->
-                <data android:scheme="string_appwxid" />
+                <!-- wxb1cad11d55aaebe2 -->
+                <data android:scheme="wxb1cad11d55aaebe2" />
             </intent-filter>
         </activity>
         <!-- TODO SDK接入 微信接入配置 END -->
@@ -129,22 +129,22 @@
             android:value="no" />
         <meta-data
             android:name="appid"
-            android:value="1105258885" />
+            android:value="1105326592" />
         <meta-data
             android:name="qqAppId"
-            android:value="string1105258885" />
+            android:value="string1105326592" />
         <!-- stringstring_appid -->
-        <!-- 
+        
         <meta-data
             android:name="qqAppKey"
-            android:value="0JAPgMs2gq4Ct4jT" />
-         -->
+            android:value="FaP0pD2Tk5qDCzK8" />
+        
         <meta-data
             android:name="wxAppId"
-            android:value="wxf9b0eff5ff57d374" />
+            android:value="wxb1cad11d55aaebe2" />
         <meta-data
             android:name="wxAppKey"
-            android:value="5276544ffd2b597cf97b52bef36fbc10" />
+            android:value="dca6cab8408a7ecc0288e061a6c91d32" />
         
         <meta-data
             android:name="com.tencent.rdm.uuid"
@@ -180,7 +180,7 @@
 
         <meta-data
             android:name="yayawan_game_id"
-            android:value="yaya2079036627" />
+            android:value="yaya3683870412" />
         <meta-data
             android:name="union_id"
             android:value="yaya2958292331" />

@@ -1,10 +1,14 @@
 package com.black.studycode.asyncTask;
 
-import com.blacknife.studycode.R;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 
-import android.R.integer;
 import android.app.Activity;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -12,11 +16,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import com.blacknife.studycode.R;
+
 public class AsyncTaskActivity extends Activity {
+	private static final String Url = "http://img.my.csdn.net/uploads/201504/12/1428806103_9476.png";
 	private Button bt;
 	private ImageView iv;
 	private ProgressBar pb;
-
+	private MyAsyncTask mTask;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -26,7 +33,9 @@ public class AsyncTaskActivity extends Activity {
 
 	public void imagetest(View v) {
 		bt.setVisibility(View.GONE);
-		
+
+		mTask = new MyAsyncTask();
+		mTask.execute(Url);
 	}
 
 	private void initView() {
@@ -46,7 +55,32 @@ public class AsyncTaskActivity extends Activity {
 		@Override
 		protected Bitmap doInBackground(String... params) {
 			Bitmap bitmap = null;
-			
+			String url = params[0];
+			URLConnection connection;
+			InputStream is;
+			try {
+				connection = new URL(url).openConnection();
+				is = connection.getInputStream();
+				bitmap = BitmapFactory.decodeStream(is);
+				is.close();
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			for (int i = 0; i < 100; i++) {
+				if (isCancelled()) {
+					break;
+				}
+				publishProgress(i);
+				try {
+					Thread.sleep(50);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
 			return bitmap;
 		}
 		

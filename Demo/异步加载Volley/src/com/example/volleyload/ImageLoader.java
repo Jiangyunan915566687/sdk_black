@@ -29,12 +29,14 @@ public class ImageLoader {
 	public ImageLoader(ListView listView){
 		mListView = listView;
 		mTask = new HashSet<NewsAsyncTask>();
+		//获取运行内存的最大值
 		int maxMemory = (int) Runtime.getRuntime().maxMemory();
+		//定义最大缓存空间的大小
 		int cacheSize = maxMemory / 4;
 		mCaches = new LruCache<String, Bitmap>(cacheSize){
 			@Override
 			protected int sizeOf(String key, Bitmap value) {
-				//每次写入缓存的时候调用
+				//每次写入缓存的时候调用，获取缓存的剩余值
 				return value.getByteCount();
 			}
 		};
@@ -47,17 +49,33 @@ public class ImageLoader {
 			mImageView.setImageBitmap((Bitmap) msg.obj);			
 		};
 	};
-	
+	/**
+	 * 添加Bitmap到Cache中
+	 * @param url		bitmap的url作为数据的key
+	 * @param bitmap	Bitmap对象数据
+	 */
 	public void addBitmapToCache(String url,Bitmap bitmap){
 		if(getBitmapFromCache(url) == null){
+			//将key、bitmap 放到 mCaches中保存
 			mCaches.put(url, bitmap);
 		}
 	}
 	
+	/**
+	 * 从Cache中获取缓存的bitmap
+	 * @param url		bitmap对应的url
+	 * @return
+	 */
 	public Bitmap getBitmapFromCache(String url){
+		//通过key 从mCaches中 获取对应的 Bitmap对象
 		return mCaches.get(url);
 	}
 	
+	/**
+	 * 用Thread来下载Bitmap对象
+	 * @param imageView	bitmap设置的imageView控件
+	 * @param url		bitmap下载url
+	 */
 	public void showImageByThread(ImageView imageView,final String url){
 		mImageView = imageView;
 		mUrl = url;
@@ -72,10 +90,15 @@ public class ImageLoader {
 			}
 		}.start();;
 	}
-	
+	/**
+	 * 用AsyncTask来下载Bitmap对象
+	 * @param imageView	bitmap设置的imageView控件
+	 * @param url		bitmap下载url
+	 */
 	public void showImageByAsyncTask(ImageView imageView,final String url){
 		Bitmap bitmap = getBitmapFromCache(url);
 		if( bitmap == null){
+			//通过AsyncTask来下载bitmap
 			//new NewsAsyncTask(imageView,url).execute(url);
 			imageView.setImageResource(R.drawable.ic_launcher);;
 		}else{
