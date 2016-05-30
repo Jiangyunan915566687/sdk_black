@@ -33,7 +33,7 @@ public class AddressDao {
 				address = "报警电话";				
 				break;
 			case 4:
-				address = "模拟器";				
+				address = "模拟器";
 				break;
 			case 5:
 				address = "客服电话";				
